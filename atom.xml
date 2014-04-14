@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-14T23:15:18+08:00</updated>
+  <updated>2014-04-14T23:24:05+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Reinstall Octopress]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/04/14/reinstall-octopress/"/>
+    <updated>2014-04-14T23:22:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/04/14/reinstall-octopress</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress
+</span><span class='line'>bundle exec rake install
+</span><span class='line'>
+</span><span class='line'>bundle exec rake setup_github_pages
+</span><span class='line'>
+</span><span class='line'>bundle exec rake generate
+</span><span class='line'>bundle exec rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>files need to backup</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>_posts
+</span><span class='line'>robots.txt
+</span><span class='line'>CNAME
+</span><span class='line'>
+</span><span class='line'>octopress/source/_includes/custom/asides/tag_cloud.html
+</span><span class='line'>octopress/plugins/tag_cloud.rb</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Write a Executable Gem]]></title>
@@ -894,62 +935,6 @@ login your server and</p>
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>cd /var/www/your_app/current; bundle exec unicorn -D -c /var/www/your_app/shared/config/unicorn.rb -E production</span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Capistrano]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/using-capistrano/"/>
-    <updated>2014-03-02T18:21:00+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/using-capistrano</id>
-    <content type="html"><![CDATA[<p>add gem</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem "capistrano"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>cd project folder</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>capify .</span></code></pre></td></tr></table></div></figure>
-
-
-<p>setup need to run in the first time</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cap deploy:setup</span></code></pre></td></tr></table></div></figure>
-
-
-<p>next time, just need to run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cap deploy</span></code></pre></td></tr></table></div></figure>
-
-
-<p>cap your_task
-cap -T
-cap -vT</p>
-
-<p>this need to config in deploy.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>set :application, ""
-</span><span class='line'>set :repository,  ""
-</span><span class='line'>set :scm, :git
-</span><span class='line'>set :deploy_to, "/var/www/#{application}"
-</span><span class='line'>set :user, ""
-</span><span class='line'>set :port, 
-</span><span class='line'>server "your_server.com", :app, :web</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="https://github.com/capistrano/capistrano/wiki/2.x-Getting-Started">https://github.com/capistrano/capistrano/wiki/2.x-Getting-Started</a>
-<a href="https://github.com/capistrano/capistrano/wiki/2.x-From-The-Beginning">https://github.com/capistrano/capistrano/wiki/2.x-From-The-Beginning</a></p>
 ]]></content>
   </entry>
   

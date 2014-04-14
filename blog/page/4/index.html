@@ -9,12 +9,14 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="download sublimetext 1
+http://www.sublimetext.com/2 1
 2
 3
 4
-5
-sudo nano /etc/ssh/sshd_config #modify the port service ssh restart ">
+tar xf Sublime\ Text\ 2.0.1\ x64.tar.bz2
+sudo mkdir /opt
+sudo mv Sublime\ Text\ 2 /opt/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,6 +84,164 @@ sudo nano /etc/ssh/sshd_config #modify the port service ssh restart ">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/using-sublime-text-2-as-ruby-on-rails-ide/">Using Sublime Text 2 as Ruby on Rails Ide</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T16:14:09+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>download sublimetext</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://www.sublimetext.com/2</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>tar xf Sublime\ Text\ 2.0.1\ x64.tar.bz2
+</span><span class='line'>sudo mkdir /opt
+</span><span class='line'>sudo mv Sublime\ Text\ 2 /opt/
+</span><span class='line'>sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/bin/sublime</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo gedit /usr/share/applications/sublime.desktop</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[Desktop Entry]
+</span><span class='line'>Version=1.0
+</span><span class='line'>Name=Sublime Text 2
+</span><span class='line'># Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
+</span><span class='line'># From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
+</span><span class='line'>GenericName=Text Editor
+</span><span class='line'>
+</span><span class='line'>Exec=sublime
+</span><span class='line'>Terminal=false
+</span><span class='line'>Icon=/opt/Sublime Text 2/Icon/48x48/sublime_text.png
+</span><span class='line'>Type=Application
+</span><span class='line'>Categories=TextEditor;IDE;Development
+</span><span class='line'>X-Ayatana-Desktop-Shortcuts=NewWindow
+</span><span class='line'>
+</span><span class='line'>[NewWindow Shortcut Group]
+</span><span class='line'>Name=New Window
+</span><span class='line'>Exec=sublime -n
+</span><span class='line'>TargetEnvironment=Unity</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And replace all occurrences of gedit.desktop with sublime.desktop.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo gedit /usr/share/applications/defaults.list</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install Sublime Package Control</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://wbond.net/sublime_packages/package_control/installation</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ctrl+shift+p</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>install
+</span><span class='line'>
+</span><span class='line'>ctags
+</span><span class='line'>RubyFormat # no  BeautifyRuby</span></code></pre></td></tr></table></div></figure>
+
+
+<p>need install ctags</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install ctags</span></code></pre></td></tr></table></div></figure>
+
+
+<p>go to project root</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle show --paths | xargs ctags -R -f .gemtags --exclude=*/test/* 
+</span><span class='line'>ctags -R -f .tags --exclude=.git --exclude=log --exclude=tmp --exclude=public --exclude=db</span></code></pre></td></tr></table></div></figure>
+
+
+<p>xml format in ubunut</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install tidy</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://gist.github.com/coldnebo/1138554">https://gist.github.com/coldnebo/1138554</a></p>
+
+<p>js  json format</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/jdc0589/JsFormat</span></code></pre></td></tr></table></div></figure>
+
+
+<p>html format : ctrl+shift+h
+hide/ collapsible folder pane  ctrl+K, ctrl+B</p>
+
+<p>need to backup user key binding</p>
+
+<p><a href="http://stackoverflow.com/questions/8839753/formatting-html-code-using-sublime-text-2">http://stackoverflow.com/questions/8839753/formatting-html-code-using-sublime-text-2</a></p>
+
+<ul>
+<li>format for html</li>
+<li>format for ruby</li>
+<li>ctags</li>
+</ul>
+
+
+<p>{&ldquo;keys&rdquo;: [&ldquo;ctrl+shift+w&rdquo;], &ldquo;command&rdquo;: &ldquo;toggle_setting&rdquo;, &ldquo;args&rdquo;: {&ldquo;setting&rdquo;: &ldquo;word_wrap&rdquo;} }</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -580,62 +740,6 @@ install pg9.2 in ubuntu13</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/01/using-mysql-in-ubuntu/">Using Mysql in Ubuntu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-01T21:12:20+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install mysql-server
-</span><span class='line'>sudo apt-get install mysql-workbench
-</span><span class='line'>sudo apt-get install libmysqlclient-dev 
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>mysql -uroot -p
-</span><span class='line'>mysql&gt; create database dbname character set utf8;
-</span><span class='line'>mysql&gt; grant all privileges on *.* to 'app'@'localhost' identified by '******';
-</span><span class='line'>
-</span><span class='line'>shell&gt;mysql -u*** -p*** dbname&lt; init.sql</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -650,11 +754,15 @@ install pg9.2 in ubuntu13</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 108.57142857142857%'>octopress(1)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/14/reinstall-octopress/">Reinstall Octopress</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/11/write-a-executable-gem/">Write a Executable Gem</a>
@@ -670,10 +778,6 @@ install pg9.2 in ubuntu13</p>
     
       <li class="post">
         <a href="/blog/2014/03/02/reset-unity/">Reset Unity</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/02/install-transmission-in-ubuntu-server/">Install Transmission in Ubuntu Server</a>
       </li>
     
   </ul>
