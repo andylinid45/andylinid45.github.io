@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rvm | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/rvm/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rvm in Ubunut]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/rvm-in-ubunut/"/>
+    <updated>2014-03-02T16:25:48+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/rvm-in-ubunut</id>
+    <content type="html"><![CDATA[<p>install rvm
+<code>
+curl -L get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm requirements
+</code></p>
+
+<p>usefull script
+```
+rvm install 1.9.3
+rvm use 1.9.3 &mdash;default
+rvm gemset create 3.2.3
+rvm gemset use 3.2.3
+rvm use 1.9.3@3.2.3 &mdash;default<br/>
+gem sources &mdash;remove <a href="http://rubygems.org/">http://rubygems.org/</a>
+gem sources -a <a href="http://ruby.taobao.org/">http://ruby.taobao.org/</a>
+gem install rails -v=3.2.12</p>
+
+<p>rvm list
+rvm gemset list
+```</p>
+
+<p>remove rvm
+<code>
+rvm implode
+</code></p>
+
+<p>if you can not find rvm in terminal
+gedit  .bashrc
+and add
+<code>
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
+</code></p>
+
+<p>no rdoc
+<code>
+echo -e "install: --no-rdoc --no-ri \nupdate: --no-rdoc --no-ri" &gt;&gt; ~/.gemrc
+</code></p>
+
+<p>do not use .rvmrc file any more, go to the project folder
+<code>
+echo "ruby-1.9.3-p429" &gt;&gt; .ruby-version
+echo "myapp" &gt;&gt; .ruby-gemset
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

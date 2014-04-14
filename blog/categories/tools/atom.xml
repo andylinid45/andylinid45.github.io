@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tools | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Reset Unity]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/reset-unity/"/>
+    <updated>2014-03-02T20:54:01+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/reset-unity</id>
+    <content type="html"><![CDATA[<p><code>
+unity --replace
+unity --reset
+dconf reset -f /org/compiz; sleep 2; unity
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Send Sms From Ubunut]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/send-sms-from-ubunut/"/>
+    <updated>2014-03-02T20:25:25+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/send-sms-from-ubunut</id>
+    <content type="html"><![CDATA[<p>```
+sudo add-apt-repository ppa:linuxonly/modem+manager+gui
+sudo apt-get update
+sudo apt-get install modem-manager-gui</p>
+
+<p><a href="http://askubuntu.com/questions/325229/hspa-3g-modem-manager-for-backtrack-ubuntu?rq=1">http://askubuntu.com/questions/325229/hspa-3g-modem-manager-for-backtrack-ubuntu?rq=1</a>
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Virtualbox Win8 Screen Resolution]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/virtualbox-win8-screen-resolution/"/>
+    <updated>2014-03-02T18:41:00+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/virtualbox-win8-screen-resolution</id>
+    <content type="html"><![CDATA[<p>run
+<code>
+/usr/bin/VBoxManage setextradata win8 CustomVideoMode1 1366x768x32
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Sublime Text 2 as Ruby on Rails Ide]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/using-sublime-text-2-as-ruby-on-rails-ide/"/>
+    <updated>2014-03-02T16:14:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/using-sublime-text-2-as-ruby-on-rails-ide</id>
+    <content type="html"><![CDATA[<p>download sublimetext
+<code>
+http://www.sublimetext.com/2
+</code>
+<code>
+tar xf Sublime\ Text\ 2.0.1\ x64.tar.bz2
+sudo mkdir /opt
+sudo mv Sublime\ Text\ 2 /opt/
+sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/bin/sublime
+</code></p>
+
+<p>sudo gedit /usr/share/applications/sublime.desktop
+```
+[Desktop Entry]
+Version=1.0
+Name=Sublime Text 2</p>
+
+<h1>Only KDE 4 seems to use GenericName, so we reuse the KDE strings.</h1>
+
+<h1>From Ubuntu&rsquo;s language-pack-kde-XX-base packages, version 9.04-20090413.</h1>
+
+<p>GenericName=Text Editor</p>
+
+<p>Exec=sublime
+Terminal=false
+Icon=/opt/Sublime Text 2/Icon/48x48/sublime_text.png
+Type=Application
+Categories=TextEditor;IDE;Development
+X-Ayatana-Desktop-Shortcuts=NewWindow</p>
+
+<p>[NewWindow Shortcut Group]
+Name=New Window
+Exec=sublime -n
+TargetEnvironment=Unity
+```</p>
+
+<p>And replace all occurrences of gedit.desktop with sublime.desktop.
+<code>
+sudo gedit /usr/share/applications/defaults.list
+</code></p>
+
+<p>install Sublime Package Control
+<code>
+http://wbond.net/sublime_packages/package_control/installation
+</code></p>
+
+<p>ctrl+shift+p
+```
+install</p>
+
+<p>ctags
+RubyFormat # no  BeautifyRuby
+```</p>
+
+<p>need install ctags
+<code>
+sudo apt-get install ctags
+</code></p>
+
+<p>go to project root
+<code>
+bundle show --paths | xargs ctags -R -f .gemtags --exclude=*/test/*
+ctags -R -f .tags --exclude=.git --exclude=log --exclude=tmp --exclude=public --exclude=db
+</code></p>
+
+<p>xml format in ubunut
+<code>
+sudo apt-get install tidy
+</code>
+<a href="https://gist.github.com/coldnebo/1138554">https://gist.github.com/coldnebo/1138554</a></p>
+
+<p>js  json format
+<code>
+https://github.com/jdc0589/JsFormat
+</code></p>
+
+<p>html format : ctrl+shift+h
+hide/ collapsible folder pane  ctrl+K, ctrl+B</p>
+
+<p>need to backup user key binding</p>
+
+<p><a href="http://stackoverflow.com/questions/8839753/formatting-html-code-using-sublime-text-2">http://stackoverflow.com/questions/8839753/formatting-html-code-using-sublime-text-2</a></p>
+
+<ul>
+<li>format for html</li>
+<li>format for ruby</li>
+<li>ctags</li>
+</ul>
+
+
+<p>{&ldquo;keys&rdquo;: [&ldquo;ctrl+shift+w&rdquo;], &ldquo;command&rdquo;: &ldquo;toggle_setting&rdquo;, &ldquo;args&rdquo;: {&ldquo;setting&rdquo;: &ldquo;word_wrap&rdquo;} }</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Firefox Addons]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/firefox-addons/"/>
+    <updated>2014-03-02T15:27:46+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/firefox-addons</id>
+    <content type="html"><![CDATA[<p><code>
+https://addons.mozilla.org/en-US/firefox/addon/all-in-one-gestures/
+https://addons.mozilla.org/en-US/firefox/addon/firebug/
+https://addons.mozilla.org/en-US/firefox/addon/measureit/
+https://addons.mozilla.org/en-US/firefox/addon/colorzilla/
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

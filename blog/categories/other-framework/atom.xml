@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Other-framework | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/other-framework/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Padrino Command]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/padrino-command/"/>
+    <updated>2014-03-02T20:22:01+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/padrino-command</id>
+    <content type="html"><![CDATA[<p>```
+gem install padrino</p>
+
+<p>padrino g project my_project</p>
+
+<p>padrino s # padrino start
+padrino c</p>
+
+<p><a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></p>
+
+<p>padrino g controller Post get: index get: show
+padrino g model Post title: string body: text
+padrino g plugin better_error</p>
+
+<p>padrino rake routes
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gem | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/gem/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Write a Executable Gem]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/04/11/write-a-executable-gem/"/>
+    <updated>2014-04-11T15:05:49+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/04/11/write-a-executable-gem</id>
+    <content type="html"><![CDATA[<p><code>
+cd my_gem
+mkdir bin
+touch bin/my_gem
+chmod +x bin/my_gem
+</code></p>
+
+<p>edit my_gem
+```</p>
+
+<h1>!/usr/bin/env ruby</h1>
+
+<p>require &lsquo;my_gem&rsquo;</p>
+
+<p>MyGem.hi
+```</p>
+
+<p>edit my_gem.gemspec
+<code>
+spec.executables = ["my_gem"]
+</code>
+or commit change to git, so you need not change the gemspec file</p>
+
+<p>build and install
+<code>
+gem build my_gem.gemspec
+gem install --local ./my_gem-0.0.1.gem
+</code></p>
+
+<p>restart terminal and run
+<code>
+my_gem
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Make Your Own Gem]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/04/11/make-your-own-gem/"/>
+    <updated>2014-04-11T12:16:16+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/04/11/make-your-own-gem</id>
+    <content type="html"><![CDATA[<p>create the gem
+<code>
+bundle gem my_gem
+</code></p>
+
+<p>edit my_gem.rb
+```
+module MyGem
+  def self.hi</p>
+
+<pre><code>puts "Hello world!"
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>build
+<code>
+gem build my_gem.gemspec
+</code></p>
+
+<p>install
+<code>
+gem install --local ./my_gem-0.0.1.gem
+</code></p>
+
+<p>run it
+<code>
+irb
+irb(main):001:0&gt; require 'my_gem'
+=&gt; true
+irb(main):002:0&gt; MyGem.hi
+Hello world!
+=&gt; nil
+</code></p>
+
+<p>Publishing your gem
+<code>
+gem push xxx.gem
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Deploy | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/deploy/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Nginx and Unicorn]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/nginx-and-unicorn/"/>
+    <updated>2014-03-02T18:44:27+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/nginx-and-unicorn</id>
+    <content type="html"><![CDATA[<p>nginx
+<code>
+sudo /etc/init.d/nginx start
+sudo /etc/init.d/nginx restart
+</code></p>
+
+<p>config files
+<code>
+/etc/nginx/sites-enabled/
+/etc/nginx/sites-available/
+</code>
+<code>
+/usr/share/doc/nginx-doc/examples/
+</code></p>
+
+<p>logs
+<code>
+more /var/log/nginx/access.log
+more /var/log/nginx/error.log
+</code></p>
+
+<p>default site
+<code>
+ls /usr/share/nginx/www
+</code></p>
+
+<p><code>
+http://wiki.nginx.org/Pitfalls
+http://wiki.nginx.org/QuickStart
+http://wiki.nginx.org/Configuration
+</code></p>
+
+<h3>unicorn</h3>
+
+<p><code>
+gem "unicorn"
+</code>
+run
+<code>
+unicorn -c unicorn.rb -E production
+</code>
+<code>
+http://unicorn.bogomips.org/unicorn_1.html
+http://unicorn.bogomips.org/Unicorn/Configurator.html
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Capistrano-nginx-unicorn]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/using-capistrano-nginx-unicorn/"/>
+    <updated>2014-03-02T18:23:47+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/using-capistrano-nginx-unicorn</id>
+    <content type="html"><![CDATA[<p>add gem
+<code>
+gem 'capistrano-nginx-unicorn', require: false, group: :development
+</code></p>
+
+<p>add this line in the END of deploy.rb
+<code>
+require 'capistrano-nginx-unicorn'
+</code></p>
+
+<p>add this to deploy.rb
+<code>
+set :nginx_server_name, ""
+set :unicorn_workers, 5
+</code></p>
+
+<p>if &ldquo; eval: bundle: not found&rdquo;, when running &ldquo;cap deploy:start&rdquo;
+login your server and
+<code>
+cd /var/www/your_app/current; bundle exec unicorn -D -c /var/www/your_app/shared/config/unicorn.rb -E production
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Capistrano]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/using-capistrano/"/>
+    <updated>2014-03-02T18:21:00+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/using-capistrano</id>
+    <content type="html"><![CDATA[<p>add gem
+<code>
+gem "capistrano"
+</code></p>
+
+<p>cd project folder
+<code>
+capify .
+</code></p>
+
+<p>setup need to run in the first time
+<code>
+cap deploy:setup
+</code></p>
+
+<p>next time, just need to run
+<code>
+cap deploy
+</code></p>
+
+<p>cap your_task
+cap -T
+cap -vT</p>
+
+<p>this need to config in deploy.rb
+<code>
+set :application, ""
+set :repository,  ""
+set :scm, :git
+set :deploy_to, "/var/www/#{application}"
+set :user, ""
+set :port,
+server "your_server.com", :app, :web
+</code></p>
+
+<p><a href="https://github.com/capistrano/capistrano/wiki/2.x-Getting-Started">https://github.com/capistrano/capistrano/wiki/2.x-Getting-Started</a>
+<a href="https://github.com/capistrano/capistrano/wiki/2.x-From-The-Beginning">https://github.com/capistrano/capistrano/wiki/2.x-From-The-Beginning</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fixed robots.txt No Found When Using Unicorn]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/fixed-robots-dot-txt-no-found-when-using-unicorn/"/>
+    <updated>2014-03-02T16:33:50+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/fixed-robots-dot-txt-no-found-when-using-unicorn</id>
+    <content type="html"><![CDATA[<p>in config production.rb
+<code>
+config.serve_static_assets = true
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

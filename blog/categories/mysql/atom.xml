@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mysql | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/mysql/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Reset Mysql Root Password]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/reset-mysql-root-password/"/>
+    <updated>2014-03-02T15:36:36+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/reset-mysql-root-password</id>
+    <content type="html"><![CDATA[<p>```
+sudo /etc/init.d/mysql stop
+sudo mysqld_safe &mdash;user=mysql &mdash;skip-grant-tables &mdash;skip-networking &amp;
+mysql -u root mysql</p>
+
+<p>mysql> UPDATE mysql.user SET Password=PASSWORD(&lsquo;YOUR-NEW-MYSQL-PASSWORD&rsquo;) WHERE User=&lsquo;root&rsquo;;
+mysql> FLUSH PRIVILEGES;
+mysql> quit</p>
+
+<p>sudo /etc/init.d/mysql restart</p>
+
+<p>mysql -u root -p
+Enter password:</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Mysql in Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/01/using-mysql-in-ubuntu/"/>
+    <updated>2014-03-01T21:12:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/01/using-mysql-in-ubuntu</id>
+    <content type="html"><![CDATA[<p>```
+sudo apt-get install mysql-server
+sudo apt-get install mysql-workbench
+sudo apt-get install libmysqlclient-dev</p>
+
+<p>mysql -uroot -p
+mysql> create database dbname character set utf8;
+mysql> grant all privileges on <em>.</em> to &lsquo;app&rsquo;@&lsquo;localhost&rsquo; identified by &lsquo;******&rsquo;;</p>
+
+<p>shell>mysql -u<strong><em> -p</em></strong> dbname&lt; init.sql
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

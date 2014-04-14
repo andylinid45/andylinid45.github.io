@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Postgresql | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/postgresql/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Postgresql in Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/using-postgresql-in-ubuntu/"/>
+    <updated>2014-03-02T15:40:07+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/using-postgresql-in-ubuntu</id>
+    <content type="html"><![CDATA[<p>install
+<code>
+sudo apt-get install postgresql
+sudo apt-get install libpq-dev
+sudo apt-get install postgresql-client
+sudo apt-get install pgadmin3
+psql --version #or psql -V
+</code></p>
+
+<p>connect to the default PostgreSQL template database
+<code>
+sudo -u postgres psql template1
+ALTER USER postgres with encrypted password 'your_password'; #and then, you can ues pgadmin3 to connection you db
+</code></p>
+
+<p>use MD5 authentication with the postgres user
+after the line #Database administrative login by Unix domain socket
+replace the &lsquo;peer&rsquo; by &lsquo;md5&rsquo;
+```
+sudo gedit /etc/postgresql/9.1/main/pg_hba.conf</p>
+
+<p>local all postgres md5</p>
+
+<p>sudo /etc/init.d/postgresql restart
+```</p>
+
+<p>create a database
+<code>
+sudo -u postgres createdb mydb
+</code></p>
+
+<p>useful script
+<code>
+pg_dump dbname &gt; outfile
+sudo -u postgres psql dbname &lt; infile
+pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d db_name test.dump
+</code></p>
+
+<p>config files in
+<code>
+/etc/postgresql/9.1/main
+</code></p>
+
+<p><a href="https://help.ubuntu.com/12.04/serverguide/postgresql.html">https://help.ubuntu.com/12.04/serverguide/postgresql.html</a>
+<a href="https://help.ubuntu.com/community/PostgreSQL">https://help.ubuntu.com/community/PostgreSQL</a></p>
+
+<p>[updated]
+install pg9.2 in ubuntu13</p>
+
+<p>add a source
+<code>
+deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main
+</code></p>
+
+<p><code>
+sudo apt-get update
+sudo apt-get install postgresql-9.2
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mongodb | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/mongodb/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mongodb and Mongoid]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/mongodb-and-mongoid/"/>
+    <updated>2014-03-02T16:36:29+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/mongodb-and-mongoid</id>
+    <content type="html"><![CDATA[<p><code>
+sudo apt-get install mongodb
+</code></p>
+
+<p>turn off journal and turn on rest in you dev
+```
+sudo nano /etc/mongodb.conf</p>
+
+<p>journal = false
+rest = true
+```</p>
+
+<p>add mongodb to startup
+<code>
+sudo update-rc.d mongodb  defaults
+</code></p>
+
+<p>run
+```
+mongo</p>
+
+<p>db.test.save( { a: 1 } )
+db.test.find()</p>
+
+<p>show collections
+db.abc.count()
+```</p>
+
+<p>if you can not start mongodb sometime
+```
+tail /var/log/mongodb/mongodb.log -n 100</p>
+
+<p>sudo rm /var/lib/mongodb/mongod.lock</p>
+
+<p>sudo -u mongodb mongod -f /etc/mongodb.conf &mdash;repair
+```</p>
+
+<p>check mongodb work
+<code>
+http://localhost:28017/
+</code></p>
+
+<p><code>
+http://docs.mongodb.org/manual/
+http://mongoid.org/en/mongoid/
+http://www.precog.com/editions/precog-for-mongodb
+https://github.com/bobthecow/genghis
+https://github.com/zuk/DrowsyDromedary
+</code></p>
+
+<h3>mongoid</h3>
+
+<p>Gemfile
+<code>
+gem 'mongoid'
+gem 'bson_ext'
+</code></p>
+
+<p><code>
+rails g mongoid:config
+</code></p>
+
+<p>The Mongoid Demo Application
+<code>
+https://github.com/mongoid/echo
+</code></p>
+
+<p>create indexes for db
+<code>
+rake db:mongoid:create_indexes
+rake db:seed
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Git | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Switching Git Server]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/switching-git-server/"/>
+    <updated>2014-03-02T18:34:29+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/switching-git-server</id>
+    <content type="html"><![CDATA[<p>```
+git remote -v</p>
+
+<p>git branch</p>
+
+<p>git remote add bitbucket git@bitbucket.org:&lt;<username>>/&lt;<repo>></p>
+
+<p>git remote rm origin</p>
+
+<p>git remote rename bitbucket origin</p>
+
+<p>git push -u origin &mdash;all
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git Ignore the File Permission(mode) Changes]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/git-ignore-the-file-permission-mode-changes/"/>
+    <updated>2014-03-02T18:15:37+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/git-ignore-the-file-permission-mode-changes</id>
+    <content type="html"><![CDATA[<p><code>
+git config core.filemode false
+git config --global core.filemode false # for global
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Add Global Git Ignore]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/add-global-git-ignore/"/>
+    <updated>2014-03-02T18:14:02+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/add-global-git-ignore</id>
+    <content type="html"><![CDATA[<p>```
+git config &mdash;global core.excludesfile ~/.gitignore</p>
+
+<p>echo .tags  >> ~/.gitignore
+echo .tags_sorted_by_file  >> ~/.gitignore
+echo .gemtags  >> ~/.gitignore
+echo <em>.sublime-project  >> ~/.gitignore
+echo </em>.sublime-workspace  >> ~/.gitignore
+echo andy_doc  >> ~/.gitignore
+echo andy_pass  >> ~/.gitignore
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git Checkout Branch From a Tag]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/git-checkout-branch-from-a-tag/"/>
+    <updated>2014-03-02T15:55:54+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/git-checkout-branch-from-a-tag</id>
+    <content type="html"><![CDATA[<p>after you clone a git repo
+```
+git checkout -b my_new_branch my_tag</p>
+
+<p>git push origin my_new_branch
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Project Specific Git User and Email]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/01/project-specific-git-user-and-email/"/>
+    <updated>2014-03-01T21:18:55+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/01/project-specific-git-user-and-email</id>
+    <content type="html"><![CDATA[<p>go to the project folder and run
+<code>
+git config user.email "***"
+git config user.name "***"
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

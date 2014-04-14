@@ -5,11 +5,23 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>Andy Lin</title>
+  <meta name="author" content="Andy">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="1
+2
+3
+4
+cd my_gem
+mkdir bin
+touch bin/my_gem
+chmod +x bin/my_gem edit my_gem 1
+2
+3
+4
+5
+#!/usr/bin/env ruby require 'my_gem' MyGem.hi edit my_gem. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +33,7 @@
   <link rel="canonical" href="http://andylinid45.github.io">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
@@ -31,14 +43,26 @@
 <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48929179-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/">Andy Lin</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>a Rails and Javascript coder</h2>
   
 </hgroup>
 
@@ -48,7 +72,7 @@
   
 </ul>
   
-<form action="https://www.google.com/search" method="get">
+<form action="http://google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:andylinid45.github.io" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -66,7 +90,737 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/11/write-a-executable-gem/">Write a Executable Gem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-11T15:05:49+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd my_gem
+</span><span class='line'>mkdir bin
+</span><span class='line'>touch bin/my_gem
+</span><span class='line'>chmod +x bin/my_gem</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit my_gem</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/env ruby
+</span><span class='line'>
+</span><span class='line'>require 'my_gem'
+</span><span class='line'>
+</span><span class='line'>MyGem.hi</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit my_gem.gemspec</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>spec.executables = ["my_gem"]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or commit change to git, so you need not change the gemspec file</p>
+
+<p>build and install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem build my_gem.gemspec
+</span><span class='line'>gem install --local ./my_gem-0.0.1.gem</span></code></pre></td></tr></table></div></figure>
+
+
+<p>restart terminal and run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>my_gem</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/11/make-your-own-gem/">Make Your Own Gem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-11T12:16:16+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>create the gem</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle gem my_gem</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit my_gem.rb</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>module MyGem
+</span><span class='line'>  def self.hi
+</span><span class='line'>    puts "Hello world!"
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>build</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem build my_gem.gemspec</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install --local ./my_gem-0.0.1.gem</span></code></pre></td></tr></table></div></figure>
+
+
+<p>run it</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>irb
+</span><span class='line'>irb(main):001:0&gt; require 'my_gem'
+</span><span class='line'>=&gt; true
+</span><span class='line'>irb(main):002:0&gt; MyGem.hi
+</span><span class='line'>Hello world!
+</span><span class='line'>=&gt; nil</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Publishing your gem</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem push xxx.gem</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/03/using-rbenv-to-manage-ruby-versions/">Using Rbenv to Manage Ruby Versions Instead of Rvm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-03T19:48:48+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>remove rvm first</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm implode</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install rbenv</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd
+</span><span class='line'>git clone git://github.com/sstephenson/rbenv.git .rbenv
+</span><span class='line'>echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc
+</span><span class='line'>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bashrc
+</span><span class='line'>exec $SHELL
+</span><span class='line'>
+</span><span class='line'>git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+</span><span class='line'>echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' &gt;&gt; ~/.bashrc
+</span><span class='line'>exec $SHELL
+</span><span class='line'>
+</span><span class='line'>sudo apt-get -y install curl git-core python-software-properties build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev
+</span><span class='line'>
+</span><span class='line'>rbenv install 2.1.0
+</span><span class='line'>rbenv global 2.1.0
+</span><span class='line'>ruby -v
+</span><span class='line'>
+</span><span class='line'>echo "gem: --no-ri --no-rdoc" &gt; ~/.gemrc</span></code></pre></td></tr></table></div></figure>
+
+
+<p>go to a exist project</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rbenv local 2.1.0  # create the .ruby-version file
+</span><span class='line'>
+</span><span class='line'>gem sources --remove https://rubygems.org/
+</span><span class='line'>gem sources -a http://ruby.taobao.org/
+</span><span class='line'>
+</span><span class='line'>gem install bundler # if you do not have bundler installed before
+</span><span class='line'>
+</span><span class='line'>rbenv rehash #Run this command after you install a new version of Ruby, or install a gem that provides commands
+</span><span class='line'>
+</span><span class='line'>bundle</span></code></pre></td></tr></table></div></figure>
+
+
+<p>fixed You Have Already Activated X but Your Gemfile Requires Y</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec ***</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://gorails.com/setup/ubuntu/13.10
+</span><span class='line'>https://github.com/ianheggie/rbenv-binstubs</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/reset-unity/">Reset Unity</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:54:01+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>unity --replace
+</span><span class='line'>unity --reset 
+</span><span class='line'>dconf reset -f /org/compiz; sleep 2; unity</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/install-transmission-in-ubuntu-server/">Install Transmission in Ubuntu Server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:46:16+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install transmission-daemon
+</span><span class='line'>
+</span><span class='line'>sudo service transmission-daemon stop
+</span><span class='line'>
+</span><span class='line'># modify setting after stop the service
+</span><span class='line'>sudo nano /etc/transmission-daemon/settings.json
+</span><span class='line'>
+</span><span class='line'>sudo service transmission-daemon start
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server/">Install Ubuntu 13.04 X64 Server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:41:23+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
+
+
+<p>add a new user</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>adduser newuser</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo /usr/sbin/visudo</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># User privilege specification
+</span><span class='line'>root    ALL=(ALL:ALL) ALL
+</span><span class='line'>newuser    ALL=(ALL:ALL) ALL</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Press ‘cntrl x’ to exit the file and then ‘Y’ to save it.</p>
+
+<p>server install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git zip nginx</span></code></pre></td></tr></table></div></figure>
+
+
+<p>need to config</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>hostname need to config
+</span><span class='line'>ssh port 
+</span><span class='line'>ssh without password
+</span><span class='line'>transmission</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/install-ubuntu-13-dot-04-x64/">Install Ubuntu 13.04 X64</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:28:07+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>install some tools</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get purge ubuntuone-client unity-lens-shopping unity-webapps-common thunderbird gwibber indicator-messages
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>sudo apt-get install docky git xclip chromium-browser fcitx-googlepinyin ubuntu-restricted-extras stardict mypaint shutter curl openjdk-7-jdk  sshuttle preload indicator-multiload whois filezilla p7zip pidgin rar unrar
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>skype for Ubuntu 13.04</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+</span><span class='line'>sudo apt-get update 
+</span><span class='line'>sudo apt-get install skype</span></code></pre></td></tr></table></div></figure>
+
+
+<p>xbacklight</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install xbacklight
+</span><span class='line'>xbacklight -set 80
+</span><span class='line'>
+</span><span class='line'>http://askubuntu.com/questions/3841/desktop-doesnt-remember-brightness-settings-after-a-reboot</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install chinese lang in system setting</p>
+
+<p>echo &lsquo;source ~/code/bash/bash&rsquo;  >> ~/.bashrc</p>
+
+<h3>need to do some config</h3>
+
+<ul>
+<li>sublime</li>
+<li>firefox addon</li>
+</ul>
+
+
+<p>install smartgit from a deb file</p>
+
+<p>install google chrome</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+</span><span class='line'>sudo dpkg -i google-chrome*.deb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install word lib</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>wget -c http://hslinuxextra.googlecode.com/files/android.7z
+</span><span class='line'>sudo apt-get install p7zip-full
+</span><span class='line'>7z e android.7z
+</span><span class='line'>sudo mv /usr/share/ibus-pinyin/db/android.db /usr/share/ibus-pinyin/db/android.db.bak
+</span><span class='line'>sudo mv android.db /usr/share/ibus-pinyin/db/android.db</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/r-language/">R Language</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:26:51+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install r-base
+</span><span class='line'>
+</span><span class='line'>https://github.com/randy3k/Enhanced-R
+</span><span class='line'>
+</span><span class='line'>http://tomschenkjr.net/using-sublime-text-2-for-r/</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/send-sms-from-ubunut/">Send Sms From Ubunut</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:25:25+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:linuxonly/modem+manager+gui
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install modem-manager-gui
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>http://askubuntu.com/questions/325229/hspa-3g-modem-manager-for-backtrack-ubuntu?rq=1</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/padrino-command/">Padrino Command</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:22:01+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install padrino
+</span><span class='line'>
+</span><span class='line'>padrino g project my_project
+</span><span class='line'>
+</span><span class='line'>padrino s # padrino start
+</span><span class='line'>padrino c
+</span><span class='line'>
+</span><span class='line'>http://127.0.0.1:3000
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>padrino g controller Post get: index get: show
+</span><span class='line'>padrino g model Post title: string body: text
+</span><span class='line'>padrino g plugin better_error
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>padrino rake routes</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -74,9 +828,29 @@
 </div>
 <aside class="sidebar">
   
-    <section>
+    Included file &#8216;custom/asides/tag_cloud.html&#8217; not found in _includes directory<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/11/write-a-executable-gem/">Write a Executable Gem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/11/make-your-own-gem/">Make Your Own Gem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/03/using-rbenv-to-manage-ruby-versions/">Using Rbenv to Manage Ruby Versions Instead of Rvm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/reset-unity/">Reset Unity</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/install-transmission-in-ubuntu-server/">Install Transmission in Ubuntu Server</a>
+      </li>
     
   </ul>
 </section>
@@ -91,7 +865,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Your Name -
+  Copyright &copy; 2014 - Andy -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

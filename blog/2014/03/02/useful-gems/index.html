@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Useful Gems - Andy Lin</title>
+  <meta name="author" content="Andy">
+
+  
+  <meta name="description" content="great gems 1
+2
+3
+4
+5
+6
+gem 'devise'
+gem 'haml'
+gem 'rabl' # for building rest api
+gem "capistrano"
+gem 'capistrano-nginx-unicorn', require: false, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/03/02/useful-gems">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48929179-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Andy Lin</a></h1>
+  
+    <h2>a Rails and Javascript coder</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:andylinid45.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Useful Gems</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T18:27:35+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>great gems</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'devise'
+</span><span class='line'>gem 'haml'
+</span><span class='line'>gem 'rabl' # for building rest api
+</span><span class='line'>gem "capistrano"
+</span><span class='line'>gem 'capistrano-nginx-unicorn', require: false, group: :development
+</span><span class='line'>https://github.com/AF83/capistrano-af83</span></code></pre></td></tr></table></div></figure>
+
+
+<p>view</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem "rails_autolink"
+</span><span class='line'>gem 'rinku' # replacement for auto_link
+</span><span class='line'>gem 'best_in_place'
+</span><span class='line'>gem 'draper', '~&gt; 1.0' # Decorator for View Models for Rails
+</span><span class='line'>gem 'exception_notification_rails3'
+</span><span class='line'>gem 'jquery-rails'
+</span><span class='line'>gem 'jquery-ui-rails'
+</span><span class='line'>gem 'fancybox-rails'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>db</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails_admin', :git =&gt; 'git://github.com/sferik/rails_admin.git'
+</span><span class='line'>gem 'foreigner'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>debug</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'pry'
+</span><span class='line'>gem 'pry-nav'
+</span><span class='line'>gem 'pry-rails'
+</span><span class='line'>gem 'pry-stack_explorer'
+</span><span class='line'>gem "awesome_print"  # https://github.com/michaeldv/awesome_print</span></code></pre></td></tr></table></div></figure>
+
+
+<p>search</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'sunspot_rails' # full text search
+</span><span class='line'>gem 'sunspot_solr'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>server</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'unicorn'
+</span><span class='line'>gem 'thin'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>other framework</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'sinatra'
+</span><span class='line'>gem "padrino" # http://www.padrinorb.com/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>pdf</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'pdfkit'
+</span><span class='line'>gem 'wicked_pdf'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>tools</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'quiet_assets' 
+</span><span class='line'>gem 'annotate' 
+</span><span class='line'>gem "better_errors"
+</span><span class='line'>gem 'rails-dev-tweaks', '~&gt; 0.6.1' #improve your Rails (3.1+) development experience.
+</span><span class='line'>gem "rails-erd"  #Generate Entity-Relationship Diagrams for Rails applications
+</span><span class='line'>gem "settingslogic" # for setting global var
+</span><span class='line'>gem 'garb'
+</span><span class='line'>gem "nokogiri"
+</span><span class='line'>gem "backup"
+</span><span class='line'>gem "money"
+</span><span class='line'>gem 'money-rails'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>exception_notification</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/smartinez87/exception_notification</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Keeping Track of Who Did What</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/collectiveidea/audited
+</span><span class='line'>https://github.com/airblade/paper_trail</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Google analytics Api</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/chrisle/gattica
+</span><span class='line'>https://github.com/robmckinnon/rugalytics
+</span><span class='line'>https://www.ruby-toolbox.com/categories/Web_Analytics </span></code></pre></td></tr></table></div></figure>
+
+
+<p>word</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem "harmonious_dictionary"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>google map</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem "googlestaticmap"
+</span><span class='line'>gem 'gmaps4rails'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>js dependency management</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/rharriso/bower-rails/
+</span><span class='line'>https://github.com/bower/bower
+</span><span class='line'>https://github.com/sstephenson/sprockets
+</span><span class='line'>#http://dev.af83.com/2013/01/02/managing-rails-assets-with-bower.html
+</span><span class='line'>https://github.com/component/component</span></code></pre></td></tr></table></div></figure>
+
+
+<p>js</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>jaml              #http://edspencer.github.com/jaml  # jaml-beautiful-html-generation-for-javascript
+</span><span class='line'>jquery.pageless   #https://github.com/jney/jquery.pageless</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Andy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T18:27:35+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://andylinid45.github.io/blog/2014/03/02/useful-gems/" data-via="" data-counturl="http://andylinid45.github.io/blog/2014/03/02/useful-gems/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/03/02/using-capistrano-nginx-unicorn/" title="Previous Post: using capistrano-nginx-unicorn">&laquo; using capistrano-nginx-unicorn</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/03/02/switching-git-server/" title="Next Post: switching git server">switching git server &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    Included file 'custom/asides/tag_cloud.html' not found in _includes directory<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/11/write-a-executable-gem/">Write a Executable Gem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/11/make-your-own-gem/">Make Your Own Gem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/03/using-rbenv-to-manage-ruby-versions/">Using Rbenv to Manage Ruby Versions Instead of Rvm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/reset-unity/">Reset Unity</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/install-transmission-in-ubuntu-server/">Install Transmission in Ubuntu Server</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Andy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

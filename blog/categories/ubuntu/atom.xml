@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install Transmission in Ubuntu Server]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/install-transmission-in-ubuntu-server/"/>
+    <updated>2014-03-02T20:46:16+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/install-transmission-in-ubuntu-server</id>
+    <content type="html"><![CDATA[<p>```
+sudo apt-get install transmission-daemon</p>
+
+<p>sudo service transmission-daemon stop</p>
+
+<h1>modify setting after stop the service</h1>
+
+<p>sudo nano /etc/transmission-daemon/settings.json</p>
+
+<p>sudo service transmission-daemon start</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Ubuntu 13.04 X64 Server]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server/"/>
+    <updated>2014-03-02T20:41:23+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server</id>
+    <content type="html"><![CDATA[<p><code>
+sudo apt-get update
+sudo apt-get upgrade
+</code></p>
+
+<p>add a new user
+<code>
+adduser newuser
+</code></p>
+
+<p>sudo /usr/sbin/visudo
+```</p>
+
+<h1>User privilege specification</h1>
+
+<p>root    ALL=(ALL:ALL) ALL
+newuser    ALL=(ALL:ALL) ALL
+```
+Press ‘cntrl x’ to exit the file and then ‘Y’ to save it.</p>
+
+<p>server install
+<code>
+sudo apt-get install git zip nginx
+</code></p>
+
+<p>need to config
+<code>
+hostname need to config
+ssh port
+ssh without password
+transmission
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Ubuntu 13.04 X64]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64/"/>
+    <updated>2014-03-02T20:28:07+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64</id>
+    <content type="html"><![CDATA[<p>install some tools
+```
+sudo apt-get purge ubuntuone-client unity-lens-shopping unity-webapps-common thunderbird gwibber indicator-messages</p>
+
+<p>sudo apt-get install docky git xclip chromium-browser fcitx-googlepinyin ubuntu-restricted-extras stardict mypaint shutter curl openjdk-7-jdk  sshuttle preload indicator-multiload whois filezilla p7zip pidgin rar unrar</p>
+
+<p>```</p>
+
+<p>skype for Ubuntu 13.04
+<code>
+sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+sudo apt-get update
+sudo apt-get install skype
+</code></p>
+
+<p>xbacklight
+```
+sudo apt-get install xbacklight
+xbacklight -set 80</p>
+
+<p><a href="http://askubuntu.com/questions/3841/desktop-doesnt-remember-brightness-settings-after-a-reboot">http://askubuntu.com/questions/3841/desktop-doesnt-remember-brightness-settings-after-a-reboot</a>
+```</p>
+
+<p>install chinese lang in system setting</p>
+
+<p>echo &lsquo;source ~/code/bash/bash&rsquo;  >> ~/.bashrc</p>
+
+<h3>need to do some config</h3>
+
+<ul>
+<li>sublime</li>
+<li>firefox addon</li>
+</ul>
+
+
+<p>install smartgit from a deb file</p>
+
+<p>install google chrome
+<code>
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
+</code></p>
+
+<p>install word lib
+<code>
+wget -c http://hslinuxextra.googlecode.com/files/android.7z
+sudo apt-get install p7zip-full
+7z e android.7z
+sudo mv /usr/share/ibus-pinyin/db/android.db /usr/share/ibus-pinyin/db/android.db.bak
+sudo mv android.db /usr/share/ibus-pinyin/db/android.db
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using 'Backup' Gem to Backup Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/using-backup-gem-to-backup-ubuntu/"/>
+    <updated>2014-03-02T18:39:16+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/using-backup-gem-to-backup-ubuntu</id>
+    <content type="html"><![CDATA[<p>```
+gem install backup</p>
+
+<p>backup generate:model &mdash;trigger andy &mdash;storages=local &mdash;compressors=gzip &mdash;archives &mdash;no-splitter
+```</p>
+
+<p>run
+<code>
+backup perform --trigger andy --root-path "~/.backups/" --config_file '/home/andy/code/bash/backup/config.rb'
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Turn Off Ubuntu Swap]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/turn-off-ubuntu-swap/"/>
+    <updated>2014-03-02T18:12:33+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/turn-off-ubuntu-swap</id>
+    <content type="html"><![CDATA[<p>sudo gedit /etc/sysctl.conf
+change or add this line
+<code>
+vm.swappiness=0
+</code></p>
+
+<p>Reboot for the change to take effect</p>
+
+<p><a href="http://askubuntu.com/questions/103242/is-it-safe-to-turn-swap-off-permanently">http://askubuntu.com/questions/103242/is-it-safe-to-turn-swap-off-permanently</a></p>
+]]></content>
+  </entry>
+  
+</feed>

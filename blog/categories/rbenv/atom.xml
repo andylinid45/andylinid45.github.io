@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rbenv | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/rbenv/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Rbenv to Manage Ruby Versions Instead of Rvm]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/03/using-rbenv-to-manage-ruby-versions/"/>
+    <updated>2014-03-03T19:48:48+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/03/using-rbenv-to-manage-ruby-versions</id>
+    <content type="html"><![CDATA[<p>remove rvm first
+<code>
+rvm implode
+</code></p>
+
+<p>install rbenv
+```
+cd
+git clone git://github.com/sstephenson/rbenv.git .rbenv
+echo &lsquo;export PATH=&ldquo;$HOME/.rbenv/bin:$PATH&rdquo;&rsquo; >> ~/.bashrc
+echo &lsquo;eval &ldquo;$(rbenv init &ndash;)&rdquo;&rsquo; >> ~/.bashrc
+exec $SHELL</p>
+
+<p>git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo &lsquo;export PATH=&ldquo;$HOME/.rbenv/plugins/ruby-build/bin:$PATH&rdquo;&rsquo; >> ~/.bashrc
+exec $SHELL</p>
+
+<p>sudo apt-get -y install curl git-core python-software-properties build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev</p>
+
+<p>rbenv install 2.1.0
+rbenv global 2.1.0
+ruby -v</p>
+
+<p>echo &ldquo;gem: &mdash;no-ri &mdash;no-rdoc&rdquo; > ~/.gemrc
+```</p>
+
+<p>go to a exist project
+```
+rbenv local 2.1.0  # create the .ruby-version file</p>
+
+<p>gem sources &mdash;remove <a href="https://rubygems.org/">https://rubygems.org/</a>
+gem sources -a <a href="http://ruby.taobao.org/">http://ruby.taobao.org/</a></p>
+
+<p>gem install bundler # if you do not have bundler installed before</p>
+
+<p>rbenv rehash #Run this command after you install a new version of Ruby, or install a gem that provides commands</p>
+
+<p>bundle
+```</p>
+
+<p>fixed You Have Already Activated X but Your Gemfile Requires Y
+<code>
+bundle exec ***
+</code></p>
+
+<p><code>
+http://gorails.com/setup/ubuntu/13.10
+https://github.com/ianheggie/rbenv-binstubs
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

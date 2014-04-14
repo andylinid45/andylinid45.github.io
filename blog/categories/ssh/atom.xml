@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ssh | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/ssh/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-14T23:10:22+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Modify Ssh Port]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/modify-ssh-port/"/>
+    <updated>2014-03-02T16:01:21+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/modify-ssh-port</id>
+    <content type="html"><![CDATA[<p>```
+sudo nano /etc/ssh/sshd_config</p>
+
+<h1>modify the port</h1>
+
+<p>service ssh restart
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ssh Without Password]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/01/ssh-without-password/"/>
+    <updated>2014-03-01T21:10:02+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/01/ssh-without-password</id>
+    <content type="html"><![CDATA[<p><code>
+ssh-copy-id user@host
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
