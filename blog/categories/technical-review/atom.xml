@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-16T15:57:59+08:00</updated>
+  <updated>2014-04-17T02:07:05+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -20,8 +20,9 @@
     <id>http://andylinid45.github.io/blog/2014/04/16/rbenv-vs-rvm</id>
     <content type="html"><![CDATA[<p>rbenv win.</p>
 
-<p>because no gemsets in rbenv. rbenv make things simple.
-rvm is over-design.</p>
+<p>because no gemsets in rbenv. rbenv make things simple.</p>
+
+<p>rvm is over-design.</p>
 ]]></content>
   </entry>
   
