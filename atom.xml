@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-14T23:24:05+08:00</updated>
+  <updated>2014-04-16T15:57:59+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rbenv vs Rvm]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/04/16/rbenv-vs-rvm/"/>
+    <updated>2014-04-16T15:51:14+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/04/16/rbenv-vs-rvm</id>
+    <content type="html"><![CDATA[<p>rbenv win.</p>
+
+<p>because no gemsets in rbenv. rbenv make things simple.
+rvm is over-design.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Reinstall Octopress]]></title>
@@ -900,40 +912,6 @@
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>jaml              #http://edspencer.github.com/jaml  # jaml-beautiful-html-generation-for-javascript
 </span><span class='line'>jquery.pageless   #https://github.com/jney/jquery.pageless</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Capistrano-nginx-unicorn]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/using-capistrano-nginx-unicorn/"/>
-    <updated>2014-03-02T18:23:47+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/using-capistrano-nginx-unicorn</id>
-    <content type="html"><![CDATA[<p>add gem</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'capistrano-nginx-unicorn', require: false, group: :development</span></code></pre></td></tr></table></div></figure>
-
-
-<p>add this line in the END of deploy.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>require 'capistrano-nginx-unicorn'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>add this to deploy.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>set :nginx_server_name, ""
-</span><span class='line'>set :unicorn_workers, 5</span></code></pre></td></tr></table></div></figure>
-
-
-<p>if &ldquo; eval: bundle: not found&rdquo;, when running &ldquo;cap deploy:start&rdquo;
-login your server and</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd /var/www/your_app/current; bundle exec unicorn -D -c /var/www/your_app/shared/config/unicorn.rb -E production</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

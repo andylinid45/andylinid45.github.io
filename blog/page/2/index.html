@@ -15,18 +15,9 @@
 4
 5
 6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-gem install padrino padrino g project my_project padrino s # padrino start
-padrino c http://127.0.0.1:3000 &hellip;">
+sudo add-apt-repository ppa:linuxonly/modem+manager+gui
+sudo apt-get update
+sudo apt-get install modem-manager-gui http://askubuntu.com/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +85,54 @@ padrino c http://127.0.0.1:3000 &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/send-sms-from-ubunut/">Send Sms From Ubunut</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:25:25+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:linuxonly/modem+manager+gui
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install modem-manager-gui
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>http://askubuntu.com/questions/325229/hspa-3g-modem-manager-for-backtrack-ubuntu?rq=1</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -773,67 +812,6 @@ padrino c http://127.0.0.1:3000 &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/using-capistrano-nginx-unicorn/">Using Capistrano-nginx-unicorn</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:23:47+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>add gem</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'capistrano-nginx-unicorn', require: false, group: :development</span></code></pre></td></tr></table></div></figure>
-
-
-<p>add this line in the END of deploy.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>require 'capistrano-nginx-unicorn'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>add this to deploy.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>set :nginx_server_name, ""
-</span><span class='line'>set :unicorn_workers, 5</span></code></pre></td></tr></table></div></figure>
-
-
-<p>if &ldquo; eval: bundle: not found&rdquo;, when running &ldquo;cap deploy:start&rdquo;
-login your server and</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd /var/www/your_app/current; bundle exec unicorn -D -c /var/www/your_app/shared/config/unicorn.rb -E production</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -848,11 +826,15 @@ login your server and</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 108.57142857142857%'>technical-review(1)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/16/rbenv-vs-rvm/">Rbenv vs Rvm</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/14/reinstall-octopress/">Reinstall Octopress</a>
@@ -868,10 +850,6 @@ login your server and</p>
     
       <li class="post">
         <a href="/blog/2014/03/03/using-rbenv-to-manage-ruby-versions/">Using Rbenv to Manage Ruby Versions Instead of Rvm</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/02/reset-unity/">Reset Unity</a>
       </li>
     
   </ul>
