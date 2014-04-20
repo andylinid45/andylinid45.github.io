@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-21T00:15:32+08:00</updated>
+  <updated>2014-04-21T00:31:51+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -47,7 +47,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Fixed Failed to Fetch From Registry: Bower]]></title>
+    <title type="html"><![CDATA[Fixed Failed to Fetch From Registry: Bower, in Ubuntu 13]]></title>
     <link href="http://andylinid45.github.io/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/"/>
     <updated>2014-04-20T16:19:57+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower</id>
