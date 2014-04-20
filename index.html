@@ -9,15 +9,7 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
-2
-3
-4
-5
-6
-cd project_root
-echo '{ "directory": "vendor/assets/components" }' &gt; .bowerrc
-bower init #just use the default setting is ok bower &hellip;">
+  <meta name="description" content="There are many ways to manage assets in rails. let us compare these two ways. 1)use rails assets gem. https://rails-assets.org/ Rails Assets is the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +79,73 @@ bower init #just use the default setting is ok bower &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/21/rails-assets-gem-vs-using-bower/">Rails Assets Gem vs Bower</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-21T01:26:18+08:00" pubdate data-updated="true">Apr 21<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There are many ways to manage assets in rails.</p>
+
+<h2>let us compare these two ways.</h2>
+
+<h3>1)use rails assets gem. <a href="https://rails-assets.org/">https://rails-assets.org/</a></h3>
+
+<p>Rails Assets is the frictionless proxy between Bundler and Bower.</p>
+
+<p>it need to add a gem source to your gem file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>source 'https://rails-assets.org'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and add assets like this to gem file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails-assets-BOWER_PACKAGE_NAME'</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>2)use bower directly</h3>
+
+<h3>use bower directly win!</h3>
+
+<p>I think rails-assets adds an unnecessary layer.
+I want to make things simple.</p>
+
+<p>PS: there is a gem called &lsquo;bower-rails&rsquo;, helping you use bower.</p>
+
+<p>It provides a DSL configuration in Bowerfile at the project&rsquo;s root similar to Bundler.</p>
+
+<p>But I think this gem also add an unnecessary layer. so DON&rsquo;T use this gem! It just wastes your time!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -292,12 +351,16 @@ bower init #just use the default setting is ok bower &hellip;">
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>_posts
 </span><span class='line'>robots.txt
 </span><span class='line'>CNAME
 </span><span class='line'>
 </span><span class='line'>octopress/source/_includes/custom/asides/tag_cloud.html
-</span><span class='line'>octopress/plugins/tag_cloud.rb</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>octopress/plugins/tag_cloud.rb
+</span><span class='line'>
+</span><span class='line'>octopress/source/_includes/custom/navigation.html</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -685,84 +748,6 @@ bower init #just use the default setting is ok bower &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server/">Install Ubuntu 13.04 X64 Server</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T20:41:23+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
-
-
-<p>add a new user</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>adduser newuser</span></code></pre></td></tr></table></div></figure>
-
-
-<p>sudo /usr/sbin/visudo</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># User privilege specification
-</span><span class='line'>root    ALL=(ALL:ALL) ALL
-</span><span class='line'>newuser    ALL=(ALL:ALL) ALL</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Press ‘cntrl x’ to exit the file and then ‘Y’ to save it.</p>
-
-<p>server install</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git zip nginx</span></code></pre></td></tr></table></div></figure>
-
-
-<p>need to config</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hostname need to config
-</span><span class='line'>ssh port 
-</span><span class='line'>ssh without password
-</span><span class='line'>transmission</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -775,11 +760,15 @@ bower init #just use the default setting is ok bower &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 108.57142857142857%'>technical-review(1)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 117.14285714285714%'>technical-review(2)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/21/rails-assets-gem-vs-using-bower/">Rails Assets Gem vs Bower</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/21/using-bower-to-manage-rails-assets/">Using Bower to Manage Rails Assets</a>
@@ -795,10 +784,6 @@ bower init #just use the default setting is ok bower &hellip;">
     
       <li class="post">
         <a href="/blog/2014/04/14/reinstall-octopress/">Reinstall Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/11/write-a-executable-gem/">Write a Executable Gem</a>
       </li>
     
   </ul>

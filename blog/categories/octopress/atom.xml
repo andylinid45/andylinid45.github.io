@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-21T00:31:51+08:00</updated>
+  <updated>2014-04-21T01:48:55+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -36,7 +36,9 @@ robots.txt
 CNAME</p>
 
 <p>octopress/source/_includes/custom/asides/tag_cloud.html
-octopress/plugins/tag_cloud.rb
+octopress/plugins/tag_cloud.rb</p>
+
+<p>octopress/source/_includes/custom/navigation.html
 ```</p>
 ]]></content>
   </entry>
