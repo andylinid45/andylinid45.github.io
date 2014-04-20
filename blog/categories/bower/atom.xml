@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Bower | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/bower/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-04-20T16:24:43+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fixed Failed to Fetch From Registry: Bower]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/"/>
+    <updated>2014-04-20T16:19:57+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower</id>
+    <content type="html"><![CDATA[<p>```
+sudo apt-get purge nodejs npm</p>
+
+<p>sudo apt-get update
+sudo apt-get install -y python-software-properties python g++ make
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get install nodejs
+sudo npm install -g bower
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
