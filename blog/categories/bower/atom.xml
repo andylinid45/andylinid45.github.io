@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bower | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/bower/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-20T16:24:43+08:00</updated>
+  <updated>2014-04-21T00:15:32+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using Bower to Manage Rails Assets]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/04/21/using-bower-to-manage-rails-assets/"/>
+    <updated>2014-04-21T00:02:56+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/04/21/using-bower-to-manage-rails-assets</id>
+    <content type="html"><![CDATA[<p>```
+cd project_root
+echo &lsquo;{ &ldquo;directory&rdquo;: &ldquo;vendor/assets/components&rdquo; }&rsquo; > .bowerrc
+bower init #just use the default setting is ok</p>
+
+<p>bower install angular
+bower install sass-bootstrap
+```</p>
+
+<p>in app/assets/javascripts/application.js add:
+<code>
+//= require angular/angular
+</code></p>
+
+<p>in app/assets/stylesheets/application.css add:
+<code>
+*= require sass-bootstrap/lib/bootstrap
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Fixed Failed to Fetch From Registry: Bower]]></title>

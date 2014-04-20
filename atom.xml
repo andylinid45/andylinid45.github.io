@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-20T16:24:43+08:00</updated>
+  <updated>2014-04-21T00:15:32+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using Bower to Manage Rails Assets]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/04/21/using-bower-to-manage-rails-assets/"/>
+    <updated>2014-04-21T00:02:56+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/04/21/using-bower-to-manage-rails-assets</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd project_root
+</span><span class='line'>echo '{ "directory": "vendor/assets/components" }' &gt; .bowerrc
+</span><span class='line'>bower init #just use the default setting is ok
+</span><span class='line'>
+</span><span class='line'>bower install angular
+</span><span class='line'>bower install sass-bootstrap</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in app/assets/javascripts/application.js add:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//= require angular/angular</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in app/assets/stylesheets/application.css add:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*= require sass-bootstrap/lib/bootstrap</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Fixed Failed to Fetch From Registry: Bower]]></title>
@@ -722,37 +755,6 @@
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>self.inheritance_column = :_type_disabled</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Switching Git Server]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/switching-git-server/"/>
-    <updated>2014-03-02T18:34:29+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/switching-git-server</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git remote -v
-</span><span class='line'>
-</span><span class='line'>git branch
-</span><span class='line'>
-</span><span class='line'>git remote add bitbucket git@bitbucket.org:&lt;&lt;username&gt;&gt;/&lt;&lt;repo&gt;&gt;
-</span><span class='line'>
-</span><span class='line'>git remote rm origin
-</span><span class='line'>
-</span><span class='line'>git remote rename bitbucket origin
-</span><span class='line'>
-</span><span class='line'>git push -u origin --all</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
