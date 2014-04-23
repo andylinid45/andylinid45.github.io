@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Angularjs | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/angularjs/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-23T18:01:14+08:00</updated>
+  <updated>2014-04-23T18:03:52+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -37,10 +37,10 @@ Todos.EditTodoView = Ember.TextField.extend({  &hellip;</p>
 
 <p>If you use DI, then you code is plain old javascritp object. and easy to test.</p>
 
-<p>Because of these two main reasons, Angularjs can help you minimize your code.
-Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site helping you select a javascript framework.
-&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone</a>
-&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs</a>
+<p>Because of these two main reasons, Angularjs can help you minimize your code. <br/>
+Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site helping you select a javascript framework. <br/>
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone  ">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone  </a>
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs  ">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs  </a>
 &ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs</a></p>
 
 <p>We can see how many line of code need these three javascript framework to make a same app.</p>
