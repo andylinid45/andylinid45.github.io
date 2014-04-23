@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
-  <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Angularjs | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/angularjs/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
   <updated>2014-04-23T18:01:14+08:00</updated>
   <id>http://andylinid45.github.io/</id>
@@ -46,57 +46,6 @@ Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site help
 <p>We can see how many line of code need these three javascript framework to make a same app.</p>
 
 <p>so, Angularjs win!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails Assets Gem vs Bower]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/21/rails-assets-gem-vs-using-bower/"/>
-    <updated>2014-04-21T01:26:18+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/21/rails-assets-gem-vs-using-bower</id>
-    <content type="html"><![CDATA[<p>There are many ways to manage assets in rails.</p>
-
-<h2>let us compare these two ways.</h2>
-
-<h3>1)use rails assets gem. <a href="https://rails-assets.org/">https://rails-assets.org/</a></h3>
-
-<p>Rails Assets is the frictionless proxy between Bundler and Bower.</p>
-
-<p>it need to add a gem source to your gem file
-<code>
-source 'https://rails-assets.org'
-</code></p>
-
-<p>and add assets like this to gem file
-<code>
-gem 'rails-assets-BOWER_PACKAGE_NAME'
-</code></p>
-
-<h3>2)use bower directly</h3>
-
-<h3>use bower directly win!</h3>
-
-<p>I think rails-assets adds an unnecessary layer.
-I want to make things simple.</p>
-
-<p>PS: there is a gem called &lsquo;bower-rails&rsquo;, helping you use bower.</p>
-
-<p>It provides a DSL configuration in Bowerfile at the project&rsquo;s root similar to Bundler.</p>
-
-<p>But I think this gem also add an unnecessary layer. so DON&rsquo;T use this gem! It just wastes your time!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rbenv vs Rvm]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/16/rbenv-vs-rvm/"/>
-    <updated>2014-04-16T15:51:14+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/16/rbenv-vs-rvm</id>
-    <content type="html"><![CDATA[<p>rbenv win.</p>
-
-<p>because no gemsets in rbenv. rbenv make things simple.</p>
-
-<p>rvm is over-design.</p>
 ]]></content>
   </entry>
   

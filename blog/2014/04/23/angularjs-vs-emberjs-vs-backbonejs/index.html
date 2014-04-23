@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Turn Off Ubuntu Swap - Andy Lin</title>
+  <title>Angularjs vs Emberjs vs Backbonejs - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="sudo gedit /etc/sysctl.conf
-change or add this line 1
-vm.swappiness=0 Reboot for the change to take effect http://askubuntu.com/questions/103242/is- &hellip;">
+  <meta name="description" content="Many blog post compare these three javascript libraries. But I dont think they get the point. 1) Two way data binding Backbonejs does not support two &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ vm.swappiness=0 Reboot for the change to take effect http://askubuntu.com/questi
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/03/02/turn-off-ubuntu-swap">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -84,7 +82,7 @@ vm.swappiness=0 Reboot for the change to take effect http://askubuntu.com/questi
   
   <header>
     
-      <h1 class="entry-title">Turn Off Ubuntu Swap</h1>
+      <h1 class="entry-title">Angularjs vs Emberjs vs Backbonejs</h1>
     
     
       <p class="meta">
@@ -100,23 +98,44 @@ vm.swappiness=0 Reboot for the change to take effect http://askubuntu.com/questi
   
 
 
-<time datetime="2014-03-02T18:12:33+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-04-23T17:12:15+08:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>sudo gedit /etc/sysctl.conf
-change or add this line</p>
+<div class="entry-content"><p>Many blog post compare these three javascript libraries. But I dont think they get the point.</p>
+
+<h3>1) Two way data binding</h3>
+
+<p>Backbonejs does not support two way data bingding native. (You can use a plugin like backbone.stickit <a href="http://nytimes.github.io/backbone.stickit/">http://nytimes.github.io/backbone.stickit/</a>)</p>
+
+<p>Why two way data binding is so important? Because it help you auto update the view in most cases. It helps you minimize your code.</p>
+
+<h3>2) Dependency injection using directive</h3>
+
+<p>Emberjs does not support DI(Dependency injection), so you need to write more code such as</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>vm.swappiness=0</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Todos.EditTodoView = Ember.TextField.extend({  ...
+</span><span class='line'>
+</span><span class='line'>Todos.TodoController = Ember.ObjectController.extend({ ...</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Reboot for the change to take effect</p>
+<p>If you use DI, then you code is plain old javascritp object. and easy to test.</p>
 
-<p><a href="http://askubuntu.com/questions/103242/is-it-safe-to-turn-swap-off-permanently">http://askubuntu.com/questions/103242/is-it-safe-to-turn-swap-off-permanently</a></p>
+<p>Because of these two main reasons, Angularjs can help you minimize your code.
+Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site helping you select a javascript framework.
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone</a>
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs</a>
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs</a></p>
+
+<p>We can see how many line of code need these three javascript framework to make a same app.</p>
+
+<p>so, Angularjs win!</p>
 </div>
 
 
@@ -139,12 +158,12 @@ change or add this line</p>
   
 
 
-<time datetime="2014-03-02T18:12:33+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-04-23T17:12:15+08:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+    <a class='category' href='/blog/categories/angularjs/'>Angularjs</a>, <a class='category' href='/blog/categories/technical-review/'>technical-review</a>
   
 </span>
 
@@ -153,7 +172,7 @@ change or add this line</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://andylinid45.github.io/blog/2014/03/02/turn-off-ubuntu-swap/" data-via="" data-counturl="http://andylinid45.github.io/blog/2014/03/02/turn-off-ubuntu-swap/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://andylinid45.github.io/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/" data-via="" data-counturl="http://andylinid45.github.io/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/" >Tweet</a>
   
   
   
@@ -162,10 +181,8 @@ change or add this line</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/03/02/spinejs-and-rails/" title="Previous Post: spinejs and rails">&laquo; spinejs and rails</a>
+        <a class="basic-alignment left" href="/blog/2014/04/21/rails-assets-gem-vs-using-bower/" title="Previous Post: rails assets gem vs bower">&laquo; rails assets gem vs bower</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/03/02/add-global-git-ignore/" title="Next Post: add global git ignore">add global git ignore &raquo;</a>
       
     </p>
   </footer>

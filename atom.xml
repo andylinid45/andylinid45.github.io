@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-21T01:48:55+08:00</updated>
+  <updated>2014-04-23T18:01:14+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Angularjs vs Emberjs vs Backbonejs]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/"/>
+    <updated>2014-04-23T17:12:15+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs</id>
+    <content type="html"><![CDATA[<p>Many blog post compare these three javascript libraries. But I dont think they get the point.</p>
+
+<h3>1) Two way data binding</h3>
+
+<p>Backbonejs does not support two way data bingding native. (You can use a plugin like backbone.stickit <a href="http://nytimes.github.io/backbone.stickit/">http://nytimes.github.io/backbone.stickit/</a>)</p>
+
+<p>Why two way data binding is so important? Because it help you auto update the view in most cases. It helps you minimize your code.</p>
+
+<h3>2) Dependency injection using directive</h3>
+
+<p>Emberjs does not support DI(Dependency injection), so you need to write more code such as</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Todos.EditTodoView = Ember.TextField.extend({  ...
+</span><span class='line'>
+</span><span class='line'>Todos.TodoController = Ember.ObjectController.extend({ ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you use DI, then you code is plain old javascritp object. and easy to test.</p>
+
+<p>Because of these two main reasons, Angularjs can help you minimize your code.
+Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site helping you select a javascript framework.
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone</a>
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs</a>
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs</a></p>
+
+<p>We can see how many line of code need these three javascript framework to make a same app.</p>
+
+<p>so, Angularjs win!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rails Assets Gem vs Bower]]></title>
@@ -775,17 +814,6 @@ I want to make things simple.</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>backup perform --trigger andy --root-path "~/.backups/" --config_file '/home/andy/code/bash/backup/config.rb'</span></code></pre></td></tr></table></div></figure>
 
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fixed Heroku Rails4 Assets Not Found]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/fixed-heroku-rails4-assets-not-found/"/>
-    <updated>2014-03-02T18:37:25+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/fixed-heroku-rails4-assets-not-found</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails_12factor', group: :production</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

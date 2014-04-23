@@ -9,11 +9,21 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="when 1
+  <meta name="description" content="1
 2
-gem install linecache19 --backtrace
-Building native extensions. This could take a while... and can not go farther try: 1
-gem install ruby- &hellip;">
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+sudo /etc/init.d/mysql stop
+sudo mysqld_safe --user=mysql --skip-grant-tables --skip-networking &
+mysql -u root mysql &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +93,67 @@ gem install ruby- &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/reset-mysql-root-password/">Reset Mysql Root Password</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:36:36+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/mysql stop
+</span><span class='line'>sudo mysqld_safe --user=mysql --skip-grant-tables --skip-networking &
+</span><span class='line'>mysql -u root mysql
+</span><span class='line'>
+</span><span class='line'>mysql&gt; UPDATE mysql.user SET Password=PASSWORD('YOUR-NEW-MYSQL-PASSWORD') WHERE User='root';
+</span><span class='line'>mysql&gt; FLUSH PRIVILEGES;
+</span><span class='line'>mysql&gt; quit
+</span><span class='line'>
+</span><span class='line'>sudo /etc/init.d/mysql restart
+</span><span class='line'>
+</span><span class='line'>mysql -u root -p
+</span><span class='line'>Enter password:
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -576,11 +647,15 @@ gem install ruby- &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 117.14285714285714%'>technical-review(2)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 108.57142857142857%'>Angularjs(1)</a> <a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 125.71428571428572%'>technical-review(3)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/">Angularjs vs Emberjs vs Backbonejs</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/21/rails-assets-gem-vs-using-bower/">Rails Assets Gem vs Bower</a>
@@ -596,10 +671,6 @@ gem install ruby- &hellip;">
     
       <li class="post">
         <a href="/blog/2014/04/16/rbenv-vs-rvm/">Rbenv vs Rvm</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/14/reinstall-octopress/">Reinstall Octopress</a>
       </li>
     
   </ul>

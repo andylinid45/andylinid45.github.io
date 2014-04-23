@@ -9,7 +9,7 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="There are many ways to manage assets in rails. let us compare these two ways. 1)use rails assets gem. https://rails-assets.org/ Rails Assets is the &hellip;">
+  <meta name="description" content="Many blog post compare these three javascript libraries. But I dont think they get the point. 1) Two way data binding Backbonejs does not support two &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,72 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/">Angularjs vs Emberjs vs Backbonejs</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-23T17:12:15+08:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Many blog post compare these three javascript libraries. But I dont think they get the point.</p>
+
+<h3>1) Two way data binding</h3>
+
+<p>Backbonejs does not support two way data bingding native. (You can use a plugin like backbone.stickit <a href="http://nytimes.github.io/backbone.stickit/">http://nytimes.github.io/backbone.stickit/</a>)</p>
+
+<p>Why two way data binding is so important? Because it help you auto update the view in most cases. It helps you minimize your code.</p>
+
+<h3>2) Dependency injection using directive</h3>
+
+<p>Emberjs does not support DI(Dependency injection), so you need to write more code such as</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Todos.EditTodoView = Ember.TextField.extend({  ...
+</span><span class='line'>
+</span><span class='line'>Todos.TodoController = Ember.ObjectController.extend({ ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you use DI, then you code is plain old javascritp object. and easy to test.</p>
+
+<p>Because of these two main reasons, Angularjs can help you minimize your code.
+Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site helping you select a javascript framework.
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone</a>
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs</a>
+&ndash; <a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs</a></p>
+
+<p>We can see how many line of code need these three javascript framework to make a same app.</p>
+
+<p>so, Angularjs win!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -695,59 +761,6 @@ I want to make things simple.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/install-transmission-in-ubuntu-server/">Install Transmission in Ubuntu Server</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T20:46:16+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install transmission-daemon
-</span><span class='line'>
-</span><span class='line'>sudo service transmission-daemon stop
-</span><span class='line'>
-</span><span class='line'># modify setting after stop the service
-</span><span class='line'>sudo nano /etc/transmission-daemon/settings.json
-</span><span class='line'>
-</span><span class='line'>sudo service transmission-daemon start
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -760,11 +773,15 @@ I want to make things simple.</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 117.14285714285714%'>technical-review(2)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 108.57142857142857%'>Angularjs(1)</a> <a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 125.71428571428572%'>technical-review(3)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/">Angularjs vs Emberjs vs Backbonejs</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/21/rails-assets-gem-vs-using-bower/">Rails Assets Gem vs Bower</a>
@@ -780,10 +797,6 @@ I want to make things simple.</p>
     
       <li class="post">
         <a href="/blog/2014/04/16/rbenv-vs-rvm/">Rbenv vs Rvm</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/14/reinstall-octopress/">Reinstall Octopress</a>
       </li>
     
   </ul>
