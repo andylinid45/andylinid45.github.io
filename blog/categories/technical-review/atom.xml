@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-23T18:08:12+08:00</updated>
+  <updated>2014-04-26T23:40:57+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why Haml Sucks]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/04/26/why-haml-sucks/"/>
+    <updated>2014-04-26T23:16:54+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/04/26/why-haml-sucks</id>
+    <content type="html"><![CDATA[<p><blockquote><p>Beautiful, DRY, well-indented, clear markup</p><footer><strong>haml <a href="http://haml.info/">http://haml.info/</a></strong></footer></blockquote></p>
+
+<p>You can see how haml selling himself to you at his website.</p>
+
+<p>But after using haml for sometime. I feel it suck.</p>
+
+<p>There many blog post telling you how suck haml does.</p>
+
+<p>But here, I want to get the point. It just because this technique is totally unnecessary.</p>
+
+<p>Building a web app is like playing lego toy bricks. No need to pick up all bricks in the worlk to make a great web app.</p>
+
+<p>Haml is just anohter beauty lie in the technical world.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Angularjs vs Emberjs vs Backbonejs]]></title>
