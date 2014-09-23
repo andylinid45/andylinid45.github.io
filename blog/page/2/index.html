@@ -9,15 +9,8 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="create the gem 1
-bundle gem my_gem edit my_gem.rb 1
-2
-3
-4
-5
-module MyGem def self.hi puts "Hello world!" end
-end build 1
-gem build my_gem.gemspec &hellip;">
+  <meta name="description" content="rbenv win. because no gemsets in rbenv. rbenv make things simple. rvm is over-design.
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +80,198 @@ gem build my_gem.gemspec &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/16/rbenv-vs-rvm/">Rbenv vs Rvm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-16T15:51:14+08:00" pubdate data-updated="true">Apr 16<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>rbenv win.</p>
+
+<p>because no gemsets in rbenv. rbenv make things simple.</p>
+
+<p>rvm is over-design.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/14/reinstall-octopress/">Reinstall Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-14T23:22:20+08:00" pubdate data-updated="true">Apr 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress
+</span><span class='line'>bundle exec rake install
+</span><span class='line'>
+</span><span class='line'>bundle exec rake setup_github_pages
+</span><span class='line'>
+</span><span class='line'>bundle exec rake generate
+</span><span class='line'>bundle exec rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>files need to backup</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>_posts
+</span><span class='line'>robots.txt
+</span><span class='line'>CNAME
+</span><span class='line'>
+</span><span class='line'>octopress/source/_includes/custom/asides/tag_cloud.html
+</span><span class='line'>octopress/plugins/tag_cloud.rb
+</span><span class='line'>
+</span><span class='line'>octopress/source/_includes/custom/navigation.html</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/11/write-a-executable-gem/">Write a Executable Gem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-11T15:05:49+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd my_gem
+</span><span class='line'>mkdir bin
+</span><span class='line'>touch bin/my_gem
+</span><span class='line'>chmod +x bin/my_gem</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit my_gem</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/env ruby
+</span><span class='line'>
+</span><span class='line'>require 'my_gem'
+</span><span class='line'>
+</span><span class='line'>MyGem.hi</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit my_gem.gemspec</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>spec.executables = ["my_gem"]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or commit change to git, so you need not change the gemspec file</p>
+
+<p>build and install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem build my_gem.gemspec
+</span><span class='line'>gem install --local ./my_gem-0.0.1.gem</span></code></pre></td></tr></table></div></figure>
+
+
+<p>restart terminal and run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>my_gem</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -618,200 +803,6 @@ gem build my_gem.gemspec &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/send-sms-from-ubunut/">Send Sms From Ubunut</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T20:25:25+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:linuxonly/modem+manager+gui
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get install modem-manager-gui
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>http://askubuntu.com/questions/325229/hspa-3g-modem-manager-for-backtrack-ubuntu?rq=1</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/padrino-command/">Padrino Command</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T20:22:01+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install padrino
-</span><span class='line'>
-</span><span class='line'>padrino g project my_project
-</span><span class='line'>
-</span><span class='line'>padrino s # padrino start
-</span><span class='line'>padrino c
-</span><span class='line'>
-</span><span class='line'>http://127.0.0.1:3000
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>padrino g controller Post get: index get: show
-</span><span class='line'>padrino g model Post title: string body: text
-</span><span class='line'>padrino g plugin better_error
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>padrino rake routes</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/rails-command/">Rails Command</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T20:17:46+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:drop RAILS_ENV=development
-</span><span class='line'>rake db:drop RAILS_ENV=production
-</span><span class='line'>rake db:drop 
-</span><span class='line'>rake db:create 
-</span><span class='line'>rake db:migrate 
-</span><span class='line'>rake db:seed
-</span><span class='line'>rake db:reset  #db:setup =&gt; db:create db:schema:load db:seed
-</span><span class='line'>rake db:test:load
-</span><span class='line'>rake db:test:prepare
-</span><span class='line'>rake routes
-</span><span class='line'>
-</span><span class='line'>integer
-</span><span class='line'>string
-</span><span class='line'>datetime
-</span><span class='line'>text
-</span><span class='line'>
-</span><span class='line'>rails generate scaffold user email:string name:string password:string
-</span><span class='line'>rails generate controller user info
-</span><span class='line'>rails generate model Site address:string  url:string
-</span><span class='line'>rails generate migration AddAvailable available:boolean</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -826,11 +817,23 @@ gem build my_gem.gemspec &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 108.57142857142857%'>Angularjs(1)</a> <a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 160.0%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 125.71428571428572%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 134.28571428571428%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 108.57142857142857%'>Angularjs(1)</a> <a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 108.57142857142857%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 160.0%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 125.71428571428572%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 117.14285714285714%'>osx(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 134.28571428571428%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 151.42857142857144%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(7)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/23/using-brew-in-osx/">Using Brew in Osx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/23/sudo-without-password/">Sudo Without Password in Osx and Ubuntu</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/23/using-homebrew-with-multiple-users/">Using Homebrew With Multiple Users</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/05/02/git-marge-master-to-a-branch/">Git Marge Master to a Branch</a>
@@ -838,18 +841,6 @@ gem build my_gem.gemspec &hellip;">
     
       <li class="post">
         <a href="/blog/2014/05/02/mysql-backup-and-restore/">Mysql Backup and Restore</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/26/why-haml-sucks/">Why Haml Sucks</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/">Angularjs vs Emberjs vs Backbonejs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/21/rails-assets-gem-vs-using-bower/">Rails Assets Gem vs Bower</a>
       </li>
     
   </ul>

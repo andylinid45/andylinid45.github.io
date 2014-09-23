@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-09-23T09:25:35+08:00</updated>
+  <updated>2014-09-23T10:29:43+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sudo Without Password in Osx and Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/23/sudo-without-password/"/>
+    <updated>2014-09-23T10:10:16+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/23/sudo-without-password</id>
+    <content type="html"><![CDATA[<p><code>
+echo 'account_name ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Transmission in Ubuntu Server]]></title>
@@ -147,23 +158,6 @@ gem install backup</p>
 <code>
 backup perform --trigger andy --root-path "~/.backups/" --config_file '/home/andy/code/bash/backup/config.rb'
 </code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Turn Off Ubuntu Swap]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/turn-off-ubuntu-swap/"/>
-    <updated>2014-03-02T18:12:33+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/turn-off-ubuntu-swap</id>
-    <content type="html"><![CDATA[<p>sudo gedit /etc/sysctl.conf
-change or add this line
-<code>
-vm.swappiness=0
-</code></p>
-
-<p>Reboot for the change to take effect</p>
-
-<p><a href="http://askubuntu.com/questions/103242/is-it-safe-to-turn-swap-off-permanently">http://askubuntu.com/questions/103242/is-it-safe-to-turn-swap-off-permanently</a></p>
 ]]></content>
   </entry>
   

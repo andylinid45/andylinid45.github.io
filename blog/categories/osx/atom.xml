@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Osx | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/osx/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-09-23T10:29:43+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Brew in Osx]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/23/using-brew-in-osx/"/>
+    <updated>2014-09-23T10:15:27+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/23/using-brew-in-osx</id>
+    <content type="html"><![CDATA[<p><a href="http://brew.sh">http://brew.sh</a></p>
+
+<p>install brew
+<code>
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></p>
+
+<p><a href="http://caskroom.io/">http://caskroom.io/</a>
+install
+<code>
+brew install caskroom/cask/brew-cask
+</code></p>
+
+<p>tools
+```
+brew install imagemagick
+brew install p7zip</p>
+
+<p>brew cask install google-chrome
+brew cask install firefox
+brew cask install sublime-text
+brew cask install skitch
+brew cask install skype
+brew cask install virtualbox
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sudo Without Password in Osx and Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/23/sudo-without-password/"/>
+    <updated>2014-09-23T10:10:16+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/23/sudo-without-password</id>
+    <content type="html"><![CDATA[<p><code>
+echo 'account_name ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -237,12 +237,26 @@
         <lastmod>2014-05-02T17:50:28+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://andylinid45.github.io/blog/2014/09/23/using-homebrew-with-multiple-users/
+        </loc>
+        <lastmod>2014-09-23T10:08:16+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://andylinid45.github.io/blog/2014/09/23/sudo-without-password/</loc>
+        <lastmod>2014-09-23T10:12:45+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://andylinid45.github.io/blog/2014/09/23/using-brew-in-osx/</loc>
+        <lastmod>2014-09-23T10:26:38+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://andylinid45.github.io/blog/archives/</loc>
-        <lastmod>2014-09-23T09:04:55+08:00</lastmod>
+        <lastmod>2014-09-23T10:26:38+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/</loc>
-        <lastmod>2014-09-23T09:04:55+08:00</lastmod>
+        <lastmod>2014-09-23T10:26:38+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/robots.txt</loc>

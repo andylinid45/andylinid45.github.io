@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-09-23T09:25:35+08:00</updated>
+  <updated>2014-09-23T10:29:43+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using Brew in Osx]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/23/using-brew-in-osx/"/>
+    <updated>2014-09-23T10:15:27+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/23/using-brew-in-osx</id>
+    <content type="html"><![CDATA[<p><a href="http://brew.sh">http://brew.sh</a></p>
+
+<p>install brew</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://caskroom.io/">http://caskroom.io/</a>
+install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install caskroom/cask/brew-cask</span></code></pre></td></tr></table></div></figure>
+
+
+<p>tools</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install imagemagick
+</span><span class='line'>brew install p7zip
+</span><span class='line'>
+</span><span class='line'>brew cask install google-chrome
+</span><span class='line'>brew cask install firefox
+</span><span class='line'>brew cask install sublime-text
+</span><span class='line'>brew cask install skitch
+</span><span class='line'>brew cask install skype
+</span><span class='line'>brew cask install virtualbox</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sudo Without Password in Osx and Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/23/sudo-without-password/"/>
+    <updated>2014-09-23T10:10:16+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/23/sudo-without-password</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo 'account_name ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Homebrew With Multiple Users]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/23/using-homebrew-with-multiple-users/"/>
+    <updated>2014-09-23T10:06:52+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/23/using-homebrew-with-multiple-users</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo chmod -R g+w /Library/Caches/Homebrew
+</span><span class='line'>sudo chmod -R g+w /usr/local/
+</span><span class='line'>brew doctor</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Git Marge Master to a Branch]]></title>
@@ -664,119 +734,6 @@ I want to make things simple.</p>
 </span><span class='line'>http://tomschenkjr.net/using-sublime-text-2-for-r/</span></code></pre></td></tr></table></div></figure>
 
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Send Sms From Ubunut]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/send-sms-from-ubunut/"/>
-    <updated>2014-03-02T20:25:25+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/send-sms-from-ubunut</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:linuxonly/modem+manager+gui
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get install modem-manager-gui
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>http://askubuntu.com/questions/325229/hspa-3g-modem-manager-for-backtrack-ubuntu?rq=1</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Padrino Command]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/padrino-command/"/>
-    <updated>2014-03-02T20:22:01+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/padrino-command</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install padrino
-</span><span class='line'>
-</span><span class='line'>padrino g project my_project
-</span><span class='line'>
-</span><span class='line'>padrino s # padrino start
-</span><span class='line'>padrino c
-</span><span class='line'>
-</span><span class='line'>http://127.0.0.1:3000
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>padrino g controller Post get: index get: show
-</span><span class='line'>padrino g model Post title: string body: text
-</span><span class='line'>padrino g plugin better_error
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>padrino rake routes</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails Command]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/rails-command/"/>
-    <updated>2014-03-02T20:17:46+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/rails-command</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:drop RAILS_ENV=development
-</span><span class='line'>rake db:drop RAILS_ENV=production
-</span><span class='line'>rake db:drop 
-</span><span class='line'>rake db:create 
-</span><span class='line'>rake db:migrate 
-</span><span class='line'>rake db:seed
-</span><span class='line'>rake db:reset  #db:setup =&gt; db:create db:schema:load db:seed
-</span><span class='line'>rake db:test:load
-</span><span class='line'>rake db:test:prepare
-</span><span class='line'>rake routes
-</span><span class='line'>
-</span><span class='line'>integer
-</span><span class='line'>string
-</span><span class='line'>datetime
-</span><span class='line'>text
-</span><span class='line'>
-</span><span class='line'>rails generate scaffold user email:string name:string password:string
-</span><span class='line'>rails generate controller user info
-</span><span class='line'>rails generate model Site address:string  url:string
-</span><span class='line'>rails generate migration AddAvailable available:boolean</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
