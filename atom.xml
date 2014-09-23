@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-26T23:50:25+08:00</updated>
+  <updated>2014-09-23T09:25:35+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Git Marge Master to a Branch]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/05/02/git-marge-master-to-a-branch/"/>
+    <updated>2014-05-02T17:49:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/05/02/git-marge-master-to-a-branch</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout branch_1
+</span><span class='line'>git merge master
+</span><span class='line'>git push
+</span><span class='line'>git checkout master</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mysql Backup and Restore]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/05/02/mysql-backup-and-restore/"/>
+    <updated>2014-05-02T17:44:37+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/05/02/mysql-backup-and-restore</id>
+    <content type="html"><![CDATA[<p>backup</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysqldump -u*** -p*** dbname &gt; backup`date +%F`.sql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>just some tables</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysqldump -u*** -p*** dbname table1 table2&gt; backup`date +%F`.sql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>restore</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql -u*** -p*** dbname &lt; data.sql</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Why Haml Sucks]]></title>
@@ -378,12 +420,12 @@ I want to make things simple.</p>
 <span class='line-number'>17</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>cd
 </span><span class='line'>git clone git://github.com/sstephenson/rbenv.git .rbenv
-</span><span class='line'>echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc
+</span><span class='line'>echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc  # .bash_profile in osx
 </span><span class='line'>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bashrc
 </span><span class='line'>exec $SHELL
 </span><span class='line'>
 </span><span class='line'>git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-</span><span class='line'>echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' &gt;&gt; ~/.bashrc
+</span><span class='line'>echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' &gt;&gt; ~/.bashrc # .bash_profile in osx
 </span><span class='line'>exec $SHELL
 </span><span class='line'>
 </span><span class='line'>sudo apt-get -y install curl git-core python-software-properties build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev
@@ -735,88 +777,6 @@ I want to make things simple.</p>
 </span><span class='line'>rails generate controller user info
 </span><span class='line'>rails generate model Site address:string  url:string
 </span><span class='line'>rails generate migration AddAvailable available:boolean</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Nginx and Unicorn]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/nginx-and-unicorn/"/>
-    <updated>2014-03-02T18:44:27+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/nginx-and-unicorn</id>
-    <content type="html"><![CDATA[<p>nginx</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/nginx start
-</span><span class='line'>sudo /etc/init.d/nginx restart</span></code></pre></td></tr></table></div></figure>
-
-
-<p>config files</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/etc/nginx/sites-enabled/
-</span><span class='line'>/etc/nginx/sites-available/ </span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/share/doc/nginx-doc/examples/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>logs</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>more /var/log/nginx/access.log
-</span><span class='line'>more /var/log/nginx/error.log</span></code></pre></td></tr></table></div></figure>
-
-
-<p>default site</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ls /usr/share/nginx/www</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://wiki.nginx.org/Pitfalls
-</span><span class='line'>http://wiki.nginx.org/QuickStart
-</span><span class='line'>http://wiki.nginx.org/Configuration</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>unicorn</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem "unicorn"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>unicorn -c unicorn.rb -E production </span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://unicorn.bogomips.org/unicorn_1.html
-</span><span class='line'>http://unicorn.bogomips.org/Unicorn/Configurator.html</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Virtualbox Win8 Screen Resolution]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/virtualbox-win8-screen-resolution/"/>
-    <updated>2014-03-02T18:41:00+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/virtualbox-win8-screen-resolution</id>
-    <content type="html"><![CDATA[<p>run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/VBoxManage setextradata win8 CustomVideoMode1 1366x768x32</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

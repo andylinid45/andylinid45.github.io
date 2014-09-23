@@ -5,18 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Spinejs and Rails - Andy Lin</title>
+  <title>Mysql Backup and Restore - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="create a app 1
-2
-3
-4
-5
-rails new demo rails g scaffold post title:string content:string rake db:migrate Gemfile add spine support 1
-2
-gem 'spine- &hellip;">
+  <meta name="description" content="backup 1
+mysqldump -u*** -p*** dbname &gt; backup`date +%F`.sql just some tables 1
+mysqldump -u*** -p*** dbname table1 table2&gt; backup`date +%F`. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -25,7 +20,7 @@ gem 'spine- &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/03/02/spinejs-and-rails">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/05/02/mysql-backup-and-restore">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -89,7 +84,7 @@ gem 'spine- &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Spinejs and Rails</h1>
+      <h1 class="entry-title">Mysql Backup and Restore</h1>
     
     
       <p class="meta">
@@ -105,78 +100,30 @@ gem 'spine- &hellip;">
   
 
 
-<time datetime="2014-03-02T18:07:53+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-05-02T17:44:37+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>create a app</p>
+<div class="entry-content"><p>backup</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails new demo
-</span><span class='line'>
-</span><span class='line'>rails g scaffold post title:string content:string
-</span><span class='line'>
-</span><span class='line'>rake db:migrate</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysqldump -u*** -p*** dbname &gt; backup`date +%F`.sql</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Gemfile add spine support</p>
+<p>just some tables</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'spine-rails'
-</span><span class='line'>gem 'eco'</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysqldump -u*** -p*** dbname table1 table2&gt; backup`date +%F`.sql</span></code></pre></td></tr></table></div></figure>
 
 
-
+<p>restore</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g spine:new
-</span><span class='line'>
-</span><span class='line'>rails g spine:model post title content</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql -u*** -p*** dbname &lt; data.sql</span></code></pre></td></tr></table></div></figure>
 
-
-<p>check localhost:3000</p>
-
-<p>in chrome console</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#add a post
-</span><span class='line'>var post = App.Post.create({title: 'hi', content: 't'});
-</span><span class='line'>
-</span><span class='line'>#get a post
-</span><span class='line'>App.Post.fetch();
-</span><span class='line'>App.Post.first().content
-</span><span class='line'>App.Post.first().destroy()</span></code></pre></td></tr></table></div></figure>
-
-
-<p>spine scaffold</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g spine:scaffold Post title content</span></code></pre></td></tr></table></div></figure>
-
-
-<p>remove this line in post controllers js</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ = jQuery.sub()</span></code></pre></td></tr></table></div></figure>
-
-
-<p>done, you can now use spine mvc as a ajax front end</p>
 </div>
 
 
@@ -199,12 +146,12 @@ gem 'spine- &hellip;">
   
 
 
-<time datetime="2014-03-02T18:07:53+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-05-02T17:44:37+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/rails/'>rails</a>
+    <a class='category' href='/blog/categories/mysql/'>mysql</a>
   
 </span>
 
@@ -213,7 +160,7 @@ gem 'spine- &hellip;">
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://andylinid45.github.io/blog/2014/03/02/spinejs-and-rails/" data-via="" data-counturl="http://andylinid45.github.io/blog/2014/03/02/spinejs-and-rails/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://andylinid45.github.io/blog/2014/05/02/mysql-backup-and-restore/" data-via="" data-counturl="http://andylinid45.github.io/blog/2014/05/02/mysql-backup-and-restore/" >Tweet</a>
   
   
   
@@ -222,10 +169,10 @@ gem 'spine- &hellip;">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/03/02/mongodb-and-mongoid/" title="Previous Post: mongodb and mongoid">&laquo; mongodb and mongoid</a>
+        <a class="basic-alignment left" href="/blog/2014/04/26/why-haml-sucks/" title="Previous Post: why haml sucks">&laquo; why haml sucks</a>
       
       
-        <a class="basic-alignment right" href="/blog/2014/03/02/turn-off-ubuntu-swap/" title="Next Post: turn off ubuntu swap">turn off ubuntu swap &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/05/02/git-marge-master-to-a-branch/" title="Next Post: git marge master to a branch">git marge master to a branch &raquo;</a>
       
     </p>
   </footer>

@@ -9,15 +9,10 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="install 1
+  <meta name="description" content="after you clone a git repo 1
 2
 3
-4
-5
-sudo apt-get install postgresql
-sudo apt-get install libpq-dev
-sudo apt-get install postgresql-client
-sudo apt-get install pgadmin3 &hellip;">
+git checkout -b my_new_branch my_tag git push origin my_new_branch ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +82,88 @@ sudo apt-get install pgadmin3 &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/git-checkout-branch-from-a-tag/">Git Checkout Branch From a Tag</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:55:54+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>after you clone a git repo</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -b my_new_branch my_tag
+</span><span class='line'>
+</span><span class='line'>git push origin my_new_branch</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/fixed-rails-could-not-find-a-javascript-runtime/">Fixed Rails Could Not Find a JavaScript Runtime</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:49:50+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install nodejs</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -551,162 +628,6 @@ install pg9.2 in ubuntu13</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/01/using-git-in-ubuntu/">Using Git in Ubuntu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-01T21:01:58+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>install</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git
-</span><span class='line'>
-</span><span class='line'>git config --global user.name "Andy"
-</span><span class='line'>git config --global user.email "Andy"
-</span><span class='line'>git config --global color.ui "auto"
-</span><span class='line'>git config core.quotepath false  #for chinese char
-</span><span class='line'>git config core.filemode false  #ignore chmod to file change
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>ssh-keygen -t rsa
-</span><span class='line'>
-</span><span class='line'>xclip -sel clip &lt; ~/.ssh/id_rsa.pub
-</span><span class='line'>
-</span><span class='line'>cat ~/.ssh/id_rsa.pub
-</span><span class='line'>#copy to https://github.com/account/ssh
-</span><span class='line'>#copy to https://bitbucket.org/account/
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>#testing ssh config in this server
-</span><span class='line'>ssh -T git@github.com
-</span><span class='line'>ssh -T git@bitbucket.org</span></code></pre></td></tr></table></div></figure>
-
-
-<p>tag</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git tag #list tags
-</span><span class='line'>git tag before_devise #tag a tag
-</span><span class='line'>git tag -a v1.4 -m 'version 1.4' </span></code></pre></td></tr></table></div></figure>
-
-
-<p>show history</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git show SHA1:/path/to/file</span></code></pre></td></tr></table></div></figure>
-
-
-<p>mistake rm a file</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git reset HEAD file
-</span><span class='line'>git checkout file</span></code></pre></td></tr></table></div></figure>
-
-
-<p>git add all</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add -A</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/01/octopress-command/">Octopress Command</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-01T20:43:42+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["Hello octopress"]
-</span><span class='line'>rake generate # Generates posts and pages into the public directory
-</span><span class='line'>rake preview # Watches, and mounts a webserver at http://localhost:4000 
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -721,11 +642,19 @@ install pg9.2 in ubuntu13</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 108.57142857142857%'>Angularjs(1)</a> <a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 134.28571428571428%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 108.57142857142857%'>Angularjs(1)</a> <a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 160.0%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 125.71428571428572%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 134.28571428571428%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/git-marge-master-to-a-branch/">Git Marge Master to a Branch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/mysql-backup-and-restore/">Mysql Backup and Restore</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/26/why-haml-sucks/">Why Haml Sucks</a>
@@ -737,14 +666,6 @@ install pg9.2 in ubuntu13</p>
     
       <li class="post">
         <a href="/blog/2014/04/21/rails-assets-gem-vs-using-bower/">Rails Assets Gem vs Bower</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/21/using-bower-to-manage-rails-assets/">Using Bower to Manage Rails Assets</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/">Fixed Failed to Fetch From Registry: Bower, in Ubuntu 13</a>
       </li>
     
   </ul>

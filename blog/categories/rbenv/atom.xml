@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rbenv | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/rbenv/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-04-26T23:50:25+08:00</updated>
+  <updated>2014-09-23T09:25:35+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -27,12 +27,12 @@ rvm implode
 ```
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
-echo &lsquo;export PATH=&ldquo;$HOME/.rbenv/bin:$PATH&rdquo;&rsquo; >> ~/.bashrc
+echo &lsquo;export PATH=&ldquo;$HOME/.rbenv/bin:$PATH&rdquo;&rsquo; >> ~/.bashrc  # .bash_profile in osx
 echo &lsquo;eval &ldquo;$(rbenv init &ndash;)&rdquo;&rsquo; >> ~/.bashrc
 exec $SHELL</p>
 
 <p>git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo &lsquo;export PATH=&ldquo;$HOME/.rbenv/plugins/ruby-build/bin:$PATH&rdquo;&rsquo; >> ~/.bashrc
+echo &lsquo;export PATH=&ldquo;$HOME/.rbenv/plugins/ruby-build/bin:$PATH&rdquo;&rsquo; >> ~/.bashrc # .bash_profile in osx
 exec $SHELL</p>
 
 <p>sudo apt-get -y install curl git-core python-software-properties build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev</p>

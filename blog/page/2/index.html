@@ -9,11 +9,15 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="create the gem 1
+bundle gem my_gem edit my_gem.rb 1
 2
 3
-unity --replace
-unity --reset dconf reset -f /org/compiz; sleep 2; unity ">
+4
+5
+module MyGem def self.hi puts "Hello world!" end
+end build 1
+gem build my_gem.gemspec &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +87,210 @@ unity --reset dconf reset -f /org/compiz; sleep 2; unity ">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/11/make-your-own-gem/">Make Your Own Gem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-11T12:16:16+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>create the gem</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle gem my_gem</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit my_gem.rb</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>module MyGem
+</span><span class='line'>  def self.hi
+</span><span class='line'>    puts "Hello world!"
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>build</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem build my_gem.gemspec</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install --local ./my_gem-0.0.1.gem</span></code></pre></td></tr></table></div></figure>
+
+
+<p>run it</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>irb
+</span><span class='line'>irb(main):001:0&gt; require 'my_gem'
+</span><span class='line'>=&gt; true
+</span><span class='line'>irb(main):002:0&gt; MyGem.hi
+</span><span class='line'>Hello world!
+</span><span class='line'>=&gt; nil</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Publishing your gem</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem push xxx.gem</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/03/using-rbenv-to-manage-ruby-versions/">Using Rbenv to Manage Ruby Versions Instead of Rvm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-03T19:48:48+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>remove rvm first</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm implode</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install rbenv</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd
+</span><span class='line'>git clone git://github.com/sstephenson/rbenv.git .rbenv
+</span><span class='line'>echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc  # .bash_profile in osx
+</span><span class='line'>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bashrc
+</span><span class='line'>exec $SHELL
+</span><span class='line'>
+</span><span class='line'>git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+</span><span class='line'>echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' &gt;&gt; ~/.bashrc # .bash_profile in osx
+</span><span class='line'>exec $SHELL
+</span><span class='line'>
+</span><span class='line'>sudo apt-get -y install curl git-core python-software-properties build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev
+</span><span class='line'>
+</span><span class='line'>rbenv install 2.1.0
+</span><span class='line'>rbenv global 2.1.0
+</span><span class='line'>ruby -v
+</span><span class='line'>
+</span><span class='line'>echo "gem: --no-ri --no-rdoc" &gt; ~/.gemrc</span></code></pre></td></tr></table></div></figure>
+
+
+<p>go to a exist project</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rbenv local 2.1.0  # create the .ruby-version file
+</span><span class='line'>
+</span><span class='line'>gem sources --remove https://rubygems.org/
+</span><span class='line'>gem sources -a http://ruby.taobao.org/
+</span><span class='line'>
+</span><span class='line'>gem install bundler # if you do not have bundler installed before
+</span><span class='line'>
+</span><span class='line'>rbenv rehash #Run this command after you install a new version of Ruby, or install a gem that provides commands
+</span><span class='line'>
+</span><span class='line'>bundle</span></code></pre></td></tr></table></div></figure>
+
+
+<p>fixed You Have Already Activated X but Your Gemfile Requires Y</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec ***</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://gorails.com/setup/ubuntu/13.10
+</span><span class='line'>https://github.com/ianheggie/rbenv-binstubs</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -604,142 +812,6 @@ unity --reset dconf reset -f /org/compiz; sleep 2; unity ">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/nginx-and-unicorn/">Nginx and Unicorn</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:44:27+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>nginx</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/nginx start
-</span><span class='line'>sudo /etc/init.d/nginx restart</span></code></pre></td></tr></table></div></figure>
-
-
-<p>config files</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/etc/nginx/sites-enabled/
-</span><span class='line'>/etc/nginx/sites-available/ </span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/share/doc/nginx-doc/examples/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>logs</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>more /var/log/nginx/access.log
-</span><span class='line'>more /var/log/nginx/error.log</span></code></pre></td></tr></table></div></figure>
-
-
-<p>default site</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ls /usr/share/nginx/www</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://wiki.nginx.org/Pitfalls
-</span><span class='line'>http://wiki.nginx.org/QuickStart
-</span><span class='line'>http://wiki.nginx.org/Configuration</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>unicorn</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem "unicorn"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>unicorn -c unicorn.rb -E production </span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://unicorn.bogomips.org/unicorn_1.html
-</span><span class='line'>http://unicorn.bogomips.org/Unicorn/Configurator.html</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/virtualbox-win8-screen-resolution/">Virtualbox Win8 Screen Resolution</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:41:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/VBoxManage setextradata win8 CustomVideoMode1 1366x768x32</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -754,11 +826,19 @@ unity --reset dconf reset -f /org/compiz; sleep 2; unity ">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 108.57142857142857%'>Angularjs(1)</a> <a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 151.42857142857144%'>git(6)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 117.14285714285714%'>mysql(2)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 134.28571428571428%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 108.57142857142857%'>Angularjs(1)</a> <a href='/blog/categories/bower' style='font-size: 117.14285714285714%'>bower(2)</a> <a href='/blog/categories/deploy' style='font-size: 134.28571428571428%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 117.14285714285714%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 160.0%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 117.14285714285714%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 108.57142857142857%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 125.71428571428572%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 117.14285714285714%'>octopress(2)</a> <a href='/blog/categories/other-framework' style='font-size: 108.57142857142857%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 108.57142857142857%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 108.57142857142857%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(7)</a> <a href='/blog/categories/rbenv' style='font-size: 108.57142857142857%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 108.57142857142857%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 117.14285714285714%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 134.28571428571428%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 142.85714285714286%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 151.42857142857144%'>ubuntu(6)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/git-marge-master-to-a-branch/">Git Marge Master to a Branch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/mysql-backup-and-restore/">Mysql Backup and Restore</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/26/why-haml-sucks/">Why Haml Sucks</a>
@@ -770,14 +850,6 @@ unity --reset dconf reset -f /org/compiz; sleep 2; unity ">
     
       <li class="post">
         <a href="/blog/2014/04/21/rails-assets-gem-vs-using-bower/">Rails Assets Gem vs Bower</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/21/using-bower-to-manage-rails-assets/">Using Bower to Manage Rails Assets</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/">Fixed Failed to Fetch From Registry: Bower, in Ubuntu 13</a>
       </li>
     
   </ul>
