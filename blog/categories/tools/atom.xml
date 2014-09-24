@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-09-23T10:29:43+08:00</updated>
+  <updated>2014-09-25T02:26:07+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -36,12 +36,13 @@ brew install caskroom/cask/brew-cask
 brew install imagemagick
 brew install p7zip</p>
 
-<p>brew cask install google-chrome
+<p>brew cask install google-chrome &mdash;appdir=/Applications
 brew cask install firefox
 brew cask install sublime-text
-brew cask install skitch
 brew cask install skype
 brew cask install virtualbox
+brew cask install sequel-pro
+brew cask install mactex #latex
 ```</p>
 ]]></content>
   </entry>
