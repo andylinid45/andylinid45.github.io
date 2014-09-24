@@ -25,10 +25,11 @@ tools
 brew install imagemagick
 brew install p7zip
 
-brew cask install google-chrome
+brew cask install google-chrome --appdir=/Applications
 brew cask install firefox
 brew cask install sublime-text
-brew cask install skitch
 brew cask install skype
 brew cask install virtualbox
+brew cask install sequel-pro
+brew cask install mactex #latex
 ```
