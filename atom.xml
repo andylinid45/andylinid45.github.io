@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-09-25T02:26:07+08:00</updated>
+  <updated>2014-09-27T22:11:40+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Generate Several Random Passwords in Bash]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/27/generate-several-random-passwords-in-bash/"/>
+    <updated>2014-09-27T22:07:35+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/27/generate-several-random-passwords-in-bash</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install apg
+</span><span class='line'>apg -m 16</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Find Process by Name in Bash]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/27/find-process-by-name-in-bash/"/>
+    <updated>2014-09-27T22:05:47+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/27/find-process-by-name-in-bash</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ps aux|grep sshd</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby on Rails Development Setup for OSX]]></title>
@@ -694,135 +718,6 @@ I want to make things simple.</p>
 </span><span class='line'>
 </span><span class='line'>sudo service transmission-daemon start
 </span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Ubuntu 13.04 X64 Server]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server/"/>
-    <updated>2014-03-02T20:41:23+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
-
-
-<p>add a new user</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>adduser newuser</span></code></pre></td></tr></table></div></figure>
-
-
-<p>sudo /usr/sbin/visudo</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># User privilege specification
-</span><span class='line'>root    ALL=(ALL:ALL) ALL
-</span><span class='line'>newuser    ALL=(ALL:ALL) ALL</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Press ‘cntrl x’ to exit the file and then ‘Y’ to save it.</p>
-
-<p>server install</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git zip nginx</span></code></pre></td></tr></table></div></figure>
-
-
-<p>need to config</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hostname need to config
-</span><span class='line'>ssh port 
-</span><span class='line'>ssh without password
-</span><span class='line'>transmission</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Ubuntu 13.04 X64]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64/"/>
-    <updated>2014-03-02T20:28:07+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64</id>
-    <content type="html"><![CDATA[<p>install some tools</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get purge ubuntuone-client unity-lens-shopping unity-webapps-common thunderbird gwibber indicator-messages
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>sudo apt-get install docky git xclip chromium-browser fcitx-googlepinyin ubuntu-restricted-extras stardict mypaint shutter curl openjdk-7-jdk  sshuttle preload indicator-multiload whois filezilla p7zip pidgin rar unrar
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>skype for Ubuntu 13.04</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
-</span><span class='line'>sudo apt-get update 
-</span><span class='line'>sudo apt-get install skype</span></code></pre></td></tr></table></div></figure>
-
-
-<p>xbacklight</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install xbacklight
-</span><span class='line'>xbacklight -set 80
-</span><span class='line'>
-</span><span class='line'>http://askubuntu.com/questions/3841/desktop-doesnt-remember-brightness-settings-after-a-reboot</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install chinese lang in system setting</p>
-
-<p>echo &lsquo;source ~/code/bash/bash&rsquo;  >> ~/.bashrc</p>
-
-<h3>need to do some config</h3>
-
-<ul>
-<li>sublime</li>
-<li>firefox addon</li>
-</ul>
-
-
-<p>install smartgit from a deb file</p>
-
-<p>install google chrome</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-</span><span class='line'>sudo dpkg -i google-chrome*.deb</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install word lib</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>wget -c http://hslinuxextra.googlecode.com/files/android.7z
-</span><span class='line'>sudo apt-get install p7zip-full
-</span><span class='line'>7z e android.7z
-</span><span class='line'>sudo mv /usr/share/ibus-pinyin/db/android.db /usr/share/ibus-pinyin/db/android.db.bak
-</span><span class='line'>sudo mv android.db /usr/share/ibus-pinyin/db/android.db</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
