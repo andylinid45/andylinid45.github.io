@@ -10,3 +10,5 @@ run
 ```
 /usr/bin/VBoxManage setextradata win8 CustomVideoMode1 1366x768x32
 ```
+
+(unnecessary in virtualbox 4.3 after installed Extension Pack)
