@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-09-27T22:11:40+08:00</updated>
+  <updated>2014-09-27T22:31:45+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -84,6 +84,8 @@ sudo apt-get install modem-manager-gui</p>
 <code>
 /usr/bin/VBoxManage setextradata win8 CustomVideoMode1 1366x768x32
 </code></p>
+
+<p>(unnecessary in virtualbox 4.3 after installed Extension Pack)</p>
 ]]></content>
   </entry>
   

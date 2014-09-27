@@ -11,13 +11,9 @@
   
   <meta name="description" content="1
 2
-sudo apt-get update
-sudo apt-get upgrade add a new user 1
-adduser newuser sudo /usr/sbin/visudo 1
-2
 3
-# User privilege specification
-root ALL=( &hellip;">
+unity --replace
+unity --reset dconf reset -f /org/compiz; sleep 2; unity ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +83,101 @@ root ALL=( &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/reset-unity/">Reset Unity</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:54:01+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>unity --replace
+</span><span class='line'>unity --reset 
+</span><span class='line'>dconf reset -f /org/compiz; sleep 2; unity</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/install-transmission-in-ubuntu-server/">Install Transmission in Ubuntu Server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:46:16+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install transmission-daemon
+</span><span class='line'>
+</span><span class='line'>sudo service transmission-daemon stop
+</span><span class='line'>
+</span><span class='line'># modify setting after stop the service
+</span><span class='line'>sudo nano /etc/transmission-daemon/settings.json
+</span><span class='line'>
+</span><span class='line'>sudo service transmission-daemon start
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -642,94 +733,8 @@ root ALL=( &hellip;">
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/VBoxManage setextradata win8 CustomVideoMode1 1366x768x32</span></code></pre></td></tr></table></div></figure>
 
-</div>
-  
-  
 
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/using-backup-gem-to-backup-ubuntu/">Using &#8216;Backup&#8217; Gem to Backup Ubuntu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:39:16+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install backup
-</span><span class='line'>
-</span><span class='line'>backup generate:model --trigger andy --storages=local --compressors=gzip --archives --no-splitter</span></code></pre></td></tr></table></div></figure>
-
-
-<p>run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>backup perform --trigger andy --root-path "~/.backups/" --config_file '/home/andy/code/bash/backup/config.rb'</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/fixed-heroku-rails4-assets-not-found/">Fixed Heroku Rails4 Assets Not Found</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:37:25+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails_12factor', group: :production</span></code></pre></td></tr></table></div></figure>
-
+<p>(unnecessary in virtualbox 4.3 after installed Extension Pack)</p>
 </div>
   
   
@@ -751,11 +756,19 @@ root ALL=( &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 107.5%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 115.0%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 115.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 107.5%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 130.0%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 115.0%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 152.5%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 115.0%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 107.5%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 122.5%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 115.0%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 122.5%'>osx(3)</a> <a href='/blog/categories/other-framework' style='font-size: 107.5%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 107.5%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 107.5%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.5%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 107.5%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 115.0%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 130.0%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 145.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 152.5%'>ubuntu(7)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 120.0%'>osx(3)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.66666666666667%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 126.66666666666667%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 140.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/27/usb-in-virtualbox/">Usb in Virtualbox</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/27/setup-pptpserver-in-ubuntu/">Setup PPTPServer in Ubuntu</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/09/27/generate-several-random-passwords-in-bash/">Generate Several Random Passwords in Bash</a>
@@ -767,14 +780,6 @@ root ALL=( &hellip;">
     
       <li class="post">
         <a href="/blog/2014/09/25/ruby-on-rails-development-setup-for-osx/">Ruby on Rails Development Setup for OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/23/using-brew-in-osx/">Using Brew in Osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/23/sudo-without-password/">Sudo Without Password in Osx and Ubuntu</a>
       </li>
     
   </ul>

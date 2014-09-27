@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-09-27T22:11:40+08:00</updated>
+  <updated>2014-09-27T22:31:45+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Usb in Virtualbox]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox/"/>
+    <updated>2014-09-27T22:23:32+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox</id>
+    <content type="html"><![CDATA[<p>ubuntu 14.04 , virtualbox 4.3</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo adduser yourusername vboxusers</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You HAVE to logout/login from your session, NOT just restart Virtual Box, after the group change.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setup PPTPServer in Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu/"/>
+    <updated>2014-09-27T22:19:50+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://help.ubuntu.com/community/PPTPServer</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Generate Several Random Passwords in Bash]]></title>
@@ -677,47 +703,6 @@ I want to make things simple.</p>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>http://gorails.com/setup/ubuntu/13.10
 </span><span class='line'>https://github.com/ianheggie/rbenv-binstubs</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Reset Unity]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/reset-unity/"/>
-    <updated>2014-03-02T20:54:01+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/reset-unity</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>unity --replace
-</span><span class='line'>unity --reset 
-</span><span class='line'>dconf reset -f /org/compiz; sleep 2; unity</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Transmission in Ubuntu Server]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/install-transmission-in-ubuntu-server/"/>
-    <updated>2014-03-02T20:46:16+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/install-transmission-in-ubuntu-server</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install transmission-daemon
-</span><span class='line'>
-</span><span class='line'>sudo service transmission-daemon stop
-</span><span class='line'>
-</span><span class='line'># modify setting after stop the service
-</span><span class='line'>sudo nano /etc/transmission-daemon/settings.json
-</span><span class='line'>
-</span><span class='line'>sudo service transmission-daemon start
-</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

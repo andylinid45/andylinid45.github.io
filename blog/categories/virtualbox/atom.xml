@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Virtualbox | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/virtualbox/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-09-27T22:31:45+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Usb in Virtualbox]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox/"/>
+    <updated>2014-09-27T22:23:32+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox</id>
+    <content type="html"><![CDATA[<p>ubuntu 14.04 , virtualbox 4.3
+<code>
+sudo adduser yourusername vboxusers
+</code></p>
+
+<p>You HAVE to logout/login from your session, NOT just restart Virtual Box, after the group change.</p>
+]]></content>
+  </entry>
+  
+</feed>

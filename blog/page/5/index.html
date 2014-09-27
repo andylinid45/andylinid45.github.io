@@ -9,14 +9,17 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="create a app 1
+  <meta name="description" content="1
 2
 3
 4
 5
-rails new demo rails g scaffold post title:string content:string rake db:migrate Gemfile add spine support 1
-2
-gem 'spine- &hellip;">
+6
+7
+8
+9
+git config --global core.excludesfile ~/.gitignore echo .tags &gt;&gt; ~/.gitignore
+echo .tags_sorted_by_file &gt;&gt; ~/.gitignore &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +89,105 @@ gem 'spine- &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/add-global-git-ignore/">Add Global Git Ignore</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T18:14:02+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config --global core.excludesfile ~/.gitignore
+</span><span class='line'>
+</span><span class='line'>echo .tags  &gt;&gt; ~/.gitignore
+</span><span class='line'>echo .tags_sorted_by_file  &gt;&gt; ~/.gitignore
+</span><span class='line'>echo .gemtags  &gt;&gt; ~/.gitignore
+</span><span class='line'>echo *.sublime-project  &gt;&gt; ~/.gitignore
+</span><span class='line'>echo *.sublime-workspace  &gt;&gt; ~/.gitignore
+</span><span class='line'>echo andy_doc  &gt;&gt; ~/.gitignore
+</span><span class='line'>echo andy_pass  &gt;&gt; ~/.gitignore</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/turn-off-ubuntu-swap/">Turn Off Ubuntu Swap</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T18:12:33+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>sudo gedit /etc/sysctl.conf
+change or add this line</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>vm.swappiness=0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Reboot for the change to take effect</p>
+
+<p><a href="http://askubuntu.com/questions/103242/is-it-safe-to-turn-swap-off-permanently">http://askubuntu.com/questions/103242/is-it-safe-to-turn-swap-off-permanently</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -751,181 +853,6 @@ hide/ collapsible folder pane  ctrl+K, ctrl+B</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/using-postgresql-in-ubuntu/">Using Postgresql in Ubuntu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T15:40:07+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>install</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install postgresql
-</span><span class='line'>sudo apt-get install libpq-dev
-</span><span class='line'>sudo apt-get install postgresql-client
-</span><span class='line'>sudo apt-get install pgadmin3
-</span><span class='line'>psql --version #or psql -V</span></code></pre></td></tr></table></div></figure>
-
-
-<p>connect to the default PostgreSQL template database</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo -u postgres psql template1
-</span><span class='line'>ALTER USER postgres with encrypted password 'your_password'; #and then, you can ues pgadmin3 to connection you db</span></code></pre></td></tr></table></div></figure>
-
-
-<p>use MD5 authentication with the postgres user
-after the line #Database administrative login by Unix domain socket
-replace the &lsquo;peer&rsquo; by &lsquo;md5&rsquo;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo gedit /etc/postgresql/9.1/main/pg_hba.conf
-</span><span class='line'>
-</span><span class='line'>local all postgres md5
-</span><span class='line'>
-</span><span class='line'>sudo /etc/init.d/postgresql restart</span></code></pre></td></tr></table></div></figure>
-
-
-<p>create a database</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo -u postgres createdb mydb</span></code></pre></td></tr></table></div></figure>
-
-
-<p>useful script</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>pg_dump dbname &gt; outfile
-</span><span class='line'>sudo -u postgres psql dbname &lt; infile
-</span><span class='line'>pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d db_name test.dump</span></code></pre></td></tr></table></div></figure>
-
-
-<p>config files in</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/etc/postgresql/9.1/main</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="https://help.ubuntu.com/12.04/serverguide/postgresql.html">https://help.ubuntu.com/12.04/serverguide/postgresql.html</a>
-<a href="https://help.ubuntu.com/community/PostgreSQL">https://help.ubuntu.com/community/PostgreSQL</a></p>
-
-<p>[updated]
-install pg9.2 in ubuntu13</p>
-
-<p>add a source</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main </span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get install postgresql-9.2</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/reset-mysql-root-password/">Reset Mysql Root Password</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T15:36:36+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/mysql stop
-</span><span class='line'>sudo mysqld_safe --user=mysql --skip-grant-tables --skip-networking &
-</span><span class='line'>mysql -u root mysql
-</span><span class='line'>
-</span><span class='line'>mysql&gt; UPDATE mysql.user SET Password=PASSWORD('YOUR-NEW-MYSQL-PASSWORD') WHERE User='root';
-</span><span class='line'>mysql&gt; FLUSH PRIVILEGES;
-</span><span class='line'>mysql&gt; quit
-</span><span class='line'>
-</span><span class='line'>sudo /etc/init.d/mysql restart
-</span><span class='line'>
-</span><span class='line'>mysql -u root -p
-</span><span class='line'>Enter password:
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -940,11 +867,19 @@ install pg9.2 in ubuntu13</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 107.5%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 115.0%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 115.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 107.5%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 130.0%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 115.0%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 152.5%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 115.0%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 107.5%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 122.5%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 115.0%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 122.5%'>osx(3)</a> <a href='/blog/categories/other-framework' style='font-size: 107.5%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 107.5%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 107.5%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 160.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.5%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 107.5%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 115.0%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 130.0%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 145.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 152.5%'>ubuntu(7)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 120.0%'>osx(3)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.66666666666667%'>rbenv(1)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 126.66666666666667%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 140.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/27/usb-in-virtualbox/">Usb in Virtualbox</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/27/setup-pptpserver-in-ubuntu/">Setup PPTPServer in Ubuntu</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/09/27/generate-several-random-passwords-in-bash/">Generate Several Random Passwords in Bash</a>
@@ -956,14 +891,6 @@ install pg9.2 in ubuntu13</p>
     
       <li class="post">
         <a href="/blog/2014/09/25/ruby-on-rails-development-setup-for-osx/">Ruby on Rails Development Setup for OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/23/using-brew-in-osx/">Using Brew in Osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/23/sudo-without-password/">Sudo Without Password in Osx and Ubuntu</a>
       </li>
     
   </ul>
