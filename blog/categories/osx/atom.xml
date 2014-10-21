@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Osx | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/osx/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-09-27T22:31:45+08:00</updated>
+  <updated>2014-10-21T20:49:28+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dot Files in Osx]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/10/21/dot-files-in-osx/"/>
+    <updated>2014-10-21T20:45:33+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/10/21/dot-files-in-osx</id>
+    <content type="html"><![CDATA[<p>```
+mkdir ~/.ssh
+sudo cp /Users/andy/.ssh/id_rsa  ~/.ssh
+sudo cp /Users/andy/.ssh/id_rsa.pub  ~/.ssh</p>
+
+<p>sudo cp /Users/andy/.gitconfig ~
+sudo cp /Users/andy/.gitignore ~</p>
+
+<p>echo &ldquo;alias ll=&lsquo;ls -alF&rsquo;&rdquo;  >> ~/.bash_profile
+echo &ldquo;alias la=&lsquo;ls -A&rsquo;&rdquo;  >> ~/.bash_profile
+echo &ldquo;alias l=&lsquo;ls -CF&rsquo;&rdquo;  >> ~/.bash_profile</p>
+
+<p>sudo chown  -R new_user  ~/.ssh
+sudo chown new_user ~/.gitconfig
+sudo chown new_user ~/.gitignore
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby on Rails Development Setup for OSX]]></title>
@@ -121,6 +145,7 @@ brew cask install skype
 brew cask install virtualbox
 brew cask install sequel-pro
 brew cask install mactex #latex
+brew cask install the-unarchiver #rar 7zip
 ```</p>
 ]]></content>
   </entry>
