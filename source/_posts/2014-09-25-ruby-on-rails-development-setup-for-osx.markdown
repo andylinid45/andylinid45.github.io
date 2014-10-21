@@ -3,7 +3,7 @@ layout: post
 title: "Ruby on Rails development setup for OSX"
 date: 2014-09-25 02:13:09 +0800
 comments: true
-categories: [rails, osx]
+categories: [rails, osx, rbenv]
 ---
 
 Install Command Line Tools

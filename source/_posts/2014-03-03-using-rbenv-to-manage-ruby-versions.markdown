@@ -11,8 +11,9 @@ remove rvm first
 rvm implode
 ```
 
-install rbenv
+install rbenv in ubuntu
 ```
+# use brew to install rbenv in osx
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc  # .bash_profile in osx

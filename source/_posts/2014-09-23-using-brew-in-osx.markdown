@@ -32,4 +32,5 @@ brew cask install skype
 brew cask install virtualbox
 brew cask install sequel-pro
 brew cask install mactex #latex
+brew cask install the-unarchiver #rar 7zip
 ```
