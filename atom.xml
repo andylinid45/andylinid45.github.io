@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-10-21T20:49:28+08:00</updated>
+  <updated>2014-10-27T00:06:45+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu 14.04 Server Initial]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/10/27/ubuntu-14-dot-04-server-initial/"/>
+    <updated>2014-10-27T00:01:07+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/10/27/ubuntu-14-dot-04-server-initial</id>
+    <content type="html"><![CDATA[<p>login as root</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>adduser deploy
+</span><span class='line'>
+</span><span class='line'>echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
+</span><span class='line'>
+</span><span class='line'>nano /etc/ssh/sshd_config 
+</span><span class='line'># edit two lines
+</span><span class='line'>PermitRootLogin no
+</span><span class='line'>PasswordAuthentication no 
+</span><span class='line'>
+</span><span class='line'>service ssh restart  # do not use , no use /etc/init.d/ssh  restart 
+</span><span class='line'>
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in local</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id deploy@ip</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dot Files in Osx]]></title>
@@ -32,6 +75,10 @@
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>mkdir ~/.ssh
 </span><span class='line'>sudo cp /Users/andy/.ssh/id_rsa  ~/.ssh
 </span><span class='line'>sudo cp /Users/andy/.ssh/id_rsa.pub  ~/.ssh
@@ -39,13 +86,19 @@
 </span><span class='line'>sudo cp /Users/andy/.gitconfig ~
 </span><span class='line'>sudo cp /Users/andy/.gitignore ~
 </span><span class='line'>
-</span><span class='line'>echo "alias ll='ls -alF'"  &gt;&gt; ~/.bash_profile
-</span><span class='line'>echo "alias la='ls -A'"  &gt;&gt; ~/.bash_profile
-</span><span class='line'>echo "alias l='ls -CF'"  &gt;&gt; ~/.bash_profile
+</span><span class='line'>echo "
+</span><span class='line'>alias ll='ls -alF'
+</span><span class='line'>alias la='ls -A'
+</span><span class='line'>alias l='ls -CF'
+</span><span class='line'>export PS1='\u@\h:\w$ '
+</span><span class='line'>export CLICOLOR=1
+</span><span class='line'>export GREP_OPTIONS='--color=auto' " &gt;&gt; ~/.bash_profile
 </span><span class='line'>
 </span><span class='line'>sudo chown  -R new_user  ~/.ssh
 </span><span class='line'>sudo chown new_user ~/.gitconfig 
 </span><span class='line'>sudo chown new_user ~/.gitignore</span></code></pre></td></tr></table></div></figure>
+
+
 
 ]]></content>
   </entry>
@@ -556,59 +609,6 @@ I want to make things simple.</p>
 </span><span class='line'>octopress/plugins/tag_cloud.rb
 </span><span class='line'>
 </span><span class='line'>octopress/source/_includes/custom/navigation.html</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Write a Executable Gem]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/11/write-a-executable-gem/"/>
-    <updated>2014-04-11T15:05:49+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/11/write-a-executable-gem</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd my_gem
-</span><span class='line'>mkdir bin
-</span><span class='line'>touch bin/my_gem
-</span><span class='line'>chmod +x bin/my_gem</span></code></pre></td></tr></table></div></figure>
-
-
-<p>edit my_gem</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/env ruby
-</span><span class='line'>
-</span><span class='line'>require 'my_gem'
-</span><span class='line'>
-</span><span class='line'>MyGem.hi</span></code></pre></td></tr></table></div></figure>
-
-
-<p>edit my_gem.gemspec</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>spec.executables = ["my_gem"]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or commit change to git, so you need not change the gemspec file</p>
-
-<p>build and install</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem build my_gem.gemspec
-</span><span class='line'>gem install --local ./my_gem-0.0.1.gem</span></code></pre></td></tr></table></div></figure>
-
-
-<p>restart terminal and run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>my_gem</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-10-21T20:49:28+08:00</updated>
+  <updated>2014-10-27T00:06:45+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -74,27 +74,7 @@ sudo apt-get install transmission-daemon</p>
     <link href="http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server/"/>
     <updated>2014-03-02T20:41:23+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server</id>
-    <content type="html"><![CDATA[<p><code>
-sudo apt-get update
-sudo apt-get upgrade
-</code></p>
-
-<p>add a new user
-<code>
-adduser newuser
-</code></p>
-
-<p>sudo /usr/sbin/visudo
-```</p>
-
-<h1>User privilege specification</h1>
-
-<p>root    ALL=(ALL:ALL) ALL
-newuser    ALL=(ALL:ALL) ALL
-```
-Press ‘cntrl x’ to exit the file and then ‘Y’ to save it.</p>
-
-<p>server install
+    <content type="html"><![CDATA[<p>server install
 <code>
 sudo apt-get install git zip nginx
 </code></p>

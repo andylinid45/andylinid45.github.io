@@ -9,14 +9,29 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="nginx 1
+  <meta name="description" content="1
 2
-sudo /etc/init.d/nginx start
-sudo /etc/init.d/nginx restart config files 1
-2
-/etc/nginx/sites-enabled/
-/etc/nginx/sites-available/ 1
-/usr/ &hellip;">
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+rake db:drop RAILS_ENV=development
+rake db:drop RAILS_ENV=production
+rake db:drop rake db:create &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +101,82 @@ sudo /etc/init.d/nginx restart config files 1
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/rails-command/">Rails Command</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:17:46+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:drop RAILS_ENV=development
+</span><span class='line'>rake db:drop RAILS_ENV=production
+</span><span class='line'>rake db:drop 
+</span><span class='line'>rake db:create 
+</span><span class='line'>rake db:migrate 
+</span><span class='line'>rake db:seed
+</span><span class='line'>rake db:reset  #db:setup =&gt; db:create db:schema:load db:seed
+</span><span class='line'>rake db:test:load
+</span><span class='line'>rake db:test:prepare
+</span><span class='line'>rake routes
+</span><span class='line'>
+</span><span class='line'>integer
+</span><span class='line'>string
+</span><span class='line'>datetime
+</span><span class='line'>text
+</span><span class='line'>
+</span><span class='line'>rails generate scaffold user email:string name:string password:string
+</span><span class='line'>rails generate controller user info
+</span><span class='line'>rails generate model Site address:string  url:string
+</span><span class='line'>rails generate migration AddAvailable available:boolean</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -765,69 +856,6 @@ cap -vT</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/heroku-command/">Heroku Command</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:19:19+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>heroku create
-</span><span class='line'>
-</span><span class='line'>heroku run rails console
-</span><span class='line'>
-</span><span class='line'>#run one by one
-</span><span class='line'>heroku pg:reset DATABASE
-</span><span class='line'>heroku run rake db:migrate 
-</span><span class='line'>heroku run rake db:seed
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>heroku db:push
-</span><span class='line'>heroku db:pull
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -842,11 +870,15 @@ cap -vT</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 106.66666666666667%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 126.66666666666667%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 113.33333333333333%'>rbenv(2)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 126.66666666666667%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 140.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 106.66666666666667%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 126.66666666666667%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 106.66666666666667%'>production(1)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 113.33333333333333%'>rbenv(2)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/technical-review' style='font-size: 126.66666666666667%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 140.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/10/27/ubuntu-14-dot-04-server-initial/">Ubuntu 14.04 Server Initial</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/10/21/dot-files-in-osx/">Dot Files in Osx</a>
@@ -862,10 +894,6 @@ cap -vT</p>
     
       <li class="post">
         <a href="/blog/2014/09/27/setup-pptpserver-in-ubuntu/">Setup PPTPServer in Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/27/generate-several-random-passwords-in-bash/">Generate Several Random Passwords in Bash</a>
       </li>
     
   </ul>
