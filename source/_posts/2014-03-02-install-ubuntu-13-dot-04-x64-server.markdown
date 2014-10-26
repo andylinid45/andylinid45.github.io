@@ -7,25 +7,6 @@ categories: ubuntu
 ---
 
 
-```
-sudo apt-get update
-sudo apt-get upgrade
-```
-
-add a new user
-```
-adduser newuser
-```
-
-sudo /usr/sbin/visudo
-```
-# User privilege specification
-root    ALL=(ALL:ALL) ALL
-newuser    ALL=(ALL:ALL) ALL
-```
-Press ‘cntrl x’ to exit the file and then ‘Y’ to save it. 
-
-
 server install
 ```
 sudo apt-get install git zip nginx
