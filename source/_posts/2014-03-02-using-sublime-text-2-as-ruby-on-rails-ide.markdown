@@ -103,3 +103,9 @@ http://stackoverflow.com/questions/8839753/formatting-html-code-using-sublime-te
 - ctags
 
 {"keys": ["ctrl+shift+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"} }
+
+
+in osx
+```
+ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+```

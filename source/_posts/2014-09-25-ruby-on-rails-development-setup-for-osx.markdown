@@ -30,7 +30,7 @@ ruby -v
 
 install rails
 ```
-echo "gem: --no-document\n" >> ~/.gemrc
+echo "gem: --no-document" >> ~/.gemrc
 gem install rails
 rbenv rehash
 rails -v
