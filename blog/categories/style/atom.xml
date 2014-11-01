@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Style | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/style/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2014-11-01T15:22:52+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Id Naming]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/11/01/id-naming/"/>
+    <updated>2014-11-01T15:19:17+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/11/01/id-naming</id>
+    <content type="html"><![CDATA[<p>html css
+<code>
+this-is-my-id
+</code></p>
+
+<p>javascript
+<code>
+thisIsMyId
+</code></p>
+
+<p>ruby
+<code>
+this_is_my_id
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

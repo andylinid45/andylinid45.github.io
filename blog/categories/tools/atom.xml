@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-10-27T00:06:45+08:00</updated>
+  <updated>2014-11-01T15:22:52+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -186,6 +186,16 @@ hide/ collapsible folder pane  ctrl+K, ctrl+B</p>
 
 
 <p>{&ldquo;keys&rdquo;: [&ldquo;ctrl+shift+w&rdquo;], &ldquo;command&rdquo;: &ldquo;toggle_setting&rdquo;, &ldquo;args&rdquo;: {&ldquo;setting&rdquo;: &ldquo;word_wrap&rdquo;} }</p>
+
+<p>in osx
+<code>
+ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+</code></p>
+
+<p>install package
+<code>
+Syntax Highlighting for Sass
+</code></p>
 ]]></content>
   </entry>
   

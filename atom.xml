@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-10-27T00:06:45+08:00</updated>
+  <updated>2014-11-01T15:22:52+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Id Naming]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/11/01/id-naming/"/>
+    <updated>2014-11-01T15:19:17+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/11/01/id-naming</id>
+    <content type="html"><![CDATA[<p>html css</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>this-is-my-id</span></code></pre></td></tr></table></div></figure>
+
+
+<p>javascript</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>thisIsMyId</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ruby</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>this_is_my_id</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu 14.04 Server Initial]]></title>
@@ -214,7 +239,7 @@
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>echo "gem: --no-document\n" &gt;&gt; ~/.gemrc
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo "gem: --no-document" &gt;&gt; ~/.gemrc
 </span><span class='line'>gem install rails
 </span><span class='line'>rbenv rehash
 </span><span class='line'>rails -v</span></code></pre></td></tr></table></div></figure>
@@ -565,51 +590,6 @@ I want to make things simple.</p>
 <p>because no gemsets in rbenv. rbenv make things simple.</p>
 
 <p>rvm is over-design.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Reinstall Octopress]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/14/reinstall-octopress/"/>
-    <updated>2014-04-14T23:22:20+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/14/reinstall-octopress</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
-</span><span class='line'>cd octopress
-</span><span class='line'>bundle exec rake install
-</span><span class='line'>
-</span><span class='line'>bundle exec rake setup_github_pages
-</span><span class='line'>
-</span><span class='line'>bundle exec rake generate
-</span><span class='line'>bundle exec rake deploy</span></code></pre></td></tr></table></div></figure>
-
-
-<p>files need to backup</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>_posts
-</span><span class='line'>robots.txt
-</span><span class='line'>CNAME
-</span><span class='line'>
-</span><span class='line'>octopress/source/_includes/custom/asides/tag_cloud.html
-</span><span class='line'>octopress/plugins/tag_cloud.rb
-</span><span class='line'>
-</span><span class='line'>octopress/source/_includes/custom/navigation.html</span></code></pre></td></tr></table></div></figure>
-
 ]]></content>
   </entry>
   
