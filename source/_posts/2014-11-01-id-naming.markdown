@@ -1,0 +1,22 @@
+---
+layout: post
+title: "id naming"
+date: 2014-11-01 15:19:17 +0800
+comments: true
+categories: style
+---
+
+html css
+```
+this-is-my-id
+```
+
+javascript
+```
+thisIsMyId
+```
+
+ruby
+```
+this_is_my_id
+```
