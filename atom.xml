@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-11-01T15:22:52+08:00</updated>
+  <updated>2014-12-22T17:23:41+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sendmail vs Postfix]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/12/22/sendmail-vs-postfix/"/>
+    <updated>2014-12-22T17:21:18+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/12/22/sendmail-vs-postfix</id>
+    <content type="html"><![CDATA[<p>Sendmail and Postfix are programs that send mail in Unix link OS.</p>
+
+<p>Postfix is better because it is newer.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Id Naming]]></title>
@@ -577,19 +588,6 @@ I want to make things simple.</p>
 </span><span class='line'>sudo apt-get install nodejs
 </span><span class='line'>sudo npm install -g bower</span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rbenv vs Rvm]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/16/rbenv-vs-rvm/"/>
-    <updated>2014-04-16T15:51:14+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/16/rbenv-vs-rvm</id>
-    <content type="html"><![CDATA[<p>rbenv win.</p>
-
-<p>because no gemsets in rbenv. rbenv make things simple.</p>
-
-<p>rvm is over-design.</p>
 ]]></content>
   </entry>
   

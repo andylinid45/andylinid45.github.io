@@ -10,10 +10,8 @@
 
   
   <meta name="description" content="add gem 1
-gem "capistrano" cd project folder 1
-capify . setup need to run in the first time 1
-cap deploy:setup next time, just need to run 1
-cap &hellip;">
+gem 'capistrano-nginx-unicorn', require: false, group: :development add this line in the END of deploy.rb 1
+require 'capistrano-nginx- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +81,67 @@ cap &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/using-capistrano-nginx-unicorn/">Using Capistrano-nginx-unicorn</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T18:23:47+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>add gem</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'capistrano-nginx-unicorn', require: false, group: :development</span></code></pre></td></tr></table></div></figure>
+
+
+<p>add this line in the END of deploy.rb</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>require 'capistrano-nginx-unicorn'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>add this to deploy.rb</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>set :nginx_server_name, ""
+</span><span class='line'>set :unicorn_workers, 5</span></code></pre></td></tr></table></div></figure>
+
+
+<p>if &ldquo; eval: bundle: not found&rdquo;, when running &ldquo;cap deploy:start&rdquo;
+login your server and</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /var/www/your_app/current; bundle exec unicorn -D -c /var/www/your_app/shared/config/unicorn.rb -E production</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -685,106 +744,6 @@ change or add this line</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/rvm-in-ubunut/">Rvm in Ubunut</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T16:25:48+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>install rvm</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>curl -L get.rvm.io | bash -s stable
-</span><span class='line'>source ~/.rvm/scripts/rvm
-</span><span class='line'>rvm requirements</span></code></pre></td></tr></table></div></figure>
-
-
-<p>usefull script</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm install 1.9.3
-</span><span class='line'>rvm use 1.9.3 --default
-</span><span class='line'>rvm gemset create 3.2.3
-</span><span class='line'>rvm gemset use 3.2.3 
-</span><span class='line'>rvm use 1.9.3@3.2.3 --default  
-</span><span class='line'>gem sources --remove http://rubygems.org/
-</span><span class='line'>gem sources -a http://ruby.taobao.org/
-</span><span class='line'>gem install rails -v=3.2.12
-</span><span class='line'>
-</span><span class='line'>rvm list
-</span><span class='line'>rvm gemset list</span></code></pre></td></tr></table></div></figure>
-
-
-<p>remove rvm</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm implode</span></code></pre></td></tr></table></div></figure>
-
-
-<p>if you can not find rvm in terminal
-gedit  .bashrc
-and add</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi</span></code></pre></td></tr></table></div></figure>
-
-
-<p>no rdoc</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>echo -e "install: --no-rdoc --no-ri \nupdate: --no-rdoc --no-ri" &gt;&gt; ~/.gemrc</span></code></pre></td></tr></table></div></figure>
-
-
-<p>do not use .rvmrc file any more, go to the project folder</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>echo "ruby-1.9.3-p429" &gt;&gt; .ruby-version
-</span><span class='line'>echo "myapp" &gt;&gt; .ruby-gemset</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -799,11 +758,15 @@ and add</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 106.66666666666667%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 126.66666666666667%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 106.66666666666667%'>production(1)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 113.33333333333333%'>rbenv(2)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 106.66666666666667%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 126.66666666666667%'>technical-review(4)</a> <a href='/blog/categories/tools' style='font-size: 140.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 106.66666666666667%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 126.66666666666667%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 106.66666666666667%'>production(1)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 113.33333333333333%'>rbenv(2)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 106.66666666666667%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 133.33333333333334%'>technical-review(5)</a> <a href='/blog/categories/tools' style='font-size: 140.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/22/sendmail-vs-postfix/">Sendmail vs Postfix</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/11/01/id-naming/">Id Naming</a>
@@ -819,10 +782,6 @@ and add</p>
     
       <li class="post">
         <a href="/blog/2014/09/29/using-pry-to-debug-in-rails-project/">Using Pry to Debug in Rails Project</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/27/usb-in-virtualbox/">Usb in Virtualbox</a>
       </li>
     
   </ul>
