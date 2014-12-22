@@ -29,7 +29,7 @@ dig mx your_domain.com
 and now you can send mail to your_account_name_in_vps@your_domain.com , and other mail address will be rejected
 
 
-### add mail forward to your gmail
+### add mail forward to your gmail (usefull for small business if you don't want to buy "Google App" for managing your mail box)
 
 ```
 sudo nano /etc/postfix/main.cf
