@@ -31,14 +31,18 @@ and now you can send mail to your_account_name_in_vps@your_domain.com , and othe
 
 ### add mail forward to your gmail
 
-
+```
 sudo nano /etc/postfix/main.cf
+```
+
 add 
 ```
 virtual_alias_maps = hash:/etc/postfix/virtual
 ```
 
+```
 sudo nano  /etc/postfix/virtual
+```
 add
 ```
 your_new_mail_address@your_domain.com  your_gmail@gmail.com
