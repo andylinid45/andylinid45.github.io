@@ -48,6 +48,7 @@ add
 your_new_mail_address@your_domain.com  your_gmail@gmail.com
 ```
 
+and restart at last
 ```
 sudo postmap /etc/postfix/virtual
 sudo /etc/init.d/postfix restart
@@ -59,6 +60,15 @@ log file in
 /var/log/mail.log 
 ```
 
+### add a new domain mail box to your vps
+```
+sudo nano /etc/postfix/main.cf
+```
+add the domain to 
+```
+mydestination
+```
 
+also modify the /etc/postfix/virtual to add mail address like above, so your mail will forward to your gmail rather than go to you VPS local file
 
 
