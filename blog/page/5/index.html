@@ -9,9 +9,17 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="add gem 1
-gem 'capistrano-nginx-unicorn', require: false, group: :development add this line in the END of deploy.rb 1
-require 'capistrano-nginx- &hellip;">
+  <meta name="description" content="great gems 1
+2
+3
+4
+5
+6
+gem 'devise'
+gem 'haml'
+gem 'rabl' # for building rest api
+gem "capistrano"
+gem 'capistrano-nginx-unicorn', require: false, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,6 +89,216 @@ require 'capistrano-nginx- &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/useful-gems/">Useful Gems</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T18:27:35+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>great gems</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'devise'
+</span><span class='line'>gem 'haml'
+</span><span class='line'>gem 'rabl' # for building rest api
+</span><span class='line'>gem "capistrano"
+</span><span class='line'>gem 'capistrano-nginx-unicorn', require: false, group: :development
+</span><span class='line'>https://github.com/AF83/capistrano-af83</span></code></pre></td></tr></table></div></figure>
+
+
+<p>view</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem "rails_autolink"
+</span><span class='line'>gem 'rinku' # replacement for auto_link
+</span><span class='line'>gem 'best_in_place'
+</span><span class='line'>gem 'draper', '~&gt; 1.0' # Decorator for View Models for Rails
+</span><span class='line'>gem 'exception_notification_rails3'
+</span><span class='line'>gem 'jquery-rails'
+</span><span class='line'>gem 'jquery-ui-rails'
+</span><span class='line'>gem 'fancybox-rails'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>db</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails_admin', :git =&gt; 'git://github.com/sferik/rails_admin.git'
+</span><span class='line'>gem 'foreigner'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>debug</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'pry'
+</span><span class='line'>gem 'pry-nav'
+</span><span class='line'>gem 'pry-rails'
+</span><span class='line'>gem 'pry-stack_explorer'
+</span><span class='line'>gem "awesome_print"  # https://github.com/michaeldv/awesome_print</span></code></pre></td></tr></table></div></figure>
+
+
+<p>search</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'sunspot_rails' # full text search
+</span><span class='line'>gem 'sunspot_solr'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>server</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'unicorn'
+</span><span class='line'>gem 'thin'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>other framework</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'sinatra'
+</span><span class='line'>gem "padrino" # http://www.padrinorb.com/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>pdf</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'pdfkit'
+</span><span class='line'>gem 'wicked_pdf'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>tools</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'quiet_assets' 
+</span><span class='line'>gem 'annotate' 
+</span><span class='line'>gem "better_errors"
+</span><span class='line'>gem 'rails-dev-tweaks', '~&gt; 0.6.1' #improve your Rails (3.1+) development experience.
+</span><span class='line'>gem "rails-erd"  #Generate Entity-Relationship Diagrams for Rails applications
+</span><span class='line'>gem "settingslogic" # for setting global var
+</span><span class='line'>gem 'garb'
+</span><span class='line'>gem "nokogiri"
+</span><span class='line'>gem "backup"
+</span><span class='line'>gem "money"
+</span><span class='line'>gem 'money-rails'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>exception_notification</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/smartinez87/exception_notification</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Keeping Track of Who Did What</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/collectiveidea/audited
+</span><span class='line'>https://github.com/airblade/paper_trail</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Google analytics Api</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/chrisle/gattica
+</span><span class='line'>https://github.com/robmckinnon/rugalytics
+</span><span class='line'>https://www.ruby-toolbox.com/categories/Web_Analytics </span></code></pre></td></tr></table></div></figure>
+
+
+<p>word</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem "harmonious_dictionary"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>google map</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem "googlestaticmap"
+</span><span class='line'>gem 'gmaps4rails'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>js dependency management</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/rharriso/bower-rails/
+</span><span class='line'>https://github.com/bower/bower
+</span><span class='line'>https://github.com/sstephenson/sprockets
+</span><span class='line'>#http://dev.af83.com/2013/01/02/managing-rails-assets-with-bower.html
+</span><span class='line'>https://github.com/component/component</span></code></pre></td></tr></table></div></figure>
+
+
+<p>js</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>jaml              #http://edspencer.github.com/jaml  # jaml-beautiful-html-generation-for-javascript
+</span><span class='line'>jquery.pageless   #https://github.com/jney/jquery.pageless</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -704,46 +922,6 @@ change or add this line</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/fixed-robots-dot-txt-no-found-when-using-unicorn/">Fixed robots.txt No Found When Using Unicorn</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T16:33:50+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>in config production.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>config.serve_static_assets = true</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -758,11 +936,15 @@ change or add this line</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 106.66666666666667%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 126.66666666666667%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 106.66666666666667%'>production(1)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 113.33333333333333%'>rbenv(2)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 106.66666666666667%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 133.33333333333334%'>technical-review(5)</a> <a href='/blog/categories/tools' style='font-size: 140.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 106.66666666666667%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 126.66666666666667%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 113.33333333333333%'>production(2)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 113.33333333333333%'>rbenv(2)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 106.66666666666667%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 133.33333333333334%'>technical-review(5)</a> <a href='/blog/categories/tools' style='font-size: 140.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/22/postfix-in-ubuntu/">Postfix in Ubuntu</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/12/22/sendmail-vs-postfix/">Sendmail vs Postfix</a>
@@ -778,10 +960,6 @@ change or add this line</p>
     
       <li class="post">
         <a href="/blog/2014/10/21/dot-files-in-osx/">Dot Files in Osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/29/using-pry-to-debug-in-rails-project/">Using Pry to Debug in Rails Project</a>
       </li>
     
   </ul>

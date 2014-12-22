@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2014-12-22T17:23:41+08:00</updated>
+  <updated>2014-12-22T21:31:16+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Postfix in Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/12/22/postfix-in-ubuntu/"/>
+    <updated>2014-12-22T21:21:14+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/12/22/postfix-in-ubuntu</id>
+    <content type="html"><![CDATA[<h3>outgoing mail</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install postfix</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>test outgoing mail</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo "My test email sent from sendmail" | /usr/sbin/sendmail  your_gmail@gmail.com</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>incomming mail</h3>
+
+<p>setup MX record in DNS, point to your VPS ip or domain name</p>
+
+<h3>test MX record</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and now you can send mail to <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x79;&#111;&#117;&#114;&#x5f;&#x61;&#99;&#99;&#111;&#x75;&#x6e;&#116;&#95;&#x6e;&#x61;&#109;&#101;&#95;&#105;&#x6e;&#95;&#118;&#112;&#115;&#x40;&#121;&#x6f;&#117;&#114;&#x5f;&#x64;&#111;&#x6d;&#x61;&#105;&#x6e;&#46;&#99;&#x6f;&#109;">&#121;&#111;&#117;&#114;&#95;&#97;&#99;&#99;&#111;&#x75;&#x6e;&#116;&#x5f;&#x6e;&#x61;&#x6d;&#x65;&#95;&#x69;&#x6e;&#x5f;&#118;&#x70;&#115;&#64;&#121;&#x6f;&#117;&#114;&#95;&#x64;&#111;&#x6d;&#x61;&#105;&#x6e;&#x2e;&#x63;&#x6f;&#x6d;</a> , and other mail address will be rejected</p>
+
+<h3>add mail forward to your gmail</h3>
+
+<p>sudo nano /etc/postfix/main.cf
+add</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>virtual_alias_maps = hash:/etc/postfix/virtual</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo nano  /etc/postfix/virtual
+add</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>your_new_mail_address@your_domain.com  your_gmail@gmail.com</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo postmap /etc/postfix/virtual
+</span><span class='line'>sudo /etc/init.d/postfix restart</span></code></pre></td></tr></table></div></figure>
+
+
+<p>log file in</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/var/log/mail.err 
+</span><span class='line'>/var/log/mail.log </span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sendmail vs Postfix]]></title>
@@ -564,29 +629,6 @@ I want to make things simple.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>*= require sass-bootstrap/lib/bootstrap</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fixed Failed to Fetch From Registry: Bower, in Ubuntu 13]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/"/>
-    <updated>2014-04-20T16:19:57+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get purge nodejs npm
-</span><span class='line'>
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get install -y python-software-properties python g++ make
-</span><span class='line'>sudo add-apt-repository ppa:chris-lea/node.js
-</span><span class='line'>sudo apt-get install nodejs
-</span><span class='line'>sudo npm install -g bower</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

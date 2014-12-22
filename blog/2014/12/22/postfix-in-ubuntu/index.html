@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Mongodb - Andy Lin</title>
+  <title>Postfix in Ubuntu - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="Category: mongodb">
+  <meta name="description" content="outgoing mail 1
+sudo apt-get install postfix test outgoing mail 1
+echo "My test email sent from sendmail" | /usr/sbin/sendmail your_gmail@gmail.com &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.ioblog/categories/mongodb">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/12/22/postfix-in-ubuntu">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -78,35 +80,140 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Mongodb</h1>
+    
+      <h1 class="entry-title">Postfix in Ubuntu</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-22T21:21:14+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
+
+
+<div class="entry-content"><h3>outgoing mail</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install postfix</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>test outgoing mail</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo "My test email sent from sendmail" | /usr/sbin/sendmail  your_gmail@gmail.com</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>incomming mail</h3>
+
+<p>setup MX record in DNS, point to your VPS ip or domain name</p>
+
+<h3>test MX record</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and now you can send mail to <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x79;&#111;&#117;&#114;&#x5f;&#x61;&#99;&#99;&#111;&#x75;&#x6e;&#116;&#95;&#x6e;&#x61;&#109;&#101;&#95;&#105;&#x6e;&#95;&#118;&#112;&#115;&#x40;&#121;&#x6f;&#117;&#114;&#x5f;&#x64;&#111;&#x6d;&#x61;&#105;&#x6e;&#46;&#99;&#x6f;&#109;">&#121;&#111;&#117;&#114;&#95;&#97;&#99;&#99;&#111;&#x75;&#x6e;&#116;&#x5f;&#x6e;&#x61;&#x6d;&#x65;&#95;&#x69;&#x6e;&#x5f;&#118;&#x70;&#115;&#64;&#121;&#x6f;&#117;&#114;&#95;&#x64;&#111;&#x6d;&#x61;&#105;&#x6e;&#x2e;&#x63;&#x6f;&#x6d;</a> , and other mail address will be rejected</p>
+
+<h3>add mail forward to your gmail</h3>
+
+<p>sudo nano /etc/postfix/main.cf
+add</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>virtual_alias_maps = hash:/etc/postfix/virtual</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo nano  /etc/postfix/virtual
+add</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>your_new_mail_address@your_domain.com  your_gmail@gmail.com</span></code></pre></td></tr></table></div></figure>
 
 
 
-  
-  <h2>2014</h2>
 
-<article>
-  
-<h1><a href="/blog/2014/03/02/mongodb-and-mongoid/">Mongodb and Mongoid</a></h1>
-<time datetime="2014-03-02T16:36:29+08:00" pubdate><span class='month'>Mar</span> <span class='day'>02</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/mongodb/'>mongodb</a></span>
-</footer>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo postmap /etc/postfix/virtual
+</span><span class='line'>sudo /etc/init.d/postfix restart</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>log file in</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/var/log/mail.err 
+</span><span class='line'>/var/log/mail.log </span></code></pre></td></tr></table></div></figure>
+
+
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Andy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-22T21:21:14+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/production/'>production</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://andylinid45.github.io/blog/2014/12/22/postfix-in-ubuntu/" data-via="" data-counturl="http://andylinid45.github.io/blog/2014/12/22/postfix-in-ubuntu/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/12/22/sendmail-vs-postfix/" title="Previous Post: Sendmail vs Postfix">&laquo; Sendmail vs Postfix</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
