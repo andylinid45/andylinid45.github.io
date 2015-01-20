@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-01-20T16:14:53+08:00</updated>
+  <updated>2015-01-20T17:24:44+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -32,7 +32,8 @@ sudo adduser yourusername vboxusers
     <link href="http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu/"/>
     <updated>2014-09-27T22:19:50+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu</id>
-    <content type="html"><![CDATA[<p><code>
+    <content type="html"><![CDATA[<p>all the same
+<code>
 https://help.ubuntu.com/community/PPTPServer
 </code></p>
 ]]></content>
