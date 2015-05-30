@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-01-20T17:44:01+08:00</updated>
+  <updated>2015-05-30T16:58:46+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -73,20 +73,6 @@ sudo apt-get install modem-manager-gui</p>
 
 <p><a href="http://askubuntu.com/questions/325229/hspa-3g-modem-manager-for-backtrack-ubuntu?rq=1">http://askubuntu.com/questions/325229/hspa-3g-modem-manager-for-backtrack-ubuntu?rq=1</a>
 ```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Virtualbox Win8 Screen Resolution]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/virtualbox-win8-screen-resolution/"/>
-    <updated>2014-03-02T18:41:00+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/virtualbox-win8-screen-resolution</id>
-    <content type="html"><![CDATA[<p>run
-<code>
-/usr/bin/VBoxManage setextradata win8 CustomVideoMode1 1366x768x32
-</code></p>
-
-<p>(unnecessary in virtualbox 4.3 after installed Extension Pack)</p>
 ]]></content>
   </entry>
   
@@ -195,6 +181,20 @@ ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/lo
 <p>install package
 <code>
 Syntax Highlighting for Sass
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Firefox Addons]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/firefox-addons/"/>
+    <updated>2014-03-02T15:27:46+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/firefox-addons</id>
+    <content type="html"><![CDATA[<p><code>
+https://addons.mozilla.org/en-US/firefox/addon/all-in-one-gestures/
+https://addons.mozilla.org/en-US/firefox/addon/firebug/
+https://addons.mozilla.org/en-US/firefox/addon/measureit/
+https://addons.mozilla.org/en-US/firefox/addon/colorzilla/
 </code></p>
 ]]></content>
   </entry>
