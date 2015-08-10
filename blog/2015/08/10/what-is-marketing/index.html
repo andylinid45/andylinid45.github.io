@@ -5,24 +5,20 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ubuntu 14.04 Server Initial - Andy Lin</title>
+  <title>[第二课]营销是什么 - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="login as root 1
+  <meta name="description" content="在消费社会，营销即贪嗔痴，紧抓用户心理需求。因为物质需求是比较容易满足的，而心理需求则需要花一生去满足。 1
 2
 3
 4
 5
-6
-7
-8
-9
-10
-11
-12
-13
-adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers nano /etc/ssh/sshd_config &hellip;">
+打折，团购 -&gt; 贪
+流行 -&gt; 从众，社会认同
+粉丝经济 -&gt; 喜好，社会认同
+限时特价 -&gt; 稀缺
+用户邀请好友 -&gt; 互惠 产品设计、 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -31,7 +27,7 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/10/27/ubuntu-14-dot-04-server-initial">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2015/08/10/what-is-marketing">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -95,7 +91,7 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
   
   <header>
     
-      <h1 class="entry-title">Ubuntu 14.04 Server Initial</h1>
+      <h1 class="entry-title">[第二课]营销是什么</h1>
     
     
       <p class="meta">
@@ -111,48 +107,36 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
   
 
 
-<time datetime="2014-10-27T00:01:07+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+<time datetime="2015-08-10T14:48:23+08:00" pubdate data-updated="true">Aug 10<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>login as root</p>
+<div class="entry-content"><p>在消费社会，营销即贪嗔痴，紧抓用户心理需求。因为物质需求是比较容易满足的，而心理需求则需要花一生去满足。</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>adduser deploy
-</span><span class='line'>
-</span><span class='line'>echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
-</span><span class='line'>
-</span><span class='line'>nano /etc/ssh/sshd_config 
-</span><span class='line'># edit two lines
-</span><span class='line'>PermitRootLogin no
-</span><span class='line'>PasswordAuthentication no 
-</span><span class='line'>
-</span><span class='line'>service ssh restart  # do not use , no use /etc/init.d/ssh  restart 
-</span><span class='line'>
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>打折，团购 -&gt; 贪
+</span><span class='line'>流行  -&gt;  从众，社会认同
+</span><span class='line'>粉丝经济  -&gt; 喜好，社会认同
+</span><span class='line'>限时特价  -&gt;  稀缺
+</span><span class='line'>用户邀请好友 -&gt; 互惠</span></code></pre></td></tr></table></div></figure>
 
 
-<p>in local</p>
+<h3>产品设计、营销要抓住用户贪嗔痴，不是向用户宣传产品价值</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id deploy@ip</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>所以产品设计要逃离功能性设计和易用性设计，从颜色，字体，文案，排版，功能流程等都要紧抓用户心理需求</span></code></pre></td></tr></table></div></figure>
 
+
+<p></p>
+
+<p>推荐 <a href="http://book.douban.com/subject/5287474/">《影响力》</a></p>
 </div>
 
 
@@ -175,12 +159,12 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
   
 
 
-<time datetime="2014-10-27T00:01:07+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+<time datetime="2015-08-10T14:48:23+08:00" pubdate data-updated="true">Aug 10<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/production/'>production</a>
+    <a class='category' href='/blog/categories/chuang-ye/'>创业</a>
   
 </span>
 
@@ -196,10 +180,8 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/10/21/dot-files-in-osx/" title="Previous Post: dot files in osx">&laquo; dot files in osx</a>
+        <a class="basic-alignment left" href="/blog/2015/08/10/when-to-stop-as-a-startup/" title="Previous Post: [第一课]创业项目应该什么时候停止">&laquo; [第一课]创业项目应该什么时候停止</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/11/01/id-naming/" title="Next Post: id naming">id naming &raquo;</a>
       
     </p>
   </footer>

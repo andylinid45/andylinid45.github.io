@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-10T14:41:14+08:00</updated>
+  <updated>2015-08-10T15:30:29+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[第二课]营销是什么]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/10/what-is-marketing/"/>
+    <updated>2015-08-10T14:48:23+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/10/what-is-marketing</id>
+    <content type="html"><![CDATA[<p>在消费社会，营销即贪嗔痴，紧抓用户心理需求。因为物质需求是比较容易满足的，而心理需求则需要花一生去满足。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>打折，团购 -&gt; 贪
+</span><span class='line'>流行  -&gt;  从众，社会认同
+</span><span class='line'>粉丝经济  -&gt; 喜好，社会认同
+</span><span class='line'>限时特价  -&gt;  稀缺
+</span><span class='line'>用户邀请好友 -&gt; 互惠</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>产品设计、营销要抓住用户贪嗔痴，不是向用户宣传产品价值</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>所以产品设计要逃离功能性设计和易用性设计，从颜色，字体，文案，排版，功能流程等都要紧抓用户心理需求</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>推荐 <a href="http://book.douban.com/subject/5287474/">《影响力》</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[第一课]创业项目应该什么时候停止]]></title>
@@ -95,7 +126,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x79;&#111;&#x75;&#114;&#x5f;&#97;&#99;&#99;&#111;&#117;&#110;&#116;&#95;&#110;&#97;&#x6d;&#x65;&#95;&#105;&#x6e;&#x5f;&#118;&#x70;&#x73;&#64;&#x79;&#111;&#117;&#114;&#x5f;&#100;&#x6f;&#x6d;&#x61;&#105;&#110;&#46;&#99;&#x6f;&#109;">&#121;&#x6f;&#117;&#114;&#x5f;&#97;&#x63;&#x63;&#x6f;&#117;&#110;&#116;&#95;&#x6e;&#97;&#x6d;&#101;&#95;&#x69;&#x6e;&#x5f;&#x76;&#112;&#115;&#64;&#121;&#x6f;&#117;&#114;&#95;&#100;&#111;&#x6d;&#97;&#105;&#x6e;&#x2e;&#99;&#111;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#121;&#111;&#x75;&#x72;&#95;&#x61;&#x63;&#99;&#111;&#x75;&#x6e;&#116;&#95;&#110;&#x61;&#x6d;&#101;&#x5f;&#105;&#110;&#x5f;&#x76;&#x70;&#x73;&#x40;&#121;&#x6f;&#x75;&#x72;&#95;&#100;&#x6f;&#109;&#x61;&#105;&#110;&#46;&#x63;&#111;&#109;">&#121;&#x6f;&#117;&#114;&#95;&#97;&#99;&#99;&#x6f;&#117;&#110;&#116;&#x5f;&#x6e;&#x61;&#109;&#x65;&#95;&#x69;&#x6e;&#95;&#x76;&#112;&#115;&#64;&#x79;&#111;&#117;&#114;&#95;&#100;&#x6f;&#109;&#x61;&#x69;&#110;&#x2e;&#x63;&#111;&#109;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -634,46 +665,6 @@ Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site help
 <p>We can see how many line of code need these three javascript framework to make a same app.</p>
 
 <p>so, Angularjs win!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails Assets Gem vs Bower]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/21/rails-assets-gem-vs-using-bower/"/>
-    <updated>2014-04-21T01:26:18+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/21/rails-assets-gem-vs-using-bower</id>
-    <content type="html"><![CDATA[<p>There are many ways to manage assets in rails.</p>
-
-<h2>let us compare these two ways.</h2>
-
-<h3>1)use rails assets gem. <a href="https://rails-assets.org/">https://rails-assets.org/</a></h3>
-
-<p>Rails Assets is the frictionless proxy between Bundler and Bower.</p>
-
-<p>it need to add a gem source to your gem file</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source 'https://rails-assets.org'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and add assets like this to gem file</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails-assets-BOWER_PACKAGE_NAME'</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>2)use bower directly</h3>
-
-<h3>use bower directly win!</h3>
-
-<p>I think rails-assets adds an unnecessary layer.
-I want to make things simple.</p>
-
-<p>PS: there is a gem called &lsquo;bower-rails&rsquo;, helping you use bower.</p>
-
-<p>It provides a DSL configuration in Bowerfile at the project&rsquo;s root similar to Bundler.</p>
-
-<p>But I think this gem also add an unnecessary layer. so DON&rsquo;T use this gem! It just wastes your time!</p>
 ]]></content>
   </entry>
   
