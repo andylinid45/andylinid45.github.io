@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-10T12:30:12+08:00</updated>
+  <updated>2015-08-10T12:38:40+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -14,41 +14,51 @@
 
   
   <entry>
-    <title type="html"><![CDATA[［第一课］创业项目应该什么时候停止]]></title>
+    <title type="html"><![CDATA[[第一课]创业项目应该什么时候停止]]></title>
     <link href="http://andylinid45.github.io/blog/2015/08/10/when-to-stop-as-a-startup/"/>
     <updated>2015-08-10T11:35:33+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/10/when-to-stop-as-a-startup</id>
     <content type="html"><![CDATA[<h3>创业项目应该什么时候停止</h3>
 
-<ul>
-<li>风险资金撤出的时候</li>
-<li>经过所有可以的尝试后，你的指标（如用户注册数，用户留存，营收等你认为合适的衡量公司的指标）都不增长的时候</li>
-</ul>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>风险资金撤出的时候
+</span><span class='line'>经过所有可以的尝试后，你的指标（如用户注册数，用户留存，营收等你认为合适的衡量公司的指标）都不增长的时候</span></code></pre></td></tr></table></div></figure>
 
 
-<h1></h1>
+<p></p>
 
 <h3>对于风险资金撤出</h3>
 
-<ul>
-<li>风险资金撤出只是表示你的项目不是一个理想的投资标的</li>
-<li>风险资金希望公司是指数型增长</li>
-<li>如果公司营收可覆盖成本，对风险资金可能不是一个好项目，但对创始人可能是一个好项目</li>
-</ul>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>风险资金撤出只是表示你的项目不是一个理想的投资标的
+</span><span class='line'>风险资金希望公司是指数型增长
+</span><span class='line'>如果公司营收可覆盖成本，对风险资金可能不是一个好项目，但对创始人可能是一个好项目</span></code></pre></td></tr></table></div></figure>
 
+
+<p></p>
 
 <h3>创始人和团队心态建设</h3>
 
-<ul>
-<li>以投资标的心态看待创业项目，放弃执着与偏见</li>
-<li>以止损心态看待项目，什么时候结束心理已经有计划</li>
-<li>对投资的时间与金钱设置止损线</li>
-<li>切忌拼地一博，保证项目失败不影响个人财务状况和生活水平</li>
-<li>切忌把项目等同自己，项目失败不等于自己失败</li>
-<li>总结经验，重新开始新生活</li>
-<li>天涯何处无芳草</li>
-</ul>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>以投资标的心态看待创业项目，放弃执着与偏见
+</span><span class='line'>以止损心态看待项目，什么时候结束心理已经有计划
+</span><span class='line'>对投资的时间与金钱设置止损线
+</span><span class='line'>切忌拼地一博，保证项目失败不影响个人财务状况和生活水平
+</span><span class='line'>切忌把项目等同自己，项目失败不等于自己失败
+</span><span class='line'>总结经验，重新开始新生活
+</span><span class='line'>天涯何处无芳草</span></code></pre></td></tr></table></div></figure>
 
+
+<p></p>
 
 <p>最后，以陈奕迅的歌词结束这篇文章</p>
 
@@ -85,7 +95,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x79;&#x6f;&#117;&#x72;&#x5f;&#97;&#x63;&#99;&#111;&#x75;&#x6e;&#x74;&#95;&#x6e;&#97;&#x6d;&#101;&#x5f;&#x69;&#x6e;&#95;&#118;&#x70;&#x73;&#64;&#x79;&#x6f;&#117;&#114;&#95;&#x64;&#x6f;&#x6d;&#x61;&#105;&#110;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#111;&#x75;&#x72;&#x5f;&#x61;&#99;&#x63;&#x6f;&#x75;&#110;&#x74;&#x5f;&#x6e;&#x61;&#x6d;&#x65;&#95;&#x69;&#x6e;&#95;&#118;&#x70;&#x73;&#x40;&#x79;&#111;&#x75;&#x72;&#95;&#100;&#111;&#109;&#x61;&#x69;&#x6e;&#x2e;&#x63;&#111;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x79;&#x6f;&#x75;&#114;&#x5f;&#x61;&#99;&#x63;&#x6f;&#117;&#x6e;&#x74;&#x5f;&#110;&#x61;&#109;&#101;&#95;&#105;&#x6e;&#x5f;&#118;&#x70;&#x73;&#64;&#x79;&#111;&#x75;&#x72;&#95;&#100;&#111;&#109;&#x61;&#105;&#x6e;&#x2e;&#99;&#111;&#109;">&#121;&#x6f;&#x75;&#x72;&#95;&#97;&#99;&#99;&#x6f;&#117;&#x6e;&#116;&#95;&#x6e;&#x61;&#109;&#101;&#95;&#x69;&#x6e;&#95;&#x76;&#x70;&#115;&#x40;&#x79;&#x6f;&#117;&#x72;&#x5f;&#100;&#x6f;&#x6d;&#x61;&#x69;&#x6e;&#x2e;&#x63;&#x6f;&#109;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
