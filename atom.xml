@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-10T12:26:34+08:00</updated>
+  <updated>2015-08-10T12:30:12+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -25,6 +25,8 @@
 <li>经过所有可以的尝试后，你的指标（如用户注册数，用户留存，营收等你认为合适的衡量公司的指标）都不增长的时候</li>
 </ul>
 
+
+<h1></h1>
 
 <h3>对于风险资金撤出</h3>
 
@@ -83,7 +85,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#121;&#111;&#117;&#x72;&#95;&#97;&#x63;&#99;&#x6f;&#x75;&#x6e;&#116;&#95;&#x6e;&#97;&#109;&#x65;&#95;&#105;&#x6e;&#95;&#x76;&#x70;&#x73;&#x40;&#121;&#x6f;&#117;&#x72;&#x5f;&#100;&#111;&#109;&#x61;&#x69;&#110;&#x2e;&#99;&#111;&#109;">&#x79;&#x6f;&#x75;&#114;&#x5f;&#x61;&#99;&#99;&#111;&#117;&#x6e;&#116;&#x5f;&#x6e;&#x61;&#x6d;&#x65;&#x5f;&#x69;&#x6e;&#95;&#118;&#x70;&#115;&#x40;&#121;&#x6f;&#117;&#x72;&#x5f;&#100;&#111;&#x6d;&#x61;&#105;&#110;&#x2e;&#99;&#111;&#x6d;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x79;&#x6f;&#117;&#x72;&#x5f;&#97;&#x63;&#99;&#111;&#x75;&#x6e;&#x74;&#95;&#x6e;&#97;&#x6d;&#101;&#x5f;&#x69;&#x6e;&#95;&#118;&#x70;&#x73;&#64;&#x79;&#x6f;&#117;&#114;&#95;&#x64;&#x6f;&#x6d;&#x61;&#105;&#110;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#111;&#x75;&#x72;&#x5f;&#x61;&#99;&#x63;&#x6f;&#x75;&#110;&#x74;&#x5f;&#x6e;&#x61;&#x6d;&#x65;&#95;&#x69;&#x6e;&#95;&#118;&#x70;&#x73;&#x40;&#x79;&#111;&#x75;&#x72;&#95;&#100;&#111;&#109;&#x61;&#x69;&#x6e;&#x2e;&#x63;&#111;&#109;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
