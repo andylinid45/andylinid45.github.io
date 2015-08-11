@@ -9,11 +9,21 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="when 1
+  <meta name="description" content="1
 2
-gem install linecache19 --backtrace
-Building native extensions. This could take a while... and can not go farther try: 1
-gem install ruby- &hellip;">
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+sudo /etc/init.d/mysql stop
+sudo mysqld_safe --user=mysql --skip-grant-tables --skip-networking &
+mysql -u root mysql &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +94,67 @@ gem install ruby- &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/reset-mysql-root-password/">Reset Mysql Root Password</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:36:36+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/mysql stop
+</span><span class='line'>sudo mysqld_safe --user=mysql --skip-grant-tables --skip-networking &
+</span><span class='line'>mysql -u root mysql
+</span><span class='line'>
+</span><span class='line'>mysql&gt; UPDATE mysql.user SET Password=PASSWORD('YOUR-NEW-MYSQL-PASSWORD') WHERE User='root';
+</span><span class='line'>mysql&gt; FLUSH PRIVILEGES;
+</span><span class='line'>mysql&gt; quit
+</span><span class='line'>
+</span><span class='line'>sudo /etc/init.d/mysql restart
+</span><span class='line'>
+</span><span class='line'>mysql -u root -p
+</span><span class='line'>Enter password:
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -577,11 +648,15 @@ gem install ruby- &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 106.66666666666667%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 126.66666666666667%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 126.66666666666667%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 113.33333333333333%'>rbenv(2)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 106.66666666666667%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 133.33333333333334%'>technical-review(5)</a> <a href='/blog/categories/tools' style='font-size: 133.33333333333334%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 113.33333333333333%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 113.33333333333333%'>创业(2)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 106.66666666666667%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 126.66666666666667%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 126.66666666666667%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 113.33333333333333%'>rbenv(2)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 106.66666666666667%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 133.33333333333334%'>technical-review(5)</a> <a href='/blog/categories/tools' style='font-size: 133.33333333333334%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 113.33333333333333%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 120.0%'>创业(3)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/08/11/content-marketing/">[第三课]content Marketing</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/08/10/what-is-marketing/">[第二课]营销是什么</a>
@@ -597,10 +672,6 @@ gem install ruby- &hellip;">
     
       <li class="post">
         <a href="/blog/2014/12/22/sendmail-vs-postfix/">Sendmail vs Postfix</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/01/id-naming/">Id Naming</a>
       </li>
     
   </ul>
