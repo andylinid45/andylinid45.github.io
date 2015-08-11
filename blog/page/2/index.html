@@ -9,7 +9,7 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="login as root 1
 2
 3
 4
@@ -22,14 +22,7 @@
 11
 12
 13
-14
-15
-16
-17
-18
-mkdir ~/.ssh
-sudo cp /Users/andy/.ssh/id_rsa ~/.ssh
-sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
+adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers nano /etc/ssh/sshd_config &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -100,6 +93,76 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/10/27/ubuntu-14-dot-04-server-initial/">Ubuntu 14.04 Server Initial</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-27T00:01:07+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>login as root</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>adduser deploy
+</span><span class='line'>
+</span><span class='line'>echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
+</span><span class='line'>
+</span><span class='line'>nano /etc/ssh/sshd_config 
+</span><span class='line'># edit two lines
+</span><span class='line'>PermitRootLogin no
+</span><span class='line'>PasswordAuthentication no 
+</span><span class='line'>
+</span><span class='line'>service ssh restart  # do not use , no use /etc/init.d/ssh  restart 
+</span><span class='line'>
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in local</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id deploy@ip</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -627,48 +690,6 @@ install</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/09/23/using-homebrew-with-multiple-users/">Using Homebrew With Multiple Users</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-23T10:06:52+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo chmod -R g+w /Library/Caches/Homebrew
-</span><span class='line'>sudo chmod -R g+w /usr/local/
-</span><span class='line'>brew doctor</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -683,11 +704,15 @@ install</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 106.66666666666667%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 126.66666666666667%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 126.66666666666667%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 113.33333333333333%'>rbenv(2)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 106.66666666666667%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 133.33333333333334%'>technical-review(5)</a> <a href='/blog/categories/tools' style='font-size: 133.33333333333334%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 113.33333333333333%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 140.0%'>创业(6)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 106.66666666666667%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 113.33333333333333%'>bash(2)</a> <a href='/blog/categories/bower' style='font-size: 113.33333333333333%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 106.66666666666667%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 126.66666666666667%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 113.33333333333333%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 106.66666666666667%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 146.66666666666666%'>git(7)</a> <a href='/blog/categories/heroku' style='font-size: 113.33333333333333%'>heroku(2)</a> <a href='/blog/categories/mongodb' style='font-size: 106.66666666666667%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 120.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 113.33333333333333%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 126.66666666666667%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 106.66666666666667%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 106.66666666666667%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 126.66666666666667%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 106.66666666666667%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 153.33333333333334%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 113.33333333333333%'>rbenv(2)</a> <a href='/blog/categories/rvm' style='font-size: 106.66666666666667%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 113.33333333333333%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 106.66666666666667%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 133.33333333333334%'>technical-review(5)</a> <a href='/blog/categories/tools' style='font-size: 133.33333333333334%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(9)</a> <a href='/blog/categories/virtualbox' style='font-size: 113.33333333333333%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 146.66666666666666%'>创业(7)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/08/11/why-baby-consumer-market-suck-for-startup/">[第七课]为什么母婴市场坑了这么多创业者</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/08/11/is-idea-important/">[第六课]Idea重要吗</a>
@@ -703,10 +728,6 @@ install</p>
     
       <li class="post">
         <a href="/blog/2015/08/11/content-marketing/">[第三课]Content Marketing</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/10/what-is-marketing/">[第二课]营销是什么</a>
       </li>
     
   </ul>
