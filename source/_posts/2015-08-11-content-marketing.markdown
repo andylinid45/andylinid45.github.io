@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[第三课]content marketing"
+title: "[第三课]Content marketing"
 date: 2015-08-11 13:52:18 +0800
 comments: true
 categories: 创业
