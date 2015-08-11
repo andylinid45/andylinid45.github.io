@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 创业 | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/chuang-ye/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-11T14:49:04+08:00</updated>
+  <updated>2015-08-11T15:27:33+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[第五课]生产要素价格]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/11/the-price-of-factors/"/>
+    <updated>2015-08-11T15:17:43+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/11/the-price-of-factors</id>
+    <content type="html"><![CDATA[<p>有几个力量决定生产要素的价格
+<code>
+上游生产要素价格，企业家精神，生产力，权力
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[第四课]生产要素循环]]></title>
@@ -25,7 +37,7 @@
 
 <p>生产要素循环
 <code>
-有时我简称生产要素为“资源”（是有点不专业的说法）
+有时我简称生产要素为“资源”，“社会资源”（是有点不专业的说法）
 企业进行生产活动把要素变成产品和服务，产品服务投入市场再转变成要素。循环不息
 </code></p>
 

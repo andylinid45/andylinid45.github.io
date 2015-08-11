@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-11T14:49:04+08:00</updated>
+  <updated>2015-08-11T15:27:33+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[第五课]生产要素价格]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/11/the-price-of-factors/"/>
+    <updated>2015-08-11T15:17:43+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/11/the-price-of-factors</id>
+    <content type="html"><![CDATA[<p>有几个力量决定生产要素的价格</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>上游生产要素价格，企业家精神，生产力，权力</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[第四课]生产要素循环]]></title>
@@ -28,7 +43,7 @@
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>有时我简称生产要素为“资源”（是有点不专业的说法）
+</pre></td><td class='code'><pre><code class=''><span class='line'>有时我简称生产要素为“资源”，“社会资源”（是有点不专业的说法）
 </span><span class='line'>企业进行生产活动把要素变成产品和服务，产品服务投入市场再转变成要素。循环不息</span></code></pre></td></tr></table></div></figure>
 
 
@@ -190,7 +205,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#58;&#121;&#111;&#117;&#x72;&#95;&#97;&#99;&#99;&#x6f;&#117;&#x6e;&#x74;&#x5f;&#x6e;&#x61;&#x6d;&#101;&#x5f;&#x69;&#110;&#x5f;&#118;&#x70;&#x73;&#64;&#x79;&#x6f;&#117;&#x72;&#95;&#100;&#x6f;&#109;&#97;&#105;&#110;&#x2e;&#99;&#111;&#109;">&#x79;&#111;&#x75;&#114;&#x5f;&#97;&#x63;&#x63;&#x6f;&#117;&#x6e;&#x74;&#x5f;&#110;&#97;&#x6d;&#x65;&#x5f;&#x69;&#110;&#x5f;&#118;&#112;&#115;&#64;&#121;&#111;&#x75;&#x72;&#x5f;&#x64;&#111;&#x6d;&#97;&#105;&#110;&#x2e;&#x63;&#x6f;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#121;&#x6f;&#117;&#x72;&#x5f;&#x61;&#x63;&#x63;&#x6f;&#117;&#x6e;&#116;&#95;&#110;&#x61;&#109;&#x65;&#x5f;&#105;&#x6e;&#x5f;&#x76;&#x70;&#115;&#64;&#x79;&#x6f;&#117;&#x72;&#x5f;&#x64;&#x6f;&#109;&#97;&#105;&#x6e;&#x2e;&#99;&#111;&#109;">&#121;&#x6f;&#x75;&#114;&#95;&#97;&#x63;&#x63;&#111;&#x75;&#x6e;&#x74;&#95;&#110;&#x61;&#109;&#x65;&#95;&#105;&#x6e;&#x5f;&#118;&#112;&#x73;&#64;&#x79;&#111;&#x75;&#x72;&#x5f;&#x64;&#x6f;&#109;&#97;&#x69;&#110;&#x2e;&#99;&#111;&#x6d;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -638,31 +653,6 @@ install</p>
 </span><span class='line'>git merge master
 </span><span class='line'>git push
 </span><span class='line'>git checkout master</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mysql Backup and Restore]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/05/02/mysql-backup-and-restore/"/>
-    <updated>2014-05-02T17:44:37+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/05/02/mysql-backup-and-restore</id>
-    <content type="html"><![CDATA[<p>backup</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mysqldump -u*** -p*** dbname &gt; backup`date +%F`.sql</span></code></pre></td></tr></table></div></figure>
-
-
-<p>just some tables</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mysqldump -u*** -p*** dbname table1 table2&gt; backup`date +%F`.sql</span></code></pre></td></tr></table></div></figure>
-
-
-<p>restore</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mysql -u*** -p*** dbname &lt; data.sql</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
