@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-11T14:03:11+08:00</updated>
+  <updated>2015-08-11T14:12:35+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -46,8 +46,10 @@
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
+<span class='line-number'>6</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>打折，团购 -&gt; 贪
-</span><span class='line'>流行  -&gt;  从众，社会认同
+</span><span class='line'>八卦，好色，虚荣，好学，上进 -&gt; 贪
+</span><span class='line'>流行，时尚  -&gt;  从众，社会认同
 </span><span class='line'>粉丝经济  -&gt; 喜好，社会认同
 </span><span class='line'>限时特价  -&gt;  稀缺
 </span><span class='line'>用户邀请好友 -&gt; 互惠</span></code></pre></td></tr></table></div></figure>
@@ -60,6 +62,10 @@
 
 
 <p></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>切忌创始人和团队贪嗔痴，而产品乏味</span></code></pre></td></tr></table></div></figure>
+
 
 <p>推荐 <a href="http://book.douban.com/subject/5287474/">《影响力》</a></p>
 ]]></content>
@@ -149,7 +155,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x79;&#111;&#x75;&#114;&#x5f;&#x61;&#99;&#99;&#x6f;&#x75;&#x6e;&#116;&#x5f;&#x6e;&#x61;&#x6d;&#x65;&#95;&#x69;&#110;&#x5f;&#x76;&#x70;&#115;&#x40;&#x79;&#x6f;&#117;&#114;&#x5f;&#x64;&#x6f;&#109;&#97;&#x69;&#x6e;&#46;&#x63;&#111;&#x6d;">&#121;&#x6f;&#117;&#x72;&#95;&#x61;&#99;&#x63;&#111;&#x75;&#110;&#x74;&#95;&#x6e;&#x61;&#109;&#x65;&#95;&#105;&#x6e;&#x5f;&#x76;&#112;&#x73;&#x40;&#x79;&#x6f;&#x75;&#114;&#x5f;&#x64;&#111;&#109;&#x61;&#105;&#x6e;&#46;&#99;&#111;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#121;&#111;&#117;&#x72;&#x5f;&#97;&#x63;&#99;&#x6f;&#x75;&#110;&#x74;&#x5f;&#110;&#97;&#109;&#101;&#95;&#105;&#110;&#95;&#118;&#x70;&#x73;&#x40;&#x79;&#111;&#117;&#114;&#x5f;&#100;&#x6f;&#x6d;&#x61;&#105;&#110;&#x2e;&#x63;&#111;&#109;">&#121;&#111;&#x75;&#114;&#95;&#x61;&#99;&#x63;&#111;&#117;&#x6e;&#116;&#95;&#110;&#97;&#x6d;&#x65;&#95;&#105;&#x6e;&#x5f;&#118;&#112;&#115;&#x40;&#121;&#x6f;&#117;&#x72;&#x5f;&#100;&#111;&#109;&#97;&#105;&#110;&#x2e;&#99;&#x6f;&#x6d;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
