@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-11T23:47:34+08:00</updated>
+  <updated>2015-08-12T16:36:40+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[1]技术人员如何快速成长]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/12/how-to-learn-fast/"/>
+    <updated>2015-08-12T15:56:28+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/12/how-to-learn-fast</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>看官方的英文文档，看中文文档是一个坑
+</span><span class='line'>用英文搜索问题而不是中文，多看stackoverflow.com ，里面的回答都很好
+</span><span class='line'>看用到的开源库的源代码。所有东西都在源代码里，有问题就debug进去
+</span><span class='line'>精读技术书籍是坑，要快速浏览大概。书本不能帮你解决具体技术问题
+</span><span class='line'>要学以致用，切忌天马行空、纸上谈兵
+</span><span class='line'>多写demo</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[8]推荐一些参考资料]]></title>
@@ -256,7 +277,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#121;&#x6f;&#117;&#x72;&#x5f;&#x61;&#99;&#x63;&#x6f;&#x75;&#110;&#116;&#95;&#x6e;&#97;&#109;&#x65;&#95;&#x69;&#x6e;&#95;&#118;&#112;&#x73;&#x40;&#x79;&#111;&#x75;&#x72;&#95;&#x64;&#x6f;&#x6d;&#x61;&#105;&#110;&#46;&#x63;&#x6f;&#109;">&#121;&#x6f;&#117;&#114;&#95;&#97;&#99;&#99;&#111;&#x75;&#x6e;&#x74;&#95;&#110;&#97;&#x6d;&#x65;&#95;&#105;&#110;&#95;&#x76;&#x70;&#x73;&#64;&#121;&#x6f;&#x75;&#x72;&#95;&#x64;&#x6f;&#x6d;&#x61;&#x69;&#110;&#x2e;&#x63;&#111;&#x6d;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x79;&#111;&#117;&#x72;&#x5f;&#x61;&#99;&#99;&#x6f;&#117;&#x6e;&#x74;&#95;&#x6e;&#x61;&#109;&#101;&#95;&#x69;&#110;&#x5f;&#x76;&#x70;&#115;&#x40;&#x79;&#111;&#117;&#114;&#x5f;&#100;&#x6f;&#x6d;&#x61;&#105;&#x6e;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#x6f;&#x75;&#x72;&#95;&#97;&#99;&#99;&#111;&#x75;&#110;&#x74;&#95;&#110;&#x61;&#x6d;&#x65;&#95;&#x69;&#x6e;&#x5f;&#x76;&#x70;&#115;&#64;&#x79;&#x6f;&#x75;&#114;&#x5f;&#100;&#x6f;&#109;&#x61;&#x69;&#110;&#x2e;&#x63;&#x6f;&#x6d;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -614,54 +635,6 @@
 
 <p><a href="https://gorails.com/setup/osx/10.9-mavericks">https://gorails.com/setup/osx/10.9-mavericks</a>
 <a href="http://www.createdbypete.com/articles/ruby-on-rails-development-setup-for-mac-osx/">http://www.createdbypete.com/articles/ruby-on-rails-development-setup-for-mac-osx/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Brew in Osx]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/23/using-brew-in-osx/"/>
-    <updated>2014-09-23T10:15:27+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/23/using-brew-in-osx</id>
-    <content type="html"><![CDATA[<p><a href="http://brew.sh">http://brew.sh</a></p>
-
-<p>install brew</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="http://caskroom.io/">http://caskroom.io/</a>
-install</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>brew install caskroom/cask/brew-cask</span></code></pre></td></tr></table></div></figure>
-
-
-<p>tools</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>brew install imagemagick
-</span><span class='line'>brew install p7zip
-</span><span class='line'>
-</span><span class='line'>brew cask install google-chrome --appdir=/Applications
-</span><span class='line'>brew cask install firefox
-</span><span class='line'>brew cask install sublime-text
-</span><span class='line'>brew cask install skype
-</span><span class='line'>brew cask install virtualbox
-</span><span class='line'>brew cask install sequel-pro
-</span><span class='line'>brew cask install mactex #latex
-</span><span class='line'>brew cask install the-unarchiver #rar 7zip</span></code></pre></td></tr></table></div></figure>
-
 ]]></content>
   </entry>
   

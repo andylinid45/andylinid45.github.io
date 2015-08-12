@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 技术 | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/ji-zhu/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2015-08-12T16:36:40+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[1]技术人员如何快速成长]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/12/how-to-learn-fast/"/>
+    <updated>2015-08-12T15:56:28+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/12/how-to-learn-fast</id>
+    <content type="html"><![CDATA[<p><code>
+看官方的英文文档，看中文文档是一个坑
+用英文搜索问题而不是中文，多看stackoverflow.com ，里面的回答都很好
+看用到的开源库的源代码。所有东西都在源代码里，有问题就debug进去
+精读技术书籍是坑，要快速浏览大概。书本不能帮你解决具体技术问题
+要学以致用，切忌天马行空、纸上谈兵
+多写demo
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
