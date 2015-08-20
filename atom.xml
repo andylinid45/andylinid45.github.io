@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-17T14:52:51+08:00</updated>
+  <updated>2015-08-20T19:27:12+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install Maven on Ubuntu14]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/20/install-maven-on-ubuntu14/"/>
+    <updated>2015-08-20T19:12:51+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/20/install-maven-on-ubuntu14</id>
+    <content type="html"><![CDATA[<p>Download maven</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mv Downloads/apache-maven-3.3.3-bin.tar.gz /usr/local/
+</span><span class='line'>cd /usr/local/
+</span><span class='line'>sudo tar -xvf apache-maven-3.3.3-bin.tar.gz
+</span><span class='line'>sudo rm apache-maven-3.3.3-bin.tar.gz </span></code></pre></td></tr></table></div></figure>
+
+
+<p>cd
+nano .profile # add at the end</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export M2_HOME="/usr/local/apache-maven-3.3.3"
+</span><span class='line'>export PATH=${PATH}:${M2_HOME}/bin</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Have a test</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>source .profile
+</span><span class='line'>mvn --version</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Jdk in Ubuntu14]]></title>
@@ -360,7 +396,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#121;&#x6f;&#x75;&#114;&#95;&#97;&#99;&#x63;&#x6f;&#x75;&#x6e;&#116;&#x5f;&#110;&#97;&#x6d;&#x65;&#95;&#105;&#x6e;&#x5f;&#118;&#112;&#115;&#64;&#x79;&#111;&#x75;&#x72;&#95;&#100;&#x6f;&#x6d;&#x61;&#105;&#110;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#111;&#x75;&#x72;&#95;&#97;&#99;&#x63;&#111;&#117;&#110;&#x74;&#x5f;&#x6e;&#97;&#x6d;&#101;&#95;&#105;&#110;&#x5f;&#x76;&#x70;&#115;&#64;&#x79;&#111;&#117;&#114;&#x5f;&#x64;&#111;&#109;&#97;&#x69;&#110;&#46;&#x63;&#111;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#121;&#x6f;&#x75;&#114;&#95;&#x61;&#x63;&#x63;&#x6f;&#x75;&#110;&#x74;&#x5f;&#x6e;&#x61;&#x6d;&#101;&#x5f;&#105;&#110;&#x5f;&#x76;&#x70;&#x73;&#64;&#x79;&#x6f;&#x75;&#x72;&#x5f;&#x64;&#x6f;&#109;&#x61;&#x69;&#110;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x6f;&#117;&#x72;&#x5f;&#97;&#99;&#x63;&#x6f;&#117;&#110;&#116;&#95;&#x6e;&#x61;&#109;&#101;&#95;&#105;&#110;&#x5f;&#x76;&#x70;&#x73;&#64;&#x79;&#x6f;&#117;&#114;&#x5f;&#100;&#111;&#109;&#97;&#x69;&#x6e;&#46;&#99;&#x6f;&#x6d;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -573,19 +609,6 @@
 
 
 <p>You HAVE to logout/login from your session, NOT just restart Virtual Box, after the group change.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setup PPTPServer in Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu/"/>
-    <updated>2014-09-27T22:19:50+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu</id>
-    <content type="html"><![CDATA[<p>all the same</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://help.ubuntu.com/community/PPTPServer</span></code></pre></td></tr></table></div></figure>
-
 ]]></content>
   </entry>
   
