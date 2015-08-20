@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-20T19:27:12+08:00</updated>
+  <updated>2015-08-20T20:52:19+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,40 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Install Jdk in Ubuntu14]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/17/install-jdk-in-ubuntu14/"/>
-    <updated>2015-08-17T14:40:35+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/17/install-jdk-in-ubuntu14</id>
-    <content type="html"><![CDATA[<p>If you have some problmes with installing jdk using
-<code>
-sudo apt-get install default-jdk
-</code></p>
-
-<p>Have a try with this</p>
-
-<p>Download jdk from Oracle website.
-<code>
-sudo mkdir /usr/lib/jvm
-sudo tar zxvf ./jdk-8u51-linux-x64.tar.gz  -C /usr/lib/jvm
-</code></p>
-
-<p>gedit ~/.bashrc # add at the end
-<code>
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_51
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-export PATH=${JAVA_HOME}/bin:$PATH
-</code></p>
-
-<p>Have a test
-<code>
-source ~/.bashrc
-java -version
-</code></p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Usb in Virtualbox]]></title>
@@ -101,6 +67,26 @@ sudo apt-get install transmission-daemon</p>
 <p>sudo service transmission-daemon start</p>
 
 <p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Ubuntu 13.04 X64 Server]]></title>
+    <link href="http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server/"/>
+    <updated>2014-03-02T20:41:23+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server</id>
+    <content type="html"><![CDATA[<p>server install
+<code>
+sudo apt-get install git zip nginx
+</code></p>
+
+<p>need to config
+<code>
+hostname need to config
+ssh port
+ssh without password
+transmission
+</code></p>
 ]]></content>
   </entry>
   
