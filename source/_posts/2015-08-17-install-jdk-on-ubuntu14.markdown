@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "install jdk in ubuntu14"
+title: "install jdk on ubuntu14"
 date: 2015-08-17 14:40:35 +0800
 comments: true
-categories: ubuntu
+categories: java
 ---
 
 If you have some problmes with installing jdk using

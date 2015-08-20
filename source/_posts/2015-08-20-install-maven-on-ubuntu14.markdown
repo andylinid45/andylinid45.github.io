@@ -14,8 +14,7 @@ sudo tar -xvf apache-maven-3.3.3-bin.tar.gz
 sudo rm apache-maven-3.3.3-bin.tar.gz 
 ```
 
-cd 
-nano .profile # add at the end
+gedit ~/.bashrc # add at the end
 ```
 export M2_HOME="/usr/local/apache-maven-3.3.3"
 export PATH=${PATH}:${M2_HOME}/bin
