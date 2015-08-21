@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Big-data | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/big-data/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2015-08-21T17:02:57+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install hadoop1.0.4 on Ubuntu14]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14/"/>
+    <updated>2015-08-21T16:33:46+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14</id>
+    <content type="html"><![CDATA[<p>Download hadoop
+<code>
+sudo cp hadoop-1.0.4-bin.tar.gz /opt
+cd /opt
+sudo tar -vxf hadoop-1.0.4-bin.tar.gz
+sudo rm hadoop-1.0.4-bin.tar.gz
+sudo mv hadoop-1.0.4/ hadoop
+</code></p>
+
+<p>sudo gedit /opt/hadoop/conf/hadoop-env.sh  #modify java home
+<code>
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_51
+</code></p>
+
+<p>gedit ~/.bashrc # do not use &lsquo;HADOOP_HOME&rsquo;
+<code>
+export HADOOP_PREFIX=/opt/hadoop
+export PATH=$HADOOP_PREFIX/bin:$PATH
+</code></p>
+
+<p>have a test
+<code>
+hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar pi 4 1000
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

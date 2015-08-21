@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Production | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/production/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-20T20:52:19+08:00</updated>
+  <updated>2015-08-21T17:02:57+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -40,7 +40,7 @@ echo "My test email sent from sendmail" | /usr/sbin/sendmail  your_gmail@gmail.c
 dig mx your_domain.com
 </code></p>
 
-<p>and now you can send mail to <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x79;&#x6f;&#x75;&#x72;&#95;&#x61;&#x63;&#x63;&#111;&#x75;&#x6e;&#116;&#95;&#110;&#97;&#x6d;&#101;&#95;&#105;&#x6e;&#95;&#x76;&#x70;&#x73;&#x40;&#x79;&#111;&#117;&#x72;&#x5f;&#x64;&#x6f;&#109;&#97;&#105;&#110;&#x2e;&#x63;&#x6f;&#109;">&#121;&#111;&#117;&#x72;&#x5f;&#97;&#99;&#x63;&#x6f;&#117;&#110;&#x74;&#x5f;&#x6e;&#97;&#x6d;&#101;&#95;&#x69;&#110;&#x5f;&#118;&#x70;&#x73;&#x40;&#x79;&#x6f;&#117;&#114;&#x5f;&#100;&#x6f;&#x6d;&#97;&#105;&#110;&#x2e;&#99;&#x6f;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#121;&#x6f;&#x75;&#x72;&#95;&#x61;&#x63;&#x63;&#x6f;&#117;&#x6e;&#116;&#95;&#x6e;&#97;&#109;&#101;&#x5f;&#x69;&#110;&#95;&#118;&#112;&#115;&#x40;&#x79;&#x6f;&#x75;&#x72;&#95;&#100;&#x6f;&#x6d;&#x61;&#105;&#x6e;&#46;&#x63;&#111;&#109;">&#x79;&#x6f;&#117;&#x72;&#95;&#x61;&#x63;&#99;&#111;&#117;&#110;&#116;&#95;&#110;&#x61;&#109;&#x65;&#95;&#x69;&#110;&#95;&#x76;&#x70;&#x73;&#64;&#x79;&#x6f;&#x75;&#x72;&#x5f;&#x64;&#111;&#x6d;&#x61;&#105;&#x6e;&#46;&#x63;&#111;&#x6d;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
