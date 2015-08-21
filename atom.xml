@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-21T17:02:57+08:00</updated>
+  <updated>2015-08-21T17:47:22+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,115 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Config Hadoop for Pseudo Distributed Mode]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/21/config-hadoop-for-pseudo-distributed-mode/"/>
+    <updated>2015-08-21T17:17:03+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/21/config-hadoop-for-pseudo-distributed-mode</id>
+    <content type="html"><![CDATA[<p>install ssh</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install openssh-client=1:6.6p1-2ubuntu1
+</span><span class='line'>sudo apt-get install openssh-server
+</span><span class='line'>ssh-keygen
+</span><span class='line'>cp .ssh/id_rsa.pub .ssh/authorized_keys
+</span><span class='line'>ssh localhost</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo nano /opt/hadoop/conf/core-site.xml</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;property&gt;
+</span><span class='line'>&lt;name&gt;fs.default.name&lt;/name&gt;
+</span><span class='line'>&lt;value&gt;hdfs://localhost:9000&lt;/value&gt;
+</span><span class='line'>&lt;/property&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;property&gt;
+</span><span class='line'>&lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
+</span><span class='line'>&lt;value&gt;/var/lib/hadoop&lt;/value&gt;
+</span><span class='line'>&lt;/property&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo nano /opt/hadoop/conf/hdfs-site.xml</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;property&gt;
+</span><span class='line'>&lt;name&gt;dfs.replication&lt;/name&gt;
+</span><span class='line'>&lt;value&gt;1&lt;/value&gt;
+</span><span class='line'>&lt;/property&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo nano /opt/hadoop/conf/mapred-site.xml</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;property&gt;
+</span><span class='line'>&lt;name&gt;mapred.job.tracker&lt;/name&gt;
+</span><span class='line'>&lt;value&gt;localhost:9001&lt;/value&gt;
+</span><span class='line'>&lt;/property&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>make temp dir for hadoop</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir /var/lib/hadoop
+</span><span class='line'>sudo chmod 777 /var/lib/hadoop</span></code></pre></td></tr></table></div></figure>
+
+
+<p>make log dir for hadoop</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir /opt/hadoop/logs 
+</span><span class='line'>sudo chmod 777 /opt/hadoop/logs/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>run just for the first time to format file system</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop namenode -format</span></code></pre></td></tr></table></div></figure>
+
+
+<p>start it</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>start-dfs.sh
+</span><span class='line'>start-mapred.sh
+</span><span class='line'>hadoop fs -ls /  # have a test</span></code></pre></td></tr></table></div></figure>
+
+
+<p>web UI for it</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://localhost:50030/
+</span><span class='line'>http://localhost:50070/</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install hadoop1.0.4 on Ubuntu14]]></title>
@@ -438,7 +547,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#121;&#111;&#117;&#x72;&#95;&#x61;&#99;&#99;&#111;&#117;&#x6e;&#x74;&#x5f;&#110;&#97;&#x6d;&#x65;&#x5f;&#x69;&#x6e;&#95;&#x76;&#x70;&#x73;&#x40;&#x79;&#111;&#x75;&#114;&#x5f;&#100;&#x6f;&#x6d;&#97;&#105;&#110;&#x2e;&#99;&#111;&#x6d;">&#121;&#x6f;&#117;&#x72;&#x5f;&#97;&#x63;&#x63;&#111;&#117;&#110;&#116;&#x5f;&#x6e;&#x61;&#109;&#101;&#x5f;&#105;&#x6e;&#95;&#118;&#112;&#115;&#64;&#121;&#111;&#x75;&#114;&#95;&#x64;&#x6f;&#x6d;&#x61;&#105;&#110;&#46;&#x63;&#x6f;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#121;&#x6f;&#x75;&#114;&#95;&#97;&#99;&#99;&#111;&#x75;&#110;&#116;&#95;&#110;&#97;&#x6d;&#101;&#95;&#105;&#x6e;&#95;&#118;&#112;&#x73;&#x40;&#x79;&#x6f;&#117;&#114;&#95;&#x64;&#111;&#x6d;&#97;&#x69;&#110;&#46;&#x63;&#111;&#109;">&#x79;&#111;&#117;&#x72;&#95;&#x61;&#99;&#99;&#x6f;&#x75;&#x6e;&#116;&#x5f;&#x6e;&#x61;&#109;&#101;&#x5f;&#105;&#x6e;&#x5f;&#118;&#x70;&#115;&#64;&#121;&#111;&#x75;&#114;&#95;&#x64;&#x6f;&#x6d;&#97;&#105;&#x6e;&#x2e;&#99;&#111;&#109;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -618,23 +727,6 @@
 </span><span class='line'>sudo chown new_user ~/.gitignore</span></code></pre></td></tr></table></div></figure>
 
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Pry to Debug in Rails Project]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/29/using-pry-to-debug-in-rails-project/"/>
-    <updated>2014-09-29T16:56:49+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/29/using-pry-to-debug-in-rails-project</id>
-    <content type="html"><![CDATA[<p>gem &lsquo;pry-rails&rsquo;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>binding.pry
-</span><span class='line'>cd 
-</span><span class='line'>ls</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
