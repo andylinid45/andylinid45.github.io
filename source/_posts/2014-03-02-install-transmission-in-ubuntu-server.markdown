@@ -3,7 +3,7 @@ layout: post
 title: "install transmission in ubuntu server"
 date: 2014-03-02 20:46:16 +0800
 comments: true
-categories: ubuntu
+categories: [ubuntu, production]
 ---
 
 
