@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-22T12:32:21+08:00</updated>
+  <updated>2015-08-22T14:50:59+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[大数据在电子商务的应用]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/22/what-big-data-can-help-e-commerce/"/>
+    <updated>2015-08-22T14:18:33+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/22/what-big-data-can-help-e-commerce</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>流量统计
+</span><span class='line'>页面PV，用户IP
+</span><span class='line'>统计网站、APP客户分布
+</span><span class='line'>日、月度注册统计
+</span><span class='line'>日、月度购买次数统计
+</span><span class='line'>促销事件效果统计
+</span><span class='line'>基于浏览记录推荐商品
+</span><span class='line'>基于购买记录推荐商品
+</span><span class='line'>热销商品预测（可能）</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Execute a Ruby Script in Terminal Using Shebang]]></title>
@@ -642,7 +669,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x79;&#x6f;&#117;&#x72;&#x5f;&#97;&#99;&#99;&#x6f;&#117;&#x6e;&#x74;&#x5f;&#110;&#x61;&#109;&#101;&#95;&#105;&#x6e;&#x5f;&#118;&#112;&#x73;&#64;&#x79;&#111;&#x75;&#114;&#x5f;&#100;&#x6f;&#109;&#97;&#x69;&#x6e;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x6f;&#117;&#x72;&#x5f;&#x61;&#x63;&#x63;&#111;&#x75;&#x6e;&#x74;&#95;&#x6e;&#x61;&#109;&#x65;&#x5f;&#x69;&#x6e;&#95;&#x76;&#112;&#115;&#64;&#x79;&#x6f;&#x75;&#x72;&#95;&#x64;&#x6f;&#x6d;&#x61;&#105;&#x6e;&#x2e;&#x63;&#111;&#x6d;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#121;&#111;&#117;&#x72;&#x5f;&#x61;&#x63;&#99;&#111;&#117;&#x6e;&#x74;&#95;&#x6e;&#x61;&#x6d;&#x65;&#95;&#x69;&#x6e;&#95;&#x76;&#x70;&#x73;&#64;&#121;&#x6f;&#117;&#x72;&#x5f;&#100;&#111;&#109;&#x61;&#x69;&#x6e;&#46;&#99;&#111;&#109;">&#121;&#x6f;&#x75;&#114;&#95;&#97;&#99;&#x63;&#111;&#x75;&#110;&#116;&#95;&#x6e;&#97;&#x6d;&#101;&#x5f;&#x69;&#x6e;&#x5f;&#x76;&#x70;&#x73;&#64;&#121;&#111;&#x75;&#114;&#95;&#x64;&#x6f;&#109;&#x61;&#x69;&#110;&#x2e;&#x63;&#111;&#109;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -697,17 +724,6 @@
 
 
 <p>also modify the /etc/postfix/virtual to add mail address like above, so your mail will forward to your gmail rather than go to you VPS local file</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Sendmail vs Postfix]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/12/22/sendmail-vs-postfix/"/>
-    <updated>2014-12-22T17:21:18+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/12/22/sendmail-vs-postfix</id>
-    <content type="html"><![CDATA[<p>Sendmail and Postfix are programs that send mail in Unix link OS.</p>
-
-<p>Postfix is better because it is newer.</p>
 ]]></content>
   </entry>
   

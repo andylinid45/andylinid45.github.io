@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Big-data | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/big-data/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-22T12:32:21+08:00</updated>
+  <updated>2015-08-22T14:50:59+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[大数据在电子商务的应用]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/22/what-big-data-can-help-e-commerce/"/>
+    <updated>2015-08-22T14:18:33+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/22/what-big-data-can-help-e-commerce</id>
+    <content type="html"><![CDATA[<p><code>
+流量统计
+页面PV，用户IP
+统计网站、APP客户分布
+日、月度注册统计
+日、月度购买次数统计
+促销事件效果统计
+基于浏览记录推荐商品
+基于购买记录推荐商品
+热销商品预测（可能）
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using HDFS FS Shell]]></title>
