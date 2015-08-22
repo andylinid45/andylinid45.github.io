@@ -5,20 +5,20 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Install Transmission in Ubuntu Server - Andy Lin</title>
+  <title>Ruby on Hadoop, Using Streaming - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="wcmapper.rb 1
 2
 3
 4
 5
 6
-7
-8
-sudo apt-get install transmission-daemon sudo service transmission-daemon stop # modify setting after stop the service
-sudo nano /etc &hellip;">
+#!/usr/bin/ruby -w while line = gets words = line.split(" ") words.each{ |word| puts word.strip+"\t1"}
+end wcreducer.rb 1
+2
+3 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -27,7 +27,7 @@ sudo nano /etc &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/03/02/install-transmission-in-ubuntu-server">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2015/08/22/ruby-on-hadoop">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -90,7 +90,7 @@ sudo nano /etc &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Install Transmission in Ubuntu Server</h1>
+      <h1 class="entry-title">Ruby on Hadoop, Using Streaming</h1>
     
     
       <p class="meta">
@@ -106,14 +106,33 @@ sudo nano /etc &hellip;">
   
 
 
-<time datetime="2014-03-02T20:46:16+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2015-08-22T15:23:05+08:00" pubdate data-updated="true">Aug 22<span>nd</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="entry-content"><p>wcmapper.rb</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/ruby  -w
+</span><span class='line'>
+</span><span class='line'>while line = gets
+</span><span class='line'>  words = line.split(" ")
+</span><span class='line'>  words.each{ |word| puts word.strip+"\t1"}
+</span><span class='line'>end
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>wcreducer.rb</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -121,15 +140,54 @@ sudo nano /etc &hellip;">
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install transmission-daemon
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/ruby  -w
 </span><span class='line'>
-</span><span class='line'>sudo service transmission-daemon stop
+</span><span class='line'>current = nil
+</span><span class='line'>count = 0
 </span><span class='line'>
-</span><span class='line'># modify setting after stop the service
-</span><span class='line'>sudo nano /etc/transmission-daemon/settings.json
+</span><span class='line'>while line = gets
+</span><span class='line'>  word, counter = line.split("\t")
 </span><span class='line'>
-</span><span class='line'>sudo service transmission-daemon start
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>  if word == current
+</span><span class='line'>      count = count+1
+</span><span class='line'>  else
+</span><span class='line'>      puts current+"\t"+count.to_s if current
+</span><span class='line'>      current = word
+</span><span class='line'>      count = 1
+</span><span class='line'>  end
+</span><span class='line'>end
+</span><span class='line'>puts current+"\t"+count.to_s</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Implementing WordCount using hadoop streaming</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop fs -copyFromLocal test.txt /user/andy
+</span><span class='line'>
+</span><span class='line'>hadoop jar /opt/hadoop/contrib/streaming/hadoop-streaming-1.0.4.jar -file wcmapper.rb -mapper wcmapper.rb -file wcreducer.rb -reducer wcreducer.rb -input test.txt -output output
+</span><span class='line'>
+</span><span class='line'>hadoop fs -cat output/part-00000</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Performing the analysis from the command line</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cat test.txt | ./wcmapper.rb | sort | ./wcreducer.rb</span></code></pre></td></tr></table></div></figure>
+
+
 
 </div>
 
@@ -153,12 +211,12 @@ sudo nano /etc &hellip;">
   
 
 
-<time datetime="2014-03-02T20:46:16+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2015-08-22T15:23:05+08:00" pubdate data-updated="true">Aug 22<span>nd</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/production/'>production</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+    <a class='category' href='/blog/categories/big-data/'>big-data</a>, <a class='category' href='/blog/categories/hadoop/'>hadoop</a>
   
 </span>
 
@@ -174,10 +232,8 @@ sudo nano /etc &hellip;">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server/" title="Previous Post: install ubuntu 13.04 x64 server">&laquo; install ubuntu 13.04 x64 server</a>
+        <a class="basic-alignment left" href="/blog/2015/08/22/what-big-data-can-help-e-commerce/" title="Previous Post: 大数据在电子商务的应用">&laquo; 大数据在电子商务的应用</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/03/02/reset-unity/" title="Next Post: reset unity">reset unity &raquo;</a>
       
     </p>
   </footer>
