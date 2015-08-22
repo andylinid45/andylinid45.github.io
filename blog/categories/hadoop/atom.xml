@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hadoop | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/hadoop/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-21T17:47:22+08:00</updated>
+  <updated>2015-08-22T12:32:21+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using HDFS FS Shell]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/22/using-hdfs-fs-shell/"/>
+    <updated>2015-08-22T11:00:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/22/using-hdfs-fs-shell</id>
+    <content type="html"><![CDATA[<p>```
+hadoop fs -mkdir /user
+hadoop fs -mkdir /user/andy
+hadoop fs -ls /user</p>
+
+<p>echo &ldquo;This is a test.&rdquo; >> test.txt
+hadoop dfs -copyFromLocal test.txt /user/andy
+hadoop dfs -ls /user/andy
+hadoop dfs -cat /user/andy/test.txt</p>
+
+<p>hadoop dfs -mkdir data
+hadoop dfs -cp test.txt data
+hadoop dfs -ls data
+hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar wordcount data out
+hadoop fs -ls out
+hadoop fs -cat out/part-r-00000
+hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Config Hadoop for Pseudo Distributed Mode]]></title>

@@ -367,12 +367,28 @@
         <lastmod>2015-08-21T17:46:06+08:00</lastmod>
     </url>
     <url>
+        <loc>http://andylinid45.github.io/blog/2015/08/22/using-hdfs-fs-shell/</loc>
+        <lastmod>2015-08-22T11:02:36+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/
+        </loc>
+        <lastmod>2015-08-22T11:14:07+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/
+        </loc>
+        <lastmod>2015-08-22T12:28:28+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://andylinid45.github.io/blog/archives/</loc>
-        <lastmod>2015-08-21T17:46:06+08:00</lastmod>
+        <lastmod>2015-08-22T12:28:28+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/</loc>
-        <lastmod>2015-08-21T17:46:06+08:00</lastmod>
+        <lastmod>2015-08-22T12:28:28+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/robots.txt</loc>

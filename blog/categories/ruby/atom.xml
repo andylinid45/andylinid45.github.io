@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2015-08-22T12:32:21+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Execute a Ruby Script in Terminal Using Shebang]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/"/>
+    <updated>2015-08-22T12:14:08+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal</id>
+    <content type="html"><![CDATA[<p><code>
+sudo apt-get install ruby
+</code></p>
+
+<p>which ruby
+<code>
+/usr/bin/ruby
+</code></p>
+
+<p>please the shebang line on the first line of your script
+```</p>
+
+<h1>!/usr/bin/ruby -w</h1>
+
+<p>```</p>
+
+<p><code>
+chmod +x your_script.rb
+./your_script.rb
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

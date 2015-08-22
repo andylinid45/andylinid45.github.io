@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-21T17:47:22+08:00</updated>
+  <updated>2015-08-22T12:32:21+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fixing Eclipse Can Not Find Java on Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/"/>
+    <updated>2015-08-22T11:10:58+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu</id>
+    <content type="html"><![CDATA[<p>gedit ECLIPSE_HOME/eclipse.ini # add below before &lsquo;-vmargs&rsquo;
+<code>
+-vm
+/usr/lib/jvm/jdk1.8.0_51/bin/java
+</code></p>
+
+<p><a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Maven on Ubuntu14]]></title>

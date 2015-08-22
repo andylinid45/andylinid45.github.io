@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-21T17:47:22+08:00</updated>
+  <updated>2015-08-22T12:32:21+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Execute a Ruby Script in Terminal Using Shebang]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/"/>
+    <updated>2015-08-22T12:14:08+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install ruby</span></code></pre></td></tr></table></div></figure>
+
+
+<p>which ruby</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/ruby</span></code></pre></td></tr></table></div></figure>
+
+
+<p>please the shebang line on the first line of your script</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/ruby -w</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>chmod +x your_script.rb
+</span><span class='line'>./your_script.rb</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fixing Eclipse Can Not Find Java on Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/"/>
+    <updated>2015-08-22T11:10:58+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu</id>
+    <content type="html"><![CDATA[<p>gedit ECLIPSE_HOME/eclipse.ini # add below before &lsquo;-vmargs&rsquo;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>-vm 
+</span><span class='line'>/usr/lib/jvm/jdk1.8.0_51/bin/java</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using HDFS FS Shell]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/22/using-hdfs-fs-shell/"/>
+    <updated>2015-08-22T11:00:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/22/using-hdfs-fs-shell</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop fs -mkdir /user
+</span><span class='line'>hadoop fs -mkdir /user/andy
+</span><span class='line'>hadoop fs -ls /user
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>echo "This is a test." &gt;&gt; test.txt
+</span><span class='line'>hadoop dfs -copyFromLocal test.txt /user/andy
+</span><span class='line'>hadoop dfs -ls /user/andy
+</span><span class='line'>hadoop dfs -cat /user/andy/test.txt
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>hadoop dfs -mkdir data
+</span><span class='line'>hadoop dfs -cp test.txt data
+</span><span class='line'>hadoop dfs -ls data
+</span><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar wordcount data out
+</span><span class='line'>hadoop fs -ls out
+</span><span class='line'>hadoop fs -cat out/part-r-00000
+</span><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Config Hadoop for Pseudo Distributed Mode]]></title>
@@ -547,7 +642,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#121;&#x6f;&#x75;&#114;&#95;&#97;&#99;&#99;&#111;&#x75;&#110;&#116;&#95;&#110;&#97;&#x6d;&#101;&#95;&#105;&#x6e;&#95;&#118;&#112;&#x73;&#x40;&#x79;&#x6f;&#117;&#114;&#95;&#x64;&#111;&#x6d;&#97;&#x69;&#110;&#46;&#x63;&#111;&#109;">&#x79;&#111;&#117;&#x72;&#95;&#x61;&#99;&#99;&#x6f;&#x75;&#x6e;&#116;&#x5f;&#x6e;&#x61;&#109;&#101;&#x5f;&#105;&#x6e;&#x5f;&#118;&#x70;&#115;&#64;&#121;&#111;&#x75;&#114;&#95;&#x64;&#x6f;&#x6d;&#97;&#105;&#x6e;&#x2e;&#99;&#111;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x79;&#x6f;&#117;&#x72;&#x5f;&#97;&#99;&#99;&#x6f;&#117;&#x6e;&#x74;&#x5f;&#110;&#x61;&#109;&#101;&#95;&#105;&#x6e;&#x5f;&#118;&#112;&#x73;&#64;&#x79;&#111;&#x75;&#114;&#x5f;&#100;&#x6f;&#109;&#97;&#x69;&#x6e;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x6f;&#117;&#x72;&#x5f;&#x61;&#x63;&#x63;&#111;&#x75;&#x6e;&#x74;&#95;&#x6e;&#x61;&#109;&#x65;&#x5f;&#x69;&#x6e;&#95;&#x76;&#112;&#115;&#64;&#x79;&#x6f;&#x75;&#x72;&#95;&#x64;&#x6f;&#x6d;&#x61;&#105;&#x6e;&#x2e;&#x63;&#111;&#x6d;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -613,121 +708,6 @@
     <content type="html"><![CDATA[<p>Sendmail and Postfix are programs that send mail in Unix link OS.</p>
 
 <p>Postfix is better because it is newer.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Id Naming]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/11/01/id-naming/"/>
-    <updated>2014-11-01T15:19:17+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/11/01/id-naming</id>
-    <content type="html"><![CDATA[<p>html css</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>this-is-my-id</span></code></pre></td></tr></table></div></figure>
-
-
-<p>javascript</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>thisIsMyId</span></code></pre></td></tr></table></div></figure>
-
-
-<p>ruby</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>this_is_my_id</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ubuntu 14.04 Server Initial]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/10/27/ubuntu-14-dot-04-server-initial/"/>
-    <updated>2014-10-27T00:01:07+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/10/27/ubuntu-14-dot-04-server-initial</id>
-    <content type="html"><![CDATA[<p>login as root</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>adduser deploy
-</span><span class='line'>
-</span><span class='line'>echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
-</span><span class='line'>
-</span><span class='line'>nano /etc/ssh/sshd_config 
-</span><span class='line'># edit two lines
-</span><span class='line'>PermitRootLogin no
-</span><span class='line'>PasswordAuthentication no 
-</span><span class='line'>
-</span><span class='line'>service ssh restart  # do not use , no use /etc/init.d/ssh  restart 
-</span><span class='line'>
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in local</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id deploy@ip</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dot Files in Osx]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/10/21/dot-files-in-osx/"/>
-    <updated>2014-10-21T20:45:33+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/10/21/dot-files-in-osx</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir ~/.ssh
-</span><span class='line'>sudo cp /Users/andy/.ssh/id_rsa  ~/.ssh
-</span><span class='line'>sudo cp /Users/andy/.ssh/id_rsa.pub  ~/.ssh
-</span><span class='line'>
-</span><span class='line'>sudo cp /Users/andy/.gitconfig ~
-</span><span class='line'>sudo cp /Users/andy/.gitignore ~
-</span><span class='line'>
-</span><span class='line'>echo "
-</span><span class='line'>alias ll='ls -alF'
-</span><span class='line'>alias la='ls -A'
-</span><span class='line'>alias l='ls -CF'
-</span><span class='line'>export PS1='\u@\h:\w$ '
-</span><span class='line'>export CLICOLOR=1
-</span><span class='line'>export GREP_OPTIONS='--color=auto' " &gt;&gt; ~/.bash_profile
-</span><span class='line'>
-</span><span class='line'>sudo chown  -R new_user  ~/.ssh
-</span><span class='line'>sudo chown new_user ~/.gitconfig 
-</span><span class='line'>sudo chown new_user ~/.gitignore</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   

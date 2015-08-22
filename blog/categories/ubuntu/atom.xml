@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-21T17:47:22+08:00</updated>
+  <updated>2015-08-22T12:32:21+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Execute a Ruby Script in Terminal Using Shebang]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/"/>
+    <updated>2015-08-22T12:14:08+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal</id>
+    <content type="html"><![CDATA[<p><code>
+sudo apt-get install ruby
+</code></p>
+
+<p>which ruby
+<code>
+/usr/bin/ruby
+</code></p>
+
+<p>please the shebang line on the first line of your script
+```</p>
+
+<h1>!/usr/bin/ruby -w</h1>
+
+<p>```</p>
+
+<p><code>
+chmod +x your_script.rb
+./your_script.rb
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fixing Eclipse Can Not Find Java on Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/"/>
+    <updated>2015-08-22T11:10:58+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu</id>
+    <content type="html"><![CDATA[<p>gedit ECLIPSE_HOME/eclipse.ini # add below before &lsquo;-vmargs&rsquo;
+<code>
+-vm
+/usr/lib/jvm/jdk1.8.0_51/bin/java
+</code></p>
+
+<p><a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Usb in Virtualbox]]></title>
@@ -46,46 +89,6 @@ https://help.ubuntu.com/community/PPTPServer
     <id>http://andylinid45.github.io/blog/2014/09/23/sudo-without-password</id>
     <content type="html"><![CDATA[<p><code>
 echo 'account_name ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Transmission in Ubuntu Server]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/install-transmission-in-ubuntu-server/"/>
-    <updated>2014-03-02T20:46:16+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/install-transmission-in-ubuntu-server</id>
-    <content type="html"><![CDATA[<p>```
-sudo apt-get install transmission-daemon</p>
-
-<p>sudo service transmission-daemon stop</p>
-
-<h1>modify setting after stop the service</h1>
-
-<p>sudo nano /etc/transmission-daemon/settings.json</p>
-
-<p>sudo service transmission-daemon start</p>
-
-<p>```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Ubuntu 13.04 X64 Server]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server/"/>
-    <updated>2014-03-02T20:41:23+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server</id>
-    <content type="html"><![CDATA[<p>server install
-<code>
-sudo apt-get install git zip nginx
-</code></p>
-
-<p>need to config
-<code>
-hostname need to config
-ssh port
-ssh without password
-transmission
 </code></p>
 ]]></content>
   </entry>
