@@ -9,19 +9,10 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="Install Command Line Tools 1
-xcode-select --install install brew
-http://brew.sh/ install ruby 1
+  <meta name="description" content="1
 2
-3
-4
-5
-6
-7
-8
-9
-10
-brew install rbenv ruby-build &hellip;">
+brew install apg
+apg -m 16 ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,6 +81,84 @@ brew install rbenv ruby-build &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/27/generate-several-random-passwords-in-bash/">Generate Several Random Passwords in Bash</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-27T22:07:35+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install apg
+</span><span class='line'>apg -m 16</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/27/find-process-by-name-in-bash/">Find Process by Name in Bash</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-27T22:05:47+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ps aux|grep sshd</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -596,133 +665,6 @@ Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site help
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/21/rails-assets-gem-vs-using-bower/">Rails Assets Gem vs Bower</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-21T01:26:18+08:00" pubdate data-updated="true">Apr 21<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There are many ways to manage assets in rails.</p>
-
-<h2>let us compare these two ways.</h2>
-
-<h3>1)use rails assets gem. <a href="https://rails-assets.org/">https://rails-assets.org/</a></h3>
-
-<p>Rails Assets is the frictionless proxy between Bundler and Bower.</p>
-
-<p>it need to add a gem source to your gem file</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source 'https://rails-assets.org'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and add assets like this to gem file</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails-assets-BOWER_PACKAGE_NAME'</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>2)use bower directly</h3>
-
-<h3>use bower directly win!</h3>
-
-<p>I think rails-assets adds an unnecessary layer.
-I want to make things simple.</p>
-
-<p>PS: there is a gem called &lsquo;bower-rails&rsquo;, helping you use bower.</p>
-
-<p>It provides a DSL configuration in Bowerfile at the project&rsquo;s root similar to Bundler.</p>
-
-<p>But I think this gem also add an unnecessary layer. so DON&rsquo;T use this gem! It just wastes your time!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/21/using-bower-to-manage-rails-assets/">Using Bower to Manage Rails Assets</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-21T00:02:56+08:00" pubdate data-updated="true">Apr 21<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd project_root
-</span><span class='line'>echo '{ "directory": "vendor/assets/components" }' &gt; .bowerrc
-</span><span class='line'>bower init #just use the default setting is ok
-</span><span class='line'>
-</span><span class='line'>bower install angular
-</span><span class='line'>bower install sass-bootstrap</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in app/assets/javascripts/application.js add:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>//= require angular/angular</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in app/assets/stylesheets/application.css add:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>*= require sass-bootstrap/lib/bootstrap</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -737,11 +679,19 @@ I want to make things simple.</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/html5' style='font-size: 110.9090909090909%'>html5(2)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/">Native Apps, Mobile Web Apps and Hybrid Apps</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/23/what-is-new-in-html5/">What Is New in HTML5?</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/08/22/ruby-on-hadoop/">Ruby on Hadoop, Using Streaming</a>
@@ -753,14 +703,6 @@ I want to make things simple.</p>
     
       <li class="post">
         <a href="/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/">How to Execute a Ruby Script in Terminal Using Shebang</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/">Fixing Eclipse Can Not Find Java on Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/22/using-hdfs-fs-shell/">Using HDFS FS Shell</a>
       </li>
     
   </ul>

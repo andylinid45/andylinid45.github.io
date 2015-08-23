@@ -9,17 +9,8 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="great gems 1
-2
-3
-4
-5
-6
-gem 'devise'
-gem 'haml'
-gem 'rabl' # for building rest api
-gem "capistrano"
-gem 'capistrano-nginx-unicorn', require: false, &hellip;">
+  <meta name="description" content="or you need to manually set the column name to something pointless: 1
+self.inheritance_column = :_type_disabled ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +79,104 @@ gem 'capistrano-nginx-unicorn', require: false, &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/do-not-use-the-column-name-type/">Do Not Use the Column Name &#8216;Type&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T18:35:56+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>or you need to manually set the column name to something pointless:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>self.inheritance_column = :_type_disabled</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/switching-git-server/">Switching Git Server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T18:34:29+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote -v
+</span><span class='line'>
+</span><span class='line'>git branch
+</span><span class='line'>
+</span><span class='line'>git remote add bitbucket git@bitbucket.org:&lt;&lt;username&gt;&gt;/&lt;&lt;repo&gt;&gt;
+</span><span class='line'>
+</span><span class='line'>git remote rm origin
+</span><span class='line'>
+</span><span class='line'>git remote rename bitbucket origin
+</span><span class='line'>
+</span><span class='line'>git push -u origin --all</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -683,244 +772,6 @@ change or add this line</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/spinejs-and-rails/">Spinejs and Rails</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:07:53+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>create a app</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails new demo
-</span><span class='line'>
-</span><span class='line'>rails g scaffold post title:string content:string
-</span><span class='line'>
-</span><span class='line'>rake db:migrate</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Gemfile add spine support</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'spine-rails'
-</span><span class='line'>gem 'eco'</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g spine:new
-</span><span class='line'>
-</span><span class='line'>rails g spine:model post title content</span></code></pre></td></tr></table></div></figure>
-
-
-<p>check localhost:3000</p>
-
-<p>in chrome console</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#add a post
-</span><span class='line'>var post = App.Post.create({title: 'hi', content: 't'});
-</span><span class='line'>
-</span><span class='line'>#get a post
-</span><span class='line'>App.Post.fetch();
-</span><span class='line'>App.Post.first().content
-</span><span class='line'>App.Post.first().destroy()</span></code></pre></td></tr></table></div></figure>
-
-
-<p>spine scaffold</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g spine:scaffold Post title content</span></code></pre></td></tr></table></div></figure>
-
-
-<p>remove this line in post controllers js</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ = jQuery.sub()</span></code></pre></td></tr></table></div></figure>
-
-
-<p>done, you can now use spine mvc as a ajax front end</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/mongodb-and-mongoid/">Mongodb and Mongoid</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T16:36:29+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install mongodb</span></code></pre></td></tr></table></div></figure>
-
-
-<p>turn off journal and turn on rest in you dev</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/mongodb.conf 
-</span><span class='line'>
-</span><span class='line'>journal = false
-</span><span class='line'>rest = true</span></code></pre></td></tr></table></div></figure>
-
-
-<p>add mongodb to startup</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo update-rc.d mongodb  defaults</span></code></pre></td></tr></table></div></figure>
-
-
-<p>run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mongo
-</span><span class='line'>
-</span><span class='line'>db.test.save( { a: 1 } )
-</span><span class='line'>db.test.find()
-</span><span class='line'>
-</span><span class='line'>show collections
-</span><span class='line'>db.abc.count()</span></code></pre></td></tr></table></div></figure>
-
-
-<p>if you can not start mongodb sometime</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>tail /var/log/mongodb/mongodb.log -n 100
-</span><span class='line'>
-</span><span class='line'>sudo rm /var/lib/mongodb/mongod.lock
-</span><span class='line'>
-</span><span class='line'>sudo -u mongodb mongod -f /etc/mongodb.conf --repair</span></code></pre></td></tr></table></div></figure>
-
-
-<p>check mongodb work</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://localhost:28017/</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://docs.mongodb.org/manual/
-</span><span class='line'>http://mongoid.org/en/mongoid/
-</span><span class='line'>http://www.precog.com/editions/precog-for-mongodb
-</span><span class='line'>https://github.com/bobthecow/genghis
-</span><span class='line'>https://github.com/zuk/DrowsyDromedary</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>mongoid</h3>
-
-<p>Gemfile</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'mongoid'
-</span><span class='line'>gem 'bson_ext'</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g mongoid:config</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The Mongoid Demo Application</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/mongoid/echo</span></code></pre></td></tr></table></div></figure>
-
-
-<p>create indexes for db</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:mongoid:create_indexes
-</span><span class='line'>rake db:seed</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -935,11 +786,19 @@ change or add this line</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/html5' style='font-size: 110.9090909090909%'>html5(2)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/">Native Apps, Mobile Web Apps and Hybrid Apps</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/23/what-is-new-in-html5/">What Is New in HTML5?</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/08/22/ruby-on-hadoop/">Ruby on Hadoop, Using Streaming</a>
@@ -951,14 +810,6 @@ change or add this line</p>
     
       <li class="post">
         <a href="/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/">How to Execute a Ruby Script in Terminal Using Shebang</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/">Fixing Eclipse Can Not Find Java on Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/22/using-hdfs-fs-shell/">Using HDFS FS Shell</a>
       </li>
     
   </ul>

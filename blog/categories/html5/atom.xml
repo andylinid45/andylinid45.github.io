@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Html5 | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/html5/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2015-08-23T17:04:31+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Native Apps, Mobile Web Apps and Hybrid Apps]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/"/>
+    <updated>2015-08-23T16:27:10+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps</id>
+    <content type="html"><![CDATA[<p>Mobile web apps resource
+<code>
+https://html5boilerplate.com/mobile/
+http://jquerymobile.com
+</code></p>
+
+<p>I think hybrid apss will not be hot later.</p>
+
+<p>Hybrid apps resource
+<code>
+http://phonegap.com/
+http://www.ionicframework.com/
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What Is New in HTML5?]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5/"/>
+    <updated>2015-08-23T14:39:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5</id>
+    <content type="html"><![CDATA[<p><code>
+http://html5please.com/
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

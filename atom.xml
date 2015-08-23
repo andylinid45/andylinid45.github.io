@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-22T15:54:50+08:00</updated>
+  <updated>2015-08-23T17:04:31+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Native Apps, Mobile Web Apps and Hybrid Apps]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/"/>
+    <updated>2015-08-23T16:27:10+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps</id>
+    <content type="html"><![CDATA[<p>Mobile web apps resource</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://html5boilerplate.com/mobile/
+</span><span class='line'>http://jquerymobile.com</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I think hybrid apss will not be hot later.</p>
+
+<p>Hybrid apps resource</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://phonegap.com/
+</span><span class='line'>http://www.ionicframework.com/</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What Is New in HTML5?]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5/"/>
+    <updated>2015-08-23T14:39:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://html5please.com/</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby on Hadoop, Using Streaming]]></title>
@@ -628,100 +664,6 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>"注意即选择"和心理学的互惠原理</span></code></pre></td></tr></table></div></figure>
 
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[第二课]营销是什么]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/10/what-is-marketing/"/>
-    <updated>2015-08-10T14:48:23+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/10/what-is-marketing</id>
-    <content type="html"><![CDATA[<p>在消费社会，营销即贪嗔痴，紧抓用户心理需求。因为物质需求是比较容易满足的，而心理需求则需要花一生去满足。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>打折，团购 -&gt; 贪
-</span><span class='line'>八卦，好色，虚荣，好学，上进 -&gt; 贪
-</span><span class='line'>流行，时尚  -&gt;  从众，社会认同
-</span><span class='line'>粉丝经济  -&gt; 喜好，社会认同
-</span><span class='line'>限时特价  -&gt;  稀缺
-</span><span class='line'>用户邀请好友 -&gt; 互惠</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>产品设计、营销要抓住用户贪嗔痴，不是向用户宣传产品价值</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>所以产品设计要逃离功能性设计和易用性设计，从颜色，字体，文案，排版，功能流程等都要紧抓用户心理需求</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>切忌创始人和团队贪嗔痴，而产品乏味</span></code></pre></td></tr></table></div></figure>
-
-
-<p>推荐 <a href="http://book.douban.com/subject/5287474/">《影响力》</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[第一课]创业项目应该什么时候停止]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/10/when-to-stop-as-a-startup/"/>
-    <updated>2015-08-10T11:35:33+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/10/when-to-stop-as-a-startup</id>
-    <content type="html"><![CDATA[<h3>创业项目应该什么时候停止</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>风险资金撤出的时候
-</span><span class='line'>经过所有可以的尝试后，你的指标（如用户注册数，用户留存，营收等你认为合适的衡量公司的指标）都不增长的时候</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<h3>对于风险资金撤出</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>风险资金撤出只是表示你的项目不是一个理想的投资标的
-</span><span class='line'>风险资金希望公司是指数型增长
-</span><span class='line'>如果公司营收可覆盖成本，对风险资金可能不是一个好项目，但对创始人可能是一个好项目</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<h3>创始人和团队心态建设</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>以投资标的心态看待创业项目，放弃执着与偏见
-</span><span class='line'>以止损心态看待项目，什么时候结束心理已经有计划
-</span><span class='line'>对投资的时间与金钱设置止损线
-</span><span class='line'>切忌拼地一博，保证项目失败不影响个人财务状况和生活水平
-</span><span class='line'>切忌把项目等同自己，项目失败不等于自己失败
-</span><span class='line'>提早与风险投资人和团队沟通止损线
-</span><span class='line'>总结经验，重新开始
-</span><span class='line'>风险投资人喜好连续创业者，因为风险投资人能够无偏见地看待项目失败率</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<p>最后，以陈奕迅的歌词结束这篇文章</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>要拥有必先懂失去怎接受</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
