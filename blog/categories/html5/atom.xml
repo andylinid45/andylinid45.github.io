@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Html5 | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-23T17:04:31+08:00</updated>
+  <updated>2015-08-23T18:02:22+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -20,8 +20,9 @@
     <id>http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps</id>
     <content type="html"><![CDATA[<p>Mobile web apps resource
 <code>
-https://html5boilerplate.com/mobile/
 http://jquerymobile.com
+https://html5boilerplate.com
+http://getbootstrap.com/
 </code></p>
 
 <p>I think hybrid apss will not be hot later.</p>
