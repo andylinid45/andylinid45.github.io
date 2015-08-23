@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-23T18:02:22+08:00</updated>
+  <updated>2015-08-24T03:36:48+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Responsive Web Design Key Points]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points/"/>
+    <updated>2015-08-24T03:14:10+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Using media queries to change the navigation or layout or resize an image 
+</span><span class='line'>Using the fluid grid layout</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@media screen and ( max-width: 800px ) {
+</span><span class='line'>.small-menu { display:inline; }
+</span><span class='line'>.large-menu { display:none; }
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>@media screen and ( min-width: 801px ) and ( max-width: 1024px ) {
+</span><span class='line'>.small-menu { display:none; }.
+</span><span class='line'>.large-menu { display:inline; }
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>@media screen and ( min-width: 1025px ) {
+</span><span class='line'>.small-menu { display:none; }
+</span><span class='line'>.large-menu { display:inline; }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Native Apps, Mobile Web Apps and Hybrid Apps]]></title>
@@ -643,27 +688,6 @@
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>社会资源循环不畅影响大：鸦片战争、经济受外国金融风暴影响</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[第三课]Content Marketing]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/11/content-marketing/"/>
-    <updated>2015-08-11T13:52:18+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/11/content-marketing</id>
-    <content type="html"><![CDATA[<h3>什么是内容营销</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>创建对用户有用的信息但不直接宣传产品和服务</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>原理</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>"注意即选择"和心理学的互惠原理</span></code></pre></td></tr></table></div></figure>
 
 
 

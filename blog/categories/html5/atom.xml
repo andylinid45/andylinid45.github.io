@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Html5 | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-23T18:02:22+08:00</updated>
+  <updated>2015-08-24T03:36:48+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Responsive Web Design Key Points]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points/"/>
+    <updated>2015-08-24T03:14:10+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points</id>
+    <content type="html"><![CDATA[<p><code>
+Using media queries to change the navigation or layout or resize an image
+Using the fluid grid layout
+</code></p>
+
+<p>```
+@media screen and ( max-width: 800px ) {
+.small-menu { display:inline; }
+.large-menu { display:none; }
+}</p>
+
+<p>@media screen and ( min-width: 801px ) and ( max-width: 1024px ) {
+.small-menu { display:none; }.
+.large-menu { display:inline; }
+}</p>
+
+<p>@media screen and ( min-width: 1025px ) {
+.small-menu { display:none; }
+.large-menu { display:inline; }
+}
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Native Apps, Mobile Web Apps and Hybrid Apps]]></title>
