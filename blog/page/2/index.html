@@ -272,52 +272,6 @@ sudo rm &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/08/13/why-hard-to-find-business-model/">[9]为什么找商业模式这么难？</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-13T03:31:18+08:00" pubdate data-updated="true">Aug 13<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>如果你有这个问题，要想想自己是不是“我有一个Idea”式的创业
-</span><span class='line'>如果以围绕资源价格为出发点，不会有这个问题</span></code></pre></td></tr></table></div></figure>
-
-
-<p>像饿了么，不会有找不到商业模式的问题。像京东，不会有找不到商业模式的问题。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>正是"商业模式"这个说法把你带到坑里的</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
       <h1 class="entry-title"><a href="/blog/2015/08/12/how-to-learn-fast/">[1]技术人员如何快速成长</a></h1>
     
     
@@ -366,7 +320,7 @@ sudo rm &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/08/11/some-startup-reference/">[8]推荐一些参考资料</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/12/22/postfix-in-ubuntu/">Postfix in Ubuntu</a></h1>
     
     
       <p class="meta">
@@ -382,213 +336,367 @@ sudo rm &hellip;">
   
 
 
-<time datetime="2015-08-11T23:25:19+08:00" pubdate data-updated="true">Aug 11<span>th</span>, 2015</time>
+<time datetime="2014-12-22T21:21:14+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://open.163.com/special/opencourse/startup.html">YC创业课</a></p>
+  <div class="entry-content"><h3>outgoing mail</h3>
 
-<p><a href="http://book.douban.com/subject/10945606/">精益创业</a></p>
-</div>
-  
-  
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install postfix</span></code></pre></td></tr></table></div></figure>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/11/why-baby-consumer-market-suck-for-startup/">[第七课]为什么母婴市场坑了这么多创业者</a></h1>
-    
-    
-      <p class="meta">
-        
+<h3>test outgoing mail</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo "My test email sent from sendmail" | /usr/sbin/sendmail  your_gmail@gmail.com</span></code></pre></td></tr></table></div></figure>
 
 
+<h3>incomming mail</h3>
+
+<p>setup MX record in DNS, point to your VPS ip or domain name</p>
+
+<h3>test MX record</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
+<p>and now you can send mail to <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#121;&#x6f;&#x75;&#114;&#x5f;&#x61;&#99;&#x63;&#x6f;&#x75;&#110;&#x74;&#x5f;&#110;&#97;&#109;&#101;&#x5f;&#105;&#110;&#95;&#118;&#x70;&#x73;&#64;&#x79;&#x6f;&#117;&#114;&#95;&#x64;&#111;&#109;&#97;&#x69;&#x6e;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x6f;&#117;&#114;&#x5f;&#97;&#99;&#x63;&#111;&#117;&#x6e;&#116;&#95;&#x6e;&#x61;&#109;&#101;&#x5f;&#x69;&#x6e;&#x5f;&#118;&#x70;&#x73;&#x40;&#121;&#x6f;&#117;&#114;&#95;&#x64;&#111;&#x6d;&#x61;&#105;&#110;&#x2e;&#99;&#x6f;&#x6d;</a> , and other mail address will be rejected</p>
+
+<h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/postfix/main.cf</span></code></pre></td></tr></table></div></figure>
 
 
+<p>add</p>
 
-
-  
-
-
-<time datetime="2015-08-11T16:42:29+08:00" pubdate data-updated="true">Aug 11<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>围绕特定人群创业很可能掉进坑里，其他的如针对贵妇，富二代为消费群体的创业</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>virtual_alias_maps = hash:/etc/postfix/virtual</span></code></pre></td></tr></table></div></figure>
 
 
 
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>应该以资源价格为出发点，特定的产品和服务为落脚点，这样来创业</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano  /etc/postfix/virtual</span></code></pre></td></tr></table></div></figure>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/11/is-idea-important/">[第六课]Idea重要吗</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-11T15:54:30+08:00" pubdate data-updated="true">Aug 11<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>围绕生产要素价格进行创新而不是idea</span></code></pre></td></tr></table></div></figure>
-
-
-
+<p>add</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>没有永恒好的idea，没有永恒坏的idea。放弃对idea的执着与偏见</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>your_new_mail_address@your_domain.com  your_gmail@gmail.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>现在写个操作系统对抗微软不是好主意。几年前做一个app外包公司可能是一个好主意，现在不是。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>价格永远在变动，永远有机会。永远有公司成立，有公司倒闭</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/11/the-price-of-factors/">[第五课]生产要素价格</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-11T15:17:43+08:00" pubdate data-updated="true">Aug 11<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>有几个力量决定生产要素的价格</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>上游生产要素价格，企业家精神，生产力，权力</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/11/factors-of-production-cyclic/">[第四课]生产要素循环</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-11T14:27:22+08:00" pubdate data-updated="true">Aug 11<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>什么是生产要素</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>生产的必备条件，如劳动力，土地，资本等</span></code></pre></td></tr></table></div></figure>
-
-
-<p>生产要素循环</p>
+<p>and restart at last</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>有时我简称生产要素为“资源”，“社会资源”（是有点不专业的说法）
-</span><span class='line'>企业进行生产活动把要素变成产品和服务，产品服务投入市场再转变成要素。循环不息</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo postmap /etc/postfix/virtual
+</span><span class='line'>sudo /etc/init.d/postfix restart</span></code></pre></td></tr></table></div></figure>
 
 
-<p>一个企业生产汽车配件，一个企业生产汽车，汽车增加了车主的劳动产能，车主在汽车配件公司上班</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>社会资源必定循环，否则产品与服务要出口给外星人</span></code></pre></td></tr></table></div></figure>
-
-
-
+<p>log file in</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>社会资源循环不畅影响大：鸦片战争、经济受外国金融风暴影响</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/var/log/mail.err 
+</span><span class='line'>/var/log/mail.log </span></code></pre></td></tr></table></div></figure>
 
 
+<h3>add a new domain mail box to your vps</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/postfix/main.cf</span></code></pre></td></tr></table></div></figure>
+
+
+<p>add the domain to</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mydestination</span></code></pre></td></tr></table></div></figure>
+
+
+<p>also modify the /etc/postfix/virtual to add mail address like above, so your mail will forward to your gmail rather than go to you VPS local file</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/12/22/sendmail-vs-postfix/">Sendmail vs Postfix</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-22T17:21:18+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Sendmail and Postfix are programs that send mail in Unix link OS.</p>
+
+<p>Postfix is better because it is newer.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/01/id-naming/">Id Naming</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-01T15:19:17+08:00" pubdate data-updated="true">Nov 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>html css</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>this-is-my-id</span></code></pre></td></tr></table></div></figure>
+
+
+<p>javascript</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>thisIsMyId</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ruby</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>this_is_my_id</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/10/27/ubuntu-14-dot-04-server-initial/">Ubuntu 14.04 Server Initial</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-27T00:01:07+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>login as root</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>adduser deploy
+</span><span class='line'>
+</span><span class='line'>echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
+</span><span class='line'>
+</span><span class='line'>nano /etc/ssh/sshd_config 
+</span><span class='line'># edit two lines
+</span><span class='line'>PermitRootLogin no
+</span><span class='line'>PasswordAuthentication no 
+</span><span class='line'>
+</span><span class='line'>service ssh restart  # do not use , no use /etc/init.d/ssh  restart 
+</span><span class='line'>
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in local</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id deploy@ip</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/10/21/dot-files-in-osx/">Dot Files in Osx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-21T20:45:33+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir ~/.ssh
+</span><span class='line'>sudo cp /Users/andy/.ssh/id_rsa  ~/.ssh
+</span><span class='line'>sudo cp /Users/andy/.ssh/id_rsa.pub  ~/.ssh
+</span><span class='line'>
+</span><span class='line'>sudo cp /Users/andy/.gitconfig ~
+</span><span class='line'>sudo cp /Users/andy/.gitignore ~
+</span><span class='line'>
+</span><span class='line'>echo "
+</span><span class='line'>alias ll='ls -alF'
+</span><span class='line'>alias la='ls -A'
+</span><span class='line'>alias l='ls -CF'
+</span><span class='line'>export PS1='\u@\h:\w$ '
+</span><span class='line'>export CLICOLOR=1
+</span><span class='line'>export GREP_OPTIONS='--color=auto' " &gt;&gt; ~/.bash_profile
+</span><span class='line'>
+</span><span class='line'>sudo chown  -R new_user  ~/.ssh
+</span><span class='line'>sudo chown new_user ~/.gitconfig 
+</span><span class='line'>sudo chown new_user ~/.gitignore</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/29/using-pry-to-debug-in-rails-project/">Using Pry to Debug in Rails Project</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-29T16:56:49+08:00" pubdate data-updated="true">Sep 29<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>gem &lsquo;pry-rails&rsquo;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>binding.pry
+</span><span class='line'>cd 
+</span><span class='line'>ls</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -611,7 +719,7 @@ sudo rm &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/html5' style='font-size: 116.36363636363636%'>html5(3)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/html5' style='font-size: 116.36363636363636%'>html5(3)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>

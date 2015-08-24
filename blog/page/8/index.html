@@ -9,9 +9,15 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="sudo gedit /etc/sysctl.conf
-change or add this line 1
-vm.swappiness=0 Reboot for the change to take effect http://askubuntu.com/questions/103242/is- &hellip;">
+  <meta name="description" content="install 1
+2
+3
+4
+5
+sudo apt-get install postgresql
+sudo apt-get install libpq-dev
+sudo apt-get install postgresql-client
+sudo apt-get install pgadmin3 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,727 +87,6 @@ vm.swappiness=0 Reboot for the change to take effect http://askubuntu.com/questi
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/turn-off-ubuntu-swap/">Turn Off Ubuntu Swap</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:12:33+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>sudo gedit /etc/sysctl.conf
-change or add this line</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>vm.swappiness=0</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Reboot for the change to take effect</p>
-
-<p><a href="http://askubuntu.com/questions/103242/is-it-safe-to-turn-swap-off-permanently">http://askubuntu.com/questions/103242/is-it-safe-to-turn-swap-off-permanently</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/spinejs-and-rails/">Spinejs and Rails</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:07:53+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>create a app</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails new demo
-</span><span class='line'>
-</span><span class='line'>rails g scaffold post title:string content:string
-</span><span class='line'>
-</span><span class='line'>rake db:migrate</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Gemfile add spine support</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'spine-rails'
-</span><span class='line'>gem 'eco'</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g spine:new
-</span><span class='line'>
-</span><span class='line'>rails g spine:model post title content</span></code></pre></td></tr></table></div></figure>
-
-
-<p>check localhost:3000</p>
-
-<p>in chrome console</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#add a post
-</span><span class='line'>var post = App.Post.create({title: 'hi', content: 't'});
-</span><span class='line'>
-</span><span class='line'>#get a post
-</span><span class='line'>App.Post.fetch();
-</span><span class='line'>App.Post.first().content
-</span><span class='line'>App.Post.first().destroy()</span></code></pre></td></tr></table></div></figure>
-
-
-<p>spine scaffold</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g spine:scaffold Post title content</span></code></pre></td></tr></table></div></figure>
-
-
-<p>remove this line in post controllers js</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ = jQuery.sub()</span></code></pre></td></tr></table></div></figure>
-
-
-<p>done, you can now use spine mvc as a ajax front end</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/mongodb-and-mongoid/">Mongodb and Mongoid</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T16:36:29+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install mongodb</span></code></pre></td></tr></table></div></figure>
-
-
-<p>turn off journal and turn on rest in you dev</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/mongodb.conf 
-</span><span class='line'>
-</span><span class='line'>journal = false
-</span><span class='line'>rest = true</span></code></pre></td></tr></table></div></figure>
-
-
-<p>add mongodb to startup</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo update-rc.d mongodb  defaults</span></code></pre></td></tr></table></div></figure>
-
-
-<p>run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mongo
-</span><span class='line'>
-</span><span class='line'>db.test.save( { a: 1 } )
-</span><span class='line'>db.test.find()
-</span><span class='line'>
-</span><span class='line'>show collections
-</span><span class='line'>db.abc.count()</span></code></pre></td></tr></table></div></figure>
-
-
-<p>if you can not start mongodb sometime</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>tail /var/log/mongodb/mongodb.log -n 100
-</span><span class='line'>
-</span><span class='line'>sudo rm /var/lib/mongodb/mongod.lock
-</span><span class='line'>
-</span><span class='line'>sudo -u mongodb mongod -f /etc/mongodb.conf --repair</span></code></pre></td></tr></table></div></figure>
-
-
-<p>check mongodb work</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://localhost:28017/</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://docs.mongodb.org/manual/
-</span><span class='line'>http://mongoid.org/en/mongoid/
-</span><span class='line'>http://www.precog.com/editions/precog-for-mongodb
-</span><span class='line'>https://github.com/bobthecow/genghis
-</span><span class='line'>https://github.com/zuk/DrowsyDromedary</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>mongoid</h3>
-
-<p>Gemfile</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'mongoid'
-</span><span class='line'>gem 'bson_ext'</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g mongoid:config</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The Mongoid Demo Application</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/mongoid/echo</span></code></pre></td></tr></table></div></figure>
-
-
-<p>create indexes for db</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:mongoid:create_indexes
-</span><span class='line'>rake db:seed</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/fixed-robots-dot-txt-no-found-when-using-unicorn/">Fixed robots.txt No Found When Using Unicorn</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T16:33:50+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>in config production.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>config.serve_static_assets = true</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/rvm-in-ubunut/">Rvm in Ubunut</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T16:25:48+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>install rvm</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>curl -L get.rvm.io | bash -s stable
-</span><span class='line'>source ~/.rvm/scripts/rvm
-</span><span class='line'>rvm requirements</span></code></pre></td></tr></table></div></figure>
-
-
-<p>usefull script</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm install 1.9.3
-</span><span class='line'>rvm use 1.9.3 --default
-</span><span class='line'>rvm gemset create 3.2.3
-</span><span class='line'>rvm gemset use 3.2.3 
-</span><span class='line'>rvm use 1.9.3@3.2.3 --default  
-</span><span class='line'>gem sources --remove http://rubygems.org/
-</span><span class='line'>gem sources -a http://ruby.taobao.org/
-</span><span class='line'>gem install rails -v=3.2.12
-</span><span class='line'>
-</span><span class='line'>rvm list
-</span><span class='line'>rvm gemset list</span></code></pre></td></tr></table></div></figure>
-
-
-<p>remove rvm</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm implode</span></code></pre></td></tr></table></div></figure>
-
-
-<p>if you can not find rvm in terminal
-gedit  .bashrc
-and add</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi</span></code></pre></td></tr></table></div></figure>
-
-
-<p>no rdoc</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>echo -e "install: --no-rdoc --no-ri \nupdate: --no-rdoc --no-ri" &gt;&gt; ~/.gemrc</span></code></pre></td></tr></table></div></figure>
-
-
-<p>do not use .rvmrc file any more, go to the project folder</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>echo "ruby-1.9.3-p429" &gt;&gt; .ruby-version
-</span><span class='line'>echo "myapp" &gt;&gt; .ruby-gemset</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/using-sublime-text-2-as-ruby-on-rails-ide/">Using Sublime Text 2 as Ruby on Rails Ide</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T16:14:09+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>download sublimetext</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://www.sublimetext.com/2</span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>tar xf Sublime\ Text\ 2.0.1\ x64.tar.bz2
-</span><span class='line'>sudo mkdir /opt
-</span><span class='line'>sudo mv Sublime\ Text\ 2 /opt/
-</span><span class='line'>sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/bin/sublime</span></code></pre></td></tr></table></div></figure>
-
-
-<p>sudo gedit /usr/share/applications/sublime.desktop</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[Desktop Entry]
-</span><span class='line'>Version=1.0
-</span><span class='line'>Name=Sublime Text 2
-</span><span class='line'># Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
-</span><span class='line'># From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
-</span><span class='line'>GenericName=Text Editor
-</span><span class='line'>
-</span><span class='line'>Exec=sublime
-</span><span class='line'>Terminal=false
-</span><span class='line'>Icon=/opt/Sublime Text 2/Icon/48x48/sublime_text.png
-</span><span class='line'>Type=Application
-</span><span class='line'>Categories=TextEditor;IDE;Development
-</span><span class='line'>X-Ayatana-Desktop-Shortcuts=NewWindow
-</span><span class='line'>
-</span><span class='line'>[NewWindow Shortcut Group]
-</span><span class='line'>Name=New Window
-</span><span class='line'>Exec=sublime -n
-</span><span class='line'>TargetEnvironment=Unity</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And replace all occurrences of gedit.desktop with sublime.desktop.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo gedit /usr/share/applications/defaults.list</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install Sublime Package Control</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://wbond.net/sublime_packages/package_control/installation</span></code></pre></td></tr></table></div></figure>
-
-
-<p>ctrl+shift+p</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>install
-</span><span class='line'>
-</span><span class='line'>ctags
-</span><span class='line'>RubyFormat # no  BeautifyRuby</span></code></pre></td></tr></table></div></figure>
-
-
-<p>need install ctags</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install ctags</span></code></pre></td></tr></table></div></figure>
-
-
-<p>go to project root</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>bundle show --paths | xargs ctags -R -f .gemtags --exclude=*/test/* 
-</span><span class='line'>ctags -R -f .tags --exclude=.git --exclude=log --exclude=tmp --exclude=public --exclude=db</span></code></pre></td></tr></table></div></figure>
-
-
-<p>xml format in ubunut</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install tidy</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="https://gist.github.com/coldnebo/1138554">https://gist.github.com/coldnebo/1138554</a></p>
-
-<p>js  json format</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/jdc0589/JsFormat</span></code></pre></td></tr></table></div></figure>
-
-
-<p>html format : ctrl+shift+h
-hide/ collapsible folder pane  ctrl+K, ctrl+B</p>
-
-<p>need to backup user key binding</p>
-
-<p><a href="http://stackoverflow.com/questions/8839753/formatting-html-code-using-sublime-text-2">http://stackoverflow.com/questions/8839753/formatting-html-code-using-sublime-text-2</a></p>
-
-<ul>
-<li>format for html</li>
-<li>format for ruby</li>
-<li>ctags</li>
-</ul>
-
-
-<p>{&ldquo;keys&rdquo;: [&ldquo;ctrl+shift+w&rdquo;], &ldquo;command&rdquo;: &ldquo;toggle_setting&rdquo;, &ldquo;args&rdquo;: {&ldquo;setting&rdquo;: &ldquo;word_wrap&rdquo;} }</p>
-
-<p>in osx</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install package</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Syntax Highlighting for Sass</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/modify-ssh-port/">Modify Ssh Port</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T16:01:21+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/ssh/sshd_config
-</span><span class='line'>
-</span><span class='line'>#modify the port
-</span><span class='line'>
-</span><span class='line'>service ssh restart</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/git-checkout-branch-from-a-tag/">Git Checkout Branch From a Tag</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T15:55:54+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>after you clone a git repo</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -b my_new_branch my_tag
-</span><span class='line'>
-</span><span class='line'>git push origin my_new_branch</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/fixed-rails-could-not-find-a-javascript-runtime/">Fixed Rails Could Not Find a JavaScript Runtime</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T15:49:50+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install nodejs</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -917,6 +202,511 @@ install pg9.2 in ubuntu13</p>
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/reset-mysql-root-password/">Reset Mysql Root Password</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:36:36+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/mysql stop
+</span><span class='line'>sudo mysqld_safe --user=mysql --skip-grant-tables --skip-networking &
+</span><span class='line'>mysql -u root mysql
+</span><span class='line'>
+</span><span class='line'>mysql&gt; UPDATE mysql.user SET Password=PASSWORD('YOUR-NEW-MYSQL-PASSWORD') WHERE User='root';
+</span><span class='line'>mysql&gt; FLUSH PRIVILEGES;
+</span><span class='line'>mysql&gt; quit
+</span><span class='line'>
+</span><span class='line'>sudo /etc/init.d/mysql restart
+</span><span class='line'>
+</span><span class='line'>mysql -u root -p
+</span><span class='line'>Enter password:
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/fixed-gem-install-linecache19/">Fixed Gem Install Linecache19</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:34:29+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>when</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install linecache19 --backtrace
+</span><span class='line'>Building native extensions.  This could take a while...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and can not go farther</p>
+
+<p>try:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install ruby-debug19 -- --with-ruby-include=/home/andy/.rvm/src/ruby-1.9.2-p320/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and you can go through</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/ubuntu-software/">Ubuntu Software</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:29:42+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>capture, install in software center</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Shutter,  ksnapshot for photo
+</span><span class='line'>recordmydesktop for video</span></code></pre></td></tr></table></div></figure>
+
+
+<p>paint, install in software</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gnu paint
+</span><span class='line'>MyPaint</span></code></pre></td></tr></table></div></figure>
+
+
+<p>burn dvd</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>braseor</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/firefox-addons/">Firefox Addons</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:27:46+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://addons.mozilla.org/en-US/firefox/addon/all-in-one-gestures/
+</span><span class='line'>https://addons.mozilla.org/en-US/firefox/addon/firebug/
+</span><span class='line'>https://addons.mozilla.org/en-US/firefox/addon/measureit/
+</span><span class='line'>https://addons.mozilla.org/en-US/firefox/addon/colorzilla/</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/project-specific-git-user-and-email/">Project Specific Git User and Email</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T21:18:55+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>go to the project folder and run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config user.email "***"
+</span><span class='line'>git config user.name "***"</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/using-mysql-in-ubuntu/">Using Mysql in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T21:12:20+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install mysql-server
+</span><span class='line'>sudo apt-get install mysql-workbench
+</span><span class='line'>sudo apt-get install libmysqlclient-dev 
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>mysql -uroot -p
+</span><span class='line'>mysql&gt; create database dbname character set utf8;
+</span><span class='line'>mysql&gt; grant all privileges on *.* to 'app'@'localhost' identified by '******';
+</span><span class='line'>
+</span><span class='line'>shell&gt;mysql -u*** -p*** dbname&lt; init.sql</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/ssh-without-password/">Ssh Without Password</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T21:10:02+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id user@host</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/using-git-in-ubuntu/">Using Git in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T21:01:58+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git
+</span><span class='line'>
+</span><span class='line'>git config --global user.name "Andy"
+</span><span class='line'>git config --global user.email "Andy"
+</span><span class='line'>git config --global color.ui "auto"
+</span><span class='line'>git config core.quotepath false  #for chinese char
+</span><span class='line'>git config core.filemode false  #ignore chmod to file change
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>ssh-keygen -t rsa
+</span><span class='line'>
+</span><span class='line'>xclip -sel clip &lt; ~/.ssh/id_rsa.pub
+</span><span class='line'>
+</span><span class='line'>cat ~/.ssh/id_rsa.pub
+</span><span class='line'>#copy to https://github.com/account/ssh
+</span><span class='line'>#copy to https://bitbucket.org/account/
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>#testing ssh config in this server
+</span><span class='line'>ssh -T git@github.com
+</span><span class='line'>ssh -T git@bitbucket.org</span></code></pre></td></tr></table></div></figure>
+
+
+<p>tag</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git tag #list tags
+</span><span class='line'>git tag before_devise #tag a tag
+</span><span class='line'>git tag -a v1.4 -m 'version 1.4' </span></code></pre></td></tr></table></div></figure>
+
+
+<p>show history</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git show SHA1:/path/to/file</span></code></pre></td></tr></table></div></figure>
+
+
+<p>mistake rm a file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git reset HEAD file
+</span><span class='line'>git checkout file</span></code></pre></td></tr></table></div></figure>
+
+
+<p>git add all</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add -A</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/octopress-command/">Octopress Command</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T20:43:42+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["Hello octopress"]
+</span><span class='line'>rake generate # Generates posts and pages into the public directory
+</span><span class='line'>rake preview # Watches, and mounts a webserver at http://localhost:4000 
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/9/">&larr; Older</a>
@@ -931,7 +721,7 @@ install pg9.2 in ubuntu13</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/html5' style='font-size: 116.36363636363636%'>html5(3)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/html5' style='font-size: 116.36363636363636%'>html5(3)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
