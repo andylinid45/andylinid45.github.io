@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Html5 | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-29T23:15:10+08:00</updated>
+  <updated>2015-08-30T02:12:40+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -53,6 +53,23 @@ user &lt;br&gt; just for white space
 Do
 <code>
 use css
+</code></p>
+
+<p>Do
+<code>
+Use headings (h1 h2 ...) to indicate the relative importance of text
+</code>
+Do
+<code>
+Use &lt;cite&gt; tag for referencing a book title, newspaper article, or website, and the &lt;address&gt; tag to identify and supply contact information for the author of a page
+</code>
+Don&rsquo;t
+<code>
+overuse &lt;div&gt;tags.
+</code>
+Do
+<code>
+ues &lt;article&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt; tags if needed
 </code></p>
 ]]></content>
   </entry>
