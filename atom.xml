@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-29T16:23:01+08:00</updated>
+  <updated>2015-08-29T23:15:10+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Html Best Practices]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/29/html-best-practices/"/>
+    <updated>2015-08-29T22:59:28+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/29/html-best-practices</id>
+    <content type="html"><![CDATA[<p>Don&rsquo;t</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;font&gt; for text style</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Do</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>use css</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Don&rsquo;t</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;b&gt; and &lt;i&gt; tags </span></code></pre></td></tr></table></div></figure>
+
+
+<p>Do</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;strong&gt; tag in stead of &lt;b&gt;, &lt;em&gt; tag in stead of &lt;i&gt;, if you want text to be emphasized</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Don&rsquo;t</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;table&gt; for layout
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Do</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>use div and css</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Don&rsquo;t</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>user &lt;br&gt; just for white space</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Do</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>use css</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[HTML5 Cross Browser Polyfills]]></title>
@@ -618,7 +674,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#121;&#111;&#x75;&#114;&#x5f;&#x61;&#99;&#x63;&#x6f;&#x75;&#x6e;&#116;&#x5f;&#x6e;&#x61;&#109;&#101;&#x5f;&#x69;&#x6e;&#x5f;&#118;&#x70;&#115;&#x40;&#121;&#111;&#117;&#114;&#95;&#x64;&#111;&#x6d;&#97;&#105;&#110;&#46;&#x63;&#111;&#x6d;">&#121;&#x6f;&#117;&#x72;&#95;&#x61;&#99;&#99;&#111;&#x75;&#x6e;&#x74;&#x5f;&#110;&#97;&#109;&#101;&#95;&#105;&#110;&#95;&#118;&#x70;&#x73;&#64;&#x79;&#111;&#117;&#114;&#95;&#100;&#111;&#x6d;&#97;&#105;&#110;&#x2e;&#99;&#111;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#121;&#x6f;&#x75;&#x72;&#x5f;&#97;&#x63;&#x63;&#x6f;&#117;&#x6e;&#x74;&#x5f;&#x6e;&#97;&#109;&#x65;&#95;&#105;&#x6e;&#95;&#118;&#x70;&#115;&#64;&#121;&#x6f;&#117;&#x72;&#x5f;&#100;&#x6f;&#x6d;&#x61;&#105;&#110;&#x2e;&#99;&#x6f;&#109;">&#121;&#x6f;&#x75;&#x72;&#95;&#97;&#x63;&#x63;&#111;&#x75;&#x6e;&#116;&#x5f;&#110;&#97;&#109;&#x65;&#95;&#105;&#110;&#x5f;&#x76;&#x70;&#115;&#64;&#x79;&#x6f;&#117;&#x72;&#95;&#100;&#x6f;&#x6d;&#97;&#105;&#x6e;&#46;&#x63;&#x6f;&#109;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -751,53 +807,6 @@
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id deploy@ip</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dot Files in Osx]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/10/21/dot-files-in-osx/"/>
-    <updated>2014-10-21T20:45:33+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/10/21/dot-files-in-osx</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir ~/.ssh
-</span><span class='line'>sudo cp /Users/andy/.ssh/id_rsa  ~/.ssh
-</span><span class='line'>sudo cp /Users/andy/.ssh/id_rsa.pub  ~/.ssh
-</span><span class='line'>
-</span><span class='line'>sudo cp /Users/andy/.gitconfig ~
-</span><span class='line'>sudo cp /Users/andy/.gitignore ~
-</span><span class='line'>
-</span><span class='line'>echo "
-</span><span class='line'>alias ll='ls -alF'
-</span><span class='line'>alias la='ls -A'
-</span><span class='line'>alias l='ls -CF'
-</span><span class='line'>export PS1='\u@\h:\w$ '
-</span><span class='line'>export CLICOLOR=1
-</span><span class='line'>export GREP_OPTIONS='--color=auto' " &gt;&gt; ~/.bash_profile
-</span><span class='line'>
-</span><span class='line'>sudo chown  -R new_user  ~/.ssh
-</span><span class='line'>sudo chown new_user ~/.gitconfig 
-</span><span class='line'>sudo chown new_user ~/.gitignore</span></code></pre></td></tr></table></div></figure>
-
-
 
 ]]></content>
   </entry>

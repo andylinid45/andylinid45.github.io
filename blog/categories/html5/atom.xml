@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Html5 | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-29T16:23:01+08:00</updated>
+  <updated>2015-08-29T23:15:10+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Html Best Practices]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/29/html-best-practices/"/>
+    <updated>2015-08-29T22:59:28+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/29/html-best-practices</id>
+    <content type="html"><![CDATA[<p>Don&rsquo;t
+<code>
+use &lt;font&gt; for text style
+</code>
+Do
+<code>
+use css
+</code></p>
+
+<p>Don&rsquo;t
+<code>
+use &lt;b&gt; and &lt;i&gt; tags
+</code>
+Do
+<code>
+use &lt;strong&gt; tag in stead of &lt;b&gt;, &lt;em&gt; tag in stead of &lt;i&gt;, if you want text to be emphasized
+</code></p>
+
+<p>Don&rsquo;t
+```
+use <table> for layout</p>
+
+<p><code>
+Do
+</code>
+use div and css
+```</p>
+
+<p>Don&rsquo;t
+<code>
+user &lt;br&gt; just for white space
+</code>
+Do
+<code>
+use css
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[HTML5 Cross Browser Polyfills]]></title>
