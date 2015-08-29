@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-24T12:06:29+08:00</updated>
+  <updated>2015-08-29T16:23:01+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5 Cross Browser Polyfills]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills/"/>
+    <updated>2015-08-29T16:20:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Responsive Web Design Key Points]]></title>
@@ -92,6 +101,14 @@
     <id>http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>http://html5please.com/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>tools</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://caniuse.com/
+</span><span class='line'>http://html5test.com/</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
@@ -601,7 +618,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#121;&#x6f;&#x75;&#114;&#x5f;&#x61;&#99;&#x63;&#x6f;&#x75;&#110;&#x74;&#x5f;&#110;&#97;&#109;&#101;&#x5f;&#105;&#110;&#95;&#118;&#x70;&#x73;&#64;&#x79;&#x6f;&#117;&#114;&#95;&#x64;&#111;&#109;&#97;&#x69;&#x6e;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x6f;&#117;&#114;&#x5f;&#97;&#99;&#x63;&#111;&#117;&#x6e;&#116;&#95;&#x6e;&#x61;&#109;&#101;&#x5f;&#x69;&#x6e;&#x5f;&#118;&#x70;&#x73;&#x40;&#121;&#x6f;&#117;&#114;&#95;&#x64;&#111;&#x6d;&#x61;&#105;&#110;&#x2e;&#99;&#x6f;&#x6d;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#121;&#111;&#x75;&#114;&#x5f;&#x61;&#99;&#x63;&#x6f;&#x75;&#x6e;&#116;&#x5f;&#x6e;&#x61;&#109;&#101;&#x5f;&#x69;&#x6e;&#x5f;&#118;&#x70;&#115;&#x40;&#121;&#111;&#117;&#114;&#95;&#x64;&#111;&#x6d;&#97;&#105;&#110;&#46;&#x63;&#111;&#x6d;">&#121;&#x6f;&#117;&#x72;&#95;&#x61;&#99;&#99;&#111;&#x75;&#x6e;&#x74;&#x5f;&#110;&#97;&#109;&#101;&#95;&#105;&#110;&#95;&#118;&#x70;&#x73;&#64;&#x79;&#111;&#117;&#114;&#95;&#100;&#111;&#x6d;&#97;&#105;&#110;&#x2e;&#99;&#111;&#109;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -781,23 +798,6 @@
 </span><span class='line'>sudo chown new_user ~/.gitignore</span></code></pre></td></tr></table></div></figure>
 
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Pry to Debug in Rails Project]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/29/using-pry-to-debug-in-rails-project/"/>
-    <updated>2014-09-29T16:56:49+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/29/using-pry-to-debug-in-rails-project</id>
-    <content type="html"><![CDATA[<p>gem &lsquo;pry-rails&rsquo;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>binding.pry
-</span><span class='line'>cd 
-</span><span class='line'>ls</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

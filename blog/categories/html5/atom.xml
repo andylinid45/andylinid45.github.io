@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Html5 | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-24T12:06:29+08:00</updated>
+  <updated>2015-08-29T16:23:01+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5 Cross Browser Polyfills]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills/"/>
+    <updated>2015-08-29T16:20:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Responsive Web Design Key Points]]></title>
@@ -71,6 +80,12 @@ http://www.ionicframework.com/
     <id>http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5</id>
     <content type="html"><![CDATA[<p><code>
 http://html5please.com/
+</code></p>
+
+<p>tools
+<code>
+http://caniuse.com/
+http://html5test.com/
 </code></p>
 ]]></content>
   </entry>
