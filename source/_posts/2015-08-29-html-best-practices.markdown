@@ -42,3 +42,21 @@ Do
 ```
 use css
 ```
+
+Do
+```
+Use headings (h1 h2 ...) to indicate the relative importance of text
+```
+Do
+```
+Use <cite> tag for referencing a book title, newspaper article, or website, and the <address> tag to identify and supply contact information for the author of a page
+```
+Don't
+```
+overuse <div>tags.
+```
+Do
+```
+ues <article>, <nav>, <section>, and <footer> tags if needed
+```
+
