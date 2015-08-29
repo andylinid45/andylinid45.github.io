@@ -3,7 +3,7 @@ layout: post
 title: "native apps, mobile web apps and hybrid apps"
 date: 2015-08-23 16:27:10 +0800
 comments: true
-categories: html5
+categories: front-end
 ---
 
 

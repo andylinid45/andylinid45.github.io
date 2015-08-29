@@ -3,7 +3,7 @@ layout: post
 title: "Responsive Web Design key points"
 date: 2015-08-24 03:14:10 +0800
 comments: true
-categories: html5
+categories: front-end
 ---
 
 ```

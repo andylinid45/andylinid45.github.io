@@ -3,7 +3,7 @@ layout: post
 title: "Html Best Practices"
 date: 2015-08-29 22:59:28 +0800
 comments: true
-categories: html5
+categories: front-end
 ---
 
 Don't
