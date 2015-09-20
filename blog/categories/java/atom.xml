@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-09-20T15:54:11+08:00</updated>
+  <updated>2015-09-20T17:33:55+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -29,11 +29,11 @@ add -XX:MaxPermSize=256m to Tomcat in Eclipse: Server &gt; Open Launch Configura
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Generate Xml Using Xpath]]></title>
+    <title type="html"><![CDATA[Generate Xml Using Xpath in Java]]></title>
     <link href="http://andylinid45.github.io/blog/2015/09/20/generate-xml-using-xpath/"/>
     <updated>2015-09-20T15:30:52+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/09/20/generate-xml-using-xpath</id>
-    <content type="html"><![CDATA[<p>Using EclipseLink MOXy</p>
+    <content type="html"><![CDATA[<p>Using EclipseLink JAXB (MOXy)</p>
 
 <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions">http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions</a></p>
 
