@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-09-20T15:40:14+08:00</updated>
+  <updated>2015-09-20T15:54:11+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tomcat OutOfMemory in Eclipse]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/09/20/tomcat-outofmemory-in-eclipse/"/>
+    <updated>2015-09-20T15:51:23+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/09/20/tomcat-outofmemory-in-eclipse</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>add -XX:MaxPermSize=256m to Tomcat in Eclipse: Server &gt; Open Launch Configuration &gt; Arguments</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse">http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse</a></p>
+
+<p><a href="http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/">http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Generate Xml Using Xpath]]></title>
@@ -713,23 +728,6 @@
     <content type="html"><![CDATA[<p><a href="http://open.163.com/special/opencourse/startup.html">YC创业课</a></p>
 
 <p><a href="http://book.douban.com/subject/10945606/">精益创业</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[第七课]为什么母婴市场坑了这么多创业者]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/11/why-baby-consumer-market-suck-for-startup/"/>
-    <updated>2015-08-11T16:42:29+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/11/why-baby-consumer-market-suck-for-startup</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>围绕特定人群创业很可能掉进坑里，其他的如针对贵妇，富二代为消费群体的创业</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>应该以资源价格为出发点，特定的产品和服务为落脚点，这样来创业</span></code></pre></td></tr></table></div></figure>
-
 ]]></content>
   </entry>
   

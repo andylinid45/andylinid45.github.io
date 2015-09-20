@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-09-20T15:40:14+08:00</updated>
+  <updated>2015-09-20T15:54:11+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tomcat OutOfMemory in Eclipse]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/09/20/tomcat-outofmemory-in-eclipse/"/>
+    <updated>2015-09-20T15:51:23+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/09/20/tomcat-outofmemory-in-eclipse</id>
+    <content type="html"><![CDATA[<p><code>
+add -XX:MaxPermSize=256m to Tomcat in Eclipse: Server &gt; Open Launch Configuration &gt; Arguments
+</code></p>
+
+<p><a href="http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse">http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse</a></p>
+
+<p><a href="http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/">http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Generate Xml Using Xpath]]></title>

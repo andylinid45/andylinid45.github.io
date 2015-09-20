@@ -5,20 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Fixed Failed to Fetch From Registry: Bower, in Ubuntu 13 - Andy Lin</title>
+  <title>Tomcat OutOfMemory in Eclipse - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
   <meta name="description" content="1
-2
-3
-4
-5
-6
-7
-sudo apt-get purge nodejs npm sudo apt-get update
-sudo apt-get install -y python-software-properties python g++ make
-sudo add-apt- &hellip;">
+add -XX:MaxPermSize=256m to Tomcat in Eclipse: Server &gt; Open Launch Configuration &gt; Arguments http://stackoverflow.com/questions/3179141/java &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -27,7 +19,7 @@ sudo add-apt- &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2015/09/20/tomcat-outofmemory-in-eclipse">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -91,7 +83,7 @@ sudo add-apt- &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Fixed Failed to Fetch From Registry: Bower, in Ubuntu 13</h1>
+      <h1 class="entry-title">Tomcat OutOfMemory in Eclipse</h1>
     
     
       <p class="meta">
@@ -107,7 +99,7 @@ sudo add-apt- &hellip;">
   
 
 
-<time datetime="2014-04-20T16:19:57+08:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
+<time datetime="2015-09-20T15:51:23+08:00" pubdate data-updated="true">Sep 20<span>th</span>, 2015</time>
         
       </p>
     
@@ -115,20 +107,12 @@ sudo add-apt- &hellip;">
 
 
 <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get purge nodejs npm
-</span><span class='line'>
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get install -y python-software-properties python g++ make
-</span><span class='line'>sudo add-apt-repository ppa:chris-lea/node.js
-</span><span class='line'>sudo apt-get install nodejs
-</span><span class='line'>sudo npm install -g bower</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>add -XX:MaxPermSize=256m to Tomcat in Eclipse: Server &gt; Open Launch Configuration &gt; Arguments</span></code></pre></td></tr></table></div></figure>
 
+
+<p><a href="http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse">http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse</a></p>
+
+<p><a href="http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/">http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/</a></p>
 </div>
 
 
@@ -151,12 +135,12 @@ sudo add-apt- &hellip;">
   
 
 
-<time datetime="2014-04-20T16:19:57+08:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
+<time datetime="2015-09-20T15:51:23+08:00" pubdate data-updated="true">Sep 20<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/bower/'>bower</a>
+    <a class='category' href='/blog/categories/java/'>java</a>
   
 </span>
 
@@ -172,10 +156,8 @@ sudo add-apt- &hellip;">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/04/16/rbenv-vs-rvm/" title="Previous Post: rbenv vs rvm">&laquo; rbenv vs rvm</a>
+        <a class="basic-alignment left" href="/blog/2015/09/20/generate-xml-using-xpath/" title="Previous Post: generate xml using xpath">&laquo; generate xml using xpath</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/04/21/using-bower-to-manage-rails-assets/" title="Next Post: using bower to manage rails assets">using bower to manage rails assets &raquo;</a>
       
     </p>
   </footer>
