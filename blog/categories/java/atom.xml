@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-08-30T02:19:05+08:00</updated>
+  <updated>2015-09-20T15:40:14+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Generate Xml Using Xpath]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/09/20/generate-xml-using-xpath/"/>
+    <updated>2015-09-20T15:30:52+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/09/20/generate-xml-using-xpath</id>
+    <content type="html"><![CDATA[<p>Using EclipseLink MOXy</p>
+
+<p><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions">http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions</a></p>
+
+<p><a href="http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb">http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Fixing Eclipse Can Not Find Java on Ubuntu]]></title>

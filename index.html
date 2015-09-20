@@ -9,11 +9,7 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="Don&rsquo;t 1
-use &lt;font&gt; for text style Do 1
-use css Don&rsquo;t 1
-use &lt;b&gt; and &lt;i&gt; tags Do 1
-use &lt;strong&gt; tag in stead of &lt &hellip;">
+  <meta name="description" content="Using EclipseLink MOXy http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions http://stackoverflow.com/questions/17141154/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +79,46 @@ use &lt;strong&gt; tag in stead of &lt &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/09/20/generate-xml-using-xpath/">Generate Xml Using Xpath</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-20T15:30:52+08:00" pubdate data-updated="true">Sep 20<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Using EclipseLink MOXy</p>
+
+<p><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions">http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions</a></p>
+
+<p><a href="http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb">http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -668,80 +704,6 @@ use &lt;strong&gt; tag in stead of &lt &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/22/using-hdfs-fs-shell/">Using HDFS FS Shell</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-22T11:00:09+08:00" pubdate data-updated="true">Aug 22<span>nd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop fs -mkdir /user
-</span><span class='line'>hadoop fs -mkdir /user/andy
-</span><span class='line'>hadoop fs -ls /user
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>echo "This is a test." &gt;&gt; test.txt
-</span><span class='line'>hadoop dfs -copyFromLocal test.txt /user/andy
-</span><span class='line'>hadoop dfs -ls /user/andy
-</span><span class='line'>hadoop dfs -cat /user/andy/test.txt
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>hadoop dfs -mkdir data
-</span><span class='line'>hadoop dfs -cp test.txt data
-</span><span class='line'>hadoop dfs -ls data
-</span><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar wordcount data out
-</span><span class='line'>hadoop fs -ls out
-</span><span class='line'>hadoop fs -cat out/part-r-00000
-</span><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -754,11 +716,15 @@ use &lt;strong&gt; tag in stead of &lt &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 127.27272727272728%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 127.27272727272728%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 121.81818181818181%'>java(4)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/09/20/generate-xml-using-xpath/">Generate Xml Using Xpath</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/08/29/html-best-practices/">Html Best Practices</a>
@@ -774,10 +740,6 @@ use &lt;strong&gt; tag in stead of &lt &hellip;">
     
       <li class="post">
         <a href="/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/">Native Apps, Mobile Web Apps and Hybrid Apps</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/23/what-is-new-in-html5/">What Is New in HTML5?</a>
       </li>
     
   </ul>

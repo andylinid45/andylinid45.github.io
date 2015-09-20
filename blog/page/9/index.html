@@ -9,29 +9,10 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="install 1
+  <meta name="description" content="after you clone a git repo 1
 2
 3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-sudo apt-get install git git config --global user.name "Andy"
-git config --global user. &hellip;">
+git checkout -b my_new_branch my_tag git push origin my_new_branch ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,7 +88,7 @@ git config --global user. &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/01/using-git-in-ubuntu/">Using Git in Ubuntu</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/03/02/git-checkout-branch-from-a-tag/">Git Checkout Branch From a Tag</a></h1>
     
     
       <p class="meta">
@@ -123,7 +104,89 @@ git config --global user. &hellip;">
   
 
 
-<time datetime="2014-03-01T21:01:58+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+<time datetime="2014-03-02T15:55:54+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>after you clone a git repo</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -b my_new_branch my_tag
+</span><span class='line'>
+</span><span class='line'>git push origin my_new_branch</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/fixed-rails-could-not-find-a-javascript-runtime/">Fixed Rails Could Not Find a JavaScript Runtime</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:49:50+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install nodejs</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/using-postgresql-in-ubuntu/">Using Postgresql in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:40:07+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
         
       </p>
     
@@ -137,75 +200,77 @@ git config --global user. &hellip;">
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git
-</span><span class='line'>
-</span><span class='line'>git config --global user.name "Andy"
-</span><span class='line'>git config --global user.email "Andy"
-</span><span class='line'>git config --global color.ui "auto"
-</span><span class='line'>git config core.quotepath false  #for chinese char
-</span><span class='line'>git config core.filemode false  #ignore chmod to file change
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>ssh-keygen -t rsa
-</span><span class='line'>
-</span><span class='line'>xclip -sel clip &lt; ~/.ssh/id_rsa.pub
-</span><span class='line'>
-</span><span class='line'>cat ~/.ssh/id_rsa.pub
-</span><span class='line'>#copy to https://github.com/account/ssh
-</span><span class='line'>#copy to https://bitbucket.org/account/
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>#testing ssh config in this server
-</span><span class='line'>ssh -T git@github.com
-</span><span class='line'>ssh -T git@bitbucket.org</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install postgresql
+</span><span class='line'>sudo apt-get install libpq-dev
+</span><span class='line'>sudo apt-get install postgresql-client
+</span><span class='line'>sudo apt-get install pgadmin3
+</span><span class='line'>psql --version #or psql -V</span></code></pre></td></tr></table></div></figure>
 
 
-<p>tag</p>
+<p>connect to the default PostgreSQL template database</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo -u postgres psql template1
+</span><span class='line'>ALTER USER postgres with encrypted password 'your_password'; #and then, you can ues pgadmin3 to connection you db</span></code></pre></td></tr></table></div></figure>
+
+
+<p>use MD5 authentication with the postgres user
+after the line #Database administrative login by Unix domain socket
+replace the &lsquo;peer&rsquo; by &lsquo;md5&rsquo;</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git tag #list tags
-</span><span class='line'>git tag before_devise #tag a tag
-</span><span class='line'>git tag -a v1.4 -m 'version 1.4' </span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo gedit /etc/postgresql/9.1/main/pg_hba.conf
+</span><span class='line'>
+</span><span class='line'>local all postgres md5
+</span><span class='line'>
+</span><span class='line'>sudo /etc/init.d/postgresql restart</span></code></pre></td></tr></table></div></figure>
 
 
-<p>show history</p>
+<p>create a database</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git show SHA1:/path/to/file</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo -u postgres createdb mydb</span></code></pre></td></tr></table></div></figure>
 
 
-<p>mistake rm a file</p>
+<p>useful script</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git reset HEAD file
-</span><span class='line'>git checkout file</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>pg_dump dbname &gt; outfile
+</span><span class='line'>sudo -u postgres psql dbname &lt; infile
+</span><span class='line'>pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d db_name test.dump</span></code></pre></td></tr></table></div></figure>
 
 
-<p>git add all</p>
+<p>config files in</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add -A</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/etc/postgresql/9.1/main</span></code></pre></td></tr></table></div></figure>
 
 
+<p><a href="https://help.ubuntu.com/12.04/serverguide/postgresql.html">https://help.ubuntu.com/12.04/serverguide/postgresql.html</a>
+<a href="https://help.ubuntu.com/community/PostgreSQL">https://help.ubuntu.com/community/PostgreSQL</a></p>
+
+<p>[updated]
+install pg9.2 in ubuntu13</p>
+
+<p>add a source</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install postgresql-9.2</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -219,7 +284,7 @@ git config --global user. &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/01/octopress-command/">Octopress Command</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/03/02/reset-mysql-root-password/">Reset Mysql Root Password</a></h1>
     
     
       <p class="meta">
@@ -235,7 +300,7 @@ git config --global user. &hellip;">
   
 
 
-<time datetime="2014-03-01T20:43:42+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+<time datetime="2014-03-02T15:36:36+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
         
       </p>
     
@@ -246,10 +311,27 @@ git config --global user. &hellip;">
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["Hello octopress"]
-</span><span class='line'>rake generate # Generates posts and pages into the public directory
-</span><span class='line'>rake preview # Watches, and mounts a webserver at http://localhost:4000 
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/mysql stop
+</span><span class='line'>sudo mysqld_safe --user=mysql --skip-grant-tables --skip-networking &
+</span><span class='line'>mysql -u root mysql
+</span><span class='line'>
+</span><span class='line'>mysql&gt; UPDATE mysql.user SET Password=PASSWORD('YOUR-NEW-MYSQL-PASSWORD') WHERE User='root';
+</span><span class='line'>mysql&gt; FLUSH PRIVILEGES;
+</span><span class='line'>mysql&gt; quit
+</span><span class='line'>
+</span><span class='line'>sudo /etc/init.d/mysql restart
+</span><span class='line'>
+</span><span class='line'>mysql -u root -p
+</span><span class='line'>Enter password:
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -263,7 +345,7 @@ git config --global user. &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/01/hello-octopress/">Hello Octopress</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/03/02/fixed-gem-install-linecache19/">Fixed Gem Install Linecache19</a></h1>
     
     
       <p class="meta">
@@ -279,14 +361,266 @@ git config --global user. &hellip;">
   
 
 
-<time datetime="2014-03-01T20:20:59+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+<time datetime="2014-03-02T15:34:29+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>hello octopress!</p>
+  <div class="entry-content"><p>when</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install linecache19 --backtrace
+</span><span class='line'>Building native extensions.  This could take a while...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and can not go farther</p>
+
+<p>try:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install ruby-debug19 -- --with-ruby-include=/home/andy/.rvm/src/ruby-1.9.2-p320/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and you can go through</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/ubuntu-software/">Ubuntu Software</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:29:42+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>capture, install in software center</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Shutter,  ksnapshot for photo
+</span><span class='line'>recordmydesktop for video</span></code></pre></td></tr></table></div></figure>
+
+
+<p>paint, install in software</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gnu paint
+</span><span class='line'>MyPaint</span></code></pre></td></tr></table></div></figure>
+
+
+<p>burn dvd</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>braseor</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/firefox-addons/">Firefox Addons</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T15:27:46+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://addons.mozilla.org/en-US/firefox/addon/all-in-one-gestures/
+</span><span class='line'>https://addons.mozilla.org/en-US/firefox/addon/firebug/
+</span><span class='line'>https://addons.mozilla.org/en-US/firefox/addon/measureit/
+</span><span class='line'>https://addons.mozilla.org/en-US/firefox/addon/colorzilla/</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/project-specific-git-user-and-email/">Project Specific Git User and Email</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T21:18:55+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>go to the project folder and run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config user.email "***"
+</span><span class='line'>git config user.name "***"</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/using-mysql-in-ubuntu/">Using Mysql in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T21:12:20+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install mysql-server
+</span><span class='line'>sudo apt-get install mysql-workbench
+</span><span class='line'>sudo apt-get install libmysqlclient-dev 
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>mysql -uroot -p
+</span><span class='line'>mysql&gt; create database dbname character set utf8;
+</span><span class='line'>mysql&gt; grant all privileges on *.* to 'app'@'localhost' identified by '******';
+</span><span class='line'>
+</span><span class='line'>shell&gt;mysql -u*** -p*** dbname&lt; init.sql</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/ssh-without-password/">Ssh Without Password</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T21:10:02+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id user@host</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
@@ -295,6 +629,8 @@ git config --global user. &hellip;">
     </article>
   
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/10/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -306,11 +642,15 @@ git config --global user. &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 127.27272727272728%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 127.27272727272728%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 121.81818181818181%'>java(4)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/09/20/generate-xml-using-xpath/">Generate Xml Using Xpath</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/08/29/html-best-practices/">Html Best Practices</a>
@@ -326,10 +666,6 @@ git config --global user. &hellip;">
     
       <li class="post">
         <a href="/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/">Native Apps, Mobile Web Apps and Hybrid Apps</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/23/what-is-new-in-html5/">What Is New in HTML5?</a>
       </li>
     
   </ul>

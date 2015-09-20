@@ -9,15 +9,14 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="create the gem 1
-bundle gem my_gem edit my_gem.rb 1
+  <meta name="description" content="1
 2
 3
 4
-5
-module MyGem def self.hi puts "Hello world!" end
-end build 1
-gem build my_gem.gemspec &hellip;">
+git checkout branch_1
+git merge master
+git push
+git checkout master ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,7 +92,7 @@ gem build my_gem.gemspec &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/04/11/make-your-own-gem/">Make Your Own Gem</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/05/02/git-marge-master-to-a-branch/">Git Marge Master to a Branch</a></h1>
     
     
       <p class="meta">
@@ -109,255 +108,7 @@ gem build my_gem.gemspec &hellip;">
   
 
 
-<time datetime="2014-04-11T12:16:16+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>create the gem</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>bundle gem my_gem</span></code></pre></td></tr></table></div></figure>
-
-
-<p>edit my_gem.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>module MyGem
-</span><span class='line'>  def self.hi
-</span><span class='line'>    puts "Hello world!"
-</span><span class='line'>  end
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
-
-
-<p>build</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem build my_gem.gemspec</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install --local ./my_gem-0.0.1.gem</span></code></pre></td></tr></table></div></figure>
-
-
-<p>run it</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>irb
-</span><span class='line'>irb(main):001:0&gt; require 'my_gem'
-</span><span class='line'>=&gt; true
-</span><span class='line'>irb(main):002:0&gt; MyGem.hi
-</span><span class='line'>Hello world!
-</span><span class='line'>=&gt; nil</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Publishing your gem</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem push xxx.gem</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/03/using-rbenv-to-manage-ruby-versions/">Using Rbenv to Manage Ruby Versions Instead of Rvm</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-03T19:48:48+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>remove rvm first</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm implode</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install rbenv in ubuntu</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># use brew to install rbenv in osx
-</span><span class='line'>cd
-</span><span class='line'>git clone git://github.com/sstephenson/rbenv.git .rbenv
-</span><span class='line'>echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc  # .bash_profile in osx
-</span><span class='line'>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bashrc
-</span><span class='line'>exec $SHELL
-</span><span class='line'>
-</span><span class='line'>git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-</span><span class='line'>echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' &gt;&gt; ~/.bashrc # .bash_profile in osx
-</span><span class='line'>exec $SHELL
-</span><span class='line'>
-</span><span class='line'>sudo apt-get -y install curl git-core python-software-properties build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev
-</span><span class='line'>
-</span><span class='line'>rbenv install 2.1.0
-</span><span class='line'>rbenv global 2.1.0
-</span><span class='line'>ruby -v
-</span><span class='line'>
-</span><span class='line'>echo "gem: --no-ri --no-rdoc" &gt; ~/.gemrc</span></code></pre></td></tr></table></div></figure>
-
-
-<p>go to a exist project</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rbenv local 2.1.0  # create the .ruby-version file
-</span><span class='line'>
-</span><span class='line'>gem sources --remove https://rubygems.org/
-</span><span class='line'>gem sources -a http://ruby.taobao.org/
-</span><span class='line'>
-</span><span class='line'>gem install bundler # if you do not have bundler installed before
-</span><span class='line'>
-</span><span class='line'>rbenv rehash #Run this command after you install a new version of Ruby, or install a gem that provides commands
-</span><span class='line'>
-</span><span class='line'>bundle</span></code></pre></td></tr></table></div></figure>
-
-
-<p>fixed You Have Already Activated X but Your Gemfile Requires Y</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec ***</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://gorails.com/setup/ubuntu/13.10
-</span><span class='line'>https://github.com/ianheggie/rbenv-binstubs</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/reset-unity/">Reset Unity</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T20:54:01+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>unity --replace
-</span><span class='line'>unity --reset 
-</span><span class='line'>dconf reset -f /org/compiz; sleep 2; unity</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/install-transmission-in-ubuntu-server/">Install Transmission in Ubuntu Server</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T20:46:16+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-05-02T17:49:20+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2014</time>
         
       </p>
     
@@ -368,19 +119,10 @@ gem build my_gem.gemspec &hellip;">
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install transmission-daemon
-</span><span class='line'>
-</span><span class='line'>sudo service transmission-daemon stop
-</span><span class='line'>
-</span><span class='line'># modify setting after stop the service
-</span><span class='line'>sudo nano /etc/transmission-daemon/settings.json
-</span><span class='line'>
-</span><span class='line'>sudo service transmission-daemon start
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout branch_1
+</span><span class='line'>git merge master
+</span><span class='line'>git push
+</span><span class='line'>git checkout master</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -394,7 +136,7 @@ gem build my_gem.gemspec &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server/">Install Ubuntu 13.04 X64 Server</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/05/02/mysql-backup-and-restore/">Mysql Backup and Restore</a></h1>
     
     
       <p class="meta">
@@ -410,31 +152,29 @@ gem build my_gem.gemspec &hellip;">
   
 
 
-<time datetime="2014-03-02T20:41:23+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-05-02T17:44:37+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>server install</p>
+  <div class="entry-content"><p>backup</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git zip nginx</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysqldump -u*** -p*** dbname &gt; backup`date +%F`.sql</span></code></pre></td></tr></table></div></figure>
 
 
-<p>need to config</p>
+<p>just some tables</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hostname need to config
-</span><span class='line'>ssh port 
-</span><span class='line'>ssh without password
-</span><span class='line'>transmission</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysqldump -u*** -p*** dbname table1 table2&gt; backup`date +%F`.sql</span></code></pre></td></tr></table></div></figure>
 
 
+<p>restore</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql -u*** -p*** dbname &lt; data.sql</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -448,7 +188,7 @@ gem build my_gem.gemspec &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/02/install-ubuntu-13-dot-04-x64/">Install Ubuntu 13.04 X64</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/04/26/why-haml-sucks/">Why Haml Sucks</a></h1>
     
     
       <p class="meta">
@@ -464,83 +204,97 @@ gem build my_gem.gemspec &hellip;">
   
 
 
-<time datetime="2014-03-02T20:28:07+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-04-26T23:16:54+08:00" pubdate data-updated="true">Apr 26<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>install some tools</p>
+  <div class="entry-content"><blockquote><p>Beautiful, DRY, well-indented, clear markup</p><footer><strong>haml</strong> <cite><a href='http://haml.info'>haml.info/&hellip;</a></cite></footer></blockquote>
+
+
+<p>You can see how haml selling himself to you at his website.</p>
+
+<p>But after using haml for sometime. I feel it sucks.</p>
+
+<p>There also many blog post telling you how suck haml does.</p>
+
+<p>But here, I want to get the point. It just because this technique is totally unnecessary.</p>
+
+<p>Building a web app is like playing lego toy bricks. No need to pick up all bricks in the worlk to make a great web app.</p>
+
+<p>Haml is just anohter beauty lie in the technical world.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/">Angularjs vs Emberjs vs Backbonejs</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-23T17:12:15+08:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Many blog post compare these three javascript libraries. But I dont think they get the point.</p>
+
+<h3>1) Two way data binding</h3>
+
+<p>Backbonejs does not support two way data bingding native. (You can use a plugin like backbone.stickit <a href="http://nytimes.github.io/backbone.stickit/">http://nytimes.github.io/backbone.stickit/</a>)</p>
+
+<p>Why two way data binding is so important? Because it help you auto update the view in most cases. It helps you minimize your code.</p>
+
+<h3>2) Dependency injection using directive</h3>
+
+<p>Emberjs does not support DI(Dependency injection), so you need to write more code such as</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get purge ubuntuone-client unity-lens-shopping unity-webapps-common thunderbird gwibber indicator-messages
+</pre></td><td class='code'><pre><code class=''><span class='line'>Todos.EditTodoView = Ember.TextField.extend({  ...
 </span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>sudo apt-get install docky git xclip chromium-browser fcitx-googlepinyin ubuntu-restricted-extras stardict mypaint shutter curl openjdk-7-jdk  sshuttle preload indicator-multiload whois filezilla p7zip pidgin rar unrar
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>Todos.TodoController = Ember.ObjectController.extend({ ...</span></code></pre></td></tr></table></div></figure>
 
 
-<p>skype for Ubuntu 13.04</p>
+<p>If you use DI, then you code is plain old javascritp object. and easy to test.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
-</span><span class='line'>sudo apt-get update 
-</span><span class='line'>sudo apt-get install skype</span></code></pre></td></tr></table></div></figure>
-
-
-<p>xbacklight</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install xbacklight
-</span><span class='line'>xbacklight -set 80
-</span><span class='line'>
-</span><span class='line'>http://askubuntu.com/questions/3841/desktop-doesnt-remember-brightness-settings-after-a-reboot</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install chinese lang in system setting</p>
-
-<p>echo &lsquo;source ~/code/bash/bash&rsquo;  >> ~/.bashrc</p>
-
-<h3>need to do some config</h3>
+<p>Because of these two main reasons, Angularjs can help you minimize your code. <br/>
+Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site helping you select a javascript framework.</p>
 
 <ul>
-<li>sublime</li>
-<li>firefox addon</li>
+<li><a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone</a></li>
+<li><a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs</a></li>
+<li><a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs</a></li>
 </ul>
 
 
-<p>install smartgit from a deb file</p>
+<p>We can see how many line of code need these three javascript framework to make a same app.</p>
 
-<p>install google chrome</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-</span><span class='line'>sudo dpkg -i google-chrome*.deb</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install word lib</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>wget -c http://hslinuxextra.googlecode.com/files/android.7z
-</span><span class='line'>sudo apt-get install p7zip-full
-</span><span class='line'>7z e android.7z
-</span><span class='line'>sudo mv /usr/share/ibus-pinyin/db/android.db /usr/share/ibus-pinyin/db/android.db.bak
-</span><span class='line'>sudo mv android.db /usr/share/ibus-pinyin/db/android.db</span></code></pre></td></tr></table></div></figure>
-
+<p>so, Angularjs win!</p>
 </div>
   
   
@@ -553,7 +307,7 @@ gem build my_gem.gemspec &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/02/r-language/">R Language</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/04/21/rails-assets-gem-vs-using-bower/">Rails Assets Gem vs Bower</a></h1>
     
     
       <p class="meta">
@@ -569,26 +323,45 @@ gem build my_gem.gemspec &hellip;">
   
 
 
-<time datetime="2014-03-02T20:26:51+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-04-21T01:26:18+08:00" pubdate data-updated="true">Apr 21<span>st</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install r-base
-</span><span class='line'>
-</span><span class='line'>https://github.com/randy3k/Enhanced-R
-</span><span class='line'>
-</span><span class='line'>http://tomschenkjr.net/using-sublime-text-2-for-r/</span></code></pre></td></tr></table></div></figure>
+  <div class="entry-content"><p>There are many ways to manage assets in rails.</p>
+
+<h2>let us compare these two ways.</h2>
+
+<h3>1)use rails assets gem. <a href="https://rails-assets.org/">https://rails-assets.org/</a></h3>
+
+<p>Rails Assets is the frictionless proxy between Bundler and Bower.</p>
+
+<p>it need to add a gem source to your gem file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>source 'https://rails-assets.org'</span></code></pre></td></tr></table></div></figure>
 
 
+<p>and add assets like this to gem file</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails-assets-BOWER_PACKAGE_NAME'</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>2)use bower directly</h3>
+
+<h3>use bower directly win!</h3>
+
+<p>I think rails-assets adds an unnecessary layer.
+I want to make things simple.</p>
+
+<p>PS: there is a gem called &lsquo;bower-rails&rsquo;, helping you use bower.</p>
+
+<p>It provides a DSL configuration in Bowerfile at the project&rsquo;s root similar to Bundler.</p>
+
+<p>But I think this gem also add an unnecessary layer. so DON&rsquo;T use this gem! It just wastes your time!</p>
 </div>
   
   
@@ -601,7 +374,7 @@ gem build my_gem.gemspec &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/02/send-sms-from-ubunut/">Send Sms From Ubunut</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/04/21/using-bower-to-manage-rails-assets/">Using Bower to Manage Rails Assets</a></h1>
     
     
       <p class="meta">
@@ -617,7 +390,7 @@ gem build my_gem.gemspec &hellip;">
   
 
 
-<time datetime="2014-03-02T20:25:25+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-04-21T00:02:56+08:00" pubdate data-updated="true">Apr 21<span>st</span>, 2014</time>
         
       </p>
     
@@ -630,12 +403,74 @@ gem build my_gem.gemspec &hellip;">
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:linuxonly/modem+manager+gui
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd project_root
+</span><span class='line'>echo '{ "directory": "vendor/assets/components" }' &gt; .bowerrc
+</span><span class='line'>bower init #just use the default setting is ok
+</span><span class='line'>
+</span><span class='line'>bower install angular
+</span><span class='line'>bower install sass-bootstrap</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in app/assets/javascripts/application.js add:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//= require angular/angular</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in app/assets/stylesheets/application.css add:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*= require sass-bootstrap/lib/bootstrap</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/">Fixed Failed to Fetch From Registry: Bower, in Ubuntu 13</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-20T16:19:57+08:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get purge nodejs npm
+</span><span class='line'>
 </span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get install modem-manager-gui
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>http://askubuntu.com/questions/325229/hspa-3g-modem-manager-for-backtrack-ubuntu?rq=1</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>sudo apt-get install -y python-software-properties python g++ make
+</span><span class='line'>sudo add-apt-repository ppa:chris-lea/node.js
+</span><span class='line'>sudo apt-get install nodejs
+</span><span class='line'>sudo npm install -g bower</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -649,7 +484,7 @@ gem build my_gem.gemspec &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/02/padrino-command/">Padrino Command</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/04/16/rbenv-vs-rvm/">Rbenv vs Rvm</a></h1>
     
     
       <p class="meta">
@@ -665,48 +500,18 @@ gem build my_gem.gemspec &hellip;">
   
 
 
-<time datetime="2014-03-02T20:22:01+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-04-16T15:51:14+08:00" pubdate data-updated="true">Apr 16<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install padrino
-</span><span class='line'>
-</span><span class='line'>padrino g project my_project
-</span><span class='line'>
-</span><span class='line'>padrino s # padrino start
-</span><span class='line'>padrino c
-</span><span class='line'>
-</span><span class='line'>http://127.0.0.1:3000
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>padrino g controller Post get: index get: show
-</span><span class='line'>padrino g model Post title: string body: text
-</span><span class='line'>padrino g plugin better_error
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>padrino rake routes</span></code></pre></td></tr></table></div></figure>
+  <div class="entry-content"><p>rbenv win.</p>
 
+<p>because no gemsets in rbenv. rbenv make things simple.</p>
 
-
+<p>rvm is over-design.</p>
 </div>
   
   
@@ -719,7 +524,7 @@ gem build my_gem.gemspec &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/02/rails-command/">Rails Command</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/04/14/reinstall-octopress/">Reinstall Octopress</a></h1>
     
     
       <p class="meta">
@@ -735,7 +540,7 @@ gem build my_gem.gemspec &hellip;">
   
 
 
-<time datetime="2014-03-02T20:17:46+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-04-14T23:22:20+08:00" pubdate data-updated="true">Apr 14<span>th</span>, 2014</time>
         
       </p>
     
@@ -750,38 +555,114 @@ gem build my_gem.gemspec &hellip;">
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:drop RAILS_ENV=development
-</span><span class='line'>rake db:drop RAILS_ENV=production
-</span><span class='line'>rake db:drop 
-</span><span class='line'>rake db:create 
-</span><span class='line'>rake db:migrate 
-</span><span class='line'>rake db:seed
-</span><span class='line'>rake db:reset  #db:setup =&gt; db:create db:schema:load db:seed
-</span><span class='line'>rake db:test:load
-</span><span class='line'>rake db:test:prepare
-</span><span class='line'>rake routes
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress
+</span><span class='line'>bundle exec rake install
 </span><span class='line'>
-</span><span class='line'>integer
-</span><span class='line'>string
-</span><span class='line'>datetime
-</span><span class='line'>text
+</span><span class='line'>bundle exec rake setup_github_pages
 </span><span class='line'>
-</span><span class='line'>rails generate scaffold user email:string name:string password:string
-</span><span class='line'>rails generate controller user info
-</span><span class='line'>rails generate model Site address:string  url:string
-</span><span class='line'>rails generate migration AddAvailable available:boolean</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>bundle exec rake generate
+</span><span class='line'>bundle exec rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>files need to backup</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>_posts
+</span><span class='line'>robots.txt
+</span><span class='line'>CNAME
+</span><span class='line'>
+</span><span class='line'>octopress/source/_includes/custom/asides/tag_cloud.html
+</span><span class='line'>octopress/plugins/tag_cloud.rb
+</span><span class='line'>
+</span><span class='line'>octopress/source/_includes/custom/navigation.html</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/11/write-a-executable-gem/">Write a Executable Gem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-11T15:05:49+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd my_gem
+</span><span class='line'>mkdir bin
+</span><span class='line'>touch bin/my_gem
+</span><span class='line'>chmod +x bin/my_gem</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit my_gem</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/env ruby
+</span><span class='line'>
+</span><span class='line'>require 'my_gem'
+</span><span class='line'>
+</span><span class='line'>MyGem.hi</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit my_gem.gemspec</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>spec.executables = ["my_gem"]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or commit change to git, so you need not change the gemspec file</p>
+
+<p>build and install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem build my_gem.gemspec
+</span><span class='line'>gem install --local ./my_gem-0.0.1.gem</span></code></pre></td></tr></table></div></figure>
+
+
+<p>restart terminal and run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>my_gem</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -804,11 +685,15 @@ gem build my_gem.gemspec &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 127.27272727272728%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 116.36363636363636%'>java(3)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 127.27272727272728%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 121.81818181818181%'>java(4)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 132.72727272727272%'>technical-review(6)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/09/20/generate-xml-using-xpath/">Generate Xml Using Xpath</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/08/29/html-best-practices/">Html Best Practices</a>
@@ -824,10 +709,6 @@ gem build my_gem.gemspec &hellip;">
     
       <li class="post">
         <a href="/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/">Native Apps, Mobile Web Apps and Hybrid Apps</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/23/what-is-new-in-html5/">What Is New in HTML5?</a>
       </li>
     
   </ul>
