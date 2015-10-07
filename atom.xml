@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-09-20T17:33:55+08:00</updated>
+  <updated>2015-10-07T22:43:32+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Http Clients in Java]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java/"/>
+    <updated>2015-10-07T22:26:51+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java</id>
+    <content type="html"><![CDATA[<p>recommended, because they are easy to use and powerful</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>spring resttemplate
+</span><span class='line'>http://unirest.io/java.html</span></code></pre></td></tr></table></div></figure>
+
+
+<p>not recommended, because they use low level api</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://hc.apache.org/httpcomponents-client-ga/index.html
+</span><span class='line'>http://hc.apache.org/httpclient-3.x/</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tomcat OutOfMemory in Eclipse]]></title>
@@ -717,17 +740,6 @@
 </span><span class='line'>要学以致用，切忌天马行空、纸上谈兵
 </span><span class='line'>多写demo</span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[8]推荐一些参考资料]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/11/some-startup-reference/"/>
-    <updated>2015-08-11T23:25:19+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/11/some-startup-reference</id>
-    <content type="html"><![CDATA[<p><a href="http://open.163.com/special/opencourse/startup.html">YC创业课</a></p>
-
-<p><a href="http://book.douban.com/subject/10945606/">精益创业</a></p>
 ]]></content>
   </entry>
   

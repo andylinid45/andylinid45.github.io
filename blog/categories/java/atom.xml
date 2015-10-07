@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-09-20T17:33:55+08:00</updated>
+  <updated>2015-10-07T22:43:32+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Http Clients in Java]]></title>
+    <link href="http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java/"/>
+    <updated>2015-10-07T22:26:51+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java</id>
+    <content type="html"><![CDATA[<p>recommended, because they are easy to use and powerful
+<code>
+spring resttemplate
+http://unirest.io/java.html
+</code></p>
+
+<p>not recommended, because they use low level api
+<code>
+http://hc.apache.org/httpcomponents-client-ga/index.html
+http://hc.apache.org/httpclient-3.x/
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tomcat OutOfMemory in Eclipse]]></title>
@@ -79,40 +98,6 @@ export PATH=${PATH}:${M2_HOME}/bin
 <code>
 source .profile
 mvn --version
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Jdk on Ubuntu14]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/17/install-jdk-on-ubuntu14/"/>
-    <updated>2015-08-17T14:40:35+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/17/install-jdk-on-ubuntu14</id>
-    <content type="html"><![CDATA[<p>If you have some problmes with installing jdk using
-<code>
-sudo apt-get install default-jdk
-</code></p>
-
-<p>Have a try with this</p>
-
-<p>Download jdk from Oracle website.
-<code>
-sudo mkdir /usr/lib/jvm
-sudo tar zxvf ./jdk-8u51-linux-x64.tar.gz  -C /usr/lib/jvm
-</code></p>
-
-<p>gedit ~/.bashrc # add at the end
-<code>
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_51
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-export PATH=${JAVA_HOME}/bin:$PATH
-</code></p>
-
-<p>Have a test
-<code>
-source ~/.bashrc
-java -version
 </code></p>
 ]]></content>
   </entry>
