@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-10-07T22:43:32+08:00</updated>
+  <updated>2017-08-31T15:24:50+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Search Pdf in Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/08/31/search-pdf-in-ubuntu/"/>
+    <updated>2017-08-31T15:09:39+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/08/31/search-pdf-in-ubuntu</id>
+    <content type="html"><![CDATA[<p>using pdfgrep
+<code>
+sudo apt-get install pdfgrep
+pdfgrep -R 'DSL'  ./books
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Execute a Ruby Script in Terminal Using Shebang]]></title>
@@ -78,17 +91,6 @@ sudo adduser yourusername vboxusers
     <content type="html"><![CDATA[<p>all the same
 <code>
 https://help.ubuntu.com/community/PPTPServer
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Sudo Without Password in Osx and Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/23/sudo-without-password/"/>
-    <updated>2014-09-23T10:10:16+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/23/sudo-without-password</id>
-    <content type="html"><![CDATA[<p><code>
-echo 'account_name ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
 </code></p>
 ]]></content>
   </entry>

@@ -5,18 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Install Maven on Ubuntu14 - Andy Lin</title>
+  <title>Search Pdf in Ubuntu - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="Download maven 1
+  <meta name="description" content="using pdfgrep 1
 2
-3
-4
-mv Downloads/apache-maven-3.3.3-bin.tar.gz /usr/local/
-cd /usr/local/
-sudo tar -xvf apache-maven-3.3.3-bin.tar.gz
-sudo rm &hellip;">
+sudo apt-get install pdfgrep
+pdfgrep -R 'DSL' ./books ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -25,7 +21,7 @@ sudo rm &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2015/08/20/install-maven-on-ubuntu14">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2017/08/31/search-pdf-in-ubuntu">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -89,7 +85,7 @@ sudo rm &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Install Maven on Ubuntu14</h1>
+      <h1 class="entry-title">Search Pdf in Ubuntu</h1>
     
     
       <p class="meta">
@@ -105,39 +101,19 @@ sudo rm &hellip;">
   
 
 
-<time datetime="2015-08-20T19:12:51+08:00" pubdate data-updated="true">Aug 20<span>th</span>, 2015</time>
+<time datetime="2017-08-31T15:09:39+08:00" pubdate data-updated="true">Aug 31<span>st</span>, 2017</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Download maven</p>
+<div class="entry-content"><p>using pdfgrep</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mv Downloads/apache-maven-3.3.3-bin.tar.gz /usr/local/
-</span><span class='line'>cd /usr/local/
-</span><span class='line'>sudo tar -xvf apache-maven-3.3.3-bin.tar.gz
-</span><span class='line'>sudo rm apache-maven-3.3.3-bin.tar.gz </span></code></pre></td></tr></table></div></figure>
-
-
-<p>gedit ~/.bashrc # add at the end</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export M2_HOME="/usr/local/apache-maven-3.3.3"
-</span><span class='line'>export PATH=${PATH}:${M2_HOME}/bin</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Have a test</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source .profile
-</span><span class='line'>mvn --version</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install pdfgrep
+</span><span class='line'>pdfgrep -R 'DSL'  ./books </span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -161,12 +137,12 @@ sudo rm &hellip;">
   
 
 
-<time datetime="2015-08-20T19:12:51+08:00" pubdate data-updated="true">Aug 20<span>th</span>, 2015</time>
+<time datetime="2017-08-31T15:09:39+08:00" pubdate data-updated="true">Aug 31<span>st</span>, 2017</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/java/'>java</a>
+    <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
   
 </span>
 
@@ -182,10 +158,8 @@ sudo rm &hellip;">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/08/17/install-jdk-on-ubuntu14/" title="Previous Post: install jdk on ubuntu14">&laquo; install jdk on ubuntu14</a>
+        <a class="basic-alignment left" href="/blog/2015/10/07/http-clients-in-java/" title="Previous Post: http clients in java">&laquo; http clients in java</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14/" title="Next Post: install hadoop1.0.4 on ubuntu14">install hadoop1.0.4 on ubuntu14 &raquo;</a>
       
     </p>
   </footer>

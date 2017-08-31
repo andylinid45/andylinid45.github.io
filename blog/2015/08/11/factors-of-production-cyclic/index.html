@@ -27,8 +27,8 @@
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -194,11 +194,15 @@
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 127.27272727272728%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 132.72727272727272%'>java(6)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 138.1818181818182%'>technical-review(7)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 125.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 120.0%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 125.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 135.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 120.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 130.0%'>java(6)</a> <a href='/blog/categories/mongodb' style='font-size: 105.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 115.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.0%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 120.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 120.0%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 140.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.0%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.0%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 135.0%'>technical-review(7)</a> <a href='/blog/categories/tools' style='font-size: 125.0%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(12)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 145.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.0%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/08/31/search-pdf-in-ubuntu/">Search Pdf in Ubuntu</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/10/07/http-clients-in-java/">Http Clients in Java</a>
@@ -216,10 +220,6 @@
         <a href="/blog/2015/08/29/html-best-practices/">Html Best Practices</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2015/08/29/html5-cross-browser-polyfills/">HTML5 Cross Browser Polyfills</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -234,7 +234,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Andy -
+  Copyright &copy; 2017 - Andy -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

@@ -9,14 +9,23 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="download sublimetext 1
-http://www.sublimetext.com/2 1
+  <meta name="description" content="install rvm 1
+2
+3
+curl -L get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm requirements usefull script 1
 2
 3
 4
-tar xf Sublime\ Text\ 2.0.1\ x64.tar.bz2
-sudo mkdir /opt
-sudo mv Sublime\ Text\ 2 /opt/ &hellip;">
+5
+6
+7
+8
+9
+10
+11
+rvm install 1 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -30,8 +39,8 @@ sudo mv Sublime\ Text\ 2 /opt/ &hellip;">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -86,6 +95,106 @@ sudo mv Sublime\ Text\ 2 /opt/ &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/rvm-in-ubunut/">Rvm in Ubunut</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T16:25:48+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>install rvm</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -L get.rvm.io | bash -s stable
+</span><span class='line'>source ~/.rvm/scripts/rvm
+</span><span class='line'>rvm requirements</span></code></pre></td></tr></table></div></figure>
+
+
+<p>usefull script</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm install 1.9.3
+</span><span class='line'>rvm use 1.9.3 --default
+</span><span class='line'>rvm gemset create 3.2.3
+</span><span class='line'>rvm gemset use 3.2.3 
+</span><span class='line'>rvm use 1.9.3@3.2.3 --default  
+</span><span class='line'>gem sources --remove http://rubygems.org/
+</span><span class='line'>gem sources -a http://ruby.taobao.org/
+</span><span class='line'>gem install rails -v=3.2.12
+</span><span class='line'>
+</span><span class='line'>rvm list
+</span><span class='line'>rvm gemset list</span></code></pre></td></tr></table></div></figure>
+
+
+<p>remove rvm</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm implode</span></code></pre></td></tr></table></div></figure>
+
+
+<p>if you can not find rvm in terminal
+gedit  .bashrc
+and add</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi</span></code></pre></td></tr></table></div></figure>
+
+
+<p>no rdoc</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo -e "install: --no-rdoc --no-ri \nupdate: --no-rdoc --no-ri" &gt;&gt; ~/.gemrc</span></code></pre></td></tr></table></div></figure>
+
+
+<p>do not use .rvmrc file any more, go to the project folder</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo "ruby-1.9.3-p429" &gt;&gt; .ruby-version
+</span><span class='line'>echo "myapp" &gt;&gt; .ruby-gemset</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -712,48 +821,6 @@ install pg9.2 in ubuntu13</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/01/project-specific-git-user-and-email/">Project Specific Git User and Email</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-01T21:18:55+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>go to the project folder and run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git config user.email "***"
-</span><span class='line'>git config user.name "***"</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/10/">&larr; Older</a>
@@ -768,11 +835,15 @@ install pg9.2 in ubuntu13</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 127.27272727272728%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 132.72727272727272%'>java(6)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 138.1818181818182%'>technical-review(7)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 125.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 120.0%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 125.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 135.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 120.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 130.0%'>java(6)</a> <a href='/blog/categories/mongodb' style='font-size: 105.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 115.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.0%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 120.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 120.0%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 140.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.0%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.0%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 135.0%'>technical-review(7)</a> <a href='/blog/categories/tools' style='font-size: 125.0%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(12)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 145.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.0%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/08/31/search-pdf-in-ubuntu/">Search Pdf in Ubuntu</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/10/07/http-clients-in-java/">Http Clients in Java</a>
@@ -790,10 +861,6 @@ install pg9.2 in ubuntu13</p>
         <a href="/blog/2015/08/29/html-best-practices/">Html Best Practices</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2015/08/29/html5-cross-browser-polyfills/">HTML5 Cross Browser Polyfills</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -807,7 +874,7 @@ install pg9.2 in ubuntu13</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Andy -
+  Copyright &copy; 2017 - Andy -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-10-07T22:43:32+08:00</updated>
+  <updated>2017-08-31T15:24:50+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Search Pdf in Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/08/31/search-pdf-in-ubuntu/"/>
+    <updated>2017-08-31T15:09:39+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/08/31/search-pdf-in-ubuntu</id>
+    <content type="html"><![CDATA[<p>using pdfgrep</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install pdfgrep
+</span><span class='line'>pdfgrep -R 'DSL'  ./books </span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Http Clients in Java]]></title>
@@ -718,27 +733,6 @@
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>正是"商业模式"这个说法把你带到坑里的</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[1]技术人员如何快速成长]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/12/how-to-learn-fast/"/>
-    <updated>2015-08-12T15:56:28+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/12/how-to-learn-fast</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>看官方的英文文档，看中文文档是一个坑
-</span><span class='line'>用英文搜索问题而不是中文，多看stackoverflow.com ，里面的回答都很好
-</span><span class='line'>看用到的开源库的源代码。所有东西都在源代码里，有问题就debug进去
-</span><span class='line'>精读技术书籍是坑，要快速浏览大概。书本不能帮你解决具体技术问题
-</span><span class='line'>要学以致用，切忌天马行空、纸上谈兵
-</span><span class='line'>多写demo</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
