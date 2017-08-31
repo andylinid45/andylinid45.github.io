@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-08-31T17:22:12+08:00</updated>
+  <updated>2017-08-31T17:46:42+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install Tensorflow in Ubuntu 16.04LTS]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/08/31/install-tensorflow-in-ubuntu-16-dot-04lts/"/>
+    <updated>2017-08-31T17:41:08+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/08/31/install-tensorflow-in-ubuntu-16-dot-04lts</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install python3-pip python3-dev python3-virtualenv
+</span><span class='line'>
+</span><span class='line'>sudo mkdir ~/env
+</span><span class='line'>virtualenv --system-site-packages ~/env/tensorflow</span></code></pre></td></tr></table></div></figure>
+
+
+<p>add to ~/.bashrc</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>alias tensorflow="source~/env/tensorflow/bin/activate"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>go to <a href="https://storage.googleapis.com/tensorflow/">https://storage.googleapis.com/tensorflow/</a>  to pick up a version (do not install gpu version at first)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>tensorflow
+</span><span class='line'>pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.3.0-cp27-none-linux_x86_64.whl
+</span><span class='line'>pip list</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Sogo Pinyin in Ubuntu 16]]></title>
@@ -680,51 +713,6 @@
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>source .profile
 </span><span class='line'>mvn --version</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Jdk on Ubuntu14]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/17/install-jdk-on-ubuntu14/"/>
-    <updated>2015-08-17T14:40:35+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/17/install-jdk-on-ubuntu14</id>
-    <content type="html"><![CDATA[<p>If you have some problmes with installing jdk using</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install default-jdk</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Have a try with this</p>
-
-<p>Download jdk from Oracle website.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir /usr/lib/jvm
-</span><span class='line'>sudo tar zxvf ./jdk-8u51-linux-x64.tar.gz  -C /usr/lib/jvm</span></code></pre></td></tr></table></div></figure>
-
-
-<p>gedit ~/.bashrc # add at the end</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_51
-</span><span class='line'>export JRE_HOME=${JAVA_HOME}/jre 
-</span><span class='line'>export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-</span><span class='line'>export PATH=${JAVA_HOME}/bin:$PATH</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Have a test</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source ~/.bashrc
-</span><span class='line'>java -version</span></code></pre></td></tr></table></div></figure>
-
-
 
 ]]></content>
   </entry>
