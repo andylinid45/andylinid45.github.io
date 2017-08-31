@@ -7,8 +7,8 @@ categories: octopress
 ---
 
 ```
-rake new_post["Hello octopress"]
-rake generate # Generates posts and pages into the public directory
-rake preview # Watches, and mounts a webserver at http://localhost:4000 
-rake deploy
+bundle exec rake new_post["Hello octopress"]
+bundle exec rake generate # Generates posts and pages into the public directory
+bundle exec rake preview # Watches, and mounts a webserver at http://localhost:4000 
+bundle exec rake deploy
 ```
