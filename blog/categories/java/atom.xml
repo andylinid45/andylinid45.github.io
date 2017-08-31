@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-08-31T16:09:32+08:00</updated>
+  <updated>2017-08-31T16:48:54+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install Java via SDKMAN!]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman/"/>
+    <updated>2017-08-31T16:29:53+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman</id>
+    <content type="html"><![CDATA[<p><code>
+curl -s https://get.sdkman.io | bash
+sdk install java
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Http Clients in Java]]></title>
@@ -72,33 +84,6 @@ add -XX:MaxPermSize=256m to Tomcat in Eclipse: Server &gt; Open Launch Configura
 </code></p>
 
 <p><a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Maven on Ubuntu14]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/20/install-maven-on-ubuntu14/"/>
-    <updated>2015-08-20T19:12:51+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/20/install-maven-on-ubuntu14</id>
-    <content type="html"><![CDATA[<p>Download maven
-<code>
-mv Downloads/apache-maven-3.3.3-bin.tar.gz /usr/local/
-cd /usr/local/
-sudo tar -xvf apache-maven-3.3.3-bin.tar.gz
-sudo rm apache-maven-3.3.3-bin.tar.gz
-</code></p>
-
-<p>gedit ~/.bashrc # add at the end
-<code>
-export M2_HOME="/usr/local/apache-maven-3.3.3"
-export PATH=${PATH}:${M2_HOME}/bin
-</code></p>
-
-<p>Have a test
-<code>
-source .profile
-mvn --version
-</code></p>
 ]]></content>
   </entry>
   

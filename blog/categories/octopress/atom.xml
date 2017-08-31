@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-08-31T16:09:32+08:00</updated>
+  <updated>2017-08-31T16:48:54+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -49,10 +49,10 @@ octopress/plugins/tag_cloud.rb</p>
     <updated>2014-03-01T20:43:42+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/01/octopress-command</id>
     <content type="html"><![CDATA[<p><code>
-rake new_post["Hello octopress"]
-rake generate # Generates posts and pages into the public directory
-rake preview # Watches, and mounts a webserver at http://localhost:4000
-rake deploy
+bundle exec rake new_post["Hello octopress"]
+bundle exec rake generate # Generates posts and pages into the public directory
+bundle exec rake preview # Watches, and mounts a webserver at http://localhost:4000
+bundle exec rake deploy
 </code></p>
 ]]></content>
   </entry>

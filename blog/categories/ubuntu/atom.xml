@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-08-31T16:09:32+08:00</updated>
+  <updated>2017-08-31T16:48:54+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install Java via SDKMAN!]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman/"/>
+    <updated>2017-08-31T16:29:53+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman</id>
+    <content type="html"><![CDATA[<p><code>
+curl -s https://get.sdkman.io | bash
+sdk install java
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Search Pdf in Ubuntu]]></title>
@@ -80,18 +92,6 @@ sudo adduser yourusername vboxusers
 </code></p>
 
 <p>You HAVE to logout/login from your session, NOT just restart Virtual Box, after the group change.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setup PPTPServer in Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu/"/>
-    <updated>2014-09-27T22:19:50+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu</id>
-    <content type="html"><![CDATA[<p>all the same
-<code>
-https://help.ubuntu.com/community/PPTPServer
-</code></p>
 ]]></content>
   </entry>
   
