@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-08-31T16:48:54+08:00</updated>
+  <updated>2017-08-31T17:22:12+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install Sogo Pinyin in Ubuntu 16]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/08/31/install-sogo-pinyin-in-ubuntu-16/"/>
+    <updated>2017-08-31T17:03:45+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/08/31/install-sogo-pinyin-in-ubuntu-16</id>
+    <content type="html"><![CDATA[<p>download sogopinyin.deb</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install gdebi
+</span><span class='line'>sudo gdebi sogoupinyin.deb
+</span><span class='line'>sudo reboot</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Java via SDKMAN!]]></title>
@@ -708,25 +725,6 @@
 </span><span class='line'>java -version</span></code></pre></td></tr></table></div></figure>
 
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why React.js Is So Cool?]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/13/why-react-js-is-so-cool/"/>
-    <updated>2015-08-13T14:10:05+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/13/why-react-js-is-so-cool</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>React.js makes things simple. and it wins others js framework by concept
-</span><span class='line'>Re-render is automatic in Reack.js . So we can think more OOP when using it. </span></code></pre></td></tr></table></div></figure>
-
-
-<p>I think the only problme is:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Some DOM code is inside the javascript code. This make the code hard to read and rewrite.</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

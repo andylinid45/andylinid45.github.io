@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-08-31T16:48:54+08:00</updated>
+  <updated>2017-08-31T17:22:12+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install Sogo Pinyin in Ubuntu 16]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/08/31/install-sogo-pinyin-in-ubuntu-16/"/>
+    <updated>2017-08-31T17:03:45+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/08/31/install-sogo-pinyin-in-ubuntu-16</id>
+    <content type="html"><![CDATA[<p>download sogopinyin.deb
+<code>
+sudo apt-get install gdebi
+sudo gdebi sogoupinyin.deb
+sudo reboot
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Java via SDKMAN!]]></title>
@@ -78,20 +92,6 @@ chmod +x your_script.rb
 </code></p>
 
 <p><a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Usb in Virtualbox]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox/"/>
-    <updated>2014-09-27T22:23:32+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox</id>
-    <content type="html"><![CDATA[<p>ubuntu 14.04 , virtualbox 4.3
-<code>
-sudo adduser yourusername vboxusers
-</code></p>
-
-<p>You HAVE to logout/login from your session, NOT just restart Virtual Box, after the group change.</p>
 ]]></content>
   </entry>
   
