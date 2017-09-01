@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-08-31T17:46:42+08:00</updated>
+  <updated>2017-09-01T15:05:32+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Make Wget Multithreading?]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading/"/>
+    <updated>2017-09-01T14:58:41+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading</id>
+    <content type="html"><![CDATA[<p>try axel</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install axel
+</span><span class='line'>axel -a -n [Num_of_Thread] link1 link2 link3 ...
+</span><span class='line'># -a just show an improved progress bar.</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Tensorflow in Ubuntu 16.04LTS]]></title>
@@ -678,41 +695,6 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar pi 4 1000 </span></code></pre></td></tr></table></div></figure>
 
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Maven on Ubuntu14]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/20/install-maven-on-ubuntu14/"/>
-    <updated>2015-08-20T19:12:51+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/20/install-maven-on-ubuntu14</id>
-    <content type="html"><![CDATA[<p>Download maven</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mv Downloads/apache-maven-3.3.3-bin.tar.gz /usr/local/
-</span><span class='line'>cd /usr/local/
-</span><span class='line'>sudo tar -xvf apache-maven-3.3.3-bin.tar.gz
-</span><span class='line'>sudo rm apache-maven-3.3.3-bin.tar.gz </span></code></pre></td></tr></table></div></figure>
-
-
-<p>gedit ~/.bashrc # add at the end</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export M2_HOME="/usr/local/apache-maven-3.3.3"
-</span><span class='line'>export PATH=${PATH}:${M2_HOME}/bin</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Have a test</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source .profile
-</span><span class='line'>mvn --version</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

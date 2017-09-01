@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-08-31T17:46:42+08:00</updated>
+  <updated>2017-09-01T15:05:32+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Make Wget Multithreading?]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading/"/>
+    <updated>2017-09-01T14:58:41+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading</id>
+    <content type="html"><![CDATA[<p>try axel</p>
+
+<p>```
+sudo apt-get install axel
+axel -a -n [Num_of_Thread] link1 link2 link3 &hellip;</p>
+
+<h1>-a just show an improved progress bar.</h1>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Sogo Pinyin in Ubuntu 16]]></title>
@@ -77,21 +94,6 @@ sudo apt-get install ruby
 chmod +x your_script.rb
 ./your_script.rb
 </code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fixing Eclipse Can Not Find Java on Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/"/>
-    <updated>2015-08-22T11:10:58+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu</id>
-    <content type="html"><![CDATA[<p>gedit ECLIPSE_HOME/eclipse.ini # add below before &lsquo;-vmargs&rsquo;
-<code>
--vm
-/usr/lib/jvm/jdk1.8.0_51/bin/java
-</code></p>
-
-<p><a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a></p>
 ]]></content>
   </entry>
   
