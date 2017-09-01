@@ -13,3 +13,7 @@ sudo apt-get install axel
 axel -a -n [Num_of_Thread] link1 link2 link3 ...
 # -a just show an improved progress bar.
 ```
+
+```
+http://askubuntu.com/questions/214018/how-to-make-wget-faster-or-multithreading
+```
