@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-09-04T11:12:18+08:00</updated>
+  <updated>2017-09-04T17:55:55+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install Tensorflow Gpu in Ubuntu 16]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/09/04/install-tensorflow-gpu-in-ubuntu-16/"/>
+    <updated>2017-09-04T17:35:28+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/09/04/install-tensorflow-gpu-in-ubuntu-16</id>
+    <content type="html"><![CDATA[<p>download cuda and install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#https://developer.nvidia.com/cuda-downloads
+</span><span class='line'>sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install cuda</span></code></pre></td></tr></table></div></figure>
+
+
+<p>download cuDNN and install(cuDNN version depends on your tensorflow version, cuDNN v6 if on TF v1.3)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#https://developer.nvidia.com/cudnn
+</span><span class='line'>sudo dpkg -i libcudnn5_5.1.10-1+cuda8.0_amd64.deb
+</span><span class='line'>sudo dpkg -i libcudnn5-dev_5.1.10-1+cuda8.0_amd64.deb</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install libcupti-dev
+</span><span class='line'>pip install 'tensorflow-gpu==1.3.0'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>if &ldquo;libEGL.so.1 is not a symbolic link&rdquo;, and run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mv /usr/lib/nvidia-375/libEGL.so.1 /usr/lib/nvidia-375/libEGL.so.1.org
+</span><span class='line'>sudo mv /usr/lib32/nvidia-375/libEGL.so.1 /usr/lib32/nvidia-375/libEGL.so.1.org
+</span><span class='line'>sudo ln -s /usr/lib/nvidia-375/libEGL.so.375.39 /usr/lib/nvidia-375/libEGL.so.1
+</span><span class='line'>sudo ln -s /usr/lib32/nvidia-375/libEGL.so.375.39 /usr/lib32/nvidia-375/libEGL.so.1</span></code></pre></td></tr></table></div></figure>
+
+
+<p>verify your installation</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>tensorflow # if you are using virtualenv
+</span><span class='line'>python
+</span><span class='line'>import tensorflow as tf
+</span><span class='line'>hello = tf.constant('Hello TensorFlow!')
+</span><span class='line'>sess = tf.Session()
+</span><span class='line'>print(sess.run(hello))</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Update Kernel in Ubuntu With Command Line]]></title>
@@ -588,115 +653,6 @@
 </span><span class='line'>hadoop fs -ls out
 </span><span class='line'>hadoop fs -cat out/part-r-00000
 </span><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Config Hadoop for Pseudo Distributed Mode]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/21/config-hadoop-for-pseudo-distributed-mode/"/>
-    <updated>2015-08-21T17:17:03+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/21/config-hadoop-for-pseudo-distributed-mode</id>
-    <content type="html"><![CDATA[<p>install ssh</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install openssh-client=1:6.6p1-2ubuntu1
-</span><span class='line'>sudo apt-get install openssh-server
-</span><span class='line'>ssh-keygen
-</span><span class='line'>cp .ssh/id_rsa.pub .ssh/authorized_keys
-</span><span class='line'>ssh localhost</span></code></pre></td></tr></table></div></figure>
-
-
-<p>sudo nano /opt/hadoop/conf/core-site.xml</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;property&gt;
-</span><span class='line'>&lt;name&gt;fs.default.name&lt;/name&gt;
-</span><span class='line'>&lt;value&gt;hdfs://localhost:9000&lt;/value&gt;
-</span><span class='line'>&lt;/property&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;property&gt;
-</span><span class='line'>&lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
-</span><span class='line'>&lt;value&gt;/var/lib/hadoop&lt;/value&gt;
-</span><span class='line'>&lt;/property&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>sudo nano /opt/hadoop/conf/hdfs-site.xml</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;property&gt;
-</span><span class='line'>&lt;name&gt;dfs.replication&lt;/name&gt;
-</span><span class='line'>&lt;value&gt;1&lt;/value&gt;
-</span><span class='line'>&lt;/property&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>sudo nano /opt/hadoop/conf/mapred-site.xml</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;property&gt;
-</span><span class='line'>&lt;name&gt;mapred.job.tracker&lt;/name&gt;
-</span><span class='line'>&lt;value&gt;localhost:9001&lt;/value&gt;
-</span><span class='line'>&lt;/property&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>make temp dir for hadoop</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir /var/lib/hadoop
-</span><span class='line'>sudo chmod 777 /var/lib/hadoop</span></code></pre></td></tr></table></div></figure>
-
-
-<p>make log dir for hadoop</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir /opt/hadoop/logs 
-</span><span class='line'>sudo chmod 777 /opt/hadoop/logs/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>run just for the first time to format file system</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop namenode -format</span></code></pre></td></tr></table></div></figure>
-
-
-<p>start it</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>start-dfs.sh
-</span><span class='line'>start-mapred.sh
-</span><span class='line'>hadoop fs -ls /  # have a test</span></code></pre></td></tr></table></div></figure>
-
-
-<p>web UI for it</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://localhost:50030/
-</span><span class='line'>http://localhost:50070/</span></code></pre></td></tr></table></div></figure>
 
 
 
