@@ -444,7 +444,13 @@
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading/</loc>
-        <lastmod>2017-09-01T15:00:45+08:00</lastmod>
+        <lastmod>2017-09-01T15:17:57+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/
+        </loc>
+        <lastmod>2017-09-04T11:10:36+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/robots.txt</loc>
@@ -452,10 +458,10 @@
     </url>
     <url>
         <loc>http://andylinid45.github.io/</loc>
-        <lastmod>2017-09-01T15:00:45+08:00</lastmod>
+        <lastmod>2017-09-04T11:10:36+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/archives/</loc>
-        <lastmod>2017-09-01T15:00:45+08:00</lastmod>
+        <lastmod>2017-09-04T11:10:36+08:00</lastmod>
     </url>
 </urlset>

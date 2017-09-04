@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-09-01T15:05:32+08:00</updated>
+  <updated>2017-09-04T11:12:18+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Update Kernel in Ubuntu With Command Line]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/"/>
+    <updated>2017-09-04T10:59:48+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line</id>
+    <content type="html"><![CDATA[<p>check the kernel version
+<code>
+uname -r
+</code></p>
+
+<p><code>
+sudo apt-get update
+apt-cache search linux-image
+</code></p>
+
+<p>pick up a version, 4.11.0-14 for example
+<code>
+sudo apt-get install linux-image-4.11.0-14-generic linux-image-extra-4.11.0-14-generic  linux-headers-4.11.0-14-generic
+</code></p>
+
+<p>need reboot after installed!</p>
+
+<p>remove the old kernels
+<code>
+sudo apt-get autoremove
+</code></p>
+
+<p>check the result
+<code>
+uname -r
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Make Wget Multithreading?]]></title>
@@ -27,6 +61,10 @@ axel -a -n [Num_of_Thread] link1 link2 link3 &hellip;</p>
 <h1>-a just show an improved progress bar.</h1>
 
 <p>```</p>
+
+<p><code>
+http://askubuntu.com/questions/214018/how-to-make-wget-faster-or-multithreading
+</code></p>
 ]]></content>
   </entry>
   
@@ -65,34 +103,6 @@ sdk install java
 <code>
 sudo apt-get install pdfgrep
 pdfgrep -R 'DSL'  ./books
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Execute a Ruby Script in Terminal Using Shebang]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/"/>
-    <updated>2015-08-22T12:14:08+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal</id>
-    <content type="html"><![CDATA[<p><code>
-sudo apt-get install ruby
-</code></p>
-
-<p>which ruby
-<code>
-/usr/bin/ruby
-</code></p>
-
-<p>please the shebang line on the first line of your script
-```</p>
-
-<h1>!/usr/bin/ruby -w</h1>
-
-<p>```</p>
-
-<p><code>
-chmod +x your_script.rb
-./your_script.rb
 </code></p>
 ]]></content>
   </entry>

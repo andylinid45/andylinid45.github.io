@@ -5,12 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Rbenv vs Rvm - Andy Lin</title>
+  <title>Update Kernel in Ubuntu With Command Line - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="rbenv win. because no gemsets in rbenv. rbenv make things simple. rvm is over-design.
-">
+  <meta name="description" content="check the kernel version 1
+uname -r 1
+2
+sudo apt-get update
+apt-cache search linux-image pick up a version, 4.11.0-14 for example 1
+sudo apt-get &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/04/16/rbenv-vs-rvm">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -83,7 +87,7 @@
   
   <header>
     
-      <h1 class="entry-title">Rbenv vs Rvm</h1>
+      <h1 class="entry-title">Update Kernel in Ubuntu With Command Line</h1>
     
     
       <p class="meta">
@@ -99,18 +103,46 @@
   
 
 
-<time datetime="2014-04-16T15:51:14+08:00" pubdate data-updated="true">Apr 16<span>th</span>, 2014</time>
+<time datetime="2017-09-04T10:59:48+08:00" pubdate data-updated="true">Sep 4<span>th</span>, 2017</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>rbenv win.</p>
+<div class="entry-content"><p>check the kernel version</p>
 
-<p>because no gemsets in rbenv. rbenv make things simple.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>uname -r</span></code></pre></td></tr></table></div></figure>
 
-<p>rvm is over-design.</p>
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
+</span><span class='line'>apt-cache search linux-image</span></code></pre></td></tr></table></div></figure>
+
+
+<p>pick up a version, 4.11.0-14 for example</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install linux-image-4.11.0-14-generic linux-image-extra-4.11.0-14-generic  linux-headers-4.11.0-14-generic </span></code></pre></td></tr></table></div></figure>
+
+
+<p>need reboot after installed!</p>
+
+<p>remove the old kernels</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get autoremove</span></code></pre></td></tr></table></div></figure>
+
+
+<p>check the result</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>uname -r</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -133,12 +165,12 @@
   
 
 
-<time datetime="2014-04-16T15:51:14+08:00" pubdate data-updated="true">Apr 16<span>th</span>, 2014</time>
+<time datetime="2017-09-04T10:59:48+08:00" pubdate data-updated="true">Sep 4<span>th</span>, 2017</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/technical-review/'>technical-review</a>
+    <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
   
 </span>
 
@@ -154,10 +186,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/04/14/reinstall-octopress/" title="Previous Post: reinstall octopress">&laquo; reinstall octopress</a>
+        <a class="basic-alignment left" href="/blog/2017/09/01/how-to-make-wget-multithreading/" title="Previous Post: How to make wget multithreading?">&laquo; How to make wget multithreading?</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/" title="Next Post: fixed failed to fetch from registry: bower, in ubuntu 13">fixed failed to fetch from registry: bower, in ubuntu 13 &raquo;</a>
       
     </p>
   </footer>

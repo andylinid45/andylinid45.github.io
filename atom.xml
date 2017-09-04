@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-09-01T15:05:32+08:00</updated>
+  <updated>2017-09-04T11:12:18+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Update Kernel in Ubuntu With Command Line]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/"/>
+    <updated>2017-09-04T10:59:48+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line</id>
+    <content type="html"><![CDATA[<p>check the kernel version</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>uname -r</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
+</span><span class='line'>apt-cache search linux-image</span></code></pre></td></tr></table></div></figure>
+
+
+<p>pick up a version, 4.11.0-14 for example</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install linux-image-4.11.0-14-generic linux-image-extra-4.11.0-14-generic  linux-headers-4.11.0-14-generic </span></code></pre></td></tr></table></div></figure>
+
+
+<p>need reboot after installed!</p>
+
+<p>remove the old kernels</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get autoremove</span></code></pre></td></tr></table></div></figure>
+
+
+<p>check the result</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>uname -r</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Make Wget Multithreading?]]></title>
@@ -26,6 +67,12 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install axel
 </span><span class='line'>axel -a -n [Num_of_Thread] link1 link2 link3 ...
 </span><span class='line'># -a just show an improved progress bar.</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://askubuntu.com/questions/214018/how-to-make-wget-faster-or-multithreading</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
@@ -650,49 +697,6 @@
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>http://localhost:50030/
 </span><span class='line'>http://localhost:50070/</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install hadoop1.0.4 on Ubuntu14]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14/"/>
-    <updated>2015-08-21T16:33:46+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14</id>
-    <content type="html"><![CDATA[<p>Download hadoop</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo cp hadoop-1.0.4-bin.tar.gz /opt
-</span><span class='line'>cd /opt
-</span><span class='line'>sudo tar -vxf hadoop-1.0.4-bin.tar.gz
-</span><span class='line'>sudo rm hadoop-1.0.4-bin.tar.gz
-</span><span class='line'>sudo mv hadoop-1.0.4/ hadoop</span></code></pre></td></tr></table></div></figure>
-
-
-<p>sudo gedit /opt/hadoop/conf/hadoop-env.sh  #modify java home</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_51</span></code></pre></td></tr></table></div></figure>
-
-
-<p>gedit ~/.bashrc # do not use &lsquo;HADOOP_HOME&rsquo;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export HADOOP_PREFIX=/opt/hadoop
-</span><span class='line'>export PATH=$HADOOP_PREFIX/bin:$PATH</span></code></pre></td></tr></table></div></figure>
-
-
-<p>have a test</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar pi 4 1000 </span></code></pre></td></tr></table></div></figure>
 
 
 

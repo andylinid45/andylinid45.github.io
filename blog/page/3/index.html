@@ -9,14 +9,16 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="Download maven 1
+  <meta name="description" content="Download hadoop 1
 2
 3
 4
-mv Downloads/apache-maven-3.3.3-bin.tar.gz /usr/local/
-cd /usr/local/
-sudo tar -xvf apache-maven-3.3.3-bin.tar.gz
-sudo rm &hellip;">
+5
+sudo cp hadoop-1.0.4-bin.tar.gz /opt
+cd /opt
+sudo tar -vxf hadoop-1.0.4-bin.tar.gz
+sudo rm hadoop-1.0.4-bin.tar.gz
+sudo mv &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +88,76 @@ sudo rm &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14/">Install hadoop1.0.4 on Ubuntu14</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-21T16:33:46+08:00" pubdate data-updated="true">Aug 21<span>st</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Download hadoop</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo cp hadoop-1.0.4-bin.tar.gz /opt
+</span><span class='line'>cd /opt
+</span><span class='line'>sudo tar -vxf hadoop-1.0.4-bin.tar.gz
+</span><span class='line'>sudo rm hadoop-1.0.4-bin.tar.gz
+</span><span class='line'>sudo mv hadoop-1.0.4/ hadoop</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo gedit /opt/hadoop/conf/hadoop-env.sh  #modify java home</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_51</span></code></pre></td></tr></table></div></figure>
+
+
+<p>gedit ~/.bashrc # do not use &lsquo;HADOOP_HOME&rsquo;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export HADOOP_PREFIX=/opt/hadoop
+</span><span class='line'>export PATH=$HADOOP_PREFIX/bin:$PATH</span></code></pre></td></tr></table></div></figure>
+
+
+<p>have a test</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar pi 4 1000 </span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -535,68 +607,6 @@ sudo rm &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/11/factors-of-production-cyclic/">[第四课]生产要素循环</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-11T14:27:22+08:00" pubdate data-updated="true">Aug 11<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>什么是生产要素</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>生产的必备条件，如劳动力，土地，资本等</span></code></pre></td></tr></table></div></figure>
-
-
-<p>生产要素循环</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>有时我简称生产要素为“资源”，“社会资源”（是有点不专业的说法）
-</span><span class='line'>企业进行生产活动把要素变成产品和服务，产品服务投入市场再转变成要素。循环不息</span></code></pre></td></tr></table></div></figure>
-
-
-<p>一个企业生产汽车配件，一个企业生产汽车，汽车增加了车主的劳动产能，车主在汽车配件公司上班</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>社会资源必定循环，否则产品与服务要出口给外星人</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>社会资源循环不畅影响大：鸦片战争、经济受外国金融风暴影响</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -611,11 +621,15 @@ sudo rm &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 104.0%'>ai(1)</a> <a href='/blog/categories/angularjs' style='font-size: 104.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 108.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 120.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 108.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 104.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 116.0%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 120.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 108.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 104.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 128.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 116.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 108.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 128.0%'>java(7)</a> <a href='/blog/categories/mongodb' style='font-size: 104.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 112.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 108.0%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 116.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 104.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 104.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 116.0%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 104.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 132.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 108.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 104.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 104.0%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 108.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 104.0%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 128.0%'>technical-review(7)</a> <a href='/blog/categories/tensorflow' style='font-size: 104.0%'>tensorflow(1)</a> <a href='/blog/categories/tools' style='font-size: 120.0%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(15)</a> <a href='/blog/categories/virtualbox' style='font-size: 108.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 136.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 104.0%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 103.75%'>ai(1)</a> <a href='/blog/categories/angularjs' style='font-size: 103.75%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 107.5%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 118.75%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 107.5%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.75%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 115.0%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 118.75%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 107.5%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.75%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 126.25%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 115.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 107.5%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 126.25%'>java(7)</a> <a href='/blog/categories/mongodb' style='font-size: 103.75%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 111.25%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 107.5%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 115.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.75%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.75%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 115.0%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.75%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 130.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.5%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.75%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.75%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 107.5%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.75%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 126.25%'>technical-review(7)</a> <a href='/blog/categories/tensorflow' style='font-size: 103.75%'>tensorflow(1)</a> <a href='/blog/categories/tools' style='font-size: 118.75%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(16)</a> <a href='/blog/categories/virtualbox' style='font-size: 107.5%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 133.75%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.75%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/">Update Kernel in Ubuntu With Command Line</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2017/09/01/how-to-make-wget-multithreading/">How to Make Wget Multithreading?</a>
@@ -631,10 +645,6 @@ sudo rm &hellip;">
     
       <li class="post">
         <a href="/blog/2017/08/31/install-java-via-sdkman/">Install Java via SDKMAN!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2017/08/31/search-pdf-in-ubuntu/">Search Pdf in Ubuntu</a>
       </li>
     
   </ul>
