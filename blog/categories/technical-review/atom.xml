@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2017-09-04T17:55:55+08:00</updated>
+  <updated>2017-09-07T15:09:28+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[TensorFlow vs SciKit Learn]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn/"/>
+    <updated>2017-09-07T14:55:28+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn</id>
+    <content type="html"><![CDATA[<ul>
+<li>TensorFlow is more low-level;</li>
+<li>Scikit-learn offers you off-the-shelf algorithms, e.g., algorithms for classification such as SVMs, Random Forests, Logistic Regression</li>
+<li>Scikit-learn does not support GPU at this time. <a href="http://scikit-learn.org/stable/faq.html#will-you-add-gpu-support">http://scikit-learn.org/stable/faq.html#will-you-add-gpu-support</a></li>
+<li>Skflow: Simplified interface for TensorFlow (mimicking Scikit Learn) for Deep Learning. SkFlow has been moved to Tensorflow. <a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn">https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn</a></li>
+</ul>
+
+
+<p>ref:
+<a href="https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn">https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Http Clients in Java]]></title>
@@ -78,46 +96,6 @@ Some DOM code is inside the javascript code. This make the code hard to read and
 <p>Building a web app is like playing lego toy bricks. No need to pick up all bricks in the worlk to make a great web app.</p>
 
 <p>Haml is just anohter beauty lie in the technical world.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Angularjs vs Emberjs vs Backbonejs]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/"/>
-    <updated>2014-04-23T17:12:15+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs</id>
-    <content type="html"><![CDATA[<p>Many blog post compare these three javascript libraries. But I dont think they get the point.</p>
-
-<h3>1) Two way data binding</h3>
-
-<p>Backbonejs does not support two way data bingding native. (You can use a plugin like backbone.stickit <a href="http://nytimes.github.io/backbone.stickit/">http://nytimes.github.io/backbone.stickit/</a>)</p>
-
-<p>Why two way data binding is so important? Because it help you auto update the view in most cases. It helps you minimize your code.</p>
-
-<h3>2) Dependency injection using directive</h3>
-
-<p>Emberjs does not support DI(Dependency injection), so you need to write more code such as
-```
-Todos.EditTodoView = Ember.TextField.extend({  &hellip;</p>
-
-<p>Todos.TodoController = Ember.ObjectController.extend({ &hellip;
-```</p>
-
-<p>If you use DI, then you code is plain old javascritp object. and easy to test.</p>
-
-<p>Because of these two main reasons, Angularjs can help you minimize your code. <br/>
-Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site helping you select a javascript framework.</p>
-
-<ul>
-<li><a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone</a></li>
-<li><a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs</a></li>
-<li><a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs</a></li>
-</ul>
-
-
-<p>We can see how many line of code need these three javascript framework to make a same app.</p>
-
-<p>so, Angularjs win!</p>
 ]]></content>
   </entry>
   
