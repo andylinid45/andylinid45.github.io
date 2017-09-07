@@ -3,7 +3,7 @@ layout: post
 title: "TensorFlow vs SciKit Learn"
 date: 2017-09-07 14:55:28 +0800
 comments: true
-categories: [TensorFlow, SciKit-Learn, technical-review]
+categories: [tensorflow, ai, sciKit-learn, technical-review]
 ---
 
 
