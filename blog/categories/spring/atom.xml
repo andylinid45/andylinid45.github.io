@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Spring | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/spring/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2018-06-21T14:46:33+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Spring Cloud Guides]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides/"/>
+    <updated>2018-06-21T14:27:03+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides</id>
+    <content type="html"><![CDATA[<p>```
+<a href="https://spring.io/guides/gs/centralized-configuration/">https://spring.io/guides/gs/centralized-configuration/</a>
+<a href="https://spring.io/guides/gs/service-registration-and-discovery/">https://spring.io/guides/gs/service-registration-and-discovery/</a>
+<a href="https://spring.io/guides/gs/circuit-breaker/">https://spring.io/guides/gs/circuit-breaker/</a>
+<a href="https://spring.io/guides/gs/client-side-load-balancing/">https://spring.io/guides/gs/client-side-load-balancing/</a>
+<a href="https://spring.io/guides/gs/routing-and-filtering/">https://spring.io/guides/gs/routing-and-filtering/</a></p>
+
+<p><a href="https://github.com/leoChaoGlut/spring-cloud-demo">https://github.com/leoChaoGlut/spring-cloud-demo</a>
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

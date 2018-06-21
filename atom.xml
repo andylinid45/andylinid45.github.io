@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-21T14:17:48+08:00</updated>
+  <updated>2018-06-21T14:46:33+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Spring Cloud Guides]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides/"/>
+    <updated>2018-06-21T14:27:03+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://spring.io/guides/gs/centralized-configuration/
+</span><span class='line'>https://spring.io/guides/gs/service-registration-and-discovery/
+</span><span class='line'>https://spring.io/guides/gs/circuit-breaker/
+</span><span class='line'>https://spring.io/guides/gs/client-side-load-balancing/
+</span><span class='line'>https://spring.io/guides/gs/routing-and-filtering/
+</span><span class='line'>
+</span><span class='line'>https://github.com/leoChaoGlut/spring-cloud-demo</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TensorFlow vs SciKit Learn]]></title>
@@ -610,23 +633,6 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>chmod +x your_script.rb
 </span><span class='line'>./your_script.rb</span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fixing Eclipse Can Not Find Java on Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/"/>
-    <updated>2015-08-22T11:10:58+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu</id>
-    <content type="html"><![CDATA[<p>gedit ECLIPSE_HOME/eclipse.ini # add below before &lsquo;-vmargs&rsquo;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>-vm 
-</span><span class='line'>/usr/lib/jvm/jdk1.8.0_51/bin/java</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a></p>
 ]]></content>
   </entry>
   
