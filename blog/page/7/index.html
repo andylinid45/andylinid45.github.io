@@ -13,15 +13,13 @@
 2
 3
 4
-cd my_gem
-mkdir bin
-touch bin/my_gem
-chmod +x bin/my_gem edit my_gem 1
-2
-3
-4
 5
-#!/usr/bin/env ruby require 'my_gem' MyGem.hi edit my_gem. &hellip;">
+6
+7
+8
+git clone git://github.com/imathis/octopress.git octopress
+cd octopress
+bundle exec rake install bundle exec rake setup_github_pages &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,6 +89,78 @@ chmod +x bin/my_gem edit my_gem 1
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/14/reinstall-octopress/">Reinstall Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-14T23:22:20+08:00" pubdate data-updated="true">Apr 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress
+</span><span class='line'>bundle exec rake install
+</span><span class='line'>
+</span><span class='line'>bundle exec rake setup_github_pages
+</span><span class='line'>
+</span><span class='line'>bundle exec rake generate
+</span><span class='line'>bundle exec rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>files need to backup</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>_posts
+</span><span class='line'>robots.txt
+</span><span class='line'>CNAME
+</span><span class='line'>
+</span><span class='line'>octopress/source/_includes/custom/asides/tag_cloud.html
+</span><span class='line'>octopress/plugins/tag_cloud.rb
+</span><span class='line'>
+</span><span class='line'>octopress/source/_includes/custom/navigation.html</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -728,76 +798,6 @@ chmod +x bin/my_gem edit my_gem 1
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/padrino-command/">Padrino Command</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T20:22:01+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install padrino
-</span><span class='line'>
-</span><span class='line'>padrino g project my_project
-</span><span class='line'>
-</span><span class='line'>padrino s # padrino start
-</span><span class='line'>padrino c
-</span><span class='line'>
-</span><span class='line'>http://127.0.0.1:3000
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>padrino g controller Post get: index get: show
-</span><span class='line'>padrino g model Post title: string body: text
-</span><span class='line'>padrino g plugin better_error
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>padrino rake routes</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -819,6 +819,10 @@ chmod +x bin/my_gem edit my_gem 1
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2018/06/21/best-way-to-store-password-in-database/">Best Way to Store Password in Database</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2018/06/21/spring-cloud-guides/">Spring Cloud Guides</a>
       </li>
     
@@ -832,10 +836,6 @@ chmod +x bin/my_gem edit my_gem 1
     
       <li class="post">
         <a href="/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/">Update Kernel in Ubuntu With Command Line</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2017/09/01/how-to-make-wget-multithreading/">How to Make Wget Multithreading?</a>
       </li>
     
   </ul>

@@ -25,13 +25,8 @@
 14
 15
 16
-17
-18
-19
-20
-rake db:drop RAILS_ENV=development
-rake db:drop RAILS_ENV=production
-rake db:drop rake db:create &hellip;">
+gem install padrino padrino g project my_project padrino s # padrino start
+padrino c http://127.0.0.1:3000 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -101,6 +96,76 @@ rake db:drop rake db:create &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/padrino-command/">Padrino Command</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:22:01+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install padrino
+</span><span class='line'>
+</span><span class='line'>padrino g project my_project
+</span><span class='line'>
+</span><span class='line'>padrino s # padrino start
+</span><span class='line'>padrino c
+</span><span class='line'>
+</span><span class='line'>http://127.0.0.1:3000
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>padrino g controller Post get: index get: show
+</span><span class='line'>padrino g model Post title: string body: text
+</span><span class='line'>padrino g plugin better_error
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>padrino rake routes</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -779,89 +844,6 @@ login your server and</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/using-capistrano/">Using Capistrano</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:21:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>add gem</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem "capistrano"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>cd project folder</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>capify .</span></code></pre></td></tr></table></div></figure>
-
-
-<p>setup need to run in the first time</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cap deploy:setup</span></code></pre></td></tr></table></div></figure>
-
-
-<p>next time, just need to run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cap deploy</span></code></pre></td></tr></table></div></figure>
-
-
-<p>cap your_task
-cap -T
-cap -vT</p>
-
-<p>this need to config in deploy.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>set :application, ""
-</span><span class='line'>set :repository,  ""
-</span><span class='line'>set :scm, :git
-</span><span class='line'>set :deploy_to, "/var/www/#{application}"
-</span><span class='line'>set :user, ""
-</span><span class='line'>set :port, 
-</span><span class='line'>server "your_server.com", :app, :web</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="https://github.com/capistrano/capistrano/wiki/2.x-Getting-Started">https://github.com/capistrano/capistrano/wiki/2.x-Getting-Started</a>
-<a href="https://github.com/capistrano/capistrano/wiki/2.x-From-The-Beginning">https://github.com/capistrano/capistrano/wiki/2.x-From-The-Beginning</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/9/">&larr; Older</a>
@@ -883,6 +865,10 @@ cap -vT</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2018/06/21/best-way-to-store-password-in-database/">Best Way to Store Password in Database</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2018/06/21/spring-cloud-guides/">Spring Cloud Guides</a>
       </li>
     
@@ -896,10 +882,6 @@ cap -vT</p>
     
       <li class="post">
         <a href="/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/">Update Kernel in Ubuntu With Command Line</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2017/09/01/how-to-make-wget-multithreading/">How to Make Wget Multithreading?</a>
       </li>
     
   </ul>

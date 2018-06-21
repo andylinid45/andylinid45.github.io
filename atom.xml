@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-21T14:46:33+08:00</updated>
+  <updated>2018-06-21T15:18:05+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Best Way to Store Password in Database]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/21/best-way-to-store-password-in-database/"/>
+    <updated>2018-06-21T15:12:33+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/21/best-way-to-store-password-in-database</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/1054022/best-way-to-store-password-in-database</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Spring Cloud Guides]]></title>
@@ -601,37 +612,6 @@
 </span><span class='line'>基于浏览记录推荐商品
 </span><span class='line'>基于购买记录推荐商品
 </span><span class='line'>热销商品预测（可能）</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Execute a Ruby Script in Terminal Using Shebang]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/"/>
-    <updated>2015-08-22T12:14:08+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install ruby</span></code></pre></td></tr></table></div></figure>
-
-
-<p>which ruby</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/ruby</span></code></pre></td></tr></table></div></figure>
-
-
-<p>please the shebang line on the first line of your script</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/ruby -w</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>chmod +x your_script.rb
-</span><span class='line'>./your_script.rb</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

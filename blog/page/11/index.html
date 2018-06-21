@@ -10,7 +10,18 @@
 
   
   <meta name="description" content="1
-ssh-copy-id user@host ">
+2
+3
+4
+5
+6
+7
+8
+9
+10
+sudo apt-get install mysql-server
+sudo apt-get install mysql-workbench
+sudo apt-get install libmysqlclient-dev mysql -uroot -p &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +91,62 @@ ssh-copy-id user@host ">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/using-mysql-in-ubuntu/">Using Mysql in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T21:12:20+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install mysql-server
+</span><span class='line'>sudo apt-get install mysql-workbench
+</span><span class='line'>sudo apt-get install libmysqlclient-dev 
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>mysql -uroot -p
+</span><span class='line'>mysql&gt; create database dbname character set utf8;
+</span><span class='line'>mysql&gt; grant all privileges on *.* to 'app'@'localhost' identified by '******';
+</span><span class='line'>
+</span><span class='line'>shell&gt;mysql -u*** -p*** dbname&lt; init.sql</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -330,6 +397,10 @@ ssh-copy-id user@host ">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2018/06/21/best-way-to-store-password-in-database/">Best Way to Store Password in Database</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2018/06/21/spring-cloud-guides/">Spring Cloud Guides</a>
       </li>
     
@@ -343,10 +414,6 @@ ssh-copy-id user@host ">
     
       <li class="post">
         <a href="/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/">Update Kernel in Ubuntu With Command Line</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2017/09/01/how-to-make-wget-multithreading/">How to Make Wget Multithreading?</a>
       </li>
     
   </ul>
