@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-22T10:00:20+08:00</updated>
+  <updated>2018-06-22T10:22:26+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Getters and Setters Are Evil]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil/"/>
+    <updated>2018-06-22T09:46:27+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil</id>
+    <content type="html"><![CDATA[<p><code>
+https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html
+https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html
+https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html
+</code></p>
+
+<p>use <a href="https://projectlombok.org/">https://projectlombok.org/</a>   for help</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Spring Cloud Guides]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides/"/>
+    <updated>2018-06-21T14:27:03+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides</id>
+    <content type="html"><![CDATA[<p>```
+<a href="https://spring.io/guides/gs/centralized-configuration/">https://spring.io/guides/gs/centralized-configuration/</a>
+<a href="https://spring.io/guides/gs/service-registration-and-discovery/">https://spring.io/guides/gs/service-registration-and-discovery/</a>
+<a href="https://spring.io/guides/gs/circuit-breaker/">https://spring.io/guides/gs/circuit-breaker/</a>
+<a href="https://spring.io/guides/gs/client-side-load-balancing/">https://spring.io/guides/gs/client-side-load-balancing/</a>
+<a href="https://spring.io/guides/gs/routing-and-filtering/">https://spring.io/guides/gs/routing-and-filtering/</a></p>
+
+<p><a href="https://github.com/leoChaoGlut/spring-cloud-demo">https://github.com/leoChaoGlut/spring-cloud-demo</a>
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Java via SDKMAN!]]></title>
@@ -56,34 +88,6 @@ add -XX:MaxPermSize=256m to Tomcat in Eclipse: Server &gt; Open Launch Configura
 <p><a href="http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse">http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse</a></p>
 
 <p><a href="http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/">http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Generate Xml Using Xpath in Java]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/09/20/generate-xml-using-xpath/"/>
-    <updated>2015-09-20T15:30:52+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/09/20/generate-xml-using-xpath</id>
-    <content type="html"><![CDATA[<p>Using EclipseLink JAXB (MOXy)</p>
-
-<p><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions">http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions</a></p>
-
-<p><a href="http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb">http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fixing Eclipse Can Not Find Java on Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/"/>
-    <updated>2015-08-22T11:10:58+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu</id>
-    <content type="html"><![CDATA[<p>gedit ECLIPSE_HOME/eclipse.ini # add below before &lsquo;-vmargs&rsquo;
-<code>
--vm
-/usr/lib/jvm/jdk1.8.0_51/bin/java
-</code></p>
-
-<p><a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a></p>
 ]]></content>
   </entry>
   

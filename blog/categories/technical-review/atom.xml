@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-22T10:00:20+08:00</updated>
+  <updated>2018-06-22T10:22:26+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -21,7 +21,10 @@
     <content type="html"><![CDATA[<p><code>
 https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html
 https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html
+https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html
 </code></p>
+
+<p>use <a href="https://projectlombok.org/">https://projectlombok.org/</a>   for help</p>
 ]]></content>
   </entry>
   
