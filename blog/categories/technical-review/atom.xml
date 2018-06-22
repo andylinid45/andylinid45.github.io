@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-22T09:56:53+08:00</updated>
+  <updated>2018-06-22T10:00:20+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -21,6 +21,17 @@
     <content type="html"><![CDATA[<p><code>
 https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html
 https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Best Way to Store Password in Database]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/21/best-way-to-store-password-in-database/"/>
+    <updated>2018-06-21T15:12:33+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/21/best-way-to-store-password-in-database</id>
+    <content type="html"><![CDATA[<p><code>
+https://stackoverflow.com/questions/1054022/best-way-to-store-password-in-database
 </code></p>
 ]]></content>
   </entry>
@@ -76,17 +87,6 @@ Re-render is automatic in Reack.js . So we can think more OOP when using it.
 <code>
 Some DOM code is inside the javascript code. This make the code hard to read and rewrite.
 </code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Sendmail vs Postfix]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/12/22/sendmail-vs-postfix/"/>
-    <updated>2014-12-22T17:21:18+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/12/22/sendmail-vs-postfix</id>
-    <content type="html"><![CDATA[<p>Sendmail and Postfix are programs that send mail in Unix link OS.</p>
-
-<p>Postfix is better because it is newer.</p>
 ]]></content>
   </entry>
   
