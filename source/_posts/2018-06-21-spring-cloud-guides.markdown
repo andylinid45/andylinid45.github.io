@@ -3,7 +3,7 @@ layout: post
 title: "Spring Cloud Guides"
 date: 2018-06-21 14:27:03 +0800
 comments: true
-categories: spring
+categories: [spring, java]
 ---
 
 ```
