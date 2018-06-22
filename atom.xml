@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-21T15:18:05+08:00</updated>
+  <updated>2018-06-22T09:56:53+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Getters and Setters Are Evil]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil/"/>
+    <updated>2018-06-22T09:46:27+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html
+</span><span class='line'>https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Best Way to Store Password in Database]]></title>
@@ -585,33 +598,6 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>cat test.txt | ./wcmapper.rb | sort | ./wcreducer.rb</span></code></pre></td></tr></table></div></figure>
 
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[大数据在电子商务的应用]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/what-big-data-can-help-e-commerce/"/>
-    <updated>2015-08-22T14:18:33+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/what-big-data-can-help-e-commerce</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>流量统计
-</span><span class='line'>页面PV，用户IP
-</span><span class='line'>统计网站、APP客户分布
-</span><span class='line'>日、月度注册统计
-</span><span class='line'>日、月度购买次数统计
-</span><span class='line'>促销事件效果统计
-</span><span class='line'>基于浏览记录推荐商品
-</span><span class='line'>基于购买记录推荐商品
-</span><span class='line'>热销商品预测（可能）</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

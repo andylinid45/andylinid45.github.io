@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-21T15:18:05+08:00</updated>
+  <updated>2018-06-22T09:56:53+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Getters and Setters Are Evil]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil/"/>
+    <updated>2018-06-22T09:46:27+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil</id>
+    <content type="html"><![CDATA[<p><code>
+https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html
+https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TensorFlow vs SciKit Learn]]></title>
@@ -75,27 +87,6 @@ Some DOM code is inside the javascript code. This make the code hard to read and
     <content type="html"><![CDATA[<p>Sendmail and Postfix are programs that send mail in Unix link OS.</p>
 
 <p>Postfix is better because it is newer.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why Haml Sucks]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/26/why-haml-sucks/"/>
-    <updated>2014-04-26T23:16:54+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/26/why-haml-sucks</id>
-    <content type="html"><![CDATA[<p><blockquote><p>Beautiful, DRY, well-indented, clear markup</p><footer><strong>haml <a href="http://haml.info">http://haml.info</a></strong></footer></blockquote></p>
-
-<p>You can see how haml selling himself to you at his website.</p>
-
-<p>But after using haml for sometime. I feel it sucks.</p>
-
-<p>There also many blog post telling you how suck haml does.</p>
-
-<p>But here, I want to get the point. It just because this technique is totally unnecessary.</p>
-
-<p>Building a web app is like playing lego toy bricks. No need to pick up all bricks in the worlk to make a great web app.</p>
-
-<p>Haml is just anohter beauty lie in the technical world.</p>
 ]]></content>
   </entry>
   
