@@ -9,18 +9,8 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-git remote -v git branch git remote add bitbucket git@bitbucket.org:&lt;&lt;username&gt;&gt;/&lt;&lt;repo&gt;&gt; git remote &hellip;">
+  <meta name="description" content="or you need to manually set the column name to something pointless: 1
+self.inheritance_column = :_type_disabled ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,6 +80,46 @@ git remote -v git branch git remote add bitbucket git@bitbucket.org:&lt;&lt;user
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/do-not-use-the-column-name-type/">Do Not Use the Column Name &#8216;Type&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T18:35:56+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>or you need to manually set the column name to something pointless:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>self.inheritance_column = :_type_disabled</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -743,106 +773,6 @@ change or add this line</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/spinejs-and-rails/">Spinejs and Rails</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:07:53+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>create a app</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails new demo
-</span><span class='line'>
-</span><span class='line'>rails g scaffold post title:string content:string
-</span><span class='line'>
-</span><span class='line'>rake db:migrate</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Gemfile add spine support</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'spine-rails'
-</span><span class='line'>gem 'eco'</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g spine:new
-</span><span class='line'>
-</span><span class='line'>rails g spine:model post title content</span></code></pre></td></tr></table></div></figure>
-
-
-<p>check localhost:3000</p>
-
-<p>in chrome console</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#add a post
-</span><span class='line'>var post = App.Post.create({title: 'hi', content: 't'});
-</span><span class='line'>
-</span><span class='line'>#get a post
-</span><span class='line'>App.Post.fetch();
-</span><span class='line'>App.Post.first().content
-</span><span class='line'>App.Post.first().destroy()</span></code></pre></td></tr></table></div></figure>
-
-
-<p>spine scaffold</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g spine:scaffold Post title content</span></code></pre></td></tr></table></div></figure>
-
-
-<p>remove this line in post controllers js</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ = jQuery.sub()</span></code></pre></td></tr></table></div></figure>
-
-
-<p>done, you can now use spine mvc as a ajax front end</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/10/">&larr; Older</a>
@@ -857,11 +787,15 @@ change or add this line</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 111.25%'>ai(3)</a> <a href='/blog/categories/angularjs' style='font-size: 103.75%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 107.5%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 118.75%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 107.5%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.75%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 115.0%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 118.75%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 107.5%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.75%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 126.25%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 115.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 107.5%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 137.5%'>java(10)</a> <a href='/blog/categories/mongodb' style='font-size: 103.75%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 111.25%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 107.5%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 115.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.75%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.75%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 115.0%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.75%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 130.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.5%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.75%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.75%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.75%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 103.75%'>spring(1)</a> <a href='/blog/categories/ssh' style='font-size: 107.5%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.75%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 145.0%'>technical-review(12)</a> <a href='/blog/categories/tensorflow' style='font-size: 111.25%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.75%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(16)</a> <a href='/blog/categories/virtualbox' style='font-size: 107.5%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 133.75%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.75%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 111.25%'>ai(3)</a> <a href='/blog/categories/angularjs' style='font-size: 103.75%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 107.5%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 118.75%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 107.5%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.75%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 115.0%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 118.75%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 107.5%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.75%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 126.25%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 115.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 107.5%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 141.25%'>java(11)</a> <a href='/blog/categories/mongodb' style='font-size: 103.75%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 111.25%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 107.5%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 115.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.75%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.75%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 115.0%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.75%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 130.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.5%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.75%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.75%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.75%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 107.5%'>spring(2)</a> <a href='/blog/categories/ssh' style='font-size: 107.5%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.75%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 145.0%'>technical-review(12)</a> <a href='/blog/categories/tensorflow' style='font-size: 111.25%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.75%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(16)</a> <a href='/blog/categories/virtualbox' style='font-size: 107.5%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 133.75%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.75%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/">Spring JDBC Is Not Logging SQL With Log4j</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2018/06/25/anti-patterns-in-oop/">Anti-Patterns in OOP</a>
@@ -877,10 +811,6 @@ change or add this line</p>
     
       <li class="post">
         <a href="/blog/2018/06/21/best-way-to-store-password-in-database/">Best Way to Store Password in Database</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/06/21/spring-cloud-guides/">Spring Cloud Guides</a>
       </li>
     
   </ul>

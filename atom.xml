@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-25T15:50:39+08:00</updated>
+  <updated>2018-06-25T16:10:22+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Spring JDBC Is Not Logging SQL With Log4j]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/"/>
+    <updated>2018-06-25T15:54:41+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Anti-Patterns in OOP]]></title>
@@ -498,33 +509,6 @@
 </span><span class='line'>.small-menu { display:none; }
 </span><span class='line'>.large-menu { display:inline; }
 </span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Native Apps, Mobile Web Apps and Hybrid Apps]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/"/>
-    <updated>2015-08-23T16:27:10+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps</id>
-    <content type="html"><![CDATA[<p>Mobile web apps resource</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://jquerymobile.com
-</span><span class='line'>https://html5boilerplate.com
-</span><span class='line'>http://getbootstrap.com/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I think hybrid apss will not be hot later.</p>
-
-<p>Hybrid apps resource</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://phonegap.com/
-</span><span class='line'>http://www.ionicframework.com/</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

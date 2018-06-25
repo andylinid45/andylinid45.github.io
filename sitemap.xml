@@ -487,15 +487,21 @@
         <lastmod>2018-06-25T15:46:27+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/
+        </loc>
+        <lastmod>2018-06-25T16:09:55+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://andylinid45.github.io/robots.txt</loc>
         <lastmod>2017-08-31T15:34:36+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/</loc>
-        <lastmod>2018-06-25T15:46:27+08:00</lastmod>
+        <lastmod>2018-06-25T16:09:55+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/archives/</loc>
-        <lastmod>2018-06-25T15:46:27+08:00</lastmod>
+        <lastmod>2018-06-25T16:09:55+08:00</lastmod>
     </url>
 </urlset>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-25T15:50:39+08:00</updated>
+  <updated>2018-06-25T16:10:22+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Spring JDBC Is Not Logging SQL With Log4j]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/"/>
+    <updated>2018-06-25T15:54:41+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j</id>
+    <content type="html"><![CDATA[<p><code>
+https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Anti-Patterns in OOP]]></title>
@@ -66,25 +77,6 @@ https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-method
     <content type="html"><![CDATA[<p><code>
 curl -s https://get.sdkman.io | bash
 sdk install java
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Http Clients in Java]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java/"/>
-    <updated>2015-10-07T22:26:51+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java</id>
-    <content type="html"><![CDATA[<p>recommended, because they are easy to use and powerful
-<code>
-spring resttemplate
-http://unirest.io/java.html
-</code></p>
-
-<p>not recommended, because they use low level api
-<code>
-http://hc.apache.org/httpcomponents-client-ga/index.html
-http://hc.apache.org/httpclient-3.x/
 </code></p>
 ]]></content>
   </entry>
