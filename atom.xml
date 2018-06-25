@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-25T15:36:49+08:00</updated>
+  <updated>2018-06-25T15:45:28+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Anti-Patterns in OOP]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop/"/>
+    <updated>2018-06-25T15:41:25+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html
+</span><span class='line'>https://www.yegor256.com/2017/12/05/data-access-object.html
+</span><span class='line'>https://www.yegor256.com/2014/10/03/di-containers-are-evil.html</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What Exactly Is RESTful Programming?]]></title>
@@ -510,25 +525,6 @@
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>http://phonegap.com/
 </span><span class='line'>http://www.ionicframework.com/</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What Is New in HTML5?]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5/"/>
-    <updated>2015-08-23T14:39:20+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://html5please.com/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>tools</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://caniuse.com/
-</span><span class='line'>http://html5test.com/</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

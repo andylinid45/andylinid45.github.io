@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-25T15:36:49+08:00</updated>
+  <updated>2018-06-25T15:45:28+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Anti-Patterns in OOP]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop/"/>
+    <updated>2018-06-25T15:41:25+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop</id>
+    <content type="html"><![CDATA[<p><code>
+https://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html
+https://www.yegor256.com/2017/12/05/data-access-object.html
+https://www.yegor256.com/2014/10/03/di-containers-are-evil.html
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What Exactly Is RESTful Programming?]]></title>
@@ -65,25 +78,6 @@ https://stackoverflow.com/questions/1054022/best-way-to-store-password-in-databa
 
 <p>ref:
 <a href="https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn">https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Http Clients in Java]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java/"/>
-    <updated>2015-10-07T22:26:51+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java</id>
-    <content type="html"><![CDATA[<p>recommended, because they are easy to use and powerful
-<code>
-spring resttemplate
-http://unirest.io/java.html
-</code></p>
-
-<p>not recommended, because they use low level api
-<code>
-http://hc.apache.org/httpcomponents-client-ga/index.html
-http://hc.apache.org/httpclient-3.x/
-</code></p>
 ]]></content>
   </entry>
   

@@ -9,8 +9,13 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="in config production.rb 1
-config.serve_static_assets = true ">
+  <meta name="description" content="1
+sudo apt-get install mongodb turn off journal and turn on rest in you dev 1
+2
+3
+4
+sudo nano /etc/mongodb.conf journal = false
+rest = true add &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +85,144 @@ config.serve_static_assets = true ">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/mongodb-and-mongoid/">Mongodb and Mongoid</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T16:36:29+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install mongodb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>turn off journal and turn on rest in you dev</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/mongodb.conf 
+</span><span class='line'>
+</span><span class='line'>journal = false
+</span><span class='line'>rest = true</span></code></pre></td></tr></table></div></figure>
+
+
+<p>add mongodb to startup</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo update-rc.d mongodb  defaults</span></code></pre></td></tr></table></div></figure>
+
+
+<p>run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mongo
+</span><span class='line'>
+</span><span class='line'>db.test.save( { a: 1 } )
+</span><span class='line'>db.test.find()
+</span><span class='line'>
+</span><span class='line'>show collections
+</span><span class='line'>db.abc.count()</span></code></pre></td></tr></table></div></figure>
+
+
+<p>if you can not start mongodb sometime</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>tail /var/log/mongodb/mongodb.log -n 100
+</span><span class='line'>
+</span><span class='line'>sudo rm /var/lib/mongodb/mongod.lock
+</span><span class='line'>
+</span><span class='line'>sudo -u mongodb mongod -f /etc/mongodb.conf --repair</span></code></pre></td></tr></table></div></figure>
+
+
+<p>check mongodb work</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://localhost:28017/</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://docs.mongodb.org/manual/
+</span><span class='line'>http://mongoid.org/en/mongoid/
+</span><span class='line'>http://www.precog.com/editions/precog-for-mongodb
+</span><span class='line'>https://github.com/bobthecow/genghis
+</span><span class='line'>https://github.com/zuk/DrowsyDromedary</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>mongoid</h3>
+
+<p>Gemfile</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'mongoid'
+</span><span class='line'>gem 'bson_ext'</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails g mongoid:config</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The Mongoid Demo Application</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/mongoid/echo</span></code></pre></td></tr></table></div></figure>
+
+
+<p>create indexes for db</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:mongoid:create_indexes
+</span><span class='line'>rake db:seed</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -746,62 +889,6 @@ install pg9.2 in ubuntu13</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/ubuntu-software/">Ubuntu Software</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T15:29:42+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>capture, install in software center</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Shutter,  ksnapshot for photo
-</span><span class='line'>recordmydesktop for video</span></code></pre></td></tr></table></div></figure>
-
-
-<p>paint, install in software</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gnu paint
-</span><span class='line'>MyPaint</span></code></pre></td></tr></table></div></figure>
-
-
-<p>burn dvd</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>braseor</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/11/">&larr; Older</a>
@@ -816,11 +903,15 @@ install pg9.2 in ubuntu13</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 111.25%'>ai(3)</a> <a href='/blog/categories/angularjs' style='font-size: 103.75%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 107.5%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 118.75%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 107.5%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.75%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 115.0%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 118.75%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 107.5%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.75%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 126.25%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 115.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 107.5%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 133.75%'>java(9)</a> <a href='/blog/categories/mongodb' style='font-size: 103.75%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 111.25%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 107.5%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 115.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.75%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.75%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 115.0%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.75%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 130.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.5%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.75%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.75%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.75%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 103.75%'>spring(1)</a> <a href='/blog/categories/ssh' style='font-size: 107.5%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.75%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 141.25%'>technical-review(11)</a> <a href='/blog/categories/tensorflow' style='font-size: 111.25%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.75%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(16)</a> <a href='/blog/categories/virtualbox' style='font-size: 107.5%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 133.75%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.75%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 111.25%'>ai(3)</a> <a href='/blog/categories/angularjs' style='font-size: 103.75%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 107.5%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 118.75%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 107.5%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.75%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 115.0%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 118.75%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 107.5%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.75%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 126.25%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 115.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 107.5%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 133.75%'>java(9)</a> <a href='/blog/categories/mongodb' style='font-size: 103.75%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 111.25%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 107.5%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 115.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.75%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.75%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 115.0%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.75%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 130.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.5%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.75%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.75%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.75%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 103.75%'>spring(1)</a> <a href='/blog/categories/ssh' style='font-size: 107.5%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.75%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 145.0%'>technical-review(12)</a> <a href='/blog/categories/tensorflow' style='font-size: 111.25%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.75%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(16)</a> <a href='/blog/categories/virtualbox' style='font-size: 107.5%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 133.75%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.75%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/06/25/anti-patterns-in-oop/">Anti-Patterns in OOP</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2018/06/25/what-exactly-is-restful-programming/">What Exactly Is RESTful Programming?</a>
@@ -836,10 +927,6 @@ install pg9.2 in ubuntu13</p>
     
       <li class="post">
         <a href="/blog/2018/06/21/spring-cloud-guides/">Spring Cloud Guides</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2017/09/07/tensorflow-vs-scikit-learn/">TensorFlow vs SciKit Learn</a>
       </li>
     
   </ul>
