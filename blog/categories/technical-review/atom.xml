@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-22T10:22:26+08:00</updated>
+  <updated>2018-06-25T15:35:51+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What Exactly Is RESTful Programming?]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming/"/>
+    <updated>2018-06-25T15:28:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming</id>
+    <content type="html"><![CDATA[<p><code>
+https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Getters and Setters Are Evil]]></title>
@@ -72,23 +83,6 @@ http://unirest.io/java.html
 <code>
 http://hc.apache.org/httpcomponents-client-ga/index.html
 http://hc.apache.org/httpclient-3.x/
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why React.js Is So Cool?]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/13/why-react-js-is-so-cool/"/>
-    <updated>2015-08-13T14:10:05+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/13/why-react-js-is-so-cool</id>
-    <content type="html"><![CDATA[<p><code>
-React.js makes things simple. and it wins others js framework by concept
-Re-render is automatic in Reack.js . So we can think more OOP when using it.
-</code></p>
-
-<p>I think the only problme is:
-<code>
-Some DOM code is inside the javascript code. This make the code hard to read and rewrite.
 </code></p>
 ]]></content>
   </entry>
