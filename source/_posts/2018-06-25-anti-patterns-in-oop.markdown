@@ -3,7 +3,7 @@ layout: post
 title: "Anti-Patterns in OOP"
 date: 2018-06-25 15:41:25 +0800
 comments: true
-categories: [technical-review]
+categories: [technical-review, java]
 ---
 
 ```
