@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-29T09:49:46+08:00</updated>
+  <updated>2018-06-29T09:52:14+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -101,13 +101,17 @@
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://spring.io/guides/gs/centralized-configuration/
 </span><span class='line'>https://spring.io/guides/gs/service-registration-and-discovery/
 </span><span class='line'>https://spring.io/guides/gs/circuit-breaker/
 </span><span class='line'>https://spring.io/guides/gs/client-side-load-balancing/
 </span><span class='line'>https://spring.io/guides/gs/routing-and-filtering/
 </span><span class='line'>
-</span><span class='line'>https://github.com/leoChaoGlut/spring-cloud-demo</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>https://github.com/leoChaoGlut/spring-cloud-demo
+</span><span class='line'>
+</span><span class='line'>https://start.spring.io/</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
