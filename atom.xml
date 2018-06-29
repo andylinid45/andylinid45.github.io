@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-25T16:10:22+08:00</updated>
+  <updated>2018-06-29T09:49:46+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ignore a Directory With SVN]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn/"/>
+    <updated>2018-06-29T09:46:57+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Spring JDBC Is Not Logging SQL With Log4j]]></title>
@@ -465,51 +476,6 @@
     <updated>2015-08-29T16:20:09+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills</id>
     <content type="html"><![CDATA[<p><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Responsive Web Design Key Points]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points/"/>
-    <updated>2015-08-24T03:14:10+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Using media queries to change the navigation or layout or resize an image 
-</span><span class='line'>Using the fluid grid layout</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>@media screen and ( max-width: 800px ) {
-</span><span class='line'>.small-menu { display:inline; }
-</span><span class='line'>.large-menu { display:none; }
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>@media screen and ( min-width: 801px ) and ( max-width: 1024px ) {
-</span><span class='line'>.small-menu { display:none; }.
-</span><span class='line'>.large-menu { display:inline; }
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>@media screen and ( min-width: 1025px ) {
-</span><span class='line'>.small-menu { display:none; }
-</span><span class='line'>.large-menu { display:inline; }
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
 ]]></content>
   </entry>
   

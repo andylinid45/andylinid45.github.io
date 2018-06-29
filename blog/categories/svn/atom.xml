@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Svn | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/svn/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2018-06-29T09:49:46+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ignore a Directory With SVN]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn/"/>
+    <updated>2018-06-29T09:46:57+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn</id>
+    <content type="html"><![CDATA[<p><code>
+https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

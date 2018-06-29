@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ignore a Directory With SVN - Andy Lin</title>
+  <meta name="author" content="Andy">
+
+  
+  <meta name="description" content="1
+https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn ">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48929179-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Andy Lin</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:andylinid45.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/technical-review/">Technical Review</a></li>
+  <li><a href="/blog/categories/big-data/">大数据</a></li>
+  <li><a href="/blog/categories/front-end/">前端</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Ignore a Directory With SVN</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-06-29T09:46:57+08:00" pubdate data-updated="true">Jun 29<span>th</span>, 2018</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Andy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-06-29T09:46:57+08:00" pubdate data-updated="true">Jun 29<span>th</span>, 2018</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/svn/'>svn</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/" title="Previous Post: Spring JDBC is not logging SQL with log4j">&laquo; Spring JDBC is not logging SQL with log4j</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 111.25%'>ai(3)</a> <a href='/blog/categories/angularjs' style='font-size: 103.75%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 107.5%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 118.75%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 107.5%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.75%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 115.0%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 118.75%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 107.5%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.75%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 126.25%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 115.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 107.5%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 141.25%'>java(11)</a> <a href='/blog/categories/mongodb' style='font-size: 103.75%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 111.25%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 107.5%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 115.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.75%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.75%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 115.0%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.75%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 130.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.5%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.75%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.75%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.75%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 107.5%'>spring(2)</a> <a href='/blog/categories/ssh' style='font-size: 107.5%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.75%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.75%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 145.0%'>technical-review(12)</a> <a href='/blog/categories/tensorflow' style='font-size: 111.25%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.75%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(16)</a> <a href='/blog/categories/virtualbox' style='font-size: 107.5%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 133.75%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.75%'>技术(1)</a> </span>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/06/29/ignore-a-directory-with-svn/">Ignore a Directory With SVN</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/">Spring JDBC Is Not Logging SQL With Log4j</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/06/25/anti-patterns-in-oop/">Anti-Patterns in OOP</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/06/25/what-exactly-is-restful-programming/">What Exactly Is RESTful Programming?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/06/22/getters-and-setters-are-evil/">Getters and Setters Are Evil</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2018 - Andy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
