@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-29T10:38:24+08:00</updated>
+  <updated>2018-06-29T11:09:50+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What Are the Applications of Machine Learning in the E-commerce Industry?]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/"/>
+    <updated>2018-06-29T10:24:00+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry</id>
+    <content type="html"><![CDATA[<p>```
+<a href="https://www.quora.com/What-are-the-applications-of-machine-learning-in-the-e-commerce-industry-Which-ML-algorithms-and-techniques-are-used">https://www.quora.com/What-are-the-applications-of-machine-learning-in-the-e-commerce-industry-Which-ML-algorithms-and-techniques-are-used</a></p>
+
+<p><a href="https://www.quora.com/Revenue-management-and-pricing-What-machine-learning-techniques-are-used-in-revenue-management-and-pricing">https://www.quora.com/Revenue-management-and-pricing-What-machine-learning-techniques-are-used-in-revenue-management-and-pricing</a></p>
+
+<p><a href="https://www.quora.com/Which-algorithms-are-used-in-recommender-systems">https://www.quora.com/Which-algorithms-are-used-in-recommender-systems</a></p>
+
+<p><a href="https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now">https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now</a></p>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Anti-Patterns in OOP]]></title>
@@ -60,24 +78,6 @@ https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-method
     <content type="html"><![CDATA[<p><code>
 https://stackoverflow.com/questions/1054022/best-way-to-store-password-in-database
 </code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TensorFlow vs SciKit Learn]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn/"/>
-    <updated>2017-09-07T14:55:28+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn</id>
-    <content type="html"><![CDATA[<ul>
-<li>TensorFlow is more low-level;</li>
-<li>Scikit-learn offers you off-the-shelf algorithms, e.g., algorithms for classification such as SVMs, Random Forests, Logistic Regression</li>
-<li>Scikit-learn does not support GPU at this time. <a href="http://scikit-learn.org/stable/faq.html#will-you-add-gpu-support">http://scikit-learn.org/stable/faq.html#will-you-add-gpu-support</a></li>
-<li>Skflow: Simplified interface for TensorFlow (mimicking Scikit Learn) for Deep Learning. SkFlow has been moved to Tensorflow. <a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn">https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn</a></li>
-</ul>
-
-
-<p>ref:
-<a href="https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn">https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn</a></p>
 ]]></content>
   </entry>
   
