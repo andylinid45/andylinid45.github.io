@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-29T09:52:14+08:00</updated>
+  <updated>2018-06-29T10:07:47+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Minor GC vs Major GC vs Full GC]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc/"/>
+    <updated>2018-06-29T10:06:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://plumbr.io/blog/garbage-collection/minor-gc-vs-major-gc-vs-full-gc</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ignore a Directory With SVN]]></title>
@@ -471,15 +482,6 @@
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[HTML5 Cross Browser Polyfills]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills/"/>
-    <updated>2015-08-29T16:20:09+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills</id>
-    <content type="html"><![CDATA[<p><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills</a></p>
 ]]></content>
   </entry>
   

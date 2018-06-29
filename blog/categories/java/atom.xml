@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-29T09:52:14+08:00</updated>
+  <updated>2018-06-29T10:07:47+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Minor GC vs Major GC vs Full GC]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc/"/>
+    <updated>2018-06-29T10:06:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc</id>
+    <content type="html"><![CDATA[<p><code>
+https://plumbr.io/blog/garbage-collection/minor-gc-vs-major-gc-vs-full-gc
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Spring JDBC Is Not Logging SQL With Log4j]]></title>
@@ -68,18 +79,6 @@ https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-method
 
 <p><a href="https://start.spring.io/">https://start.spring.io/</a>
 ```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Java via SDKMAN!]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman/"/>
-    <updated>2017-08-31T16:29:53+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman</id>
-    <content type="html"><![CDATA[<p><code>
-curl -s https://get.sdkman.io | bash
-sdk install java
-</code></p>
 ]]></content>
   </entry>
   
