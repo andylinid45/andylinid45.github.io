@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-29T10:07:47+08:00</updated>
+  <updated>2018-06-29T10:38:24+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What Are the Applications of Machine Learning in the E-commerce Industry?]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/"/>
+    <updated>2018-06-29T10:24:00+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.quora.com/What-are-the-applications-of-machine-learning-in-the-e-commerce-industry-Which-ML-algorithms-and-techniques-are-used
+</span><span class='line'>
+</span><span class='line'>https://www.quora.com/Revenue-management-and-pricing-What-machine-learning-techniques-are-used-in-revenue-management-and-pricing
+</span><span class='line'>
+</span><span class='line'>https://www.quora.com/Which-algorithms-are-used-in-recommender-systems
+</span><span class='line'>
+</span><span class='line'>https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Minor GC vs Major GC vs Full GC]]></title>
@@ -400,88 +424,6 @@
 <p><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions">http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions</a></p>
 
 <p><a href="http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb">http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Html Best Practices]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/29/html-best-practices/"/>
-    <updated>2015-08-29T22:59:28+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/29/html-best-practices</id>
-    <content type="html"><![CDATA[<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;font&gt; for text style</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;b&gt; and &lt;i&gt; tags </span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;strong&gt; tag in stead of &lt;b&gt;, &lt;em&gt; tag in stead of &lt;i&gt;, if you want text to be emphasized</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;table&gt; for layout
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use div and css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>user &lt;br&gt; just for white space</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Use headings (h1 h2 ...) to indicate the relative importance of text</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Use &lt;cite&gt; tag for referencing a book title, newspaper article, or website, and the &lt;address&gt; tag to identify and supply contact information for the author of a page</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>overuse &lt;div&gt;tags.</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ues &lt;article&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt; tags if needed</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   
