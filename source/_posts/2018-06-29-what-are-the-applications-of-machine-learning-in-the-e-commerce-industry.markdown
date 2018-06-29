@@ -3,7 +3,7 @@ layout: post
 title: "What are the applications of machine learning in the e-commerce industry?"
 date: 2018-06-29 10:24:00 +0800
 comments: true
-categories: [ai, ml]
+categories: [ai, ml, technical-review]
 ---
 
 ```
