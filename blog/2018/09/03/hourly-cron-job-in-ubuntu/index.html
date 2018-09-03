@@ -5,11 +5,23 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Brew - Andy Lin</title>
+  <title>Hourly Cron Job in Ubuntu - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="Category: brew">
+  <meta name="description" content="1
+2
+3
+4
+5
+6
+7
+8
+cd /etc/cron.hourly
+sudo nano test1
+# the job script start with #!/bin/bash
+sudo chmod +x test1 # hava a test
+run-parts --report -- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +30,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.ioblog/categories/brew">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2018/09/03/hourly-cron-job-in-ubuntu">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -78,35 +90,108 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Brew</h1>
+    
+      <h1 class="entry-title">Hourly Cron Job in Ubuntu</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-09-03T15:34:13+08:00" pubdate data-updated="true">Sep 3<span>rd</span>, 2018</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
+
+
+<div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /etc/cron.hourly
+</span><span class='line'>sudo nano test1
+</span><span class='line'># the job script start with #!/bin/bash
+</span><span class='line'>sudo chmod +x test1
+</span><span class='line'>
+</span><span class='line'># hava a test
+</span><span class='line'>run-parts --report --test /etc/cron.hourly
+</span><span class='line'>run-parts --report /etc/cron.hourly</span></code></pre></td></tr></table></div></figure>
 
 
 
-  
-  <h2>2014</h2>
 
-<article>
-  
-<h1><a href="/blog/2014/09/23/using-homebrew-with-multiple-users/">Using Homebrew With Multiple Users</a></h1>
-<time datetime="2014-09-23T10:06:52+08:00" pubdate><span class='month'>Sep</span> <span class='day'>23</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/brew/'>brew</a></span>
-</footer>
-
-
-</article>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
+</span><span class='line'>https://help.ubuntu.com/community/CronHowto
+</span><span class='line'>https://askubuntu.com/questions/7676/function-of-etc-cron-hourly</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Andy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-09-03T15:34:13+08:00" pubdate data-updated="true">Sep 3<span>rd</span>, 2018</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/" title="Previous Post: What are the applications of machine learning in the e-commerce industry?">&laquo; What are the applications of machine learning in the e-commerce industry?</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

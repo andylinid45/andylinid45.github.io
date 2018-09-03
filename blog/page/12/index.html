@@ -9,13 +9,29 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="install 1
 2
 3
 4
-bundle exec rake new_post["Hello octopress"]
-bundle exec rake generate # Generates posts and pages into the public directory
-bundle exec rake &hellip;">
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+sudo apt-get install git git config --global user.name "Andy"
+git config --global user. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +101,118 @@ bundle exec rake &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/using-git-in-ubuntu/">Using Git in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T21:01:58+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git
+</span><span class='line'>
+</span><span class='line'>git config --global user.name "Andy"
+</span><span class='line'>git config --global user.email "Andy"
+</span><span class='line'>git config --global color.ui "auto"
+</span><span class='line'>git config core.quotepath false  #for chinese char
+</span><span class='line'>git config core.filemode false  #ignore chmod to file change
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>ssh-keygen -t rsa
+</span><span class='line'>
+</span><span class='line'>xclip -sel clip &lt; ~/.ssh/id_rsa.pub
+</span><span class='line'>
+</span><span class='line'>cat ~/.ssh/id_rsa.pub
+</span><span class='line'>#copy to https://github.com/account/ssh
+</span><span class='line'>#copy to https://bitbucket.org/account/
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>#testing ssh config in this server
+</span><span class='line'>ssh -T git@github.com
+</span><span class='line'>ssh -T git@bitbucket.org</span></code></pre></td></tr></table></div></figure>
+
+
+<p>tag</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git tag #list tags
+</span><span class='line'>git tag before_devise #tag a tag
+</span><span class='line'>git tag -a v1.4 -m 'version 1.4' </span></code></pre></td></tr></table></div></figure>
+
+
+<p>show history</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git show SHA1:/path/to/file</span></code></pre></td></tr></table></div></figure>
+
+
+<p>mistake rm a file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git reset HEAD file
+</span><span class='line'>git checkout file</span></code></pre></td></tr></table></div></figure>
+
+
+<p>git add all</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add -A</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -178,11 +306,15 @@ bundle exec rake &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 115.0%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.75%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 107.5%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 118.75%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 107.5%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.75%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 115.0%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 118.75%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 107.5%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.75%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 126.25%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 115.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 107.5%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 145.0%'>java(12)</a> <a href='/blog/categories/ml' style='font-size: 103.75%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.75%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 111.25%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 107.5%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 115.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.75%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.75%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 115.0%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.75%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 130.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.5%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.75%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.75%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.75%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 107.5%'>spring(2)</a> <a href='/blog/categories/ssh' style='font-size: 107.5%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.75%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.75%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 148.75%'>technical-review(13)</a> <a href='/blog/categories/tensorflow' style='font-size: 111.25%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.75%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(16)</a> <a href='/blog/categories/virtualbox' style='font-size: 107.5%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 133.75%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.75%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 114.11764705882354%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.52941176470588%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 107.05882352941177%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 117.64705882352942%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 107.05882352941177%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.52941176470588%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 114.11764705882354%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 117.64705882352942%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 107.05882352941177%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.52941176470588%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 124.70588235294117%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 114.11764705882354%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 107.05882352941177%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 142.35294117647058%'>java(12)</a> <a href='/blog/categories/ml' style='font-size: 103.52941176470588%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.52941176470588%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 110.58823529411765%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 107.05882352941177%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 114.11764705882354%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.52941176470588%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.52941176470588%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 114.11764705882354%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.52941176470588%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 128.23529411764707%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.05882352941177%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.52941176470588%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.52941176470588%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.52941176470588%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 107.05882352941177%'>spring(2)</a> <a href='/blog/categories/ssh' style='font-size: 107.05882352941177%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.52941176470588%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.52941176470588%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 145.88235294117646%'>technical-review(13)</a> <a href='/blog/categories/tensorflow' style='font-size: 110.58823529411765%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 117.64705882352942%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(17)</a> <a href='/blog/categories/virtualbox' style='font-size: 107.05882352941177%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 131.76470588235293%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.52941176470588%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/09/03/hourly-cron-job-in-ubuntu/">Hourly Cron Job in Ubuntu</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/">What Are the Applications of Machine Learning in the E-commerce Industry?</a>
@@ -198,10 +330,6 @@ bundle exec rake &hellip;">
     
       <li class="post">
         <a href="/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/">Spring JDBC Is Not Logging SQL With Log4j</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/06/25/anti-patterns-in-oop/">Anti-Patterns in OOP</a>
       </li>
     
   </ul>

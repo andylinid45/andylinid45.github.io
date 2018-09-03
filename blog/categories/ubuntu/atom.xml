@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-06-29T11:09:50+08:00</updated>
+  <updated>2018-09-03T15:41:31+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hourly Cron Job in Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/09/03/hourly-cron-job-in-ubuntu/"/>
+    <updated>2018-09-03T15:34:13+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/09/03/hourly-cron-job-in-ubuntu</id>
+    <content type="html"><![CDATA[<p>```
+cd /etc/cron.hourly
+sudo nano test1</p>
+
+<h1>the job script start with #!/bin/bash</h1>
+
+<p>sudo chmod +x test1</p>
+
+<h1>hava a test</h1>
+
+<p>run-parts &mdash;report &mdash;test /etc/cron.hourly
+run-parts &mdash;report /etc/cron.hourly
+```</p>
+
+<p><code>
+https://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
+https://help.ubuntu.com/community/CronHowto
+https://askubuntu.com/questions/7676/function-of-etc-cron-hourly
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Update Kernel in Ubuntu With Command Line]]></title>
@@ -90,19 +117,6 @@ sudo reboot
     <content type="html"><![CDATA[<p><code>
 curl -s https://get.sdkman.io | bash
 sdk install java
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Search Pdf in Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/08/31/search-pdf-in-ubuntu/"/>
-    <updated>2017-08-31T15:09:39+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/08/31/search-pdf-in-ubuntu</id>
-    <content type="html"><![CDATA[<p>using pdfgrep
-<code>
-sudo apt-get install pdfgrep
-pdfgrep -R 'DSL'  ./books
 </code></p>
 ]]></content>
   </entry>
