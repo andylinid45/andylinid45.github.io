@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>SQL Style Guide - Andy Lin</title>
+  <meta name="author" content="Andy">
+
+  
+  <meta name="description" content="1
+2
+https://www.sqlstyle.guide/
+http://www.dpriver.com/pp/sqlformat.htm ">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2018/09/12/sql-style-guide">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48929179-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Andy Lin</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:andylinid45.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/technical-review/">Technical Review</a></li>
+  <li><a href="/blog/categories/big-data/">大数据</a></li>
+  <li><a href="/blog/categories/front-end/">前端</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">SQL Style Guide</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-09-12T15:49:34+08:00" pubdate data-updated="true">Sep 12<span>th</span>, 2018</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.sqlstyle.guide/
+</span><span class='line'>http://www.dpriver.com/pp/sqlformat.htm</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Andy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-09-12T15:49:34+08:00" pubdate data-updated="true">Sep 12<span>th</span>, 2018</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/sql/'>sql</a>, <a class='category' href='/blog/categories/technical-review/'>technical-review</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2018/09/03/hourly-cron-job-in-ubuntu/" title="Previous Post: hourly cron job in ubuntu">&laquo; hourly cron job in ubuntu</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 114.11764705882354%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.52941176470588%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 107.05882352941177%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 117.64705882352942%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 107.05882352941177%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.52941176470588%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 114.11764705882354%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 117.64705882352942%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 107.05882352941177%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.52941176470588%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 124.70588235294117%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 114.11764705882354%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 107.05882352941177%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 142.35294117647058%'>java(12)</a> <a href='/blog/categories/ml' style='font-size: 103.52941176470588%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.52941176470588%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 110.58823529411765%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 107.05882352941177%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 114.11764705882354%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.52941176470588%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.52941176470588%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 114.11764705882354%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.52941176470588%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 128.23529411764707%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.05882352941177%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.52941176470588%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.52941176470588%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.52941176470588%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 107.05882352941177%'>spring(2)</a> <a href='/blog/categories/sql' style='font-size: 103.52941176470588%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 107.05882352941177%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.52941176470588%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.52941176470588%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 149.41176470588235%'>technical-review(14)</a> <a href='/blog/categories/tensorflow' style='font-size: 110.58823529411765%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 117.64705882352942%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(17)</a> <a href='/blog/categories/virtualbox' style='font-size: 107.05882352941177%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 131.76470588235293%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.52941176470588%'>技术(1)</a> </span>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/09/12/sql-style-guide/">SQL Style Guide</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/09/03/hourly-cron-job-in-ubuntu/">Hourly Cron Job in Ubuntu</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/">What Are the Applications of Machine Learning in the E-commerce Industry?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc/">Minor GC vs Major GC vs Full GC</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/06/29/ignore-a-directory-with-svn/">Ignore a Directory With SVN</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2018 - Andy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

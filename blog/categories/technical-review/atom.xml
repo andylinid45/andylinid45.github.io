@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-09-03T15:42:14+08:00</updated>
+  <updated>2018-09-12T15:54:04+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SQL Style Guide]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/09/12/sql-style-guide/"/>
+    <updated>2018-09-12T15:49:34+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/09/12/sql-style-guide</id>
+    <content type="html"><![CDATA[<p><code>
+https://www.sqlstyle.guide/
+http://www.dpriver.com/pp/sqlformat.htm
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What Are the Applications of Machine Learning in the E-commerce Industry?]]></title>
@@ -67,17 +79,6 @@ https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-method
 </code></p>
 
 <p>use <a href="https://projectlombok.org/">https://projectlombok.org/</a>   for help</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Best Way to Store Password in Database]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/21/best-way-to-store-password-in-database/"/>
-    <updated>2018-06-21T15:12:33+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/21/best-way-to-store-password-in-database</id>
-    <content type="html"><![CDATA[<p><code>
-https://stackoverflow.com/questions/1054022/best-way-to-store-password-in-database
-</code></p>
 ]]></content>
   </entry>
   
