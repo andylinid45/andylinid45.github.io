@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-09-12T15:54:04+08:00</updated>
+  <updated>2018-09-12T16:19:39+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Log All Requests and Responses in Spring Boot]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/"/>
+    <updated>2018-09-12T16:10:34+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot</id>
+    <content type="html"><![CDATA[<p>add pom.xml
+```
+<dependency></p>
+
+<pre><code>&lt;groupId&gt;org.zalando&lt;/groupId&gt;
+&lt;artifactId&gt;logbook-spring-boot-starter&lt;/artifactId&gt;
+&lt;version&gt;1.5.0&lt;/version&gt;
+</code></pre>
+
+<p></dependency>
+```</p>
+
+<p>add to application.yml
+<code>
+logging.level.org.zalando.logbook: TRACE
+</code></p>
+
+<p>That&rsquo;s all. Done!</p>
+
+<p><code>
+https://github.com/zalando/logbook
+https://stackoverflow.com/questions/33744875/spring-boot-how-to-log-all-requests-and-responses-with-exceptions-in-single-pl
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Minor GC vs Major GC vs Full GC]]></title>
@@ -60,25 +91,6 @@ https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-method
 </code></p>
 
 <p>use <a href="https://projectlombok.org/">https://projectlombok.org/</a>   for help</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Spring Cloud Guides]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides/"/>
-    <updated>2018-06-21T14:27:03+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides</id>
-    <content type="html"><![CDATA[<p>```
-<a href="https://spring.io/guides/gs/centralized-configuration/">https://spring.io/guides/gs/centralized-configuration/</a>
-<a href="https://spring.io/guides/gs/service-registration-and-discovery/">https://spring.io/guides/gs/service-registration-and-discovery/</a>
-<a href="https://spring.io/guides/gs/circuit-breaker/">https://spring.io/guides/gs/circuit-breaker/</a>
-<a href="https://spring.io/guides/gs/client-side-load-balancing/">https://spring.io/guides/gs/client-side-load-balancing/</a>
-<a href="https://spring.io/guides/gs/routing-and-filtering/">https://spring.io/guides/gs/routing-and-filtering/</a></p>
-
-<p><a href="https://github.com/leoChaoGlut/spring-cloud-demo">https://github.com/leoChaoGlut/spring-cloud-demo</a></p>
-
-<p><a href="https://start.spring.io/">https://start.spring.io/</a>
-```</p>
 ]]></content>
   </entry>
   

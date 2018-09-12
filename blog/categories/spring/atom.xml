@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Spring | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/spring/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-09-12T15:54:04+08:00</updated>
+  <updated>2018-09-12T16:19:39+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Log All Requests and Responses in Spring Boot]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/"/>
+    <updated>2018-09-12T16:10:34+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot</id>
+    <content type="html"><![CDATA[<p>add pom.xml
+```
+<dependency></p>
+
+<pre><code>&lt;groupId&gt;org.zalando&lt;/groupId&gt;
+&lt;artifactId&gt;logbook-spring-boot-starter&lt;/artifactId&gt;
+&lt;version&gt;1.5.0&lt;/version&gt;
+</code></pre>
+
+<p></dependency>
+```</p>
+
+<p>add to application.yml
+<code>
+logging.level.org.zalando.logbook: TRACE
+</code></p>
+
+<p>That&rsquo;s all. Done!</p>
+
+<p><code>
+https://github.com/zalando/logbook
+https://stackoverflow.com/questions/33744875/spring-boot-how-to-log-all-requests-and-responses-with-exceptions-in-single-pl
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Spring JDBC Is Not Logging SQL With Log4j]]></title>

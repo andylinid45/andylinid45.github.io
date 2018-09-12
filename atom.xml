@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-09-12T15:54:04+08:00</updated>
+  <updated>2018-09-12T16:19:39+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Log All Requests and Responses in Spring Boot]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/"/>
+    <updated>2018-09-12T16:10:34+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot</id>
+    <content type="html"><![CDATA[<p>add pom.xml</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;dependency&gt;
+</span><span class='line'>  &lt;groupId&gt;org.zalando&lt;/groupId&gt;
+</span><span class='line'>  &lt;artifactId&gt;logbook-spring-boot-starter&lt;/artifactId&gt;
+</span><span class='line'>  &lt;version&gt;1.5.0&lt;/version&gt;
+</span><span class='line'>&lt;/dependency&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>add to application.yml</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>logging.level.org.zalando.logbook: TRACE</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all. Done!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/zalando/logbook
+</span><span class='line'>https://stackoverflow.com/questions/33744875/spring-boot-how-to-log-all-requests-and-responses-with-exceptions-in-single-pl</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SQL Style Guide]]></title>
@@ -420,29 +455,6 @@
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install pdfgrep
 </span><span class='line'>pdfgrep -R 'DSL'  ./books </span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Http Clients in Java]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java/"/>
-    <updated>2015-10-07T22:26:51+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java</id>
-    <content type="html"><![CDATA[<p>recommended, because they are easy to use and powerful</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>spring resttemplate
-</span><span class='line'>http://unirest.io/java.html</span></code></pre></td></tr></table></div></figure>
-
-
-<p>not recommended, because they use low level api</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://hc.apache.org/httpcomponents-client-ga/index.html
-</span><span class='line'>http://hc.apache.org/httpclient-3.x/</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
