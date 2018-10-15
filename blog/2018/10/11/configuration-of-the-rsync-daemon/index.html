@@ -5,12 +5,20 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ignore a Directory With SVN - Andy Lin</title>
+  <title>Configuration of the Rsync Daemon - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
-https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn ">
+  <meta name="description" content="1 nano /etc/default/rsync 1
+RSYNC_ENABLE=inetd 2 1
+sudo apt-get install xinetd 3 create file /etc/xinetd.d/rsync (the same as below) 1
+2
+3
+4
+5
+6
+7
+8 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +27,7 @@ https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -83,7 +91,7 @@ https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn 
   
   <header>
     
-      <h1 class="entry-title">Ignore a Directory With SVN</h1>
+      <h1 class="entry-title">Configuration of the Rsync Daemon</h1>
     
     
       <p class="meta">
@@ -99,15 +107,117 @@ https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn 
   
 
 
-<time datetime="2018-06-29T09:46:57+08:00" pubdate data-updated="true">Jun 29<span>th</span>, 2018</time>
+<time datetime="2018-10-11T17:30:09+08:00" pubdate data-updated="true">Oct 11<span>th</span>, 2018</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn</span></code></pre></td></tr></table></div></figure>
+<div class="entry-content"><p>1 nano /etc/default/rsync</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RSYNC_ENABLE=inetd</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install xinetd</span></code></pre></td></tr></table></div></figure>
+
+
+<p>3 create file  /etc/xinetd.d/rsync (the same as below)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>service rsync
+</span><span class='line'>{
+</span><span class='line'>    disable = no
+</span><span class='line'>    socket_type = stream
+</span><span class='line'>    wait = no
+</span><span class='line'>    user = root  # must be root
+</span><span class='line'>    server = /usr/bin/rsync
+</span><span class='line'>    server_args = --daemon
+</span><span class='line'>    log_on_failure += USERID
+</span><span class='line'>    flags = IPv6
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>4 create file /etc/rsyncd.conf</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>max connections = 20
+</span><span class='line'>log file = /var/log/rsync.log
+</span><span class='line'>timeout = 300
+</span><span class='line'>
+</span><span class='line'>[share] # module name
+</span><span class='line'>comment = Public Share
+</span><span class='line'>path = /home/share
+</span><span class='line'>read only = yes
+</span><span class='line'>list = yes
+</span><span class='line'>uid = nobody
+</span><span class='line'>gid = nogroup
+</span><span class='line'>auth users = test_rsync  # the user to auth to rsync, 
+</span><span class='line'>secrets file = /etc/rsyncd.secrets</span></code></pre></td></tr></table></div></figure>
+
+
+<p>5 create file /etc/rsyncd.secrets for password
+sudo nano /etc/rsyncd.secrets</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync_user:rsync_password
+</span><span class='line'># other users ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo chmod 600 /etc/rsyncd.secrets</p>
+
+<p>6 restart</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/xinetd restart</span></code></pre></td></tr></table></div></figure>
+
+
+<p>7 create password file in client side
+sudo nano /etc/rsync.secrets</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync_password</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo chmod 600 /etc/rsync.secrets</p>
+
+<p>8 have a test in client side</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync -azhrvcP --delete --password-file=/etc/rsync.secrets  rsync_user@server_ip::share  /home/user/demo </span></code></pre></td></tr></table></div></figure>
+
+
+<p>ref</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://help.ubuntu.com/community/rsync</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -131,12 +241,12 @@ https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn 
   
 
 
-<time datetime="2018-06-29T09:46:57+08:00" pubdate data-updated="true">Jun 29<span>th</span>, 2018</time>
+<time datetime="2018-10-11T17:30:09+08:00" pubdate data-updated="true">Oct 11<span>th</span>, 2018</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/svn/'>svn</a>
+    <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
   
 </span>
 
@@ -152,10 +262,8 @@ https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn 
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/" title="Previous Post: Spring JDBC is not logging SQL with log4j">&laquo; Spring JDBC is not logging SQL with log4j</a>
+        <a class="basic-alignment left" href="/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/" title="Previous Post: Log all requests and responses in Spring Boot">&laquo; Log all requests and responses in Spring Boot</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc/" title="Next Post: Minor GC vs Major GC vs Full GC">Minor GC vs Major GC vs Full GC &raquo;</a>
       
     </p>
   </footer>

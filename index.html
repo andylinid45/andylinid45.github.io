@@ -9,12 +9,16 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="add pom.xml 1
+  <meta name="description" content="1 nano /etc/default/rsync 1
+RSYNC_ENABLE=inetd 2 1
+sudo apt-get install xinetd 3 create file /etc/xinetd.d/rsync (the same as below) 1
 2
 3
 4
 5
-&lt;dependency&gt; &lt;groupId&gt;org.zalando&lt;/groupId&gt; &lt;artifactId&gt;logbook-spring-boot-starter&lt;/artifactId&gt &hellip;">
+6
+7
+8 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +88,146 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2018/10/11/configuration-of-the-rsync-daemon/">Configuration of the Rsync Daemon</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-10-11T17:30:09+08:00" pubdate data-updated="true">Oct 11<span>th</span>, 2018</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>1 nano /etc/default/rsync</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RSYNC_ENABLE=inetd</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install xinetd</span></code></pre></td></tr></table></div></figure>
+
+
+<p>3 create file  /etc/xinetd.d/rsync (the same as below)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>service rsync
+</span><span class='line'>{
+</span><span class='line'>    disable = no
+</span><span class='line'>    socket_type = stream
+</span><span class='line'>    wait = no
+</span><span class='line'>    user = root  # must be root
+</span><span class='line'>    server = /usr/bin/rsync
+</span><span class='line'>    server_args = --daemon
+</span><span class='line'>    log_on_failure += USERID
+</span><span class='line'>    flags = IPv6
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>4 create file /etc/rsyncd.conf</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>max connections = 20
+</span><span class='line'>log file = /var/log/rsync.log
+</span><span class='line'>timeout = 300
+</span><span class='line'>
+</span><span class='line'>[share] # module name
+</span><span class='line'>comment = Public Share
+</span><span class='line'>path = /home/share
+</span><span class='line'>read only = yes
+</span><span class='line'>list = yes
+</span><span class='line'>uid = nobody
+</span><span class='line'>gid = nogroup
+</span><span class='line'>auth users = test_rsync  # the user to auth to rsync, 
+</span><span class='line'>secrets file = /etc/rsyncd.secrets</span></code></pre></td></tr></table></div></figure>
+
+
+<p>5 create file /etc/rsyncd.secrets for password
+sudo nano /etc/rsyncd.secrets</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync_user:rsync_password
+</span><span class='line'># other users ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo chmod 600 /etc/rsyncd.secrets</p>
+
+<p>6 restart</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/xinetd restart</span></code></pre></td></tr></table></div></figure>
+
+
+<p>7 create password file in client side
+sudo nano /etc/rsync.secrets</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync_password</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo chmod 600 /etc/rsync.secrets</p>
+
+<p>8 have a test in client side</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync -azhrvcP --delete --password-file=/etc/rsync.secrets  rsync_user@server_ip::share  /home/user/demo </span></code></pre></td></tr></table></div></figure>
+
+
+<p>ref</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://help.ubuntu.com/community/rsync</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -494,50 +638,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2018/06/22/getters-and-setters-are-evil/">Getters and Setters Are Evil</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-06-22T09:46:27+08:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2018</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html
-</span><span class='line'>https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html
-</span><span class='line'>https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html</span></code></pre></td></tr></table></div></figure>
-
-
-<p>use <a href="https://projectlombok.org/">https://projectlombok.org/</a>   for help</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -550,11 +650,15 @@
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 114.11764705882354%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.52941176470588%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 107.05882352941177%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 117.64705882352942%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 107.05882352941177%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.52941176470588%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 114.11764705882354%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 117.64705882352942%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 107.05882352941177%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.52941176470588%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 124.70588235294117%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 114.11764705882354%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 107.05882352941177%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 145.88235294117646%'>java(13)</a> <a href='/blog/categories/ml' style='font-size: 103.52941176470588%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.52941176470588%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 110.58823529411765%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 107.05882352941177%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 114.11764705882354%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.52941176470588%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.52941176470588%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 114.11764705882354%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.52941176470588%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 128.23529411764707%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 107.05882352941177%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.52941176470588%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.52941176470588%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.52941176470588%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 110.58823529411765%'>spring(3)</a> <a href='/blog/categories/sql' style='font-size: 103.52941176470588%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 107.05882352941177%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.52941176470588%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.52941176470588%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 149.41176470588235%'>technical-review(14)</a> <a href='/blog/categories/tensorflow' style='font-size: 110.58823529411765%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 117.64705882352942%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(17)</a> <a href='/blog/categories/virtualbox' style='font-size: 107.05882352941177%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 131.76470588235293%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.52941176470588%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 113.33333333333333%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.33333333333333%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.66666666666667%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 116.66666666666667%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.66666666666667%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.33333333333333%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 113.33333333333333%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 116.66666666666667%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.66666666666667%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.33333333333333%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 123.33333333333333%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 113.33333333333333%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.66666666666667%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 143.33333333333334%'>java(13)</a> <a href='/blog/categories/ml' style='font-size: 103.33333333333333%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.33333333333333%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 110.0%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 106.66666666666667%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 113.33333333333333%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.33333333333333%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.33333333333333%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 113.33333333333333%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.33333333333333%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 126.66666666666667%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.66666666666667%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.33333333333333%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.33333333333333%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.33333333333333%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 110.0%'>spring(3)</a> <a href='/blog/categories/sql' style='font-size: 103.33333333333333%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.66666666666667%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.33333333333333%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.33333333333333%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 146.66666666666666%'>technical-review(14)</a> <a href='/blog/categories/tensorflow' style='font-size: 110.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 116.66666666666667%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(18)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 130.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.33333333333333%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/10/11/configuration-of-the-rsync-daemon/">Configuration of the Rsync Daemon</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/">Log All Requests and Responses in Spring Boot</a>
@@ -570,10 +674,6 @@
     
       <li class="post">
         <a href="/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/">What Are the Applications of Machine Learning in the E-commerce Industry?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc/">Minor GC vs Major GC vs Full GC</a>
       </li>
     
   </ul>

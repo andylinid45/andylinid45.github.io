@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-09-12T16:19:39+08:00</updated>
+  <updated>2018-10-15T11:13:47+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,119 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Configuration of the Rsync Daemon]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon/"/>
+    <updated>2018-10-11T17:30:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon</id>
+    <content type="html"><![CDATA[<p>1 nano /etc/default/rsync</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RSYNC_ENABLE=inetd</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install xinetd</span></code></pre></td></tr></table></div></figure>
+
+
+<p>3 create file  /etc/xinetd.d/rsync (the same as below)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>service rsync
+</span><span class='line'>{
+</span><span class='line'>    disable = no
+</span><span class='line'>    socket_type = stream
+</span><span class='line'>    wait = no
+</span><span class='line'>    user = root  # must be root
+</span><span class='line'>    server = /usr/bin/rsync
+</span><span class='line'>    server_args = --daemon
+</span><span class='line'>    log_on_failure += USERID
+</span><span class='line'>    flags = IPv6
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>4 create file /etc/rsyncd.conf</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>max connections = 20
+</span><span class='line'>log file = /var/log/rsync.log
+</span><span class='line'>timeout = 300
+</span><span class='line'>
+</span><span class='line'>[share] # module name
+</span><span class='line'>comment = Public Share
+</span><span class='line'>path = /home/share
+</span><span class='line'>read only = yes
+</span><span class='line'>list = yes
+</span><span class='line'>uid = nobody
+</span><span class='line'>gid = nogroup
+</span><span class='line'>auth users = test_rsync  # the user to auth to rsync, 
+</span><span class='line'>secrets file = /etc/rsyncd.secrets</span></code></pre></td></tr></table></div></figure>
+
+
+<p>5 create file /etc/rsyncd.secrets for password
+sudo nano /etc/rsyncd.secrets</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync_user:rsync_password
+</span><span class='line'># other users ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo chmod 600 /etc/rsyncd.secrets</p>
+
+<p>6 restart</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/xinetd restart</span></code></pre></td></tr></table></div></figure>
+
+
+<p>7 create password file in client side
+sudo nano /etc/rsync.secrets</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync_password</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo chmod 600 /etc/rsync.secrets</p>
+
+<p>8 have a test in client side</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync -azhrvcP --delete --password-file=/etc/rsync.secrets  rsync_user@server_ip::share  /home/user/demo </span></code></pre></td></tr></table></div></figure>
+
+
+<p>ref</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://help.ubuntu.com/community/rsync</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Log All Requests and Responses in Spring Boot]]></title>
@@ -440,21 +553,6 @@
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>curl -s https://get.sdkman.io | bash
 </span><span class='line'>sdk install java</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Search Pdf in Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/08/31/search-pdf-in-ubuntu/"/>
-    <updated>2017-08-31T15:09:39+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/08/31/search-pdf-in-ubuntu</id>
-    <content type="html"><![CDATA[<p>using pdfgrep</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install pdfgrep
-</span><span class='line'>pdfgrep -R 'DSL'  ./books </span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-09-12T16:19:39+08:00</updated>
+  <updated>2018-10-15T11:13:47+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,91 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Configuration of the Rsync Daemon]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon/"/>
+    <updated>2018-10-11T17:30:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon</id>
+    <content type="html"><![CDATA[<p>1 nano /etc/default/rsync
+<code>
+RSYNC_ENABLE=inetd
+</code></p>
+
+<p>2
+<code>
+sudo apt-get install xinetd
+</code></p>
+
+<p>3 create file  /etc/xinetd.d/rsync (the same as below)
+```
+service rsync
+{</p>
+
+<pre><code>disable = no
+socket_type = stream
+wait = no
+user = root  # must be root
+server = /usr/bin/rsync
+server_args = --daemon
+log_on_failure += USERID
+flags = IPv6
+</code></pre>
+
+<p>}
+```</p>
+
+<p>4 create file /etc/rsyncd.conf
+```
+max connections = 20
+log file = /var/log/rsync.log
+timeout = 300</p>
+
+<p>[share] # module name
+comment = Public Share
+path = /home/share
+read only = yes
+list = yes
+uid = nobody
+gid = nogroup
+auth users = test_rsync  # the user to auth to rsync,
+secrets file = /etc/rsyncd.secrets
+```</p>
+
+<p>5 create file /etc/rsyncd.secrets for password
+sudo nano /etc/rsyncd.secrets
+```
+rsync_user:rsync_password</p>
+
+<h1>other users &hellip;</h1>
+
+<p>```</p>
+
+<p>sudo chmod 600 /etc/rsyncd.secrets</p>
+
+<p>6 restart
+<code>
+sudo /etc/init.d/xinetd restart
+</code></p>
+
+<p>7 create password file in client side
+sudo nano /etc/rsync.secrets
+<code>
+rsync_password
+</code>
+sudo chmod 600 /etc/rsync.secrets</p>
+
+<p>8 have a test in client side
+<code>
+rsync -azhrvcP --delete --password-file=/etc/rsync.secrets  rsync_user@server_ip::share  /home/user/demo
+</code></p>
+
+<p>ref
+<code>
+https://help.ubuntu.com/community/rsync
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hourly Cron Job in Ubuntu]]></title>
@@ -105,18 +190,6 @@ http://askubuntu.com/questions/214018/how-to-make-wget-faster-or-multithreading
 sudo apt-get install gdebi
 sudo gdebi sogoupinyin.deb
 sudo reboot
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Java via SDKMAN!]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman/"/>
-    <updated>2017-08-31T16:29:53+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman</id>
-    <content type="html"><![CDATA[<p><code>
-curl -s https://get.sdkman.io | bash
-sdk install java
 </code></p>
 ]]></content>
   </entry>
