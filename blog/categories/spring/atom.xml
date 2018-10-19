@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Spring | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/spring/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-10-15T11:13:47+08:00</updated>
+  <updated>2018-10-19T11:12:49+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Spring Websockets Broadcast Message to Clients]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/"/>
+    <updated>2018-10-19T11:06:12+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets">https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets</a></p>
+
+<p>ref
+<code>
+https://spring.io/guides/gs/messaging-stomp-websocket/
+https://www.sitepoint.com/implementing-spring-websocket-server-and-client/
+https://github.com/jaysridhar/spring-websocket-server
+https://github.com/jaysridhar/spring-websocket-client
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Log All Requests and Responses in Spring Boot]]></title>

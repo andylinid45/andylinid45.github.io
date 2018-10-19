@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-10-15T11:13:47+08:00</updated>
+  <updated>2018-10-19T11:12:49+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Spring Websockets Broadcast Message to Clients]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/"/>
+    <updated>2018-10-19T11:06:12+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets">https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets</a></p>
+
+<p>ref
+<code>
+https://spring.io/guides/gs/messaging-stomp-websocket/
+https://www.sitepoint.com/implementing-spring-websocket-server-and-client/
+https://github.com/jaysridhar/spring-websocket-server
+https://github.com/jaysridhar/spring-websocket-client
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Log All Requests and Responses in Spring Boot]]></title>
@@ -76,21 +93,6 @@ https://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html
 https://www.yegor256.com/2017/12/05/data-access-object.html
 https://www.yegor256.com/2014/10/03/di-containers-are-evil.html
 </code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Getters and Setters Are Evil]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil/"/>
-    <updated>2018-06-22T09:46:27+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil</id>
-    <content type="html"><![CDATA[<p><code>
-https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html
-https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html
-https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html
-</code></p>
-
-<p>use <a href="https://projectlombok.org/">https://projectlombok.org/</a>   for help</p>
 ]]></content>
   </entry>
   

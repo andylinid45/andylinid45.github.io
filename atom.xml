@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2018-10-15T11:13:47+08:00</updated>
+  <updated>2018-10-19T11:12:49+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Spring Websockets Broadcast Message to Clients]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/"/>
+    <updated>2018-10-19T11:06:12+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets">https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets</a></p>
+
+<p>ref</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://spring.io/guides/gs/messaging-stomp-websocket/
+</span><span class='line'>https://www.sitepoint.com/implementing-spring-websocket-server-and-client/
+</span><span class='line'>https://github.com/jaysridhar/spring-websocket-server
+</span><span class='line'>https://github.com/jaysridhar/spring-websocket-client</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Configuration of the Rsync Daemon]]></title>
@@ -540,19 +561,6 @@ sudo nano /etc/rsync.secrets</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install gdebi
 </span><span class='line'>sudo gdebi sogoupinyin.deb
 </span><span class='line'>sudo reboot</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Java via SDKMAN!]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman/"/>
-    <updated>2017-08-31T16:29:53+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>curl -s https://get.sdkman.io | bash
-</span><span class='line'>sdk install java</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
