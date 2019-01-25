@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-01-25T14:53:27+08:00</updated>
+  <updated>2019-01-25T15:28:04+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -23,6 +23,7 @@ https://stackoverflow.com/questions/12806386/standard-json-api-response-format
 https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf
 https://cloud.google.com/apis/design/
 https://google.github.io/styleguide/jsoncstyleguide.xml
+https://github.com/Microsoft/api-guidelines
 </code></p>
 ]]></content>
   </entry>
