@@ -9,10 +9,9 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
-2
-React.js makes things simple. and it wins others js framework by concept
-Re-render is automatic in Reack.js . So we can think more OOP when using &hellip;">
+  <meta name="description" content="If you have some problmes with installing jdk using 1
+sudo apt-get install default-jdk Have a try with this Download jdk from Oracle website. 1
+2 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,6 +81,78 @@ Re-render is automatic in Reack.js . So we can think more OOP when using &hellip
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/08/17/install-jdk-on-ubuntu14/">Install Jdk on Ubuntu14</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-17T14:40:35+08:00" pubdate data-updated="true">Aug 17<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you have some problmes with installing jdk using</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install default-jdk</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Have a try with this</p>
+
+<p>Download jdk from Oracle website.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir /usr/lib/jvm
+</span><span class='line'>sudo tar zxvf ./jdk-8u51-linux-x64.tar.gz  -C /usr/lib/jvm</span></code></pre></td></tr></table></div></figure>
+
+
+<p>gedit ~/.bashrc # add at the end</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_51
+</span><span class='line'>export JRE_HOME=${JAVA_HOME}/jre 
+</span><span class='line'>export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+</span><span class='line'>export PATH=${JAVA_HOME}/bin:$PATH</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Have a test</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>source ~/.bashrc
+</span><span class='line'>java -version</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -507,70 +578,6 @@ Re-render is automatic in Reack.js . So we can think more OOP when using &hellip
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/10/what-is-marketing/">[第二课]营销是什么</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-10T14:48:23+08:00" pubdate data-updated="true">Aug 10<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>在消费社会，营销即贪嗔痴，紧抓用户心理需求。因为物质需求是比较容易满足的，而心理需求则需要花一生去满足。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>打折，团购 -&gt; 贪
-</span><span class='line'>八卦，好色，虚荣，好学，上进 -&gt; 贪
-</span><span class='line'>流行，时尚  -&gt;  从众，社会认同
-</span><span class='line'>粉丝经济  -&gt; 喜好，社会认同
-</span><span class='line'>限时特价  -&gt;  稀缺
-</span><span class='line'>用户邀请好友 -&gt; 互惠</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>产品设计、营销要抓住用户贪嗔痴，不是向用户宣传产品价值</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>所以产品设计要逃离功能性设计和易用性设计，从颜色，字体，文案，排版，功能流程等都要紧抓用户心理需求</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>切忌创始人和团队贪嗔痴，而产品乏味</span></code></pre></td></tr></table></div></figure>
-
-
-<p>推荐 <a href="http://book.douban.com/subject/5287474/">《影响力》</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -585,11 +592,15 @@ Re-render is automatic in Reack.js . So we can think more OOP when using &hellip
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 113.33333333333333%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.33333333333333%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.66666666666667%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 116.66666666666667%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.66666666666667%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.33333333333333%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 113.33333333333333%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 116.66666666666667%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.66666666666667%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.33333333333333%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 123.33333333333333%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 113.33333333333333%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.66666666666667%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 146.66666666666666%'>java(14)</a> <a href='/blog/categories/ml' style='font-size: 103.33333333333333%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.33333333333333%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 110.0%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.33333333333333%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.66666666666667%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 113.33333333333333%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.33333333333333%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.33333333333333%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 113.33333333333333%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.33333333333333%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 126.66666666666667%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.66666666666667%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.33333333333333%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.33333333333333%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.33333333333333%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 113.33333333333333%'>spring(4)</a> <a href='/blog/categories/sql' style='font-size: 103.33333333333333%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.66666666666667%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.33333333333333%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.33333333333333%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 146.66666666666666%'>technical-review(14)</a> <a href='/blog/categories/tensorflow' style='font-size: 110.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 116.66666666666667%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(18)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 130.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.33333333333333%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 113.33333333333333%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.33333333333333%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.66666666666667%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 116.66666666666667%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.66666666666667%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.33333333333333%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 113.33333333333333%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 116.66666666666667%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.66666666666667%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.33333333333333%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 123.33333333333333%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 113.33333333333333%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.66666666666667%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 146.66666666666666%'>java(14)</a> <a href='/blog/categories/ml' style='font-size: 103.33333333333333%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.33333333333333%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 110.0%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.33333333333333%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.66666666666667%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 113.33333333333333%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.33333333333333%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.33333333333333%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 113.33333333333333%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.33333333333333%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 126.66666666666667%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.66666666666667%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.33333333333333%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.33333333333333%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.33333333333333%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 113.33333333333333%'>spring(4)</a> <a href='/blog/categories/sql' style='font-size: 103.33333333333333%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.66666666666667%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.33333333333333%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.33333333333333%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 150.0%'>technical-review(15)</a> <a href='/blog/categories/tensorflow' style='font-size: 110.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 116.66666666666667%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(18)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.66666666666667%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 130.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.33333333333333%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2019/01/25/api-design-guide/">API Design Guide</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2018/12/06/use-nvm-to-install-nodejs/">Use Nvm to Install Nodejs</a>
@@ -605,10 +616,6 @@ Re-render is automatic in Reack.js . So we can think more OOP when using &hellip
     
       <li class="post">
         <a href="/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/">Log All Requests and Responses in Spring Boot</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/09/12/sql-style-guide/">SQL Style Guide</a>
       </li>
     
   </ul>
