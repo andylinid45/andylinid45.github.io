@@ -222,7 +222,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>dig mx your_domain.com</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and now you can send mail to <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#121;&#x6f;&#117;&#x72;&#x5f;&#x61;&#99;&#99;&#x6f;&#117;&#110;&#x74;&#95;&#110;&#x61;&#x6d;&#x65;&#x5f;&#x69;&#110;&#x5f;&#x76;&#x70;&#115;&#x40;&#121;&#x6f;&#117;&#114;&#x5f;&#100;&#111;&#109;&#97;&#x69;&#x6e;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#x6f;&#117;&#114;&#x5f;&#x61;&#x63;&#99;&#x6f;&#117;&#x6e;&#116;&#x5f;&#110;&#x61;&#109;&#101;&#95;&#x69;&#110;&#x5f;&#x76;&#x70;&#115;&#64;&#121;&#x6f;&#x75;&#114;&#x5f;&#100;&#111;&#109;&#x61;&#105;&#110;&#46;&#x63;&#111;&#x6d;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x79;&#x6f;&#x75;&#114;&#95;&#x61;&#x63;&#x63;&#x6f;&#x75;&#110;&#x74;&#95;&#x6e;&#x61;&#109;&#101;&#x5f;&#105;&#110;&#95;&#x76;&#112;&#x73;&#64;&#x79;&#111;&#x75;&#114;&#95;&#100;&#x6f;&#109;&#x61;&#x69;&#110;&#46;&#99;&#x6f;&#109;">&#x79;&#x6f;&#x75;&#114;&#x5f;&#97;&#99;&#x63;&#x6f;&#117;&#x6e;&#116;&#95;&#x6e;&#x61;&#109;&#x65;&#x5f;&#x69;&#x6e;&#95;&#118;&#112;&#115;&#x40;&#x79;&#111;&#117;&#x72;&#95;&#100;&#x6f;&#x6d;&#x61;&#x69;&#110;&#46;&#x63;&#111;&#x6d;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -632,10 +632,30 @@
   </header>
 
 
-  <div class="entry-content"><p>all the same</p>
+  <div class="entry-content"><p>all the same, tested with Ubuntu 14.4 Server</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://help.ubuntu.com/community/PPTPServer</span></code></pre></td></tr></table></div></figure>
+
+
+<p>debuging, both in server side and client side</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo tail -f /var/log/syslog</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in client side</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Gateway : You ip address of pptp server Or FDDN ( Fully Qualified Domain Name )
+</span><span class='line'>User Name
+</span><span class='line'>Password
+</span><span class='line'>Click on Advanced
+</span><span class='line'>Click on " Use point to point encryption " Click OK & Save</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -737,7 +757,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2018 - Andy -
+  Copyright &copy; 2019 - Andy -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
