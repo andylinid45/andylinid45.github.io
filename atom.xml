@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-01-28T11:46:22+08:00</updated>
+  <updated>2019-01-30T17:16:44+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,163 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install Docker in Ubuntu 16.04]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/"/>
+    <updated>2019-01-30T16:54:02+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04</id>
+    <content type="html"><![CDATA[<p>install docker</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># install required packages
+</span><span class='line'>sudo apt-get install \
+</span><span class='line'>   apt-transport-https \
+</span><span class='line'>   ca-certificates \
+</span><span class='line'>   curl \
+</span><span class='line'>   software-properties-common
+</span><span class='line'>
+</span><span class='line'># get the GPG key for docker
+</span><span class='line'>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+</span><span class='line'>   sudo apt-key add -
+</span><span class='line'>
+</span><span class='line'># validating the docker GPG key is installed
+</span><span class='line'>sudo apt-key fingerprint 0EBFCD88
+</span><span class='line'>
+</span><span class='line'># adding the docker repository
+</span><span class='line'>sudo add-apt-repository \
+</span><span class='line'>   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+</span><span class='line'>   $(lsb_release -cs) \
+</span><span class='line'>   stable"
+</span><span class='line'>
+</span><span class='line'># update apt-get libraries again
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>
+</span><span class='line'># install docker
+</span><span class='line'>sudo apt-get install docker-ce
+</span><span class='line'>
+</span><span class='line'># validate install with version command
+</span><span class='line'>docker --version
+</span><span class='line'>
+</span><span class='line'># validating functionality by running a container
+</span><span class='line'>sudo docker run hello-world</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install docker-compose</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+</span><span class='line'>
+</span><span class='line'>sudo chmod +x /usr/local/bin/docker-compose</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install portainer as a GUI manager</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo docker image pull portainer/portainer
+</span><span class='line'>sudo docker image ls
+</span><span class='line'>
+</span><span class='line'>sudo docker container run -d \
+</span><span class='line'> -p 9000:9000 \
+</span><span class='line'> -v /var/run/docker.sock:/var/run/docker.sock \
+</span><span class='line'> portainer/portainer</span></code></pre></td></tr></table></div></figure>
+
+
+<p>useful command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo docker image pull hello-world
+</span><span class='line'>sudo docker image ls
+</span><span class='line'>
+</span><span class='line'>sudo docker container ps
+</span><span class='line'>sudo docker container ls -a
+</span><span class='line'>sudo docker container rm --force $(docker container ls --all --quiet) # remove all
+</span><span class='line'>sudo docker container run --detach --name web-server --rm nginx
+</span><span class='line'>sudo docker container run --detach -it --name web-server1 -p 80:80 nginx
+</span><span class='line'>sudo docker container run -it ubuntu bash
+</span><span class='line'>sudo docker container exec web-server1 cat /etc/debian_version
+</span><span class='line'>sudo docker container stop web-server
+</span><span class='line'>sudo docker container inspect web-server # docker detail
+</span><span class='line'>sudo docker container inspect --format '' web-server1 | jq
+</span><span class='line'>sudo docker container stats
+</span><span class='line'>sudo docker container stats web-server1 web-server2
+</span><span class='line'>
+</span><span class='line'>sudo docker search ubuntu
+</span><span class='line'>sudo docker volume  ls
+</span><span class='line'>sudo docker system info
+</span><span class='line'>sudo docker network ls 
+</span><span class='line'>
+</span><span class='line'>docker-compose start
+</span><span class='line'>docker-compose stop
+</span><span class='line'>docker-compose restart
+</span><span class='line'>docker-compose pause
+</span><span class='line'>docker-compose unpause</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[API Design Guide]]></title>
@@ -536,29 +693,6 @@ sudo nano /etc/rsync.secrets</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>uname -r</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Make Wget Multithreading?]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading/"/>
-    <updated>2017-09-01T14:58:41+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading</id>
-    <content type="html"><![CDATA[<p>try axel</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install axel
-</span><span class='line'>axel -a -n [Num_of_Thread] link1 link2 link3 ...
-</span><span class='line'># -a just show an improved progress bar.</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://askubuntu.com/questions/214018/how-to-make-wget-faster-or-multithreading</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Docker | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/docker/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2019-01-30T17:16:44+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install Docker in Ubuntu 16.04]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/"/>
+    <updated>2019-01-30T16:54:02+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04</id>
+    <content type="html"><![CDATA[<p>install docker
+```</p>
+
+<h1>install required packages</h1>
+
+<p>sudo apt-get install \
+   apt-transport-https \
+   ca-certificates \
+   curl \
+   software-properties-common</p>
+
+<h1>get the GPG key for docker</h1>
+
+<p>curl -fsSL <a href="https://download.docker.com/linux/ubuntu/gpg">https://download.docker.com/linux/ubuntu/gpg</a> | \
+   sudo apt-key add &ndash;</p>
+
+<h1>validating the docker GPG key is installed</h1>
+
+<p>sudo apt-key fingerprint 0EBFCD88</p>
+
+<h1>adding the docker repository</h1>
+
+<p>sudo add-apt-repository \
+   &ldquo;deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu">https://download.docker.com/linux/ubuntu</a> \
+   $(lsb_release -cs) \
+   stable&rdquo;</p>
+
+<h1>update apt-get libraries again</h1>
+
+<p>sudo apt-get update</p>
+
+<h1>install docker</h1>
+
+<p>sudo apt-get install docker-ce</p>
+
+<h1>validate install with version command</h1>
+
+<p>docker &mdash;version</p>
+
+<h1>validating functionality by running a container</h1>
+
+<p>sudo docker run hello-world
+```</p>
+
+<p>install docker-compose
+```
+sudo curl -L &ldquo;<a href="https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$">https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$</a>(uname -s)&ndash;$(uname -m)&rdquo; -o /usr/local/bin/docker-compose</p>
+
+<p>sudo chmod +x /usr/local/bin/docker-compose
+```</p>
+
+<p>install portainer as a GUI manager
+```
+sudo docker image pull portainer/portainer
+sudo docker image ls</p>
+
+<p>sudo docker container run -d \
+ -p 9000:9000 \
+ -v /var/run/docker.sock:/var/run/docker.sock \
+ portainer/portainer
+```</p>
+
+<p>useful command
+```
+sudo docker image pull hello-world
+sudo docker image ls</p>
+
+<p>sudo docker container ps
+sudo docker container ls -a
+sudo docker container rm &mdash;force $(docker container ls &mdash;all &mdash;quiet) # remove all
+sudo docker container run &mdash;detach &mdash;name web-server &mdash;rm nginx
+sudo docker container run &mdash;detach -it &mdash;name web-server1 -p 80:80 nginx
+sudo docker container run -it ubuntu bash
+sudo docker container exec web-server1 cat /etc/debian_version
+sudo docker container stop web-server
+sudo docker container inspect web-server # docker detail
+sudo docker container inspect &mdash;format &lsquo;&rsquo; web-server1 | jq
+sudo docker container stats
+sudo docker container stats web-server1 web-server2</p>
+
+<p>sudo docker search ubuntu
+sudo docker volume  ls
+sudo docker system info
+sudo docker network ls</p>
+
+<p>docker-compose start
+docker-compose stop
+docker-compose restart
+docker-compose pause
+docker-compose unpause
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
