@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Spring | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/spring/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-01-30T17:16:44+08:00</updated>
+  <updated>2019-03-21T14:58:15+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Spring JDBC Logging SQL With Log4j]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/"/>
+    <updated>2019-03-21T14:54:13+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j</id>
+    <content type="html"><![CDATA[<p><code>
+&lt;logger name="org.springframework.jdbc.core.JdbcTemplate"&gt;
+  &lt;level value="debug" /&gt;
+&lt;/logger&gt;
+&lt;logger name="org.springframework.jdbc.core.StatementCreatorUtils"&gt;
+  &lt;level value="trace" /&gt;
+&lt;/logger&gt;
+&lt;logger name="org.springframework.jdbc.datasource.DataSourceTransactionManager"&gt;
+  &lt;level value="debug" /&gt;
+&lt;/logger&gt;
+</code></p>
+
+<p><a href="https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j">https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Spring Websockets Broadcast Message to Clients]]></title>

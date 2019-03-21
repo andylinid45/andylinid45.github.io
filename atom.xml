@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-01-30T17:16:44+08:00</updated>
+  <updated>2019-03-21T14:58:15+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Spring JDBC Logging SQL With Log4j]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/"/>
+    <updated>2019-03-21T14:54:13+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;logger name="org.springframework.jdbc.core.JdbcTemplate"&gt;
+</span><span class='line'>  &lt;level value="debug" /&gt;
+</span><span class='line'>&lt;/logger&gt;
+</span><span class='line'>&lt;logger name="org.springframework.jdbc.core.StatementCreatorUtils"&gt;
+</span><span class='line'>  &lt;level value="trace" /&gt;
+</span><span class='line'>&lt;/logger&gt;
+</span><span class='line'>&lt;logger name="org.springframework.jdbc.datasource.DataSourceTransactionManager"&gt;
+</span><span class='line'>  &lt;level value="debug" /&gt;
+</span><span class='line'>&lt;/logger&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j">https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Docker in Ubuntu 16.04]]></title>
@@ -652,47 +681,6 @@ sudo nano /etc/rsync.secrets</p>
 </span><span class='line'>hello = tf.constant('Hello TensorFlow!')
 </span><span class='line'>sess = tf.Session()
 </span><span class='line'>print(sess.run(hello))</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Update Kernel in Ubuntu With Command Line]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/"/>
-    <updated>2017-09-04T10:59:48+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line</id>
-    <content type="html"><![CDATA[<p>check the kernel version</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>uname -r</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
-</span><span class='line'>apt-cache search linux-image</span></code></pre></td></tr></table></div></figure>
-
-
-<p>pick up a version, 4.11.0-14 for example</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install linux-image-4.11.0-14-generic linux-image-extra-4.11.0-14-generic  linux-headers-4.11.0-14-generic </span></code></pre></td></tr></table></div></figure>
-
-
-<p>need reboot after installed!</p>
-
-<p>remove the old kernels</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get autoremove</span></code></pre></td></tr></table></div></figure>
-
-
-<p>check the result</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>uname -r</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

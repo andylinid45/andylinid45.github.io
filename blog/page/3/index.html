@@ -9,13 +9,12 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="try axel 1
+  <meta name="description" content="check the kernel version 1
+uname -r 1
 2
-3
-sudo apt-get install axel
-axel -a -n [Num_of_Thread] link1 link2 link3 ...
-# -a just show an improved progress bar. 1
-http://askubuntu &hellip;">
+sudo apt-get update
+apt-cache search linux-image pick up a version, 4.11.0-14 for example 1
+sudo apt-get &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +84,74 @@ http://askubuntu &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/">Update Kernel in Ubuntu With Command Line</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-09-04T10:59:48+08:00" pubdate data-updated="true">Sep 4<span>th</span>, 2017</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>check the kernel version</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>uname -r</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
+</span><span class='line'>apt-cache search linux-image</span></code></pre></td></tr></table></div></figure>
+
+
+<p>pick up a version, 4.11.0-14 for example</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install linux-image-4.11.0-14-generic linux-image-extra-4.11.0-14-generic  linux-headers-4.11.0-14-generic </span></code></pre></td></tr></table></div></figure>
+
+
+<p>need reboot after installed!</p>
+
+<p>remove the old kernels</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get autoremove</span></code></pre></td></tr></table></div></figure>
+
+
+<p>check the result</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>uname -r</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -563,42 +630,6 @@ http://askubuntu &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/29/html5-cross-browser-polyfills/">HTML5 Cross Browser Polyfills</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-29T16:20:09+08:00" pubdate data-updated="true">Aug 29<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -613,11 +644,15 @@ http://askubuntu &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 144.21052631578948%'>java(14)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 112.63157894736842%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 112.63157894736842%'>spring(4)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 147.3684210526316%'>technical-review(15)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 147.3684210526316%'>java(15)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 112.63157894736842%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 147.3684210526316%'>technical-review(15)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/">Spring JDBC Logging SQL With Log4j</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/">Install Docker in Ubuntu 16.04</a>
@@ -633,10 +668,6 @@ http://askubuntu &hellip;">
     
       <li class="post">
         <a href="/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/">Spring Websockets Broadcast Message to Clients</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/10/11/configuration-of-the-rsync-daemon/">Configuration of the Rsync Daemon</a>
       </li>
     
   </ul>
