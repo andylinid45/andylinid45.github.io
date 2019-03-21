@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-03-21T14:58:15+08:00</updated>
+  <updated>2019-03-21T16:02:43+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Headless Browser for Web Scraping]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping/"/>
+    <updated>2019-03-21T16:00:38+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions">https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions</a>
+<a href="https://github.com/dhamaniasad/HeadlessBrowsers">https://github.com/dhamaniasad/HeadlessBrowsers</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[API Design Guide]]></title>
@@ -67,17 +77,6 @@ http://www.dpriver.com/pp/sqlformat.htm
 https://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html
 https://www.yegor256.com/2017/12/05/data-access-object.html
 https://www.yegor256.com/2014/10/03/di-containers-are-evil.html
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What Exactly Is RESTful Programming?]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming/"/>
-    <updated>2018-06-25T15:28:20+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming</id>
-    <content type="html"><![CDATA[<p><code>
-https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming
 </code></p>
 ]]></content>
   </entry>

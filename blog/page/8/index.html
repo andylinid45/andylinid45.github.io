@@ -9,7 +9,9 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="Beautiful, DRY, well-indented, clear markuphaml haml.info/&hellip; You can see how haml selling himself to you at his website. But after using haml &hellip;">
+  <meta name="description" content="backup 1
+mysqldump -u*** -p*** dbname &gt; backup`date +%F`.sql just some tables 1
+mysqldump -u*** -p*** dbname table1 table2&gt; backup`date +%F`. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +81,58 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/02/mysql-backup-and-restore/">Mysql Backup and Restore</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-02T17:44:37+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>backup</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysqldump -u*** -p*** dbname &gt; backup`date +%F`.sql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>just some tables</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysqldump -u*** -p*** dbname table1 table2&gt; backup`date +%F`.sql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>restore</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql -u*** -p*** dbname &lt; data.sql</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -656,124 +710,6 @@ I want to make things simple.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/03/using-rbenv-to-manage-ruby-versions/">Using Rbenv to Manage Ruby Versions Instead of Rvm</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-03T19:48:48+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>remove rvm first</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm implode</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install rbenv in ubuntu</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># use brew to install rbenv in osx
-</span><span class='line'>cd
-</span><span class='line'>git clone git://github.com/sstephenson/rbenv.git .rbenv
-</span><span class='line'>echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc  # .bash_profile in osx
-</span><span class='line'>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bashrc
-</span><span class='line'>exec $SHELL
-</span><span class='line'>
-</span><span class='line'>git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-</span><span class='line'>echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' &gt;&gt; ~/.bashrc # .bash_profile in osx
-</span><span class='line'>exec $SHELL
-</span><span class='line'>
-</span><span class='line'>sudo apt-get -y install curl git-core python-software-properties build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev
-</span><span class='line'>
-</span><span class='line'>rbenv install 2.1.0
-</span><span class='line'>rbenv global 2.1.0
-</span><span class='line'>ruby -v
-</span><span class='line'>
-</span><span class='line'>echo "gem: --no-ri --no-rdoc" &gt; ~/.gemrc</span></code></pre></td></tr></table></div></figure>
-
-
-<p>go to a exist project</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rbenv local 2.1.0  # create the .ruby-version file
-</span><span class='line'>
-</span><span class='line'>gem sources --remove https://rubygems.org/
-</span><span class='line'>gem sources -a http://ruby.taobao.org/
-</span><span class='line'>
-</span><span class='line'>gem install bundler # if you do not have bundler installed before
-</span><span class='line'>
-</span><span class='line'>rbenv rehash #Run this command after you install a new version of Ruby, or install a gem that provides commands
-</span><span class='line'>
-</span><span class='line'>bundle</span></code></pre></td></tr></table></div></figure>
-
-
-<p>fixed You Have Already Activated X but Your Gemfile Requires Y</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec ***</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://gorails.com/setup/ubuntu/13.10
-</span><span class='line'>https://github.com/ianheggie/rbenv-binstubs</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/9/">&larr; Older</a>
@@ -788,11 +724,15 @@ I want to make things simple.</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 147.3684210526316%'>java(15)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 112.63157894736842%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 147.3684210526316%'>technical-review(15)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 147.3684210526316%'>java(15)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 112.63157894736842%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 150.5263157894737%'>technical-review(16)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2019/03/21/headless-browser-for-web-scraping/">Headless Browser for Web Scraping</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/">Spring JDBC Logging SQL With Log4j</a>
@@ -808,10 +748,6 @@ I want to make things simple.</p>
     
       <li class="post">
         <a href="/blog/2018/12/06/use-nvm-to-install-nodejs/">Use Nvm to Install Nodejs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/">Spring Websockets Broadcast Message to Clients</a>
       </li>
     
   </ul>

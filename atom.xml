@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-03-21T14:58:15+08:00</updated>
+  <updated>2019-03-21T16:02:43+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Headless Browser for Web Scraping]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping/"/>
+    <updated>2019-03-21T16:00:38+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions">https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions</a>
+<a href="https://github.com/dhamaniasad/HeadlessBrowsers">https://github.com/dhamaniasad/HeadlessBrowsers</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Spring JDBC Logging SQL With Log4j]]></title>
@@ -617,71 +627,6 @@ sudo nano /etc/rsync.secrets</p>
 
 <p>ref:
 <a href="https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn">https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Tensorflow Gpu in Ubuntu 16]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/09/04/install-tensorflow-gpu-in-ubuntu-16/"/>
-    <updated>2017-09-04T17:35:28+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/09/04/install-tensorflow-gpu-in-ubuntu-16</id>
-    <content type="html"><![CDATA[<p>download cuda and install</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#https://developer.nvidia.com/cuda-downloads
-</span><span class='line'>sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get install cuda</span></code></pre></td></tr></table></div></figure>
-
-
-<p>download cuDNN and install(cuDNN version depends on your tensorflow version, cuDNN v6 if on TF v1.3)</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#https://developer.nvidia.com/cudnn
-</span><span class='line'>sudo dpkg -i libcudnn5_5.1.10-1+cuda8.0_amd64.deb
-</span><span class='line'>sudo dpkg -i libcudnn5-dev_5.1.10-1+cuda8.0_amd64.deb</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install libcupti-dev
-</span><span class='line'>pip install 'tensorflow-gpu==1.3.0'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>if &ldquo;libEGL.so.1 is not a symbolic link&rdquo;, and run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mv /usr/lib/nvidia-375/libEGL.so.1 /usr/lib/nvidia-375/libEGL.so.1.org
-</span><span class='line'>sudo mv /usr/lib32/nvidia-375/libEGL.so.1 /usr/lib32/nvidia-375/libEGL.so.1.org
-</span><span class='line'>sudo ln -s /usr/lib/nvidia-375/libEGL.so.375.39 /usr/lib/nvidia-375/libEGL.so.1
-</span><span class='line'>sudo ln -s /usr/lib32/nvidia-375/libEGL.so.375.39 /usr/lib32/nvidia-375/libEGL.so.1</span></code></pre></td></tr></table></div></figure>
-
-
-<p>verify your installation</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>tensorflow # if you are using virtualenv
-</span><span class='line'>python
-</span><span class='line'>import tensorflow as tf
-</span><span class='line'>hello = tf.constant('Hello TensorFlow!')
-</span><span class='line'>sess = tf.Session()
-</span><span class='line'>print(sess.run(hello))</span></code></pre></td></tr></table></div></figure>
-
 ]]></content>
   </entry>
   
