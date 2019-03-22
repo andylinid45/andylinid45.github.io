@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-03-21T16:02:43+08:00</updated>
+  <updated>2019-03-22T10:11:14+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Storing Hierarchical Data in a Database]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database/"/>
+    <updated>2019-03-22T10:07:54+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database</id>
+    <content type="html"><![CDATA[<p><a href="https://www.sitepoint.com/hierarchical-data-database-2/">https://www.sitepoint.com/hierarchical-data-database-2/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Headless Browser for Web Scraping]]></title>
@@ -65,19 +74,6 @@ http://www.dpriver.com/pp/sqlformat.htm
 <p><a href="https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now">https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now</a></p>
 
 <p>```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Anti-Patterns in OOP]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop/"/>
-    <updated>2018-06-25T15:41:25+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop</id>
-    <content type="html"><![CDATA[<p><code>
-https://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html
-https://www.yegor256.com/2017/12/05/data-access-object.html
-https://www.yegor256.com/2014/10/03/di-containers-are-evil.html
-</code></p>
 ]]></content>
   </entry>
   

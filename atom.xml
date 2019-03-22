@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-03-21T16:02:43+08:00</updated>
+  <updated>2019-03-22T10:11:14+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Storing Hierarchical Data in a Database]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database/"/>
+    <updated>2019-03-22T10:07:54+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database</id>
+    <content type="html"><![CDATA[<p><a href="https://www.sitepoint.com/hierarchical-data-database-2/">https://www.sitepoint.com/hierarchical-data-database-2/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Headless Browser for Web Scraping]]></title>
@@ -609,24 +618,6 @@ sudo nano /etc/rsync.secrets</p>
 </span><span class='line'>
 </span><span class='line'>https://start.spring.io/</span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TensorFlow vs SciKit Learn]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn/"/>
-    <updated>2017-09-07T14:55:28+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn</id>
-    <content type="html"><![CDATA[<ul>
-<li>TensorFlow is more low-level;</li>
-<li>Scikit-learn offers you off-the-shelf algorithms, e.g., algorithms for classification such as SVMs, Random Forests, Logistic Regression</li>
-<li>Scikit-learn does not support GPU at this time. <a href="http://scikit-learn.org/stable/faq.html#will-you-add-gpu-support">http://scikit-learn.org/stable/faq.html#will-you-add-gpu-support</a></li>
-<li>Skflow: Simplified interface for TensorFlow (mimicking Scikit Learn) for Deep Learning. SkFlow has been moved to Tensorflow. <a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn">https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn</a></li>
-</ul>
-
-
-<p>ref:
-<a href="https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn">https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn</a></p>
 ]]></content>
   </entry>
   
