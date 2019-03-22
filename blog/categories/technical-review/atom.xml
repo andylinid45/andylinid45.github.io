@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-03-22T10:11:14+08:00</updated>
+  <updated>2019-03-22T11:52:59+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation/"/>
+    <updated>2019-03-22T11:46:10+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
+<a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
+<a href="https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query">https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Storing Hierarchical Data in a Database]]></title>
@@ -56,24 +67,6 @@ https://github.com/Microsoft/api-guidelines
 https://www.sqlstyle.guide/
 http://www.dpriver.com/pp/sqlformat.htm
 </code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What Are the Applications of Machine Learning in the E-commerce Industry?]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/"/>
-    <updated>2018-06-29T10:24:00+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry</id>
-    <content type="html"><![CDATA[<p>```
-<a href="https://www.quora.com/What-are-the-applications-of-machine-learning-in-the-e-commerce-industry-Which-ML-algorithms-and-techniques-are-used">https://www.quora.com/What-are-the-applications-of-machine-learning-in-the-e-commerce-industry-Which-ML-algorithms-and-techniques-are-used</a></p>
-
-<p><a href="https://www.quora.com/Revenue-management-and-pricing-What-machine-learning-techniques-are-used-in-revenue-management-and-pricing">https://www.quora.com/Revenue-management-and-pricing-What-machine-learning-techniques-are-used-in-revenue-management-and-pricing</a></p>
-
-<p><a href="https://www.quora.com/Which-algorithms-are-used-in-recommender-systems">https://www.quora.com/Which-algorithms-are-used-in-recommender-systems</a></p>
-
-<p><a href="https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now">https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now</a></p>
-
-<p>```</p>
 ]]></content>
   </entry>
   

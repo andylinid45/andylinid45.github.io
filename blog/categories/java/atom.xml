@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-03-22T10:11:14+08:00</updated>
+  <updated>2019-03-22T11:52:59+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation/"/>
+    <updated>2019-03-22T11:46:10+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
+<a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
+<a href="https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query">https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Spring JDBC Logging SQL With Log4j]]></title>
@@ -89,17 +100,6 @@ https://stackoverflow.com/questions/33744875/spring-boot-how-to-log-all-requests
     <id>http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc</id>
     <content type="html"><![CDATA[<p><code>
 https://plumbr.io/blog/garbage-collection/minor-gc-vs-major-gc-vs-full-gc
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Spring JDBC Is Not Logging SQL With Log4j]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/"/>
-    <updated>2018-06-25T15:54:41+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j</id>
-    <content type="html"><![CDATA[<p><code>
-https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j
 </code></p>
 ]]></content>
   </entry>
