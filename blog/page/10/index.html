@@ -25,13 +25,8 @@
 14
 15
 16
-17
-18
-19
-20
-rake db:drop RAILS_ENV=development
-rake db:drop RAILS_ENV=production
-rake db:drop rake db:create &hellip;">
+gem install padrino padrino g project my_project padrino s # padrino start
+padrino c http://127.0.0.1:3000 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -101,6 +96,76 @@ rake db:drop rake db:create &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/02/padrino-command/">Padrino Command</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T20:22:01+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install padrino
+</span><span class='line'>
+</span><span class='line'>padrino g project my_project
+</span><span class='line'>
+</span><span class='line'>padrino s # padrino start
+</span><span class='line'>padrino c
+</span><span class='line'>
+</span><span class='line'>http://127.0.0.1:3000
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>padrino g controller Post get: index get: show
+</span><span class='line'>padrino g model Post title: string body: text
+</span><span class='line'>padrino g plugin better_error
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>padrino rake routes</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -779,89 +844,6 @@ login your server and</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/using-capistrano/">Using Capistrano</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:21:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>add gem</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem "capistrano"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>cd project folder</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>capify .</span></code></pre></td></tr></table></div></figure>
-
-
-<p>setup need to run in the first time</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cap deploy:setup</span></code></pre></td></tr></table></div></figure>
-
-
-<p>next time, just need to run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cap deploy</span></code></pre></td></tr></table></div></figure>
-
-
-<p>cap your_task
-cap -T
-cap -vT</p>
-
-<p>this need to config in deploy.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>set :application, ""
-</span><span class='line'>set :repository,  ""
-</span><span class='line'>set :scm, :git
-</span><span class='line'>set :deploy_to, "/var/www/#{application}"
-</span><span class='line'>set :user, ""
-</span><span class='line'>set :port, 
-</span><span class='line'>server "your_server.com", :app, :web</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="https://github.com/capistrano/capistrano/wiki/2.x-Getting-Started">https://github.com/capistrano/capistrano/wiki/2.x-Getting-Started</a>
-<a href="https://github.com/capistrano/capistrano/wiki/2.x-From-The-Beginning">https://github.com/capistrano/capistrano/wiki/2.x-From-The-Beginning</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/11/">&larr; Older</a>
@@ -876,11 +858,15 @@ cap -vT</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 150.5263157894737%'>java(16)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 112.63157894736842%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 156.8421052631579%'>technical-review(18)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 153.68421052631578%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 112.63157894736842%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 160.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/">Double vs BigDecimal in Financial Programming</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2019/03/22/using-mybatis-with-annotation/">Using Mybatis With Annotation</a>
@@ -896,10 +882,6 @@ cap -vT</p>
     
       <li class="post">
         <a href="/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/">Spring JDBC Logging SQL With Log4j</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/">Install Docker in Ubuntu 16.04</a>
       </li>
     
   </ul>

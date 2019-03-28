@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-03-22T11:52:59+08:00</updated>
+  <updated>2019-03-28T15:52:46+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Double vs BigDecimal in Financial Programming]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/"/>
+    <updated>2019-03-28T15:45:29+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming</id>
+    <content type="html"><![CDATA[<p><code>
+https://www.reddit.com/r/java/comments/8la803/double_vs_bigdecimal_in_financial_programming/
+https://stackoverflow.com/questions/3413448/double-vs-bigdecimal
+https://stackoverflow.com/questions/3866514/why-bigdecimal5-50-not-equals-to-bigdecimal5-5-and-how-to-work-around-th
+https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
@@ -89,17 +103,6 @@ logging.level.org.zalando.logbook: TRACE
 <p><code>
 https://github.com/zalando/logbook
 https://stackoverflow.com/questions/33744875/spring-boot-how-to-log-all-requests-and-responses-with-exceptions-in-single-pl
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Minor GC vs Major GC vs Full GC]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc/"/>
-    <updated>2018-06-29T10:06:09+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc</id>
-    <content type="html"><![CDATA[<p><code>
-https://plumbr.io/blog/garbage-collection/minor-gc-vs-major-gc-vs-full-gc
 </code></p>
 ]]></content>
   </entry>

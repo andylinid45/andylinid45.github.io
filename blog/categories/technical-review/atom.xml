@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-03-22T11:52:59+08:00</updated>
+  <updated>2019-03-28T15:52:46+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Double vs BigDecimal in Financial Programming]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/"/>
+    <updated>2019-03-28T15:45:29+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming</id>
+    <content type="html"><![CDATA[<p><code>
+https://www.reddit.com/r/java/comments/8la803/double_vs_bigdecimal_in_financial_programming/
+https://stackoverflow.com/questions/3413448/double-vs-bigdecimal
+https://stackoverflow.com/questions/3866514/why-bigdecimal5-50-not-equals-to-bigdecimal5-5-and-how-to-work-around-th
+https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
@@ -54,18 +68,6 @@ https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf
 https://cloud.google.com/apis/design/
 https://google.github.io/styleguide/jsoncstyleguide.xml
 https://github.com/Microsoft/api-guidelines
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SQL Style Guide]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/09/12/sql-style-guide/"/>
-    <updated>2018-09-12T15:49:34+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/09/12/sql-style-guide</id>
-    <content type="html"><![CDATA[<p><code>
-https://www.sqlstyle.guide/
-http://www.dpriver.com/pp/sqlformat.htm
 </code></p>
 ]]></content>
   </entry>

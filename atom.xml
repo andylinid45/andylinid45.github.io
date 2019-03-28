@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2019-03-22T11:52:59+08:00</updated>
+  <updated>2019-03-28T15:52:46+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Double vs BigDecimal in Financial Programming]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/"/>
+    <updated>2019-03-28T15:45:29+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.reddit.com/r/java/comments/8la803/double_vs_bigdecimal_in_financial_programming/
+</span><span class='line'>https://stackoverflow.com/questions/3413448/double-vs-bigdecimal
+</span><span class='line'>https://stackoverflow.com/questions/3866514/why-bigdecimal5-50-not-equals-to-bigdecimal5-5-and-how-to-work-around-th
+</span><span class='line'>https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
@@ -591,17 +608,6 @@ sudo nano /etc/rsync.secrets</p>
 
 
 <p>use <a href="https://projectlombok.org/">https://projectlombok.org/</a>   for help</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Best Way to Store Password in Database]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/21/best-way-to-store-password-in-database/"/>
-    <updated>2018-06-21T15:12:33+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/21/best-way-to-store-password-in-database</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/1054022/best-way-to-store-password-in-database</span></code></pre></td></tr></table></div></figure>
-
 ]]></content>
   </entry>
   
