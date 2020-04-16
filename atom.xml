@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2020-04-17T01:13:50+08:00</updated>
+  <updated>2020-04-17T01:46:26+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setup Wireguard]]></title>
+    <link href="http://andylinid45.github.io/blog/2020/04/17/setup-wireguard/"/>
+    <updated>2020-04-17T01:23:51+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2020/04/17/setup-wireguard</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#install wireguard server in ubuntu 18
+</span><span class='line'>https://github.com/l-n-s/wireguard-install</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#client side config
+</span><span class='line'>#copy config file to /etc/wireguard/mywg.conf
+</span><span class='line'>sudo wg-quick up mywg  
+</span><span class='line'>sudo wg show
+</span><span class='line'>#sudo wg-quick down mywg</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#wireguard is faster than openvpn
+</span><span class='line'>https://github.com/pirate/wireguard-docs</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setup Openvpn]]></title>
@@ -601,17 +636,6 @@ sudo nano /etc/rsync.secrets</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html
 </span><span class='line'>https://www.yegor256.com/2017/12/05/data-access-object.html
 </span><span class='line'>https://www.yegor256.com/2014/10/03/di-containers-are-evil.html</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What Exactly Is RESTful Programming?]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming/"/>
-    <updated>2018-06-25T15:28:20+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

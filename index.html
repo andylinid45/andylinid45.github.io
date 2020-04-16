@@ -11,11 +11,14 @@
   
   <meta name="description" content="1
 2
-#install in ubuntu 18 server
-https://github.com/angristan/openvpn-install 1
+#install wireguard server in ubuntu 18
+https://github.com/l-n-s/wireguard-install 1
 2
-#install client in osx 10.9
-https://tunnelblick.net/ ">
+3
+4
+5
+#client side config
+#copy config file to /etc/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +88,68 @@ https://tunnelblick.net/ ">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2020/04/17/setup-wireguard/">Setup Wireguard</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2020-04-17T01:23:51+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2020</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#install wireguard server in ubuntu 18
+</span><span class='line'>https://github.com/l-n-s/wireguard-install</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#client side config
+</span><span class='line'>#copy config file to /etc/wireguard/mywg.conf
+</span><span class='line'>sudo wg-quick up mywg  
+</span><span class='line'>sudo wg show
+</span><span class='line'>#sudo wg-quick down mywg</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#wireguard is faster than openvpn
+</span><span class='line'>https://github.com/pirate/wireguard-docs</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -632,54 +697,6 @@ https://tunnelblick.net/ ">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/">Spring Websockets Broadcast Message to Clients</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-10-19T11:06:12+08:00" pubdate data-updated="true">Oct 19<span>th</span>, 2018</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets">https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets</a></p>
-
-<p>ref</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://spring.io/guides/gs/messaging-stomp-websocket/
-</span><span class='line'>https://www.sitepoint.com/implementing-spring-websocket-server-and-client/
-</span><span class='line'>https://github.com/jaysridhar/spring-websocket-server
-</span><span class='line'>https://github.com/jaysridhar/spring-websocket-client</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -692,11 +709,15 @@ https://tunnelblick.net/ ">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 153.68421052631578%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 115.78947368421052%'>production(5)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 160.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 153.68421052631578%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 118.94736842105263%'>production(6)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 160.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2020/04/17/setup-wireguard/">Setup Wireguard</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2020/04/16/setup-openvpn/">Setup Openvpn</a>
@@ -712,10 +733,6 @@ https://tunnelblick.net/ ">
     
       <li class="post">
         <a href="/blog/2019/03/22/storing-hierarchical-data-in-a-database/">Storing Hierarchical Data in a Database</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2019/03/21/headless-browser-for-web-scraping/">Headless Browser for Web Scraping</a>
       </li>
     
   </ul>

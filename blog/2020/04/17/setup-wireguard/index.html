@@ -5,12 +5,20 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Find Process by Name in Bash - Andy Lin</title>
+  <title>Setup Wireguard - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
   <meta name="description" content="1
-ps aux|grep sshd ">
+2
+#install wireguard server in ubuntu 18
+https://github.com/l-n-s/wireguard-install 1
+2
+3
+4
+5
+#client side config
+#copy config file to /etc/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +27,7 @@ ps aux|grep sshd ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/09/27/find-process-by-name-in-bash">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2020/04/17/setup-wireguard">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -83,7 +91,7 @@ ps aux|grep sshd ">
   
   <header>
     
-      <h1 class="entry-title">Find Process by Name in Bash</h1>
+      <h1 class="entry-title">Setup Wireguard</h1>
     
     
       <p class="meta">
@@ -99,7 +107,7 @@ ps aux|grep sshd ">
   
 
 
-<time datetime="2014-09-27T22:05:47+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+<time datetime="2020-04-17T01:23:51+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2020</time>
         
       </p>
     
@@ -107,7 +115,31 @@ ps aux|grep sshd ">
 
 
 <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ps aux|grep sshd</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#install wireguard server in ubuntu 18
+</span><span class='line'>https://github.com/l-n-s/wireguard-install</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#client side config
+</span><span class='line'>#copy config file to /etc/wireguard/mywg.conf
+</span><span class='line'>sudo wg-quick up mywg  
+</span><span class='line'>sudo wg show
+</span><span class='line'>#sudo wg-quick down mywg</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#wireguard is faster than openvpn
+</span><span class='line'>https://github.com/pirate/wireguard-docs</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -131,12 +163,12 @@ ps aux|grep sshd ">
   
 
 
-<time datetime="2014-09-27T22:05:47+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+<time datetime="2020-04-17T01:23:51+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2020</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/bash/'>bash</a>
+    <a class='category' href='/blog/categories/production/'>production</a>
   
 </span>
 
@@ -152,10 +184,8 @@ ps aux|grep sshd ">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/09/25/ruby-on-rails-development-setup-for-osx/" title="Previous Post: Ruby on Rails development setup for OSX">&laquo; Ruby on Rails development setup for OSX</a>
+        <a class="basic-alignment left" href="/blog/2020/04/16/setup-openvpn/" title="Previous Post: setup openvpn">&laquo; setup openvpn</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/09/27/generate-several-random-passwords-in-bash/" title="Next Post: generate several random passwords in bash">generate several random passwords in bash &raquo;</a>
       
     </p>
   </footer>
