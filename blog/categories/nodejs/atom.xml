@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Nodejs | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/nodejs/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2020-04-17T00:10:54+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Use Nvm to Install Nodejs]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/12/06/use-nvm-to-install-nodejs/"/>
+    <updated>2018-12-06T13:52:57+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/12/06/use-nvm-to-install-nodejs</id>
+    <content type="html"><![CDATA[<p>```
+curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh">https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh</a> | bash</p>
+
+<h1>and exit terminal</h1>
+
+<p>nvm ls-remote
+nvm install v10.14.1
+node -v
+npm -v</p>
+
+<p><a href="https://github.com/creationix/nvm/blob/master/README.md">https://github.com/creationix/nvm/blob/master/README.md</a>
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

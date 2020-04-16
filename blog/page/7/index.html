@@ -9,24 +9,8 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-gem install padrino padrino g project my_project padrino s # padrino start
-padrino c http://127.0.0.1:3000 &hellip;">
+  <meta name="description" content="Sendmail and Postfix are programs that send mail in Unix link OS. Postfix is better because it is newer.
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -40,8 +24,8 @@ padrino c http://127.0.0.1:3000 &hellip;">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/libs/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -102,7 +86,7 @@ padrino c http://127.0.0.1:3000 &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/02/padrino-command/">Padrino Command</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/12/22/sendmail-vs-postfix/">Sendmail vs Postfix</a></h1>
     
     
       <p class="meta">
@@ -118,47 +102,67 @@ padrino c http://127.0.0.1:3000 &hellip;">
   
 
 
-<time datetime="2014-03-02T20:22:01+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-12-22T17:21:18+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install padrino
-</span><span class='line'>
-</span><span class='line'>padrino g project my_project
-</span><span class='line'>
-</span><span class='line'>padrino s # padrino start
-</span><span class='line'>padrino c
-</span><span class='line'>
-</span><span class='line'>http://127.0.0.1:3000
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>padrino g controller Post get: index get: show
-</span><span class='line'>padrino g model Post title: string body: text
-</span><span class='line'>padrino g plugin better_error
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>padrino rake routes</span></code></pre></td></tr></table></div></figure>
+  <div class="entry-content"><p>Sendmail and Postfix are programs that send mail in Unix link OS.</p>
+
+<p>Postfix is better because it is newer.</p>
+</div>
+  
+  
 
 
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/01/id-naming/">Id Naming</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-01T15:19:17+08:00" pubdate data-updated="true">Nov 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>html css</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>this-is-my-id</span></code></pre></td></tr></table></div></figure>
+
+
+<p>javascript</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>thisIsMyId</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ruby</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>this_is_my_id</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -172,7 +176,7 @@ padrino c http://127.0.0.1:3000 &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/02/rails-command/">Rails Command</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/10/27/ubuntu-14-dot-04-server-initial/">Ubuntu 14.04 Server Initial</a></h1>
     
     
       <p class="meta">
@@ -188,7 +192,77 @@ padrino c http://127.0.0.1:3000 &hellip;">
   
 
 
-<time datetime="2014-03-02T20:17:46+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-10-27T00:01:07+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>login as root</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>adduser deploy
+</span><span class='line'>
+</span><span class='line'>echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
+</span><span class='line'>
+</span><span class='line'>nano /etc/ssh/sshd_config 
+</span><span class='line'># edit two lines
+</span><span class='line'>PermitRootLogin no
+</span><span class='line'>PasswordAuthentication no 
+</span><span class='line'>
+</span><span class='line'>service ssh restart  # do not use , no use /etc/init.d/ssh  restart 
+</span><span class='line'>
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in local</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id deploy@ip</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/10/21/dot-files-in-osx/">Dot Files in Osx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-21T20:45:33+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2014</time>
         
       </p>
     
@@ -213,630 +287,386 @@ padrino c http://127.0.0.1:3000 &hellip;">
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir ~/.ssh
+</span><span class='line'>sudo cp /Users/andy/.ssh/id_rsa  ~/.ssh
+</span><span class='line'>sudo cp /Users/andy/.ssh/id_rsa.pub  ~/.ssh
+</span><span class='line'>
+</span><span class='line'>sudo cp /Users/andy/.gitconfig ~
+</span><span class='line'>sudo cp /Users/andy/.gitignore ~
+</span><span class='line'>
+</span><span class='line'>echo "
+</span><span class='line'>alias ll='ls -alF'
+</span><span class='line'>alias la='ls -A'
+</span><span class='line'>alias l='ls -CF'
+</span><span class='line'>export PS1='\u@\h:\w$ '
+</span><span class='line'>export CLICOLOR=1
+</span><span class='line'>export GREP_OPTIONS='--color=auto' " &gt;&gt; ~/.bash_profile
+</span><span class='line'>
+</span><span class='line'>sudo chown  -R new_user  ~/.ssh
+</span><span class='line'>sudo chown new_user ~/.gitconfig 
+</span><span class='line'>sudo chown new_user ~/.gitignore</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/29/using-pry-to-debug-in-rails-project/">Using Pry to Debug in Rails Project</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-29T16:56:49+08:00" pubdate data-updated="true">Sep 29<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>gem &lsquo;pry-rails&rsquo;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>binding.pry
+</span><span class='line'>cd 
+</span><span class='line'>ls</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/27/usb-in-virtualbox/">Usb in Virtualbox</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-27T22:23:32+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>ubuntu 14.04 , virtualbox 4.3</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo adduser yourusername vboxusers</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You HAVE to logout/login from your session, NOT just restart Virtual Box, after the group change.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/27/setup-pptpserver-in-ubuntu/">Setup PPTPServer in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-27T22:19:50+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>all the same, tested with Ubuntu 14.4 Server</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://help.ubuntu.com/community/PPTPServer</span></code></pre></td></tr></table></div></figure>
+
+
+<p>debuging, both in server side and client side</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo tail -f /var/log/syslog</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in client side</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Gateway : You ip address of pptp server Or FDDN ( Fully Qualified Domain Name )
+</span><span class='line'>User Name
+</span><span class='line'>Password
+</span><span class='line'>Click on Advanced
+</span><span class='line'>Click on " Use point to point encryption " Click OK & Save</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/27/generate-several-random-passwords-in-bash/">Generate Several Random Passwords in Bash</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-27T22:07:35+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install apg
+</span><span class='line'>apg -m 16</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/27/find-process-by-name-in-bash/">Find Process by Name in Bash</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-27T22:05:47+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ps aux|grep sshd</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/25/ruby-on-rails-development-setup-for-osx/">Ruby on Rails Development Setup for OSX</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-25T02:13:09+08:00" pubdate data-updated="true">Sep 25<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Install Command Line Tools</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>xcode-select --install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install brew
+<a href="http://brew.sh/">http://brew.sh/</a></p>
+
+<p>install ruby</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install rbenv ruby-build rbenv-gem-rehash
+</span><span class='line'>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bash_profile
+</span><span class='line'>source ~/.bash_profile
+</span><span class='line'>
+</span><span class='line'># Install Ruby 2.1.3 and set it as the default version
+</span><span class='line'>rbenv install 2.1.3
+</span><span class='line'>rbenv global 2.1.3
+</span><span class='line'>
+</span><span class='line'>ruby -v
+</span><span class='line'># ruby 2.1.3</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install rails</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo "gem: --no-document" &gt;&gt; ~/.gemrc
+</span><span class='line'>gem install rails
+</span><span class='line'>rbenv rehash
+</span><span class='line'>rails -v</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install database</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
 <span class='line-number'>19</span>
 <span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:drop RAILS_ENV=development
-</span><span class='line'>rake db:drop RAILS_ENV=production
-</span><span class='line'>rake db:drop 
-</span><span class='line'>rake db:create 
-</span><span class='line'>rake db:migrate 
-</span><span class='line'>rake db:seed
-</span><span class='line'>rake db:reset  #db:setup =&gt; db:create db:schema:load db:seed
-</span><span class='line'>rake db:test:load
-</span><span class='line'>rake db:test:prepare
-</span><span class='line'>rake routes
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install sqlite3
 </span><span class='line'>
-</span><span class='line'>integer
-</span><span class='line'>string
-</span><span class='line'>datetime
-</span><span class='line'>text
+</span><span class='line'>brew install mysql
 </span><span class='line'>
-</span><span class='line'>rails generate scaffold user email:string name:string password:string
-</span><span class='line'>rails generate controller user info
-</span><span class='line'>rails generate model Site address:string  url:string
-</span><span class='line'>rails generate migration AddAvailable available:boolean</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/nginx-and-unicorn/">Nginx and Unicorn</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:44:27+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>nginx</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/nginx start
-</span><span class='line'>sudo /etc/init.d/nginx restart</span></code></pre></td></tr></table></div></figure>
-
-
-<p>config files</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/etc/nginx/sites-enabled/
-</span><span class='line'>/etc/nginx/sites-available/ </span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/share/doc/nginx-doc/examples/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>logs</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>more /var/log/nginx/access.log
-</span><span class='line'>more /var/log/nginx/error.log</span></code></pre></td></tr></table></div></figure>
-
-
-<p>default site</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ls /usr/share/nginx/www</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://wiki.nginx.org/Pitfalls
-</span><span class='line'>http://wiki.nginx.org/QuickStart
-</span><span class='line'>http://wiki.nginx.org/Configuration</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>unicorn</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem "unicorn"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>unicorn -c unicorn.rb -E production </span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://unicorn.bogomips.org/unicorn_1.html
-</span><span class='line'>http://unicorn.bogomips.org/Unicorn/Configurator.html</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/virtualbox-win8-screen-resolution/">Virtualbox Win7 Screen Resolution</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:41:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>run (in ubuntu)</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/VBoxManage setextradata win7 CustomVideoMode1 1366x768x32</span></code></pre></td></tr></table></div></figure>
-
-
-<p>(unnecessary in virtualbox 4.3 after installed Extension Pack)</p>
-
-<p>only run (in OSX)</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>vboxmanage setextradata "win7" "CustomVideoMode1" "1440x900x32"</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/using-backup-gem-to-backup-ubuntu/">Using &#8216;Backup&#8217; Gem to Backup Ubuntu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:39:16+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install backup
+</span><span class='line'># To have launchd start mysql at login:
+</span><span class='line'>ln -sfv /usr/local/opt/mysql/*plist ~/Library/LaunchAgents
 </span><span class='line'>
-</span><span class='line'>backup generate:model --trigger andy --storages=local --compressors=gzip --archives --no-splitter</span></code></pre></td></tr></table></div></figure>
-
-
-<p>run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>backup perform --trigger andy --root-path "~/.backups/" --config_file '/home/andy/code/bash/backup/config.rb'</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/fixed-heroku-rails4-assets-not-found/">Fixed Heroku Rails4 Assets Not Found</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:37:25+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails_12factor', group: :production</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/do-not-use-the-column-name-type/">Do Not Use the Column Name &#8216;Type&#8217;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:35:56+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>or you need to manually set the column name to something pointless:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>self.inheritance_column = :_type_disabled</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/switching-git-server/">Switching Git Server</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:34:29+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git remote -v
+</span><span class='line'># Then to load mysql now:
+</span><span class='line'>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 </span><span class='line'>
-</span><span class='line'>git branch
+</span><span class='line'># or start manual
+</span><span class='line'>brew services start mysql
 </span><span class='line'>
-</span><span class='line'>git remote add bitbucket git@bitbucket.org:&lt;&lt;username&gt;&gt;/&lt;&lt;repo&gt;&gt;
 </span><span class='line'>
-</span><span class='line'>git remote rm origin
+</span><span class='line'>brew install postgresql
 </span><span class='line'>
-</span><span class='line'>git remote rename bitbucket origin
+</span><span class='line'># To have launchd start postgresql at login:
+</span><span class='line'>ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents
 </span><span class='line'>
-</span><span class='line'>git push -u origin --all</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
+</span><span class='line'># Then to load postgresql now:
+</span><span class='line'>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+</span></code></pre></td></tr></table></div></figure>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/useful-gems/">Useful Gems</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:27:35+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>great gems</p>
+<p>install git</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'devise'
-</span><span class='line'>gem 'haml'
-</span><span class='line'>gem 'rabl' # for building rest api
-</span><span class='line'>gem "capistrano"
-</span><span class='line'>gem 'capistrano-nginx-unicorn', require: false, group: :development
-</span><span class='line'>https://github.com/AF83/capistrano-af83</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install git</span></code></pre></td></tr></table></div></figure>
 
 
-<p>view</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem "rails_autolink"
-</span><span class='line'>gem 'rinku' # replacement for auto_link
-</span><span class='line'>gem 'best_in_place'
-</span><span class='line'>gem 'draper', '~&gt; 1.0' # Decorator for View Models for Rails
-</span><span class='line'>gem 'exception_notification_rails3'
-</span><span class='line'>gem 'jquery-rails'
-</span><span class='line'>gem 'jquery-ui-rails'
-</span><span class='line'>gem 'fancybox-rails'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>db</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails_admin', :git =&gt; 'git://github.com/sferik/rails_admin.git'
-</span><span class='line'>gem 'foreigner'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>debug</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'pry'
-</span><span class='line'>gem 'pry-nav'
-</span><span class='line'>gem 'pry-rails'
-</span><span class='line'>gem 'pry-stack_explorer'
-</span><span class='line'>gem "awesome_print"  # https://github.com/michaeldv/awesome_print</span></code></pre></td></tr></table></div></figure>
-
-
-<p>search</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'sunspot_rails' # full text search
-</span><span class='line'>gem 'sunspot_solr'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>server</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'unicorn'
-</span><span class='line'>gem 'thin'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>other framework</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'sinatra'
-</span><span class='line'>gem "padrino" # http://www.padrinorb.com/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>pdf</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'pdfkit'
-</span><span class='line'>gem 'wicked_pdf'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>tools</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'quiet_assets' 
-</span><span class='line'>gem 'annotate' 
-</span><span class='line'>gem "better_errors"
-</span><span class='line'>gem 'rails-dev-tweaks', '~&gt; 0.6.1' #improve your Rails (3.1+) development experience.
-</span><span class='line'>gem "rails-erd"  #Generate Entity-Relationship Diagrams for Rails applications
-</span><span class='line'>gem "settingslogic" # for setting global var
-</span><span class='line'>gem 'garb'
-</span><span class='line'>gem "nokogiri"
-</span><span class='line'>gem "backup"
-</span><span class='line'>gem "money"
-</span><span class='line'>gem 'money-rails'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>exception_notification</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/smartinez87/exception_notification</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Keeping Track of Who Did What</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/collectiveidea/audited
-</span><span class='line'>https://github.com/airblade/paper_trail</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Google analytics Api</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/chrisle/gattica
-</span><span class='line'>https://github.com/robmckinnon/rugalytics
-</span><span class='line'>https://www.ruby-toolbox.com/categories/Web_Analytics </span></code></pre></td></tr></table></div></figure>
-
-
-<p>word</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem "harmonious_dictionary"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>google map</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem "googlestaticmap"
-</span><span class='line'>gem 'gmaps4rails'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>js dependency management</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/rharriso/bower-rails/
-</span><span class='line'>https://github.com/bower/bower
-</span><span class='line'>https://github.com/sstephenson/sprockets
-</span><span class='line'>#http://dev.af83.com/2013/01/02/managing-rails-assets-with-bower.html
-</span><span class='line'>https://github.com/component/component</span></code></pre></td></tr></table></div></figure>
-
-
-<p>js</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>jaml              #http://edspencer.github.com/jaml  # jaml-beautiful-html-generation-for-javascript
-</span><span class='line'>jquery.pageless   #https://github.com/jney/jquery.pageless</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/02/using-capistrano-nginx-unicorn/">Using Capistrano-nginx-unicorn</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T18:23:47+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>add gem</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'capistrano-nginx-unicorn', require: false, group: :development</span></code></pre></td></tr></table></div></figure>
-
-
-<p>add this line in the END of deploy.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>require 'capistrano-nginx-unicorn'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>add this to deploy.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>set :nginx_server_name, ""
-</span><span class='line'>set :unicorn_workers, 5</span></code></pre></td></tr></table></div></figure>
-
-
-<p>if &ldquo; eval: bundle: not found&rdquo;, when running &ldquo;cap deploy:start&rdquo;
-login your server and</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd /var/www/your_app/current; bundle exec unicorn -D -c /var/www/your_app/shared/config/unicorn.rb -E production</span></code></pre></td></tr></table></div></figure>
-
+<p><a href="https://gorails.com/setup/osx/10.9-mavericks">https://gorails.com/setup/osx/10.9-mavericks</a>
+<a href="http://www.createdbypete.com/articles/ruby-on-rails-development-setup-for-mac-osx/">http://www.createdbypete.com/articles/ruby-on-rails-development-setup-for-mac-osx/</a></p>
 </div>
   
   
@@ -858,30 +688,30 @@ login your server and</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 127.27272727272728%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 132.72727272727272%'>java(6)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 138.1818181818182%'>technical-review(7)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 153.68421052631578%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 115.78947368421052%'>production(5)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 160.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2015/10/07/http-clients-in-java/">Http Clients in Java</a>
+        <a href="/blog/2020/04/16/setup-openvpn/">Setup Openvpn</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2015/09/20/tomcat-outofmemory-in-eclipse/">Tomcat OutOfMemory in Eclipse</a>
+        <a href="/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/">Double vs BigDecimal in Financial Programming</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2015/09/20/generate-xml-using-xpath/">Generate Xml Using Xpath in Java</a>
+        <a href="/blog/2019/03/22/using-mybatis-with-annotation/">Using Mybatis With Annotation</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2015/08/29/html-best-practices/">Html Best Practices</a>
+        <a href="/blog/2019/03/22/storing-hierarchical-data-in-a-database/">Storing Hierarchical Data in a Database</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2015/08/29/html5-cross-browser-polyfills/">HTML5 Cross Browser Polyfills</a>
+        <a href="/blog/2019/03/21/headless-browser-for-web-scraping/">Headless Browser for Web Scraping</a>
       </li>
     
   </ul>
@@ -897,7 +727,7 @@ login your server and</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Andy -
+  Copyright &copy; 2020 - Andy -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

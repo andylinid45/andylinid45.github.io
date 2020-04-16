@@ -9,10 +9,13 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="recommended, because they are easy to use and powerful 1
+  <meta name="description" content="1
 2
-spring resttemplate
-http://unirest.io/java.html not recommended, because they use low &hellip;">
+#install in ubuntu 18 server
+https://github.com/angristan/openvpn-install 1
+2
+#install client in osx 10.9
+https://tunnelblick.net/ ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -26,8 +29,8 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/libs/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -88,7 +91,7 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/10/07/http-clients-in-java/">Http Clients in Java</a></h1>
+      <h1 class="entry-title"><a href="/blog/2020/04/16/setup-openvpn/">Setup Openvpn</a></h1>
     
     
       <p class="meta">
@@ -104,57 +107,7 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
   
 
 
-<time datetime="2015-10-07T22:26:51+08:00" pubdate data-updated="true">Oct 7<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>recommended, because they are easy to use and powerful</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>spring resttemplate
-</span><span class='line'>http://unirest.io/java.html</span></code></pre></td></tr></table></div></figure>
-
-
-<p>not recommended, because they use low level api</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://hc.apache.org/httpcomponents-client-ga/index.html
-</span><span class='line'>http://hc.apache.org/httpclient-3.x/</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/09/20/tomcat-outofmemory-in-eclipse/">Tomcat OutOfMemory in Eclipse</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-09-20T15:51:23+08:00" pubdate data-updated="true">Sep 20<span>th</span>, 2015</time>
+<time datetime="2020-04-16T22:35:03+08:00" pubdate data-updated="true">Apr 16<span>th</span>, 2020</time>
         
       </p>
     
@@ -162,160 +115,18 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
 
 
   <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>add -XX:MaxPermSize=256m to Tomcat in Eclipse: Server &gt; Open Launch Configuration &gt; Arguments</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse">http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse</a></p>
-
-<p><a href="http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/">http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/09/20/generate-xml-using-xpath/">Generate Xml Using Xpath in Java</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-09-20T15:30:52+08:00" pubdate data-updated="true">Sep 20<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Using EclipseLink JAXB (MOXy)</p>
-
-<p><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions">http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions</a></p>
-
-<p><a href="http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb">http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/29/html-best-practices/">Html Best Practices</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-29T22:59:28+08:00" pubdate data-updated="true">Aug 29<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;font&gt; for text style</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;b&gt; and &lt;i&gt; tags </span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;strong&gt; tag in stead of &lt;b&gt;, &lt;em&gt; tag in stead of &lt;i&gt;, if you want text to be emphasized</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;table&gt; for layout
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#install in ubuntu 18 server
+</span><span class='line'>https://github.com/angristan/openvpn-install
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Do</p>
+
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use div and css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>user &lt;br&gt; just for white space</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Use headings (h1 h2 ...) to indicate the relative importance of text</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Use &lt;cite&gt; tag for referencing a book title, newspaper article, or website, and the &lt;address&gt; tag to identify and supply contact information for the author of a page</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>overuse &lt;div&gt;tags.</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ues &lt;article&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt; tags if needed</span></code></pre></td></tr></table></div></figure>
-
-
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#install client in osx 10.9
+</span><span class='line'>https://tunnelblick.net/</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -329,7 +140,7 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/08/29/html5-cross-browser-polyfills/">HTML5 Cross Browser Polyfills</a></h1>
+      <h1 class="entry-title"><a href="/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/">Double vs BigDecimal in Financial Programming</a></h1>
     
     
       <p class="meta">
@@ -345,43 +156,7 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
   
 
 
-<time datetime="2015-08-29T16:20:09+08:00" pubdate data-updated="true">Aug 29<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/24/responsive-web-design-key-points/">Responsive Web Design Key Points</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-24T03:14:10+08:00" pubdate data-updated="true">Aug 24<span>th</span>, 2015</time>
+<time datetime="2019-03-28T15:45:29+08:00" pubdate data-updated="true">Mar 28<span>th</span>, 2019</time>
         
       </p>
     
@@ -390,13 +165,160 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
 
   <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Using media queries to change the navigation or layout or resize an image 
-</span><span class='line'>Using the fluid grid layout</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.reddit.com/r/java/comments/8la803/double_vs_bigdecimal_in_financial_programming/
+</span><span class='line'>https://stackoverflow.com/questions/3413448/double-vs-bigdecimal
+</span><span class='line'>https://stackoverflow.com/questions/3866514/why-bigdecimal5-50-not-equals-to-bigdecimal5-5-and-how-to-work-around-th
+</span><span class='line'>https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2019/03/22/using-mybatis-with-annotation/">Using Mybatis With Annotation</a></h1>
+    
+    
+      <p class="meta">
+        
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
+
+
+
+  
+
+
+<time datetime="2019-03-22T11:46:10+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2019</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
+<a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
+<a href="https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query">https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2019/03/22/storing-hierarchical-data-in-a-database/">Storing Hierarchical Data in a Database</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-03-22T10:07:54+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2019</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://www.sitepoint.com/hierarchical-data-database-2/">https://www.sitepoint.com/hierarchical-data-database-2/</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2019/03/21/headless-browser-for-web-scraping/">Headless Browser for Web Scraping</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-03-21T16:00:38+08:00" pubdate data-updated="true">Mar 21<span>st</span>, 2019</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions">https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions</a>
+<a href="https://github.com/dhamaniasad/HeadlessBrowsers">https://github.com/dhamaniasad/HeadlessBrowsers</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/">Spring JDBC Logging SQL With Log4j</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-03-21T14:54:13+08:00" pubdate data-updated="true">Mar 21<span>st</span>, 2019</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -405,26 +327,18 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>@media screen and ( max-width: 800px ) {
-</span><span class='line'>.small-menu { display:inline; }
-</span><span class='line'>.large-menu { display:none; }
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>@media screen and ( min-width: 801px ) and ( max-width: 1024px ) {
-</span><span class='line'>.small-menu { display:none; }.
-</span><span class='line'>.large-menu { display:inline; }
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>@media screen and ( min-width: 1025px ) {
-</span><span class='line'>.small-menu { display:none; }
-</span><span class='line'>.large-menu { display:inline; }
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;logger name="org.springframework.jdbc.core.JdbcTemplate"&gt;
+</span><span class='line'>  &lt;level value="debug" /&gt;
+</span><span class='line'>&lt;/logger&gt;
+</span><span class='line'>&lt;logger name="org.springframework.jdbc.core.StatementCreatorUtils"&gt;
+</span><span class='line'>  &lt;level value="trace" /&gt;
+</span><span class='line'>&lt;/logger&gt;
+</span><span class='line'>&lt;logger name="org.springframework.jdbc.datasource.DataSourceTransactionManager"&gt;
+</span><span class='line'>  &lt;level value="debug" /&gt;
+</span><span class='line'>&lt;/logger&gt;</span></code></pre></td></tr></table></div></figure>
 
+
+<p><a href="https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j">https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</a></p>
 </div>
   
   
@@ -437,7 +351,7 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/">Native Apps, Mobile Web Apps and Hybrid Apps</a></h1>
+      <h1 class="entry-title"><a href="/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/">Install Docker in Ubuntu 16.04</a></h1>
     
     
       <p class="meta">
@@ -453,131 +367,14 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
   
 
 
-<time datetime="2015-08-23T16:27:10+08:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2015</time>
+<time datetime="2019-01-30T16:54:02+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2019</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Mobile web apps resource</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://jquerymobile.com
-</span><span class='line'>https://html5boilerplate.com
-</span><span class='line'>http://getbootstrap.com/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I think hybrid apss will not be hot later.</p>
-
-<p>Hybrid apps resource</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://phonegap.com/
-</span><span class='line'>http://www.ionicframework.com/</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/23/what-is-new-in-html5/">What Is New in HTML5?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-23T14:39:20+08:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://html5please.com/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>tools</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://caniuse.com/
-</span><span class='line'>http://html5test.com/</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/22/ruby-on-hadoop/">Ruby on Hadoop, Using Streaming</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-22T15:23:05+08:00" pubdate data-updated="true">Aug 22<span>nd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>wcmapper.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/ruby  -w
-</span><span class='line'>
-</span><span class='line'>while line = gets
-</span><span class='line'>  words = line.split(" ")
-</span><span class='line'>  words.each{ |word| puts word.strip+"\t1"}
-</span><span class='line'>end
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>wcreducer.rb</p>
+  <div class="entry-content"><p>install docker</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -596,45 +393,135 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/ruby  -w
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># install required packages
+</span><span class='line'>sudo apt-get install \
+</span><span class='line'>   apt-transport-https \
+</span><span class='line'>   ca-certificates \
+</span><span class='line'>   curl \
+</span><span class='line'>   software-properties-common
 </span><span class='line'>
-</span><span class='line'>current = nil
-</span><span class='line'>count = 0
+</span><span class='line'># get the GPG key for docker
+</span><span class='line'>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+</span><span class='line'>   sudo apt-key add -
 </span><span class='line'>
-</span><span class='line'>while line = gets
-</span><span class='line'>  word, counter = line.split("\t")
+</span><span class='line'># validating the docker GPG key is installed
+</span><span class='line'>sudo apt-key fingerprint 0EBFCD88
 </span><span class='line'>
-</span><span class='line'>  if word == current
-</span><span class='line'>      count = count+1
-</span><span class='line'>  else
-</span><span class='line'>      puts current+"\t"+count.to_s if current
-</span><span class='line'>      current = word
-</span><span class='line'>      count = 1
-</span><span class='line'>  end
-</span><span class='line'>end
-</span><span class='line'>puts current+"\t"+count.to_s</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'># adding the docker repository
+</span><span class='line'>sudo add-apt-repository \
+</span><span class='line'>   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+</span><span class='line'>   $(lsb_release -cs) \
+</span><span class='line'>   stable"
+</span><span class='line'>
+</span><span class='line'># update apt-get libraries again
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>
+</span><span class='line'># install docker
+</span><span class='line'>sudo apt-get install docker-ce
+</span><span class='line'>
+</span><span class='line'># validate install with version command
+</span><span class='line'>docker --version
+</span><span class='line'>
+</span><span class='line'># validating functionality by running a container
+</span><span class='line'>sudo docker run hello-world</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Implementing WordCount using hadoop streaming</p>
+<p>install docker-compose</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+</span><span class='line'>
+</span><span class='line'>sudo chmod +x /usr/local/bin/docker-compose</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install portainer as a GUI manager</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop fs -copyFromLocal test.txt /user/andy
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo docker image pull portainer/portainer
+</span><span class='line'>sudo docker image ls
 </span><span class='line'>
-</span><span class='line'>hadoop jar /opt/hadoop/contrib/streaming/hadoop-streaming-1.0.4.jar -file wcmapper.rb -mapper wcmapper.rb -file wcreducer.rb -reducer wcreducer.rb -input test.txt -output output
-</span><span class='line'>
-</span><span class='line'>hadoop fs -cat output/part-00000</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>sudo docker container run -d \
+</span><span class='line'> -p 9000:9000 \
+</span><span class='line'> -v /var/run/docker.sock:/var/run/docker.sock \
+</span><span class='line'> portainer/portainer</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Performing the analysis from the command line</p>
+<p>useful command</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cat test.txt | ./wcmapper.rb | sort | ./wcreducer.rb</span></code></pre></td></tr></table></div></figure>
-
-
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo docker image pull hello-world
+</span><span class='line'>sudo docker image ls
+</span><span class='line'>
+</span><span class='line'>sudo docker container ps
+</span><span class='line'>sudo docker container ls -a
+</span><span class='line'>sudo docker container rm --force $(docker container ls --all --quiet) # remove all
+</span><span class='line'>sudo docker container run --detach --name web-server --rm nginx
+</span><span class='line'>sudo docker container run --detach -it --name web-server1 -p 80:80 nginx
+</span><span class='line'>sudo docker container run -it ubuntu bash
+</span><span class='line'>sudo docker container exec web-server1 cat /etc/debian_version
+</span><span class='line'>sudo docker container stop web-server
+</span><span class='line'>sudo docker container inspect web-server # docker detail
+</span><span class='line'>sudo docker container inspect --format '' web-server1 | jq
+</span><span class='line'>sudo docker container stats
+</span><span class='line'>sudo docker container stats web-server1 web-server2
+</span><span class='line'>
+</span><span class='line'>sudo docker search ubuntu
+</span><span class='line'>sudo docker volume  ls
+</span><span class='line'>sudo docker system info
+</span><span class='line'>sudo docker network ls 
+</span><span class='line'>
+</span><span class='line'>docker-compose start
+</span><span class='line'>docker-compose stop
+</span><span class='line'>docker-compose restart
+</span><span class='line'>docker-compose pause
+</span><span class='line'>docker-compose unpause</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -648,7 +535,7 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/08/22/what-big-data-can-help-e-commerce/">大数据在电子商务的应用</a></h1>
+      <h1 class="entry-title"><a href="/blog/2019/01/25/api-design-guide/">API Design Guide</a></h1>
     
     
       <p class="meta">
@@ -664,7 +551,53 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
   
 
 
-<time datetime="2015-08-22T14:18:33+08:00" pubdate data-updated="true">Aug 22<span>nd</span>, 2015</time>
+<time datetime="2019-01-25T14:48:01+08:00" pubdate data-updated="true">Jan 25<span>th</span>, 2019</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/12806386/standard-json-api-response-format
+</span><span class='line'>https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf
+</span><span class='line'>https://cloud.google.com/apis/design/
+</span><span class='line'>https://google.github.io/styleguide/jsoncstyleguide.xml
+</span><span class='line'>https://github.com/Microsoft/api-guidelines</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2018/12/06/use-nvm-to-install-nodejs/">Use Nvm to Install Nodejs</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-12-06T13:52:57+08:00" pubdate data-updated="true">Dec 6<span>th</span>, 2018</time>
         
       </p>
     
@@ -680,15 +613,65 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>流量统计
-</span><span class='line'>页面PV，用户IP
-</span><span class='line'>统计网站、APP客户分布
-</span><span class='line'>日、月度注册统计
-</span><span class='line'>日、月度购买次数统计
-</span><span class='line'>促销事件效果统计
-</span><span class='line'>基于浏览记录推荐商品
-</span><span class='line'>基于购买记录推荐商品
-</span><span class='line'>热销商品预测（可能）</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+</span><span class='line'>
+</span><span class='line'># and exit terminal
+</span><span class='line'>
+</span><span class='line'>nvm ls-remote
+</span><span class='line'>nvm install v10.14.1
+</span><span class='line'>node -v
+</span><span class='line'>npm -v
+</span><span class='line'>
+</span><span class='line'>https://github.com/creationix/nvm/blob/master/README.md</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/">Spring Websockets Broadcast Message to Clients</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-10-19T11:06:12+08:00" pubdate data-updated="true">Oct 19<span>th</span>, 2018</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets">https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets</a></p>
+
+<p>ref</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://spring.io/guides/gs/messaging-stomp-websocket/
+</span><span class='line'>https://www.sitepoint.com/implementing-spring-websocket-server-and-client/
+</span><span class='line'>https://github.com/jaysridhar/spring-websocket-server
+</span><span class='line'>https://github.com/jaysridhar/spring-websocket-client</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -709,30 +692,30 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/angularjs' style='font-size: 105.45454545454545%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 110.9090909090909%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 127.27272727272728%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 110.9090909090909%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 105.45454545454545%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 121.81818181818181%'>deploy(4)</a> <a href='/blog/categories/front-end' style='font-size: 127.27272727272728%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 110.9090909090909%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 105.45454545454545%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 138.1818181818182%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 121.81818181818181%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 110.9090909090909%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 132.72727272727272%'>java(6)</a> <a href='/blog/categories/mongodb' style='font-size: 105.45454545454545%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 116.36363636363636%'>mysql(3)</a> <a href='/blog/categories/octopress' style='font-size: 110.9090909090909%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 121.81818181818181%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 105.45454545454545%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 105.45454545454545%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 121.81818181818181%'>production(4)</a> <a href='/blog/categories/r' style='font-size: 105.45454545454545%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 143.63636363636363%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 110.9090909090909%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 105.45454545454545%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 105.45454545454545%'>rvm(1)</a> <a href='/blog/categories/ssh' style='font-size: 110.9090909090909%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 105.45454545454545%'>style(1)</a> <a href='/blog/categories/technical-review' style='font-size: 138.1818181818182%'>technical-review(7)</a> <a href='/blog/categories/tools' style='font-size: 127.27272727272728%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(11)</a> <a href='/blog/categories/virtualbox' style='font-size: 110.9090909090909%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 149.0909090909091%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 105.45454545454545%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 153.68421052631578%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 115.78947368421052%'>production(5)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 160.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2015/10/07/http-clients-in-java/">Http Clients in Java</a>
+        <a href="/blog/2020/04/16/setup-openvpn/">Setup Openvpn</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2015/09/20/tomcat-outofmemory-in-eclipse/">Tomcat OutOfMemory in Eclipse</a>
+        <a href="/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/">Double vs BigDecimal in Financial Programming</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2015/09/20/generate-xml-using-xpath/">Generate Xml Using Xpath in Java</a>
+        <a href="/blog/2019/03/22/using-mybatis-with-annotation/">Using Mybatis With Annotation</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2015/08/29/html-best-practices/">Html Best Practices</a>
+        <a href="/blog/2019/03/22/storing-hierarchical-data-in-a-database/">Storing Hierarchical Data in a Database</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2015/08/29/html5-cross-browser-polyfills/">HTML5 Cross Browser Polyfills</a>
+        <a href="/blog/2019/03/21/headless-browser-for-web-scraping/">Headless Browser for Web Scraping</a>
       </li>
     
   </ul>
@@ -748,7 +731,7 @@ http://unirest.io/java.html not recommended, because they use low &hellip;">
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Andy -
+  Copyright &copy; 2020 - Andy -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-10-07T22:43:32+08:00</updated>
+  <updated>2020-04-17T00:10:54+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -14,81 +14,267 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How to Execute a Ruby Script in Terminal Using Shebang]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/"/>
-    <updated>2015-08-22T12:14:08+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal</id>
-    <content type="html"><![CDATA[<p><code>
-sudo apt-get install ruby
-</code></p>
-
-<p>which ruby
-<code>
-/usr/bin/ruby
-</code></p>
-
-<p>please the shebang line on the first line of your script
+    <title type="html"><![CDATA[Install Docker in Ubuntu 16.04]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/"/>
+    <updated>2019-01-30T16:54:02+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04</id>
+    <content type="html"><![CDATA[<p>install docker
 ```</p>
 
-<h1>!/usr/bin/ruby -w</h1>
+<h1>install required packages</h1>
+
+<p>sudo apt-get install \
+   apt-transport-https \
+   ca-certificates \
+   curl \
+   software-properties-common</p>
+
+<h1>get the GPG key for docker</h1>
+
+<p>curl -fsSL <a href="https://download.docker.com/linux/ubuntu/gpg">https://download.docker.com/linux/ubuntu/gpg</a> | \
+   sudo apt-key add &ndash;</p>
+
+<h1>validating the docker GPG key is installed</h1>
+
+<p>sudo apt-key fingerprint 0EBFCD88</p>
+
+<h1>adding the docker repository</h1>
+
+<p>sudo add-apt-repository \
+   &ldquo;deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu">https://download.docker.com/linux/ubuntu</a> \
+   $(lsb_release -cs) \
+   stable&rdquo;</p>
+
+<h1>update apt-get libraries again</h1>
+
+<p>sudo apt-get update</p>
+
+<h1>install docker</h1>
+
+<p>sudo apt-get install docker-ce</p>
+
+<h1>validate install with version command</h1>
+
+<p>docker &mdash;version</p>
+
+<h1>validating functionality by running a container</h1>
+
+<p>sudo docker run hello-world
+```</p>
+
+<p>install docker-compose
+```
+sudo curl -L &ldquo;<a href="https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$">https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$</a>(uname -s)&ndash;$(uname -m)&rdquo; -o /usr/local/bin/docker-compose</p>
+
+<p>sudo chmod +x /usr/local/bin/docker-compose
+```</p>
+
+<p>install portainer as a GUI manager
+```
+sudo docker image pull portainer/portainer
+sudo docker image ls</p>
+
+<p>sudo docker container run -d \
+ -p 9000:9000 \
+ -v /var/run/docker.sock:/var/run/docker.sock \
+ portainer/portainer
+```</p>
+
+<p>useful command
+```
+sudo docker image pull hello-world
+sudo docker image ls</p>
+
+<p>sudo docker container ps
+sudo docker container ls -a
+sudo docker container rm &mdash;force $(docker container ls &mdash;all &mdash;quiet) # remove all
+sudo docker container run &mdash;detach &mdash;name web-server &mdash;rm nginx
+sudo docker container run &mdash;detach -it &mdash;name web-server1 -p 80:80 nginx
+sudo docker container run -it ubuntu bash
+sudo docker container exec web-server1 cat /etc/debian_version
+sudo docker container stop web-server
+sudo docker container inspect web-server # docker detail
+sudo docker container inspect &mdash;format &lsquo;&rsquo; web-server1 | jq
+sudo docker container stats
+sudo docker container stats web-server1 web-server2</p>
+
+<p>sudo docker search ubuntu
+sudo docker volume  ls
+sudo docker system info
+sudo docker network ls</p>
+
+<p>docker-compose start
+docker-compose stop
+docker-compose restart
+docker-compose pause
+docker-compose unpause
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configuration of the Rsync Daemon]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon/"/>
+    <updated>2018-10-11T17:30:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon</id>
+    <content type="html"><![CDATA[<p>1 nano /etc/default/rsync
+<code>
+RSYNC_ENABLE=inetd
+</code></p>
+
+<p>2
+<code>
+sudo apt-get install xinetd
+</code></p>
+
+<p>3 create file  /etc/xinetd.d/rsync (the same as below)
+```
+service rsync
+{</p>
+
+<pre><code>disable = no
+socket_type = stream
+wait = no
+user = root  # must be root
+server = /usr/bin/rsync
+server_args = --daemon
+log_on_failure += USERID
+flags = IPv6
+</code></pre>
+
+<p>}
+```</p>
+
+<p>4 create file /etc/rsyncd.conf
+```
+max connections = 20
+log file = /var/log/rsync.log
+timeout = 300</p>
+
+<p>[share] # module name
+comment = Public Share
+path = /home/share
+read only = yes
+list = yes
+uid = nobody
+gid = nogroup
+auth users = test_rsync  # the user to auth to rsync,
+secrets file = /etc/rsyncd.secrets
+```</p>
+
+<p>5 create file /etc/rsyncd.secrets for password
+sudo nano /etc/rsyncd.secrets
+```
+rsync_user:rsync_password</p>
+
+<h1>other users &hellip;</h1>
+
+<p>```</p>
+
+<p>sudo chmod 600 /etc/rsyncd.secrets</p>
+
+<p>6 restart
+<code>
+sudo /etc/init.d/xinetd restart
+</code></p>
+
+<p>7 create password file in client side
+sudo nano /etc/rsync.secrets
+<code>
+rsync_password
+</code>
+sudo chmod 600 /etc/rsync.secrets</p>
+
+<p>8 have a test in client side
+<code>
+rsync -azhrvcP --delete --password-file=/etc/rsync.secrets  rsync_user@server_ip::share  /home/user/demo
+</code></p>
+
+<p>ref
+<code>
+https://help.ubuntu.com/community/rsync
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hourly Cron Job in Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/09/03/hourly-cron-job-in-ubuntu/"/>
+    <updated>2018-09-03T15:34:13+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/09/03/hourly-cron-job-in-ubuntu</id>
+    <content type="html"><![CDATA[<p>```
+cd /etc/cron.hourly
+sudo nano test1</p>
+
+<h1>the job script start with #!/bin/bash</h1>
+
+<p>sudo chmod +x test1</p>
+
+<h1>hava a test</h1>
+
+<p>run-parts &mdash;report &mdash;test /etc/cron.hourly
+run-parts &mdash;report /etc/cron.hourly
+```</p>
+
+<p><code>
+https://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
+https://help.ubuntu.com/community/CronHowto
+https://askubuntu.com/questions/7676/function-of-etc-cron-hourly
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Update Kernel in Ubuntu With Command Line]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/"/>
+    <updated>2017-09-04T10:59:48+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line</id>
+    <content type="html"><![CDATA[<p>check the kernel version
+<code>
+uname -r
+</code></p>
+
+<p><code>
+sudo apt-get update
+apt-cache search linux-image
+</code></p>
+
+<p>pick up a version, 4.11.0-14 for example
+<code>
+sudo apt-get install linux-image-4.11.0-14-generic linux-image-extra-4.11.0-14-generic  linux-headers-4.11.0-14-generic
+</code></p>
+
+<p>need reboot after installed!</p>
+
+<p>remove the old kernels
+<code>
+sudo apt-get autoremove
+</code></p>
+
+<p>check the result
+<code>
+uname -r
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Make Wget Multithreading?]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading/"/>
+    <updated>2017-09-01T14:58:41+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading</id>
+    <content type="html"><![CDATA[<p>try axel</p>
+
+<p>```
+sudo apt-get install axel
+axel -a -n [Num_of_Thread] link1 link2 link3 &hellip;</p>
+
+<h1>-a just show an improved progress bar.</h1>
 
 <p>```</p>
 
 <p><code>
-chmod +x your_script.rb
-./your_script.rb
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fixing Eclipse Can Not Find Java on Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/"/>
-    <updated>2015-08-22T11:10:58+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu</id>
-    <content type="html"><![CDATA[<p>gedit ECLIPSE_HOME/eclipse.ini # add below before &lsquo;-vmargs&rsquo;
-<code>
--vm
-/usr/lib/jvm/jdk1.8.0_51/bin/java
-</code></p>
-
-<p><a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Usb in Virtualbox]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox/"/>
-    <updated>2014-09-27T22:23:32+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox</id>
-    <content type="html"><![CDATA[<p>ubuntu 14.04 , virtualbox 4.3
-<code>
-sudo adduser yourusername vboxusers
-</code></p>
-
-<p>You HAVE to logout/login from your session, NOT just restart Virtual Box, after the group change.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setup PPTPServer in Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu/"/>
-    <updated>2014-09-27T22:19:50+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu</id>
-    <content type="html"><![CDATA[<p>all the same
-<code>
-https://help.ubuntu.com/community/PPTPServer
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Sudo Without Password in Osx and Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/23/sudo-without-password/"/>
-    <updated>2014-09-23T10:10:16+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/23/sudo-without-password</id>
-    <content type="html"><![CDATA[<p><code>
-echo 'account_name ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
+http://askubuntu.com/questions/214018/how-to-make-wget-faster-or-multithreading
 </code></p>
 ]]></content>
   </entry>

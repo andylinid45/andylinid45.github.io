@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-10-07T22:43:32+08:00</updated>
+  <updated>2020-04-17T00:10:54+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -14,110 +14,61 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Http Clients in Java]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java/"/>
-    <updated>2015-10-07T22:26:51+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java</id>
-    <content type="html"><![CDATA[<p>recommended, because they are easy to use and powerful
-<code>
-spring resttemplate
-http://unirest.io/java.html
-</code></p>
-
-<p>not recommended, because they use low level api
-<code>
-http://hc.apache.org/httpcomponents-client-ga/index.html
-http://hc.apache.org/httpclient-3.x/
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why React.js Is So Cool?]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/13/why-react-js-is-so-cool/"/>
-    <updated>2015-08-13T14:10:05+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/13/why-react-js-is-so-cool</id>
+    <title type="html"><![CDATA[Double vs BigDecimal in Financial Programming]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/"/>
+    <updated>2019-03-28T15:45:29+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming</id>
     <content type="html"><![CDATA[<p><code>
-React.js makes things simple. and it wins others js framework by concept
-Re-render is automatic in Reack.js . So we can think more OOP when using it.
-</code></p>
-
-<p>I think the only problme is:
-<code>
-Some DOM code is inside the javascript code. This make the code hard to read and rewrite.
+https://www.reddit.com/r/java/comments/8la803/double_vs_bigdecimal_in_financial_programming/
+https://stackoverflow.com/questions/3413448/double-vs-bigdecimal
+https://stackoverflow.com/questions/3866514/why-bigdecimal5-50-not-equals-to-bigdecimal5-5-and-how-to-work-around-th
+https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto
 </code></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Sendmail vs Postfix]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/12/22/sendmail-vs-postfix/"/>
-    <updated>2014-12-22T17:21:18+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/12/22/sendmail-vs-postfix</id>
-    <content type="html"><![CDATA[<p>Sendmail and Postfix are programs that send mail in Unix link OS.</p>
-
-<p>Postfix is better because it is newer.</p>
+    <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation/"/>
+    <updated>2019-03-22T11:46:10+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
+<a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
+<a href="https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query">https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query</a></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Why Haml Sucks]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/26/why-haml-sucks/"/>
-    <updated>2014-04-26T23:16:54+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/26/why-haml-sucks</id>
-    <content type="html"><![CDATA[<p><blockquote><p>Beautiful, DRY, well-indented, clear markup</p><footer><strong>haml <a href="http://haml.info">http://haml.info</a></strong></footer></blockquote></p>
-
-<p>You can see how haml selling himself to you at his website.</p>
-
-<p>But after using haml for sometime. I feel it sucks.</p>
-
-<p>There also many blog post telling you how suck haml does.</p>
-
-<p>But here, I want to get the point. It just because this technique is totally unnecessary.</p>
-
-<p>Building a web app is like playing lego toy bricks. No need to pick up all bricks in the worlk to make a great web app.</p>
-
-<p>Haml is just anohter beauty lie in the technical world.</p>
+    <title type="html"><![CDATA[Storing Hierarchical Data in a Database]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database/"/>
+    <updated>2019-03-22T10:07:54+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database</id>
+    <content type="html"><![CDATA[<p><a href="https://www.sitepoint.com/hierarchical-data-database-2/">https://www.sitepoint.com/hierarchical-data-database-2/</a></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Angularjs vs Emberjs vs Backbonejs]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/"/>
-    <updated>2014-04-23T17:12:15+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs</id>
-    <content type="html"><![CDATA[<p>Many blog post compare these three javascript libraries. But I dont think they get the point.</p>
-
-<h3>1) Two way data binding</h3>
-
-<p>Backbonejs does not support two way data bingding native. (You can use a plugin like backbone.stickit <a href="http://nytimes.github.io/backbone.stickit/">http://nytimes.github.io/backbone.stickit/</a>)</p>
-
-<p>Why two way data binding is so important? Because it help you auto update the view in most cases. It helps you minimize your code.</p>
-
-<h3>2) Dependency injection using directive</h3>
-
-<p>Emberjs does not support DI(Dependency injection), so you need to write more code such as
-```
-Todos.EditTodoView = Ember.TextField.extend({  &hellip;</p>
-
-<p>Todos.TodoController = Ember.ObjectController.extend({ &hellip;
-```</p>
-
-<p>If you use DI, then you code is plain old javascritp object. and easy to test.</p>
-
-<p>Because of these two main reasons, Angularjs can help you minimize your code. <br/>
-Checkout <a href="http://todomvc.com/">http://todomvc.com/</a> , a web site helping you select a javascript framework.</p>
-
-<ul>
-<li><a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone</a></li>
-<li><a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/emberjs</a></li>
-<li><a href="https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs">https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/angularjs</a></li>
-</ul>
-
-
-<p>We can see how many line of code need these three javascript framework to make a same app.</p>
-
-<p>so, Angularjs win!</p>
+    <title type="html"><![CDATA[Headless Browser for Web Scraping]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping/"/>
+    <updated>2019-03-21T16:00:38+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions">https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions</a>
+<a href="https://github.com/dhamaniasad/HeadlessBrowsers">https://github.com/dhamaniasad/HeadlessBrowsers</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[API Design Guide]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/01/25/api-design-guide/"/>
+    <updated>2019-01-25T14:48:01+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/01/25/api-design-guide</id>
+    <content type="html"><![CDATA[<p><code>
+https://stackoverflow.com/questions/12806386/standard-json-api-response-format
+https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf
+https://cloud.google.com/apis/design/
+https://google.github.io/styleguide/jsoncstyleguide.xml
+https://github.com/Microsoft/api-guidelines
+</code></p>
 ]]></content>
   </entry>
   

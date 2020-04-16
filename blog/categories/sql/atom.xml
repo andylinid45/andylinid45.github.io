@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Sql | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/sql/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2020-04-17T00:10:54+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SQL Style Guide]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/09/12/sql-style-guide/"/>
+    <updated>2018-09-12T15:49:34+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/09/12/sql-style-guide</id>
+    <content type="html"><![CDATA[<p><code>
+https://www.sqlstyle.guide/
+http://www.dpriver.com/pp/sqlformat.htm
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

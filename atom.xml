@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2015-10-07T22:43:32+08:00</updated>
+  <updated>2020-04-17T00:10:54+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -14,327 +14,79 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Http Clients in Java]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java/"/>
-    <updated>2015-10-07T22:26:51+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java</id>
-    <content type="html"><![CDATA[<p>recommended, because they are easy to use and powerful</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>spring resttemplate
-</span><span class='line'>http://unirest.io/java.html</span></code></pre></td></tr></table></div></figure>
-
-
-<p>not recommended, because they use low level api</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://hc.apache.org/httpcomponents-client-ga/index.html
-</span><span class='line'>http://hc.apache.org/httpclient-3.x/</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tomcat OutOfMemory in Eclipse]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/09/20/tomcat-outofmemory-in-eclipse/"/>
-    <updated>2015-09-20T15:51:23+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/09/20/tomcat-outofmemory-in-eclipse</id>
+    <title type="html"><![CDATA[Setup Openvpn]]></title>
+    <link href="http://andylinid45.github.io/blog/2020/04/16/setup-openvpn/"/>
+    <updated>2020-04-16T22:35:03+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2020/04/16/setup-openvpn</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>add -XX:MaxPermSize=256m to Tomcat in Eclipse: Server &gt; Open Launch Configuration &gt; Arguments</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse">http://stackoverflow.com/questions/3179141/java-lang-outofmemoryerror-permgen-space-in-tomcat-with-eclipse</a></p>
-
-<p><a href="http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/">http://www.mkyong.com/eclipse/eclipse-tomcat-java-lang-outofmemoryerror-java-heap-space/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Generate Xml Using Xpath in Java]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/09/20/generate-xml-using-xpath/"/>
-    <updated>2015-09-20T15:30:52+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/09/20/generate-xml-using-xpath</id>
-    <content type="html"><![CDATA[<p>Using EclipseLink JAXB (MOXy)</p>
-
-<p><a href="http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions">http://wiki.eclipse.org/EclipseLink/Examples/MOXy/GettingStarted/MOXyExtensions</a></p>
-
-<p><a href="http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb">http://stackoverflow.com/questions/17141154/unmarshalling-an-xml-using-xpath-expression-and-jaxb</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Html Best Practices]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/29/html-best-practices/"/>
-    <updated>2015-08-29T22:59:28+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/29/html-best-practices</id>
-    <content type="html"><![CDATA[<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;font&gt; for text style</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;b&gt; and &lt;i&gt; tags </span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;strong&gt; tag in stead of &lt;b&gt;, &lt;em&gt; tag in stead of &lt;i&gt;, if you want text to be emphasized</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;table&gt; for layout
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#install in ubuntu 18 server
+</span><span class='line'>https://github.com/angristan/openvpn-install
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Do</p>
+
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use div and css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>user &lt;br&gt; just for white space</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Use headings (h1 h2 ...) to indicate the relative importance of text</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Use &lt;cite&gt; tag for referencing a book title, newspaper article, or website, and the &lt;address&gt; tag to identify and supply contact information for the author of a page</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>overuse &lt;div&gt;tags.</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ues &lt;article&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt; tags if needed</span></code></pre></td></tr></table></div></figure>
-
-
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#install client in osx 10.9
+</span><span class='line'>https://tunnelblick.net/</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[HTML5 Cross Browser Polyfills]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills/"/>
-    <updated>2015-08-29T16:20:09+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills</id>
-    <content type="html"><![CDATA[<p><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Responsive Web Design Key Points]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points/"/>
-    <updated>2015-08-24T03:14:10+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points</id>
+    <title type="html"><![CDATA[Double vs BigDecimal in Financial Programming]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/"/>
+    <updated>2019-03-28T15:45:29+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Using media queries to change the navigation or layout or resize an image 
-</span><span class='line'>Using the fluid grid layout</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>@media screen and ( max-width: 800px ) {
-</span><span class='line'>.small-menu { display:inline; }
-</span><span class='line'>.large-menu { display:none; }
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>@media screen and ( min-width: 801px ) and ( max-width: 1024px ) {
-</span><span class='line'>.small-menu { display:none; }.
-</span><span class='line'>.large-menu { display:inline; }
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>@media screen and ( min-width: 1025px ) {
-</span><span class='line'>.small-menu { display:none; }
-</span><span class='line'>.large-menu { display:inline; }
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.reddit.com/r/java/comments/8la803/double_vs_bigdecimal_in_financial_programming/
+</span><span class='line'>https://stackoverflow.com/questions/3413448/double-vs-bigdecimal
+</span><span class='line'>https://stackoverflow.com/questions/3866514/why-bigdecimal5-50-not-equals-to-bigdecimal5-5-and-how-to-work-around-th
+</span><span class='line'>https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Native Apps, Mobile Web Apps and Hybrid Apps]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/"/>
-    <updated>2015-08-23T16:27:10+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps</id>
-    <content type="html"><![CDATA[<p>Mobile web apps resource</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://jquerymobile.com
-</span><span class='line'>https://html5boilerplate.com
-</span><span class='line'>http://getbootstrap.com/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I think hybrid apss will not be hot later.</p>
-
-<p>Hybrid apps resource</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://phonegap.com/
-</span><span class='line'>http://www.ionicframework.com/</span></code></pre></td></tr></table></div></figure>
-
+    <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation/"/>
+    <updated>2019-03-22T11:46:10+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
+<a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
+<a href="https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query">https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query</a></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[What Is New in HTML5?]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5/"/>
-    <updated>2015-08-23T14:39:20+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://html5please.com/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>tools</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://caniuse.com/
-</span><span class='line'>http://html5test.com/</span></code></pre></td></tr></table></div></figure>
-
+    <title type="html"><![CDATA[Storing Hierarchical Data in a Database]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database/"/>
+    <updated>2019-03-22T10:07:54+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database</id>
+    <content type="html"><![CDATA[<p><a href="https://www.sitepoint.com/hierarchical-data-database-2/">https://www.sitepoint.com/hierarchical-data-database-2/</a></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Ruby on Hadoop, Using Streaming]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/ruby-on-hadoop/"/>
-    <updated>2015-08-22T15:23:05+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/ruby-on-hadoop</id>
-    <content type="html"><![CDATA[<p>wcmapper.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/ruby  -w
-</span><span class='line'>
-</span><span class='line'>while line = gets
-</span><span class='line'>  words = line.split(" ")
-</span><span class='line'>  words.each{ |word| puts word.strip+"\t1"}
-</span><span class='line'>end
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>wcreducer.rb</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/ruby  -w
-</span><span class='line'>
-</span><span class='line'>current = nil
-</span><span class='line'>count = 0
-</span><span class='line'>
-</span><span class='line'>while line = gets
-</span><span class='line'>  word, counter = line.split("\t")
-</span><span class='line'>
-</span><span class='line'>  if word == current
-</span><span class='line'>      count = count+1
-</span><span class='line'>  else
-</span><span class='line'>      puts current+"\t"+count.to_s if current
-</span><span class='line'>      current = word
-</span><span class='line'>      count = 1
-</span><span class='line'>  end
-</span><span class='line'>end
-</span><span class='line'>puts current+"\t"+count.to_s</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Implementing WordCount using hadoop streaming</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop fs -copyFromLocal test.txt /user/andy
-</span><span class='line'>
-</span><span class='line'>hadoop jar /opt/hadoop/contrib/streaming/hadoop-streaming-1.0.4.jar -file wcmapper.rb -mapper wcmapper.rb -file wcreducer.rb -reducer wcreducer.rb -input test.txt -output output
-</span><span class='line'>
-</span><span class='line'>hadoop fs -cat output/part-00000</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Performing the analysis from the command line</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cat test.txt | ./wcmapper.rb | sort | ./wcreducer.rb</span></code></pre></td></tr></table></div></figure>
-
-
-
+    <title type="html"><![CDATA[Headless Browser for Web Scraping]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping/"/>
+    <updated>2019-03-21T16:00:38+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions">https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions</a>
+<a href="https://github.com/dhamaniasad/HeadlessBrowsers">https://github.com/dhamaniasad/HeadlessBrowsers</a></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[大数据在电子商务的应用]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/what-big-data-can-help-e-commerce/"/>
-    <updated>2015-08-22T14:18:33+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/what-big-data-can-help-e-commerce</id>
+    <title type="html"><![CDATA[Spring JDBC Logging SQL With Log4j]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/"/>
+    <updated>2019-03-21T14:54:13+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -344,73 +96,29 @@
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>流量统计
-</span><span class='line'>页面PV，用户IP
-</span><span class='line'>统计网站、APP客户分布
-</span><span class='line'>日、月度注册统计
-</span><span class='line'>日、月度购买次数统计
-</span><span class='line'>促销事件效果统计
-</span><span class='line'>基于浏览记录推荐商品
-</span><span class='line'>基于购买记录推荐商品
-</span><span class='line'>热销商品预测（可能）</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;logger name="org.springframework.jdbc.core.JdbcTemplate"&gt;
+</span><span class='line'>  &lt;level value="debug" /&gt;
+</span><span class='line'>&lt;/logger&gt;
+</span><span class='line'>&lt;logger name="org.springframework.jdbc.core.StatementCreatorUtils"&gt;
+</span><span class='line'>  &lt;level value="trace" /&gt;
+</span><span class='line'>&lt;/logger&gt;
+</span><span class='line'>&lt;logger name="org.springframework.jdbc.datasource.DataSourceTransactionManager"&gt;
+</span><span class='line'>  &lt;level value="debug" /&gt;
+</span><span class='line'>&lt;/logger&gt;</span></code></pre></td></tr></table></div></figure>
 
+
+<p><a href="https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j">https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</a></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Execute a Ruby Script in Terminal Using Shebang]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/"/>
-    <updated>2015-08-22T12:14:08+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install ruby</span></code></pre></td></tr></table></div></figure>
-
-
-<p>which ruby</p>
+    <title type="html"><![CDATA[Install Docker in Ubuntu 16.04]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/"/>
+    <updated>2019-01-30T16:54:02+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04</id>
+    <content type="html"><![CDATA[<p>install docker</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/ruby</span></code></pre></td></tr></table></div></figure>
-
-
-<p>please the shebang line on the first line of your script</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/ruby -w</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>chmod +x your_script.rb
-</span><span class='line'>./your_script.rb</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fixing Eclipse Can Not Find Java on Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/"/>
-    <updated>2015-08-22T11:10:58+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu</id>
-    <content type="html"><![CDATA[<p>gedit ECLIPSE_HOME/eclipse.ini # add below before &lsquo;-vmargs&rsquo;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>-vm 
-</span><span class='line'>/usr/lib/jvm/jdk1.8.0_51/bin/java</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="http://wiki.eclipse.org/Eclipse.ini">http://wiki.eclipse.org/Eclipse.ini</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using HDFS FS Shell]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/22/using-hdfs-fs-shell/"/>
-    <updated>2015-08-22T11:00:09+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/22/using-hdfs-fs-shell</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -428,50 +136,81 @@
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop fs -mkdir /user
-</span><span class='line'>hadoop fs -mkdir /user/andy
-</span><span class='line'>hadoop fs -ls /user
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># install required packages
+</span><span class='line'>sudo apt-get install \
+</span><span class='line'>   apt-transport-https \
+</span><span class='line'>   ca-certificates \
+</span><span class='line'>   curl \
+</span><span class='line'>   software-properties-common
 </span><span class='line'>
+</span><span class='line'># get the GPG key for docker
+</span><span class='line'>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+</span><span class='line'>   sudo apt-key add -
 </span><span class='line'>
-</span><span class='line'>echo "This is a test." &gt;&gt; test.txt
-</span><span class='line'>hadoop dfs -copyFromLocal test.txt /user/andy
-</span><span class='line'>hadoop dfs -ls /user/andy
-</span><span class='line'>hadoop dfs -cat /user/andy/test.txt
+</span><span class='line'># validating the docker GPG key is installed
+</span><span class='line'>sudo apt-key fingerprint 0EBFCD88
 </span><span class='line'>
+</span><span class='line'># adding the docker repository
+</span><span class='line'>sudo add-apt-repository \
+</span><span class='line'>   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+</span><span class='line'>   $(lsb_release -cs) \
+</span><span class='line'>   stable"
 </span><span class='line'>
-</span><span class='line'>hadoop dfs -mkdir data
-</span><span class='line'>hadoop dfs -cp test.txt data
-</span><span class='line'>hadoop dfs -ls data
-</span><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar wordcount data out
-</span><span class='line'>hadoop fs -ls out
-</span><span class='line'>hadoop fs -cat out/part-r-00000
-</span><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'># update apt-get libraries again
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>
+</span><span class='line'># install docker
+</span><span class='line'>sudo apt-get install docker-ce
+</span><span class='line'>
+</span><span class='line'># validate install with version command
+</span><span class='line'>docker --version
+</span><span class='line'>
+</span><span class='line'># validating functionality by running a container
+</span><span class='line'>sudo docker run hello-world</span></code></pre></td></tr></table></div></figure>
 
 
+<p>install docker-compose</p>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Config Hadoop for Pseudo Distributed Mode]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/21/config-hadoop-for-pseudo-distributed-mode/"/>
-    <updated>2015-08-21T17:17:03+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/21/config-hadoop-for-pseudo-distributed-mode</id>
-    <content type="html"><![CDATA[<p>install ssh</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+</span><span class='line'>
+</span><span class='line'>sudo chmod +x /usr/local/bin/docker-compose</span></code></pre></td></tr></table></div></figure>
+
+
+<p>install portainer as a GUI manager</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install openssh-client=1:6.6p1-2ubuntu1
-</span><span class='line'>sudo apt-get install openssh-server
-</span><span class='line'>ssh-keygen
-</span><span class='line'>cp .ssh/id_rsa.pub .ssh/authorized_keys
-</span><span class='line'>ssh localhost</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo docker image pull portainer/portainer
+</span><span class='line'>sudo docker image ls
+</span><span class='line'>
+</span><span class='line'>sudo docker container run -d \
+</span><span class='line'> -p 9000:9000 \
+</span><span class='line'> -v /var/run/docker.sock:/var/run/docker.sock \
+</span><span class='line'> portainer/portainer</span></code></pre></td></tr></table></div></figure>
 
 
-<p>sudo nano /opt/hadoop/conf/core-site.xml</p>
+<p>useful command</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -482,263 +221,397 @@
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;property&gt;
-</span><span class='line'>&lt;name&gt;fs.default.name&lt;/name&gt;
-</span><span class='line'>&lt;value&gt;hdfs://localhost:9000&lt;/value&gt;
-</span><span class='line'>&lt;/property&gt;
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo docker image pull hello-world
+</span><span class='line'>sudo docker image ls
 </span><span class='line'>
-</span><span class='line'>&lt;property&gt;
-</span><span class='line'>&lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
-</span><span class='line'>&lt;value&gt;/var/lib/hadoop&lt;/value&gt;
-</span><span class='line'>&lt;/property&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>sudo nano /opt/hadoop/conf/hdfs-site.xml</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;property&gt;
-</span><span class='line'>&lt;name&gt;dfs.replication&lt;/name&gt;
-</span><span class='line'>&lt;value&gt;1&lt;/value&gt;
-</span><span class='line'>&lt;/property&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>sudo nano /opt/hadoop/conf/mapred-site.xml</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;property&gt;
-</span><span class='line'>&lt;name&gt;mapred.job.tracker&lt;/name&gt;
-</span><span class='line'>&lt;value&gt;localhost:9001&lt;/value&gt;
-</span><span class='line'>&lt;/property&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>make temp dir for hadoop</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir /var/lib/hadoop
-</span><span class='line'>sudo chmod 777 /var/lib/hadoop</span></code></pre></td></tr></table></div></figure>
-
-
-<p>make log dir for hadoop</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir /opt/hadoop/logs 
-</span><span class='line'>sudo chmod 777 /opt/hadoop/logs/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>run just for the first time to format file system</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop namenode -format</span></code></pre></td></tr></table></div></figure>
-
-
-<p>start it</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>start-dfs.sh
-</span><span class='line'>start-mapred.sh
-</span><span class='line'>hadoop fs -ls /  # have a test</span></code></pre></td></tr></table></div></figure>
-
-
-<p>web UI for it</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>http://localhost:50030/
-</span><span class='line'>http://localhost:50070/</span></code></pre></td></tr></table></div></figure>
-
-
+</span><span class='line'>sudo docker container ps
+</span><span class='line'>sudo docker container ls -a
+</span><span class='line'>sudo docker container rm --force $(docker container ls --all --quiet) # remove all
+</span><span class='line'>sudo docker container run --detach --name web-server --rm nginx
+</span><span class='line'>sudo docker container run --detach -it --name web-server1 -p 80:80 nginx
+</span><span class='line'>sudo docker container run -it ubuntu bash
+</span><span class='line'>sudo docker container exec web-server1 cat /etc/debian_version
+</span><span class='line'>sudo docker container stop web-server
+</span><span class='line'>sudo docker container inspect web-server # docker detail
+</span><span class='line'>sudo docker container inspect --format '' web-server1 | jq
+</span><span class='line'>sudo docker container stats
+</span><span class='line'>sudo docker container stats web-server1 web-server2
+</span><span class='line'>
+</span><span class='line'>sudo docker search ubuntu
+</span><span class='line'>sudo docker volume  ls
+</span><span class='line'>sudo docker system info
+</span><span class='line'>sudo docker network ls 
+</span><span class='line'>
+</span><span class='line'>docker-compose start
+</span><span class='line'>docker-compose stop
+</span><span class='line'>docker-compose restart
+</span><span class='line'>docker-compose pause
+</span><span class='line'>docker-compose unpause</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Install hadoop1.0.4 on Ubuntu14]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14/"/>
-    <updated>2015-08-21T16:33:46+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14</id>
-    <content type="html"><![CDATA[<p>Download hadoop</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+    <title type="html"><![CDATA[API Design Guide]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/01/25/api-design-guide/"/>
+    <updated>2019-01-25T14:48:01+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/01/25/api-design-guide</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo cp hadoop-1.0.4-bin.tar.gz /opt
-</span><span class='line'>cd /opt
-</span><span class='line'>sudo tar -vxf hadoop-1.0.4-bin.tar.gz
-</span><span class='line'>sudo rm hadoop-1.0.4-bin.tar.gz
-</span><span class='line'>sudo mv hadoop-1.0.4/ hadoop</span></code></pre></td></tr></table></div></figure>
-
-
-<p>sudo gedit /opt/hadoop/conf/hadoop-env.sh  #modify java home</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_51</span></code></pre></td></tr></table></div></figure>
-
-
-<p>gedit ~/.bashrc # do not use &lsquo;HADOOP_HOME&rsquo;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export HADOOP_PREFIX=/opt/hadoop
-</span><span class='line'>export PATH=$HADOOP_PREFIX/bin:$PATH</span></code></pre></td></tr></table></div></figure>
-
-
-<p>have a test</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar pi 4 1000 </span></code></pre></td></tr></table></div></figure>
-
-
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/12806386/standard-json-api-response-format
+</span><span class='line'>https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf
+</span><span class='line'>https://cloud.google.com/apis/design/
+</span><span class='line'>https://google.github.io/styleguide/jsoncstyleguide.xml
+</span><span class='line'>https://github.com/Microsoft/api-guidelines</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Install Maven on Ubuntu14]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/20/install-maven-on-ubuntu14/"/>
-    <updated>2015-08-20T19:12:51+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/20/install-maven-on-ubuntu14</id>
-    <content type="html"><![CDATA[<p>Download maven</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mv Downloads/apache-maven-3.3.3-bin.tar.gz /usr/local/
-</span><span class='line'>cd /usr/local/
-</span><span class='line'>sudo tar -xvf apache-maven-3.3.3-bin.tar.gz
-</span><span class='line'>sudo rm apache-maven-3.3.3-bin.tar.gz </span></code></pre></td></tr></table></div></figure>
-
-
-<p>gedit ~/.bashrc # add at the end</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export M2_HOME="/usr/local/apache-maven-3.3.3"
-</span><span class='line'>export PATH=${PATH}:${M2_HOME}/bin</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Have a test</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source .profile
-</span><span class='line'>mvn --version</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Jdk on Ubuntu14]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/17/install-jdk-on-ubuntu14/"/>
-    <updated>2015-08-17T14:40:35+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/17/install-jdk-on-ubuntu14</id>
-    <content type="html"><![CDATA[<p>If you have some problmes with installing jdk using</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install default-jdk</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Have a try with this</p>
-
-<p>Download jdk from Oracle website.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir /usr/lib/jvm
-</span><span class='line'>sudo tar zxvf ./jdk-8u51-linux-x64.tar.gz  -C /usr/lib/jvm</span></code></pre></td></tr></table></div></figure>
-
-
-<p>gedit ~/.bashrc # add at the end</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_51
-</span><span class='line'>export JRE_HOME=${JAVA_HOME}/jre 
-</span><span class='line'>export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-</span><span class='line'>export PATH=${JAVA_HOME}/bin:$PATH</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Have a test</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source ~/.bashrc
-</span><span class='line'>java -version</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why React.js Is So Cool?]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/13/why-react-js-is-so-cool/"/>
-    <updated>2015-08-13T14:10:05+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/13/why-react-js-is-so-cool</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>React.js makes things simple. and it wins others js framework by concept
-</span><span class='line'>Re-render is automatic in Reack.js . So we can think more OOP when using it. </span></code></pre></td></tr></table></div></figure>
-
-
-<p>I think the only problme is:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Some DOM code is inside the javascript code. This make the code hard to read and rewrite.</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[9]为什么找商业模式这么难？]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/13/why-hard-to-find-business-model/"/>
-    <updated>2015-08-13T03:31:18+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/13/why-hard-to-find-business-model</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>如果你有这个问题，要想想自己是不是“我有一个Idea”式的创业
-</span><span class='line'>如果以围绕资源价格为出发点，不会有这个问题</span></code></pre></td></tr></table></div></figure>
-
-
-<p>像饿了么，不会有找不到商业模式的问题。像京东，不会有找不到商业模式的问题。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>正是"商业模式"这个说法把你带到坑里的</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[1]技术人员如何快速成长]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/12/how-to-learn-fast/"/>
-    <updated>2015-08-12T15:56:28+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/12/how-to-learn-fast</id>
+    <title type="html"><![CDATA[Use Nvm to Install Nodejs]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/12/06/use-nvm-to-install-nodejs/"/>
+    <updated>2018-12-06T13:52:57+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/12/06/use-nvm-to-install-nodejs</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>看官方的英文文档，看中文文档是一个坑
-</span><span class='line'>用英文搜索问题而不是中文，多看stackoverflow.com ，里面的回答都很好
-</span><span class='line'>看用到的开源库的源代码。所有东西都在源代码里，有问题就debug进去
-</span><span class='line'>精读技术书籍是坑，要快速浏览大概。书本不能帮你解决具体技术问题
-</span><span class='line'>要学以致用，切忌天马行空、纸上谈兵
-</span><span class='line'>多写demo</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+</span><span class='line'>
+</span><span class='line'># and exit terminal
+</span><span class='line'>
+</span><span class='line'>nvm ls-remote
+</span><span class='line'>nvm install v10.14.1
+</span><span class='line'>node -v
+</span><span class='line'>npm -v
+</span><span class='line'>
+</span><span class='line'>https://github.com/creationix/nvm/blob/master/README.md</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Spring Websockets Broadcast Message to Clients]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/"/>
+    <updated>2018-10-19T11:06:12+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets">https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets</a></p>
+
+<p>ref</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://spring.io/guides/gs/messaging-stomp-websocket/
+</span><span class='line'>https://www.sitepoint.com/implementing-spring-websocket-server-and-client/
+</span><span class='line'>https://github.com/jaysridhar/spring-websocket-server
+</span><span class='line'>https://github.com/jaysridhar/spring-websocket-client</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configuration of the Rsync Daemon]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon/"/>
+    <updated>2018-10-11T17:30:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon</id>
+    <content type="html"><![CDATA[<p>1 nano /etc/default/rsync</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RSYNC_ENABLE=inetd</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install xinetd</span></code></pre></td></tr></table></div></figure>
+
+
+<p>3 create file  /etc/xinetd.d/rsync (the same as below)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>service rsync
+</span><span class='line'>{
+</span><span class='line'>    disable = no
+</span><span class='line'>    socket_type = stream
+</span><span class='line'>    wait = no
+</span><span class='line'>    user = root  # must be root
+</span><span class='line'>    server = /usr/bin/rsync
+</span><span class='line'>    server_args = --daemon
+</span><span class='line'>    log_on_failure += USERID
+</span><span class='line'>    flags = IPv6
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>4 create file /etc/rsyncd.conf</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>max connections = 20
+</span><span class='line'>log file = /var/log/rsync.log
+</span><span class='line'>timeout = 300
+</span><span class='line'>
+</span><span class='line'>[share] # module name
+</span><span class='line'>comment = Public Share
+</span><span class='line'>path = /home/share
+</span><span class='line'>read only = yes
+</span><span class='line'>list = yes
+</span><span class='line'>uid = nobody
+</span><span class='line'>gid = nogroup
+</span><span class='line'>auth users = test_rsync  # the user to auth to rsync, 
+</span><span class='line'>secrets file = /etc/rsyncd.secrets</span></code></pre></td></tr></table></div></figure>
+
+
+<p>5 create file /etc/rsyncd.secrets for password
+sudo nano /etc/rsyncd.secrets</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync_user:rsync_password
+</span><span class='line'># other users ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo chmod 600 /etc/rsyncd.secrets</p>
+
+<p>6 restart</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /etc/init.d/xinetd restart</span></code></pre></td></tr></table></div></figure>
+
+
+<p>7 create password file in client side
+sudo nano /etc/rsync.secrets</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync_password</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo chmod 600 /etc/rsync.secrets</p>
+
+<p>8 have a test in client side</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rsync -azhrvcP --delete --password-file=/etc/rsync.secrets  rsync_user@server_ip::share  /home/user/demo </span></code></pre></td></tr></table></div></figure>
+
+
+<p>ref</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://help.ubuntu.com/community/rsync</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Log All Requests and Responses in Spring Boot]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/"/>
+    <updated>2018-09-12T16:10:34+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot</id>
+    <content type="html"><![CDATA[<p>add pom.xml</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;dependency&gt;
+</span><span class='line'>  &lt;groupId&gt;org.zalando&lt;/groupId&gt;
+</span><span class='line'>  &lt;artifactId&gt;logbook-spring-boot-starter&lt;/artifactId&gt;
+</span><span class='line'>  &lt;version&gt;1.5.0&lt;/version&gt;
+</span><span class='line'>&lt;/dependency&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>add to application.yml</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>logging.level.org.zalando.logbook: TRACE</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all. Done!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/zalando/logbook
+</span><span class='line'>https://stackoverflow.com/questions/33744875/spring-boot-how-to-log-all-requests-and-responses-with-exceptions-in-single-pl</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SQL Style Guide]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/09/12/sql-style-guide/"/>
+    <updated>2018-09-12T15:49:34+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/09/12/sql-style-guide</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.sqlstyle.guide/
+</span><span class='line'>http://www.dpriver.com/pp/sqlformat.htm</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hourly Cron Job in Ubuntu]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/09/03/hourly-cron-job-in-ubuntu/"/>
+    <updated>2018-09-03T15:34:13+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/09/03/hourly-cron-job-in-ubuntu</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /etc/cron.hourly
+</span><span class='line'>sudo nano test1
+</span><span class='line'># the job script start with #!/bin/bash
+</span><span class='line'>sudo chmod +x test1
+</span><span class='line'>
+</span><span class='line'># hava a test
+</span><span class='line'>run-parts --report --test /etc/cron.hourly
+</span><span class='line'>run-parts --report /etc/cron.hourly</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
+</span><span class='line'>https://help.ubuntu.com/community/CronHowto
+</span><span class='line'>https://askubuntu.com/questions/7676/function-of-etc-cron-hourly</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What Are the Applications of Machine Learning in the E-commerce Industry?]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/"/>
+    <updated>2018-06-29T10:24:00+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.quora.com/What-are-the-applications-of-machine-learning-in-the-e-commerce-industry-Which-ML-algorithms-and-techniques-are-used
+</span><span class='line'>
+</span><span class='line'>https://www.quora.com/Revenue-management-and-pricing-What-machine-learning-techniques-are-used-in-revenue-management-and-pricing
+</span><span class='line'>
+</span><span class='line'>https://www.quora.com/Which-algorithms-are-used-in-recommender-systems
+</span><span class='line'>
+</span><span class='line'>https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Minor GC vs Major GC vs Full GC]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc/"/>
+    <updated>2018-06-29T10:06:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://plumbr.io/blog/garbage-collection/minor-gc-vs-major-gc-vs-full-gc</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ignore a Directory With SVN]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn/"/>
+    <updated>2018-06-29T09:46:57+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Spring JDBC Is Not Logging SQL With Log4j]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/"/>
+    <updated>2018-06-25T15:54:41+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Anti-Patterns in OOP]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop/"/>
+    <updated>2018-06-25T15:41:25+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html
+</span><span class='line'>https://www.yegor256.com/2017/12/05/data-access-object.html
+</span><span class='line'>https://www.yegor256.com/2014/10/03/di-containers-are-evil.html</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What Exactly Is RESTful Programming?]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming/"/>
+    <updated>2018-06-25T15:28:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ai | Andy Lin]]></title>
+  <link href="http://andylinid45.github.io/blog/categories/ai/atom.xml" rel="self"/>
+  <link href="http://andylinid45.github.io/"/>
+  <updated>2020-04-17T00:10:54+08:00</updated>
+  <id>http://andylinid45.github.io/</id>
+  <author>
+    <name><![CDATA[Andy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[What Are the Applications of Machine Learning in the E-commerce Industry?]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/"/>
+    <updated>2018-06-29T10:24:00+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry</id>
+    <content type="html"><![CDATA[<p>```
+<a href="https://www.quora.com/What-are-the-applications-of-machine-learning-in-the-e-commerce-industry-Which-ML-algorithms-and-techniques-are-used">https://www.quora.com/What-are-the-applications-of-machine-learning-in-the-e-commerce-industry-Which-ML-algorithms-and-techniques-are-used</a></p>
+
+<p><a href="https://www.quora.com/Revenue-management-and-pricing-What-machine-learning-techniques-are-used-in-revenue-management-and-pricing">https://www.quora.com/Revenue-management-and-pricing-What-machine-learning-techniques-are-used-in-revenue-management-and-pricing</a></p>
+
+<p><a href="https://www.quora.com/Which-algorithms-are-used-in-recommender-systems">https://www.quora.com/Which-algorithms-are-used-in-recommender-systems</a></p>
+
+<p><a href="https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now">https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now</a></p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TensorFlow vs SciKit Learn]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn/"/>
+    <updated>2017-09-07T14:55:28+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn</id>
+    <content type="html"><![CDATA[<ul>
+<li>TensorFlow is more low-level;</li>
+<li>Scikit-learn offers you off-the-shelf algorithms, e.g., algorithms for classification such as SVMs, Random Forests, Logistic Regression</li>
+<li>Scikit-learn does not support GPU at this time. <a href="http://scikit-learn.org/stable/faq.html#will-you-add-gpu-support">http://scikit-learn.org/stable/faq.html#will-you-add-gpu-support</a></li>
+<li>Skflow: Simplified interface for TensorFlow (mimicking Scikit Learn) for Deep Learning. SkFlow has been moved to Tensorflow. <a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn">https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn</a></li>
+</ul>
+
+
+<p>ref:
+<a href="https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn">https://www.quora.com/What-are-the-main-differences-between-TensorFlow-and-SciKit-Learn</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Tensorflow Gpu in Ubuntu 16]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/09/04/install-tensorflow-gpu-in-ubuntu-16/"/>
+    <updated>2017-09-04T17:35:28+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/09/04/install-tensorflow-gpu-in-ubuntu-16</id>
+    <content type="html"><![CDATA[<p>download cuda and install
+```</p>
+
+<h1><a href="https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a></h1>
+
+<p>sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+sudo apt-get update
+sudo apt-get install cuda
+```</p>
+
+<p>download cuDNN and install(cuDNN version depends on your tensorflow version, cuDNN v6 if on TF v1.3)
+```</p>
+
+<h1><a href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a></h1>
+
+<p>sudo dpkg -i libcudnn5_5.1.10-1+cuda8.0_amd64.deb
+sudo dpkg -i libcudnn5-dev_5.1.10-1+cuda8.0_amd64.deb
+```</p>
+
+<p><code>
+sudo apt-get install libcupti-dev
+pip install 'tensorflow-gpu==1.3.0'
+</code></p>
+
+<p>if &ldquo;libEGL.so.1 is not a symbolic link&rdquo;, and run
+<code>
+sudo mv /usr/lib/nvidia-375/libEGL.so.1 /usr/lib/nvidia-375/libEGL.so.1.org
+sudo mv /usr/lib32/nvidia-375/libEGL.so.1 /usr/lib32/nvidia-375/libEGL.so.1.org
+sudo ln -s /usr/lib/nvidia-375/libEGL.so.375.39 /usr/lib/nvidia-375/libEGL.so.1
+sudo ln -s /usr/lib32/nvidia-375/libEGL.so.375.39 /usr/lib32/nvidia-375/libEGL.so.1
+</code></p>
+
+<p>verify your installation
+<code>
+tensorflow # if you are using virtualenv
+python
+import tensorflow as tf
+hello = tf.constant('Hello TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Tensorflow in Ubuntu 16.04LTS]]></title>
+    <link href="http://andylinid45.github.io/blog/2017/08/31/install-tensorflow-in-ubuntu-16-dot-04lts/"/>
+    <updated>2017-08-31T17:41:08+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2017/08/31/install-tensorflow-in-ubuntu-16-dot-04lts</id>
+    <content type="html"><![CDATA[<p>```
+sudo apt-get install python3-pip python3-dev python3-virtualenv</p>
+
+<p>sudo mkdir ~/env
+virtualenv &mdash;system-site-packages ~/env/tensorflow
+```</p>
+
+<p>add to ~/.bashrc
+<code>
+alias tensorflow="source~/env/tensorflow/bin/activate"
+</code></p>
+
+<p>go to <a href="https://storage.googleapis.com/tensorflow/">https://storage.googleapis.com/tensorflow/</a>  to pick up a version (do not install gpu version at first)
+<code>
+tensorflow
+pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.3.0-cp27-none-linux_x86_64.whl
+pip list
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
