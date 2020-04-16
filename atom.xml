@@ -4,7 +4,11 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
+<<<<<<< HEAD
   <updated>2020-04-17T00:48:15+08:00</updated>
+=======
+  <updated>2019-03-28T15:52:46+08:00</updated>
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -14,6 +18,7 @@
 
   
   <entry>
+<<<<<<< HEAD
     <title type="html"><![CDATA[Setup Openvpn]]></title>
     <link href="http://andylinid45.github.io/blog/2020/04/16/setup-openvpn/"/>
     <updated>2020-04-16T22:35:03+08:00</updated>
@@ -31,11 +36,26 @@
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>#install client in osx 10.9
 </span><span class='line'>https://tunnelblick.net/</span></code></pre></td></tr></table></div></figure>
+=======
+    <title type="html"><![CDATA[Double vs BigDecimal in Financial Programming]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/"/>
+    <updated>2019-03-28T15:45:29+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.reddit.com/r/java/comments/8la803/double_vs_bigdecimal_in_financial_programming/
+</span><span class='line'>https://stackoverflow.com/questions/3413448/double-vs-bigdecimal
+</span><span class='line'>https://stackoverflow.com/questions/3866514/why-bigdecimal5-50-not-equals-to-bigdecimal5-5-and-how-to-work-around-th
+</span><span class='line'>https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto</span></code></pre></td></tr></table></div></figure>
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
 
 ]]></content>
   </entry>
   
   <entry>
+<<<<<<< HEAD
     <title type="html"><![CDATA[Double vs BigDecimal in Financial Programming]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/"/>
     <updated>2019-03-28T15:45:29+08:00</updated>
@@ -49,10 +69,7 @@
 </span><span class='line'>https://stackoverflow.com/questions/3866514/why-bigdecimal5-50-not-equals-to-bigdecimal5-5-and-how-to-work-around-th
 </span><span class='line'>https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto</span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
+=======
     <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation/"/>
     <updated>2019-03-22T11:46:10+08:00</updated>
@@ -60,29 +77,87 @@
     <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
 <a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
 <a href="https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query">https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query</a></p>
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
 ]]></content>
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation/"/>
+    <updated>2019-03-22T11:46:10+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
+<a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
+<a href="https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query">https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query</a></p>
+=======
     <title type="html"><![CDATA[Storing Hierarchical Data in a Database]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database/"/>
     <updated>2019-03-22T10:07:54+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database</id>
     <content type="html"><![CDATA[<p><a href="https://www.sitepoint.com/hierarchical-data-database-2/">https://www.sitepoint.com/hierarchical-data-database-2/</a></p>
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
 ]]></content>
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title type="html"><![CDATA[Storing Hierarchical Data in a Database]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database/"/>
+    <updated>2019-03-22T10:07:54+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database</id>
+    <content type="html"><![CDATA[<p><a href="https://www.sitepoint.com/hierarchical-data-database-2/">https://www.sitepoint.com/hierarchical-data-database-2/</a></p>
+=======
     <title type="html"><![CDATA[Headless Browser for Web Scraping]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping/"/>
     <updated>2019-03-21T16:00:38+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping</id>
     <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions">https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions</a>
 <a href="https://github.com/dhamaniasad/HeadlessBrowsers">https://github.com/dhamaniasad/HeadlessBrowsers</a></p>
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
 ]]></content>
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title type="html"><![CDATA[Headless Browser for Web Scraping]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping/"/>
+    <updated>2019-03-21T16:00:38+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping</id>
+    <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions">https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions</a>
+<a href="https://github.com/dhamaniasad/HeadlessBrowsers">https://github.com/dhamaniasad/HeadlessBrowsers</a></p>
+=======
+    <title type="html"><![CDATA[Spring JDBC Logging SQL With Log4j]]></title>
+    <link href="http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/"/>
+    <updated>2019-03-21T14:54:13+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;logger name="org.springframework.jdbc.core.JdbcTemplate"&gt;
+</span><span class='line'>  &lt;level value="debug" /&gt;
+</span><span class='line'>&lt;/logger&gt;
+</span><span class='line'>&lt;logger name="org.springframework.jdbc.core.StatementCreatorUtils"&gt;
+</span><span class='line'>  &lt;level value="trace" /&gt;
+</span><span class='line'>&lt;/logger&gt;
+</span><span class='line'>&lt;logger name="org.springframework.jdbc.datasource.DataSourceTransactionManager"&gt;
+</span><span class='line'>  &lt;level value="debug" /&gt;
+</span><span class='line'>&lt;/logger&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j">https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</a></p>
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
+]]></content>
+  </entry>
+  
+  <entry>
+<<<<<<< HEAD
     <title type="html"><![CDATA[Spring JDBC Logging SQL With Log4j]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/"/>
     <updated>2019-03-21T14:54:13+08:00</updated>
@@ -112,6 +187,8 @@
   </entry>
   
   <entry>
+=======
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
     <title type="html"><![CDATA[Install Docker in Ubuntu 16.04]]></title>
     <link href="http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/"/>
     <updated>2019-01-30T16:54:02+08:00</updated>
@@ -417,8 +494,13 @@ sudo nano /etc/rsyncd.secrets</p>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rsync_user:rsync_password
 </span><span class='line'># other users ...</span></code></pre></td></tr></table></div></figure>
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
 <p>sudo chmod 600 /etc/rsyncd.secrets</p>
 
 <p>6 restart</p>
@@ -519,10 +601,17 @@ sudo nano /etc/rsync.secrets</p>
 </span><span class='line'># hava a test
 </span><span class='line'>run-parts --report --test /etc/cron.hourly
 </span><span class='line'>run-parts --report /etc/cron.hourly</span></code></pre></td></tr></table></div></figure>
+<<<<<<< HEAD
 
 
 
 
+=======
+
+
+
+
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -564,6 +653,8 @@ sudo nano /etc/rsync.secrets</p>
     <id>http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://plumbr.io/blog/garbage-collection/minor-gc-vs-major-gc-vs-full-gc</span></code></pre></td></tr></table></div></figure>
+<<<<<<< HEAD
+=======
 
 ]]></content>
   </entry>
@@ -586,11 +677,57 @@ sudo nano /etc/rsync.secrets</p>
     <id>http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</span></code></pre></td></tr></table></div></figure>
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
 
 ]]></content>
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title type="html"><![CDATA[Ignore a Directory With SVN]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn/"/>
+    <updated>2018-06-29T09:46:57+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn</span></code></pre></td></tr></table></div></figure>
+=======
+    <title type="html"><![CDATA[Anti-Patterns in OOP]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop/"/>
+    <updated>2018-06-25T15:41:25+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html
+</span><span class='line'>https://www.yegor256.com/2017/12/05/data-access-object.html
+</span><span class='line'>https://www.yegor256.com/2014/10/03/di-containers-are-evil.html</span></code></pre></td></tr></table></div></figure>
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
+
+]]></content>
+  </entry>
+  
+  <entry>
+<<<<<<< HEAD
+    <title type="html"><![CDATA[Spring JDBC Is Not Logging SQL With Log4j]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/"/>
+    <updated>2018-06-25T15:54:41+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</span></code></pre></td></tr></table></div></figure>
+=======
+    <title type="html"><![CDATA[What Exactly Is RESTful Programming?]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming/"/>
+    <updated>2018-06-25T15:28:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming</span></code></pre></td></tr></table></div></figure>
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
+
+]]></content>
+  </entry>
+  
+  <entry>
+<<<<<<< HEAD
     <title type="html"><![CDATA[Anti-Patterns in OOP]]></title>
     <link href="http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop/"/>
     <updated>2018-06-25T15:41:25+08:00</updated>
@@ -612,7 +749,21 @@ sudo nano /etc/rsync.secrets</p>
     <id>http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming</span></code></pre></td></tr></table></div></figure>
+=======
+    <title type="html"><![CDATA[Getters and Setters Are Evil]]></title>
+    <link href="http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil/"/>
+    <updated>2018-06-22T09:46:27+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html
+</span><span class='line'>https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html
+</span><span class='line'>https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html</span></code></pre></td></tr></table></div></figure>
 
+>>>>>>> 9509603a752d0ed2ff33b8fde1476f35c6d3e90d
+
+<p>use <a href="https://projectlombok.org/">https://projectlombok.org/</a>   for help</p>
 ]]></content>
   </entry>
   
