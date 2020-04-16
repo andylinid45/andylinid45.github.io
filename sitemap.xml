@@ -2,588 +2,588 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/01/hello-octopress/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/01/octopress-command/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/01/using-git-in-ubuntu/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/01/ssh-without-password/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/01/using-mysql-in-ubuntu/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/03/01/project-specific-git-user-and-email/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/firefox-addons/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/ubuntu-software/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/fixed-gem-install-linecache19/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/reset-mysql-root-password/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/using-postgresql-in-ubuntu/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/03/02/fixed-rails-could-not-find-a-javascript-runtime/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/git-checkout-branch-from-a-tag/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/modify-ssh-port/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/03/02/using-sublime-text-2-as-ruby-on-rails-ide/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/rvm-in-ubunut/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/03/02/fixed-robots-dot-txt-no-found-when-using-unicorn/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/mongodb-and-mongoid/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/spinejs-and-rails/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/turn-off-ubuntu-swap/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/add-global-git-ignore/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/03/02/git-ignore-the-file-permission-mode-changes/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/re-add-heroku-project-git-info/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/heroku-command/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/using-capistrano/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/using-capistrano-nginx-unicorn/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/useful-gems/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/switching-git-server/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/do-not-use-the-column-name-type/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/03/02/fixed-heroku-rails4-assets-not-found/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/using-backup-gem-to-backup-ubuntu/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/virtualbox-win8-screen-resolution/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/nginx-and-unicorn/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/rails-command/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/padrino-command/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/send-sms-from-ubunut/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/r-language/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/03/02/install-ubuntu-13-dot-04-x64-server/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/03/02/install-transmission-in-ubuntu-server/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/03/02/reset-unity/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/03/03/using-rbenv-to-manage-ruby-versions/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/04/11/make-your-own-gem/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/04/11/write-a-executable-gem/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/04/14/reinstall-octopress/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/04/16/rbenv-vs-rvm/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/04/21/using-bower-to-manage-rails-assets/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/04/21/rails-assets-gem-vs-using-bower/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/04/26/why-haml-sucks/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/05/02/mysql-backup-and-restore/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/05/02/git-marge-master-to-a-branch/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/09/23/using-homebrew-with-multiple-users/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/09/23/sudo-without-password/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/09/23/using-brew-in-osx/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:51+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/09/25/ruby-on-rails-development-setup-for-osx/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/09/27/find-process-by-name-in-bash/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/09/27/generate-several-random-passwords-in-bash/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2014/09/29/using-pry-to-debug-in-rails-project/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/10/21/dot-files-in-osx/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/10/27/ubuntu-14-dot-04-server-initial/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/11/01/id-naming/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/12/22/sendmail-vs-postfix/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2014/12/22/postfix-in-ubuntu/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/10/when-to-stop-as-a-startup/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/10/what-is-marketing/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/11/content-marketing/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/11/factors-of-production-cyclic/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/11/the-price-of-factors/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/11/is-idea-important/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2015/08/11/why-baby-consumer-market-suck-for-startup/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/11/some-startup-reference/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/12/how-to-learn-fast/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/13/why-hard-to-find-business-model/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/13/why-react-js-is-so-cool/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/17/install-jdk-on-ubuntu14/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/20/install-maven-on-ubuntu14/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2015/08/21/config-hadoop-for-pseudo-distributed-mode/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/22/using-hdfs-fs-shell/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2015/08/22/fixing-eclipse-can-not-find-java-on-ubuntu/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/22/what-big-data-can-help-e-commerce/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/22/ruby-on-hadoop/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/08/29/html-best-practices/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/09/20/generate-xml-using-xpath/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/09/20/tomcat-outofmemory-in-eclipse/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2015/10/07/http-clients-in-java/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2017/08/31/search-pdf-in-ubuntu/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2017/08/31/install-java-via-sdkman/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2017/08/31/install-sogo-pinyin-in-ubuntu-16/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2017/08/31/install-tensorflow-in-ubuntu-16-dot-04lts/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2017/09/04/update-kernel-in-ubuntu-with-command-line/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2017/09/04/install-tensorflow-gpu-in-ubuntu-16/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2018/06/21/best-way-to-store-password-in-database/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2018/06/22/getters-and-setters-are-evil/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2018/06/25/what-exactly-is-restful-programming/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2018/09/03/hourly-cron-job-in-ubuntu/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2018/09/12/sql-style-guide/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2018/12/06/use-nvm-to-install-nodejs/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2019/01/25/api-design-guide/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/
         </loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/2020/04/16/setup-openvpn/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/blog/archives/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://andylinid45.github.io/robots.txt</loc>
-        <lastmod>2020-04-17T00:44:09+08:00</lastmod>
+        <lastmod>2020-04-17T00:47:52+08:00</lastmod>
     </url>
 </urlset>
