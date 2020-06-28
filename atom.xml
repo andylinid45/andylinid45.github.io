@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2020-04-17T01:46:26+08:00</updated>
+  <updated>2020-06-29T05:59:39+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,77 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setup TCP Tunnel]]></title>
+    <link href="http://andylinid45.github.io/blog/2020/06/29/setup-tcp-tunnel/"/>
+    <updated>2020-06-29T05:52:01+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2020/06/29/setup-tcp-tunnel</id>
+    <content type="html"><![CDATA[<p>Server</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo snap install go --classic
+</span><span class='line'>go get -v github.com/jpillora/chisel
+</span><span class='line'>
+</span><span class='line'>crontab -e
+</span><span class='line'>@reboot /root/go/bin/chisel server -p 9312 --socks5 --pid -v --key supperkey --auth user:pass &
+</span><span class='line'># change your supperkey, user and pass</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Client</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo snap install go --classic
+</span><span class='line'>go get -v github.com/jpillora/chisel
+</span><span class='line'>~/go/bin/chisel client -fingerprint 12:34:56 --auth user:pass vps:9312 socks
+</span><span class='line'># change your fingerprint, user and pass
+</span><span class='line'>
+</span><span class='line'>#Point your SOCKS5 clients (e.g. OS/Browser) to:  localhost:1080</span></code></pre></td></tr></table></div></figure>
+
+
+<p>socks5.sh in ubuntu</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gsettings set org.gnome.system.proxy mode 'manual'
+</span><span class='line'>gsettings set org.gnome.system.proxy.socks host 'localhost'
+</span><span class='line'>gsettings set org.gnome.system.proxy.socks port 1080
+</span><span class='line'>gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1']"
+</span><span class='line'>
+</span><span class='line'>finish() {
+</span><span class='line'>  echo '  Trapped Ctrl-C, socks5 down!'
+</span><span class='line'>  gsettings set  org.gnome.system.proxy mode 'none'
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>trap finish EXIT
+</span><span class='line'>
+</span><span class='line'>~/go/bin/chisel client -fingerprint 12:34:56 --auth user:pass -v vps:9312 socks</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setup Wireguard]]></title>
@@ -621,21 +692,6 @@ sudo nano /etc/rsync.secrets</p>
     <id>http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Anti-Patterns in OOP]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop/"/>
-    <updated>2018-06-25T15:41:25+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/25/anti-patterns-in-oop</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html
-</span><span class='line'>https://www.yegor256.com/2017/12/05/data-access-object.html
-</span><span class='line'>https://www.yegor256.com/2014/10/03/di-containers-are-evil.html</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

@@ -5,12 +5,19 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Rbenv vs Rvm - Andy Lin</title>
+  <title>Setup TCP Tunnel - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="rbenv win. because no gemsets in rbenv. rbenv make things simple. rvm is over-design.
-">
+  <meta name="description" content="Server 1
+2
+3
+4
+5
+6
+sudo snap install go --classic
+go get -v github.com/jpillora/chisel crontab -e
+@reboot /root/go/bin/chisel server -p 9312 --socks5 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +26,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/04/16/rbenv-vs-rvm">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2020/06/29/setup-tcp-tunnel">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -83,7 +90,7 @@
   
   <header>
     
-      <h1 class="entry-title">Rbenv vs Rvm</h1>
+      <h1 class="entry-title">Setup TCP Tunnel</h1>
     
     
       <p class="meta">
@@ -99,18 +106,76 @@
   
 
 
-<time datetime="2014-04-16T15:51:14+08:00" pubdate data-updated="true">Apr 16<span>th</span>, 2014</time>
+<time datetime="2020-06-29T05:52:01+08:00" pubdate data-updated="true">Jun 29<span>th</span>, 2020</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>rbenv win.</p>
+<div class="entry-content"><p>Server</p>
 
-<p>because no gemsets in rbenv. rbenv make things simple.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo snap install go --classic
+</span><span class='line'>go get -v github.com/jpillora/chisel
+</span><span class='line'>
+</span><span class='line'>crontab -e
+</span><span class='line'>@reboot /root/go/bin/chisel server -p 9312 --socks5 --pid -v --key supperkey --auth user:pass &
+</span><span class='line'># change your supperkey, user and pass</span></code></pre></td></tr></table></div></figure>
 
-<p>rvm is over-design.</p>
+
+<p>Client</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo snap install go --classic
+</span><span class='line'>go get -v github.com/jpillora/chisel
+</span><span class='line'>~/go/bin/chisel client -fingerprint 12:34:56 --auth user:pass vps:9312 socks
+</span><span class='line'># change your fingerprint, user and pass
+</span><span class='line'>
+</span><span class='line'>#Point your SOCKS5 clients (e.g. OS/Browser) to:  localhost:1080</span></code></pre></td></tr></table></div></figure>
+
+
+<p>socks5.sh in ubuntu</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gsettings set org.gnome.system.proxy mode 'manual'
+</span><span class='line'>gsettings set org.gnome.system.proxy.socks host 'localhost'
+</span><span class='line'>gsettings set org.gnome.system.proxy.socks port 1080
+</span><span class='line'>gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1']"
+</span><span class='line'>
+</span><span class='line'>finish() {
+</span><span class='line'>  echo '  Trapped Ctrl-C, socks5 down!'
+</span><span class='line'>  gsettings set  org.gnome.system.proxy mode 'none'
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>trap finish EXIT
+</span><span class='line'>
+</span><span class='line'>~/go/bin/chisel client -fingerprint 12:34:56 --auth user:pass -v vps:9312 socks</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 
@@ -133,12 +198,12 @@
   
 
 
-<time datetime="2014-04-16T15:51:14+08:00" pubdate data-updated="true">Apr 16<span>th</span>, 2014</time>
+<time datetime="2020-06-29T05:52:01+08:00" pubdate data-updated="true">Jun 29<span>th</span>, 2020</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/technical-review/'>technical-review</a>
+    <a class='category' href='/blog/categories/production/'>production</a>
   
 </span>
 
@@ -154,10 +219,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/04/14/reinstall-octopress/" title="Previous Post: reinstall octopress">&laquo; reinstall octopress</a>
+        <a class="basic-alignment left" href="/blog/2020/04/17/setup-wireguard/" title="Previous Post: setup wireguard">&laquo; setup wireguard</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/" title="Next Post: fixed failed to fetch from registry: bower, in ubuntu 13">fixed failed to fetch from registry: bower, in ubuntu 13 &raquo;</a>
       
     </p>
   </footer>

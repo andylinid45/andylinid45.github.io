@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Production | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/production/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2020-04-17T01:46:26+08:00</updated>
+  <updated>2020-06-29T05:59:39+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setup TCP Tunnel]]></title>
+    <link href="http://andylinid45.github.io/blog/2020/06/29/setup-tcp-tunnel/"/>
+    <updated>2020-06-29T05:52:01+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2020/06/29/setup-tcp-tunnel</id>
+    <content type="html"><![CDATA[<p>Server
+```
+sudo snap install go &mdash;classic
+go get -v github.com/jpillora/chisel</p>
+
+<p>crontab -e
+@reboot /root/go/bin/chisel server -p 9312 &mdash;socks5 &mdash;pid -v &mdash;key supperkey &mdash;auth user:pass &amp;</p>
+
+<h1>change your supperkey, user and pass</h1>
+
+<p>```</p>
+
+<p>Client
+```
+sudo snap install go &mdash;classic
+go get -v github.com/jpillora/chisel
+~/go/bin/chisel client -fingerprint 12:34:56 &mdash;auth user:pass vps:9312 socks</p>
+
+<h1>change your fingerprint, user and pass</h1>
+
+<h1>Point your SOCKS5 clients (e.g. OS/Browser) to:  localhost:1080</h1>
+
+<p>```</p>
+
+<p>socks5.sh in ubuntu
+```
+gsettings set org.gnome.system.proxy mode &lsquo;manual&rsquo;
+gsettings set org.gnome.system.proxy.socks host &lsquo;localhost&rsquo;
+gsettings set org.gnome.system.proxy.socks port 1080
+gsettings set org.gnome.system.proxy ignore-hosts &ldquo;[&lsquo;localhost&rsquo;, &lsquo;127.0.0.0/8&rsquo;, &lsquo;::1&rsquo;]&rdquo;</p>
+
+<p>finish() {
+  echo &lsquo;  Trapped Ctrl-C, socks5 down!&rsquo;
+  gsettings set  org.gnome.system.proxy mode &lsquo;none&rsquo;
+}</p>
+
+<p>trap finish EXIT</p>
+
+<p>~/go/bin/chisel client -fingerprint 12:34:56 &mdash;auth user:pass -v vps:9312 socks
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setup Wireguard]]></title>
@@ -96,7 +144,7 @@ echo "My test email sent from sendmail" | /usr/sbin/sendmail  your_gmail@gmail.c
 dig mx your_domain.com
 </code></p>
 
-<p>and now you can send mail to <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#x79;&#111;&#x75;&#114;&#95;&#x61;&#x63;&#99;&#111;&#x75;&#110;&#116;&#x5f;&#110;&#97;&#x6d;&#x65;&#x5f;&#x69;&#x6e;&#95;&#x76;&#112;&#115;&#64;&#121;&#x6f;&#117;&#114;&#95;&#x64;&#x6f;&#109;&#97;&#x69;&#x6e;&#46;&#x63;&#x6f;&#109;">&#121;&#111;&#117;&#x72;&#95;&#97;&#99;&#x63;&#x6f;&#117;&#110;&#x74;&#x5f;&#x6e;&#x61;&#x6d;&#x65;&#95;&#105;&#x6e;&#95;&#x76;&#112;&#x73;&#64;&#121;&#111;&#117;&#x72;&#x5f;&#100;&#x6f;&#x6d;&#97;&#105;&#x6e;&#x2e;&#x63;&#x6f;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x79;&#111;&#x75;&#114;&#x5f;&#97;&#99;&#x63;&#111;&#x75;&#x6e;&#116;&#x5f;&#110;&#97;&#109;&#x65;&#x5f;&#x69;&#x6e;&#95;&#118;&#112;&#x73;&#x40;&#x79;&#111;&#x75;&#x72;&#95;&#x64;&#111;&#109;&#97;&#x69;&#110;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#x75;&#114;&#x5f;&#97;&#99;&#99;&#x6f;&#x75;&#x6e;&#x74;&#x5f;&#x6e;&#x61;&#x6d;&#101;&#x5f;&#105;&#x6e;&#x5f;&#x76;&#112;&#115;&#x40;&#x79;&#111;&#x75;&#114;&#x5f;&#100;&#x6f;&#x6d;&#97;&#x69;&#110;&#46;&#x63;&#111;&#x6d;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -170,32 +218,6 @@ sudo apt-get upgrade
 <p>in local
 <code>
 ssh-copy-id deploy@ip
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setup PPTPServer in Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu/"/>
-    <updated>2014-09-27T22:19:50+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/27/setup-pptpserver-in-ubuntu</id>
-    <content type="html"><![CDATA[<p>all the same, tested with Ubuntu 14.4 Server
-<code>
-https://help.ubuntu.com/community/PPTPServer
-</code></p>
-
-<p>debuging, both in server side and client side
-<code>
-sudo tail -f /var/log/syslog
-</code></p>
-
-<p>in client side
-<code>
-Gateway : You ip address of pptp server Or FDDN ( Fully Qualified Domain Name )
-User Name
-Password
-Click on Advanced
-Click on " Use point to point encryption " Click OK &amp; Save
 </code></p>
 ]]></content>
   </entry>
