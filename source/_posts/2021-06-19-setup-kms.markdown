@@ -1,0 +1,24 @@
+---
+layout: post
+title: "setup kms"
+date: 2021-06-19 23:19:13 +0800
+comments: true
+categories: production
+---
+
+Server
+```
+git clone https://github.com/SystemRage/py-kms.git
+cd py-kms/py-kms/
+nohup python3 pykms_Server.py &
+```
+
+in windows
+```
+// change your key in the page https://py-kms.readthedocs.io/en/latest/Keys.html#windows
+cd C:\Windows\system32>
+C:\Windows\system32>slmgr /ipk BB6NG-PQ82V-VRDPW-8XVD2-V8P66
+C:\Windows\system32>slmgr /skms 10.8.0.1
+C:\Windows\system32>slmgr /ato
+
+```
