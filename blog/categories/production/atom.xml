@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Production | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/production/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2021-02-03T23:51:33+08:00</updated>
+  <updated>2021-06-19T23:27:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setup Kms]]></title>
+    <link href="http://andylinid45.github.io/blog/2021/06/19/setup-kms/"/>
+    <updated>2021-06-19T23:19:13+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2021/06/19/setup-kms</id>
+    <content type="html"><![CDATA[<p>Server
+<code>
+git clone https://github.com/SystemRage/py-kms.git
+cd py-kms/py-kms/
+nohup python3 pykms_Server.py &amp;
+</code></p>
+
+<p>in windows
+```
+// change your key in the page <a href="https://py-kms.readthedocs.io/en/latest/Keys.html#windows">https://py-kms.readthedocs.io/en/latest/Keys.html#windows</a>
+cd C:\Windows\system32>
+C:\Windows\system32>slmgr /ipk BB6NG-PQ82V-VRDPW-8XVD2-V8P66
+C:\Windows\system32>slmgr /skms 10.8.0.1
+C:\Windows\system32>slmgr /ato</p>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setup TCP Tunnel]]></title>
@@ -144,7 +168,7 @@ echo "My test email sent from sendmail" | /usr/sbin/sendmail  your_gmail@gmail.c
 dig mx your_domain.com
 </code></p>
 
-<p>and now you can send mail to <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x79;&#111;&#x75;&#x72;&#x5f;&#97;&#99;&#99;&#x6f;&#117;&#110;&#116;&#x5f;&#x6e;&#97;&#x6d;&#x65;&#x5f;&#x69;&#110;&#95;&#118;&#x70;&#115;&#64;&#x79;&#111;&#x75;&#x72;&#95;&#100;&#x6f;&#x6d;&#x61;&#105;&#110;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#x6f;&#x75;&#x72;&#95;&#x61;&#99;&#x63;&#111;&#117;&#x6e;&#116;&#95;&#110;&#x61;&#109;&#101;&#x5f;&#x69;&#x6e;&#x5f;&#x76;&#112;&#115;&#x40;&#x79;&#x6f;&#117;&#114;&#95;&#x64;&#x6f;&#x6d;&#97;&#105;&#x6e;&#x2e;&#x63;&#x6f;&#109;</a> , and other mail address will be rejected</p>
+<p>and now you can send mail to <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x79;&#x6f;&#x75;&#x72;&#x5f;&#x61;&#x63;&#x63;&#x6f;&#117;&#x6e;&#x74;&#95;&#x6e;&#97;&#109;&#x65;&#x5f;&#x69;&#x6e;&#x5f;&#x76;&#x70;&#x73;&#x40;&#121;&#x6f;&#117;&#114;&#x5f;&#100;&#111;&#109;&#x61;&#x69;&#x6e;&#x2e;&#99;&#111;&#109;">&#121;&#x6f;&#x75;&#114;&#x5f;&#x61;&#x63;&#99;&#111;&#117;&#x6e;&#116;&#x5f;&#110;&#x61;&#x6d;&#x65;&#x5f;&#x69;&#x6e;&#95;&#118;&#x70;&#x73;&#x40;&#121;&#111;&#117;&#114;&#x5f;&#x64;&#x6f;&#109;&#97;&#x69;&#x6e;&#46;&#99;&#x6f;&#109;</a> , and other mail address will be rejected</p>
 
 <h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
 
@@ -188,37 +212,6 @@ mydestination
 </code></p>
 
 <p>also modify the /etc/postfix/virtual to add mail address like above, so your mail will forward to your gmail rather than go to you VPS local file</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ubuntu 14.04 Server Initial]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/10/27/ubuntu-14-dot-04-server-initial/"/>
-    <updated>2014-10-27T00:01:07+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/10/27/ubuntu-14-dot-04-server-initial</id>
-    <content type="html"><![CDATA[<p>login as root
-```
-adduser deploy</p>
-
-<p>echo &lsquo;deploy ALL=(ALL) NOPASSWD: ALL&rsquo; |sudo tee -a /etc/sudoers</p>
-
-<p>nano /etc/ssh/sshd_config</p>
-
-<h1>edit two lines</h1>
-
-<p>PermitRootLogin no
-PasswordAuthentication no</p>
-
-<p>service ssh restart  # do not use , no use /etc/init.d/ssh  restart</p>
-
-<p>sudo apt-get update
-sudo apt-get upgrade
-```</p>
-
-<p>in local
-<code>
-ssh-copy-id deploy@ip
-</code></p>
 ]]></content>
   </entry>
   

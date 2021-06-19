@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2021-02-03T23:51:33+08:00</updated>
+  <updated>2021-06-19T23:27:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setup Kms]]></title>
+    <link href="http://andylinid45.github.io/blog/2021/06/19/setup-kms/"/>
+    <updated>2021-06-19T23:19:13+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2021/06/19/setup-kms</id>
+    <content type="html"><![CDATA[<p>Server</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone https://github.com/SystemRage/py-kms.git
+</span><span class='line'>cd py-kms/py-kms/
+</span><span class='line'>nohup python3 pykms_Server.py &</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in windows</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>// change your key in the page https://py-kms.readthedocs.io/en/latest/Keys.html#windows
+</span><span class='line'>cd C:\Windows\system32&gt;
+</span><span class='line'>C:\Windows\system32&gt;slmgr /ipk BB6NG-PQ82V-VRDPW-8XVD2-V8P66
+</span><span class='line'>C:\Windows\system32&gt;slmgr /skms 10.8.0.1
+</span><span class='line'>C:\Windows\system32&gt;slmgr /ato
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setup TCP Tunnel]]></title>
@@ -681,17 +713,6 @@ sudo nano /etc/rsync.secrets</p>
     <id>http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Spring JDBC Is Not Logging SQL With Log4j]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/"/>
-    <updated>2018-06-25T15:54:41+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
