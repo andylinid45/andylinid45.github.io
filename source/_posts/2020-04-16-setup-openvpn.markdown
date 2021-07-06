@@ -10,6 +10,16 @@ categories: production
 #install in ubuntu 18 server
 https://github.com/angristan/openvpn-install
 
+curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
+chmod +x openvpn-install.sh
+
+```
+
+```
+# if tls handshake failed, try to reinstall with TCP option
+
+service  openvpn restart
+tail -f  /var/log/syslog
 ```
 
 ```
