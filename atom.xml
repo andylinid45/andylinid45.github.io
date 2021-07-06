@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2021-06-19T23:29:39+08:00</updated>
+  <updated>2021-07-07T00:18:15+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -158,9 +158,27 @@
     <id>http://andylinid45.github.io/blog/2020/04/16/setup-openvpn</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>#install in ubuntu 18 server
 </span><span class='line'>https://github.com/angristan/openvpn-install
+</span><span class='line'>
+</span><span class='line'>curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
+</span><span class='line'>chmod +x openvpn-install.sh
 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># if tls handshake failed, try to reinstall with TCP option
+</span><span class='line'>
+</span><span class='line'>service  openvpn restart
+</span><span class='line'>tail -f  /var/log/syslog</span></code></pre></td></tr></table></div></figure>
 
 
 
