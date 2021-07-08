@@ -11,14 +11,12 @@
   
   <meta name="description" content="1
 2
-#install wireguard server in ubuntu 18
-https://github.com/l-n-s/wireguard-install 1
-2
 3
 4
 5
-#client side config
-#copy config file to /etc/ &hellip;">
+6
+#install wireguard server in ubuntu 21 (new way)
+https://github.com/angristan/wireguard-install curl -O https://raw.githubusercontent.com &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,8 +114,30 @@ https://github.com/l-n-s/wireguard-install 1
 
 <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#install wireguard server in ubuntu 21  (new way)
+</span><span class='line'>https://github.com/angristan/wireguard-install
+</span><span class='line'>
+</span><span class='line'>curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
+</span><span class='line'>chmod +x wireguard-install.sh
+</span><span class='line'>./wireguard-install.sh</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>#install wireguard server in ubuntu 18
-</span><span class='line'>https://github.com/l-n-s/wireguard-install</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>https://github.com/l-n-s/wireguard-install
+</span><span class='line'>
+</span><span class='line'>wget https://raw.githubusercontent.com/l-n-s/wireguard-install/master/wireguard-install.sh -O wireguard-install.sh
+</span><span class='line'>bash wireguard-install.sh</span></code></pre></td></tr></table></div></figure>
 
 
 

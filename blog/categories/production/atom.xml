@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Production | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/production/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2021-07-08T14:07:27+08:00</updated>
+  <updated>2021-07-08T14:29:28+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -145,9 +145,23 @@ gsettings set org.gnome.system.proxy ignore-hosts &ldquo;[&lsquo;localhost&rsquo
     <id>http://andylinid45.github.io/blog/2020/04/17/setup-wireguard</id>
     <content type="html"><![CDATA[<p>```</p>
 
+<h1>install wireguard server in ubuntu 21  (new way)</h1>
+
+<p><a href="https://github.com/angristan/wireguard-install">https://github.com/angristan/wireguard-install</a></p>
+
+<p>curl -O <a href="https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh">https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh</a>
+chmod +x wireguard-install.sh
+./wireguard-install.sh
+```</p>
+
+<p>```</p>
+
 <h1>install wireguard server in ubuntu 18</h1>
 
-<p><a href="https://github.com/l-n-s/wireguard-install">https://github.com/l-n-s/wireguard-install</a>
+<p><a href="https://github.com/l-n-s/wireguard-install">https://github.com/l-n-s/wireguard-install</a></p>
+
+<p>wget <a href="https://raw.githubusercontent.com/l-n-s/wireguard-install/master/wireguard-install.sh">https://raw.githubusercontent.com/l-n-s/wireguard-install/master/wireguard-install.sh</a> -O wireguard-install.sh
+bash wireguard-install.sh
 ```</p>
 
 <p>```</p>
