@@ -5,11 +5,20 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Deploy - Andy Lin</title>
+  <title>Using Python Proxy - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="Category: deploy">
+  <meta name="description" content="1
+2
+3
+4
+5
+# setup client in windows 10
+winget install python
+#reopen terminal
+pip3 install pproxy
+pproxy -r socks5://serverIp:18080#youruser:yourpass &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +27,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.ioblog/categories/deploy">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2021/07/08/using-python-proxy">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -78,77 +87,144 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Deploy</h1>
+    
+      <h1 class="entry-title">Using Python Proxy</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2021-07-08T13:56:38+08:00" pubdate data-updated="true">Jul 8<span>th</span>, 2021</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
+
+
+<div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># setup client in windows 10
+</span><span class='line'>winget install python
+</span><span class='line'>#reopen terminal
+</span><span class='line'>pip3 install pproxy
+</span><span class='line'>pproxy -r socks5://serverIp:18080#youruser:yourpass --sys -vv</span></code></pre></td></tr></table></div></figure>
 
 
 
-  
-  <h2>2014</h2>
 
-<article>
-  
-<h1><a href="/blog/2014/03/02/nginx-and-unicorn/">Nginx and Unicorn</a></h1>
-<time datetime="2014-03-02T18:44:27+08:00" pubdate><span class='month'>Mar</span> <span class='day'>02</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/deploy/'>deploy</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/03/02/using-capistrano-nginx-unicorn/">Using Capistrano-nginx-unicorn</a></h1>
-<time datetime="2014-03-02T18:23:47+08:00" pubdate><span class='month'>Mar</span> <span class='day'>02</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/deploy/'>deploy</a></span>
-</footer>
-
-
-</article>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># setup server in ubuntu 21.04
+</span><span class='line'>pip3 install pproxy
+</span><span class='line'>useradd --no-create-home -s /usr/sbin/nologin pproxy
+</span><span class='line'>
+</span><span class='line'>cd /etc/init.d/
+</span><span class='line'>wget https://raw.githubusercontent.com/fhd/init-script-template/master/template
+</span><span class='line'>mv template my-proxy
+</span><span class='line'>chmod +x my-proxy
+</span><span class='line'>nano my-proxy</span></code></pre></td></tr></table></div></figure>
 
 
 
-<article>
-  
-<h1><a href="/blog/2014/03/02/using-capistrano/">Using Capistrano</a></h1>
-<time datetime="2014-03-02T18:21:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>02</span> <span class='year'>2014</span></time>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/deploy/'>deploy</a></span>
-</footer>
-
-
-</article>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># nano my-proxy
+</span><span class='line'>dir="/usr/local/bin"
+</span><span class='line'>cmd="pproxy -l socks5://:18080#youruser:yourpass -v"
+</span><span class='line'>user="pproxy"</span></code></pre></td></tr></table></div></figure>
 
 
 
-<article>
-  
-<h1><a href="/blog/2014/03/02/fixed-robots-dot-txt-no-found-when-using-unicorn/">Fixed robots.txt No Found When Using Unicorn</a></h1>
-<time datetime="2014-03-02T16:33:50+08:00" pubdate><span class='month'>Mar</span> <span class='day'>02</span> <span class='year'>2014</span></time>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/deploy/'>deploy</a></span>
-</footer>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/etc/init.d/my-proxy start
+</span><span class='line'>sudo update-rc.d my-proxy defaults</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/qwj/python-proxy
+</span><span class='line'>https://github.com/fhd/init-script-template
+</span><span class='line'>https://stackoverflow.com/questions/7221757/run-automatically-program-on-startup-under-linux-ubuntu</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Andy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2021-07-08T13:56:38+08:00" pubdate data-updated="true">Jul 8<span>th</span>, 2021</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/production/'>production</a>, <a class='category' href='/blog/categories/tools/'>tools</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2021/06/19/setup-kms/" title="Previous Post: setup kms">&laquo; setup kms</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

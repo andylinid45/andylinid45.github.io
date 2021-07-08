@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2021-07-07T00:18:15+08:00</updated>
+  <updated>2021-07-08T14:07:27+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using Python Proxy]]></title>
+    <link href="http://andylinid45.github.io/blog/2021/07/08/using-python-proxy/"/>
+    <updated>2021-07-08T13:56:38+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2021/07/08/using-python-proxy</id>
+    <content type="html"><![CDATA[<p>```</p>
+
+<h1>setup client in windows 10</h1>
+
+<p>winget install python</p>
+
+<h1>reopen terminal</h1>
+
+<p>pip3 install pproxy
+pproxy -r socks5://serverIp:18080#youruser:yourpass &mdash;sys -vv
+```</p>
+
+<p>```</p>
+
+<h1>setup server in ubuntu 21.04</h1>
+
+<p>pip3 install pproxy
+useradd &mdash;no-create-home -s /usr/sbin/nologin pproxy</p>
+
+<p>cd /etc/init.d/
+wget <a href="https://raw.githubusercontent.com/fhd/init-script-template/master/template">https://raw.githubusercontent.com/fhd/init-script-template/master/template</a>
+mv template my-proxy
+chmod +x my-proxy
+nano my-proxy
+```</p>
+
+<p>```</p>
+
+<h1>nano my-proxy</h1>
+
+<p>dir=&ldquo;/usr/local/bin&rdquo;
+cmd=&ldquo;pproxy -l socks5://:18080#youruser:yourpass -v&rdquo;
+user=&ldquo;pproxy&rdquo;
+```</p>
+
+<p><code>
+/etc/init.d/my-proxy start
+sudo update-rc.d my-proxy defaults
+</code></p>
+
+<p><code>
+https://github.com/qwj/python-proxy
+https://github.com/fhd/init-script-template
+https://stackoverflow.com/questions/7221757/run-automatically-program-on-startup-under-linux-ubuntu
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using Brew in Osx]]></title>
@@ -181,20 +234,6 @@ ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/lo
 <p>install package
 <code>
 Syntax Highlighting for Sass
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Firefox Addons]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/03/02/firefox-addons/"/>
-    <updated>2014-03-02T15:27:46+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/03/02/firefox-addons</id>
-    <content type="html"><![CDATA[<p><code>
-https://addons.mozilla.org/en-US/firefox/addon/all-in-one-gestures/
-https://addons.mozilla.org/en-US/firefox/addon/firebug/
-https://addons.mozilla.org/en-US/firefox/addon/measureit/
-https://addons.mozilla.org/en-US/firefox/addon/colorzilla/
 </code></p>
 ]]></content>
   </entry>

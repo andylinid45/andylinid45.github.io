@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Production | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/production/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2021-07-07T00:18:15+08:00</updated>
+  <updated>2021-07-08T14:07:27+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using Python Proxy]]></title>
+    <link href="http://andylinid45.github.io/blog/2021/07/08/using-python-proxy/"/>
+    <updated>2021-07-08T13:56:38+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2021/07/08/using-python-proxy</id>
+    <content type="html"><![CDATA[<p>```</p>
+
+<h1>setup client in windows 10</h1>
+
+<p>winget install python</p>
+
+<h1>reopen terminal</h1>
+
+<p>pip3 install pproxy
+pproxy -r socks5://serverIp:18080#youruser:yourpass &mdash;sys -vv
+```</p>
+
+<p>```</p>
+
+<h1>setup server in ubuntu 21.04</h1>
+
+<p>pip3 install pproxy
+useradd &mdash;no-create-home -s /usr/sbin/nologin pproxy</p>
+
+<p>cd /etc/init.d/
+wget <a href="https://raw.githubusercontent.com/fhd/init-script-template/master/template">https://raw.githubusercontent.com/fhd/init-script-template/master/template</a>
+mv template my-proxy
+chmod +x my-proxy
+nano my-proxy
+```</p>
+
+<p>```</p>
+
+<h1>nano my-proxy</h1>
+
+<p>dir=&ldquo;/usr/local/bin&rdquo;
+cmd=&ldquo;pproxy -l socks5://:18080#youruser:yourpass -v&rdquo;
+user=&ldquo;pproxy&rdquo;
+```</p>
+
+<p><code>
+/etc/init.d/my-proxy start
+sudo update-rc.d my-proxy defaults
+</code></p>
+
+<p><code>
+https://github.com/qwj/python-proxy
+https://github.com/fhd/init-script-template
+https://stackoverflow.com/questions/7221757/run-automatically-program-on-startup-under-linux-ubuntu
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setup Kms]]></title>
@@ -149,80 +202,6 @@ tail -f  /var/log/syslog
 
 <p><a href="https://tunnelblick.net/">https://tunnelblick.net/</a>
 ```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Postfix in Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/12/22/postfix-in-ubuntu/"/>
-    <updated>2014-12-22T21:21:14+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/12/22/postfix-in-ubuntu</id>
-    <content type="html"><![CDATA[<h3>outgoing mail</h3>
-
-<p><code>
-sudo apt-get install postfix
-</code></p>
-
-<h3>test outgoing mail</h3>
-
-<p><code>
-echo "My test email sent from sendmail" | /usr/sbin/sendmail  your_gmail@gmail.com
-</code></p>
-
-<h3>incomming mail</h3>
-
-<p>setup MX record in DNS, point to your VPS ip or domain name</p>
-
-<h3>test MX record</h3>
-
-<p><code>
-dig mx your_domain.com
-</code></p>
-
-<p>and now you can send mail to <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#121;&#111;&#117;&#114;&#95;&#97;&#99;&#99;&#111;&#x75;&#x6e;&#x74;&#95;&#x6e;&#97;&#x6d;&#101;&#x5f;&#105;&#110;&#x5f;&#118;&#112;&#x73;&#x40;&#121;&#x6f;&#117;&#x72;&#95;&#100;&#x6f;&#109;&#97;&#x69;&#110;&#46;&#99;&#111;&#109;">&#x79;&#x6f;&#117;&#x72;&#x5f;&#97;&#99;&#x63;&#x6f;&#x75;&#110;&#116;&#x5f;&#110;&#97;&#109;&#101;&#x5f;&#105;&#110;&#x5f;&#118;&#x70;&#115;&#64;&#x79;&#111;&#x75;&#x72;&#x5f;&#x64;&#111;&#109;&#x61;&#105;&#x6e;&#46;&#99;&#x6f;&#x6d;</a> , and other mail address will be rejected</p>
-
-<h3>add mail forward to your gmail (usefull for small business if you don&rsquo;t want to buy &ldquo;Google App&rdquo; for managing your mail box)</h3>
-
-<p><code>
-sudo nano /etc/postfix/main.cf
-</code></p>
-
-<p>add
-<code>
-virtual_alias_maps = hash:/etc/postfix/virtual
-</code></p>
-
-<p><code>
-sudo nano  /etc/postfix/virtual
-</code>
-add
-<code>
-your_new_mail_address@your_domain.com  your_gmail@gmail.com
-</code></p>
-
-<p>and restart at last
-<code>
-sudo postmap /etc/postfix/virtual
-sudo /etc/init.d/postfix restart
-</code></p>
-
-<p>log file in
-<code>
-/var/log/mail.err
-/var/log/mail.log
-</code></p>
-
-<h3>add a new domain mail box to your vps</h3>
-
-<p><code>
-sudo nano /etc/postfix/main.cf
-</code>
-add the domain to
-<code>
-mydestination
-</code></p>
-
-<p>also modify the /etc/postfix/virtual to add mail address like above, so your mail will forward to your gmail rather than go to you VPS local file</p>
 ]]></content>
   </entry>
   

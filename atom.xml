@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2021-07-07T00:18:15+08:00</updated>
+  <updated>2021-07-08T14:07:27+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,77 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using Python Proxy]]></title>
+    <link href="http://andylinid45.github.io/blog/2021/07/08/using-python-proxy/"/>
+    <updated>2021-07-08T13:56:38+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2021/07/08/using-python-proxy</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># setup client in windows 10
+</span><span class='line'>winget install python
+</span><span class='line'>#reopen terminal
+</span><span class='line'>pip3 install pproxy
+</span><span class='line'>pproxy -r socks5://serverIp:18080#youruser:yourpass --sys -vv</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># setup server in ubuntu 21.04
+</span><span class='line'>pip3 install pproxy
+</span><span class='line'>useradd --no-create-home -s /usr/sbin/nologin pproxy
+</span><span class='line'>
+</span><span class='line'>cd /etc/init.d/
+</span><span class='line'>wget https://raw.githubusercontent.com/fhd/init-script-template/master/template
+</span><span class='line'>mv template my-proxy
+</span><span class='line'>chmod +x my-proxy
+</span><span class='line'>nano my-proxy</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># nano my-proxy
+</span><span class='line'>dir="/usr/local/bin"
+</span><span class='line'>cmd="pproxy -l socks5://:18080#youruser:yourpass -v"
+</span><span class='line'>user="pproxy"</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/etc/init.d/my-proxy start
+</span><span class='line'>sudo update-rc.d my-proxy defaults</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/qwj/python-proxy
+</span><span class='line'>https://github.com/fhd/init-script-template
+</span><span class='line'>https://stackoverflow.com/questions/7221757/run-automatically-program-on-startup-under-linux-ubuntu</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setup Kms]]></title>
@@ -720,17 +791,6 @@ sudo nano /etc/rsync.secrets</p>
     <id>http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://plumbr.io/blog/garbage-collection/minor-gc-vs-major-gc-vs-full-gc</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ignore a Directory With SVN]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn/"/>
-    <updated>2018-06-29T09:46:57+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/29/ignore-a-directory-with-svn</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://stackoverflow.com/questions/116074/how-do-i-ignore-a-directory-with-svn</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

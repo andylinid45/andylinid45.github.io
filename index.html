@@ -9,17 +9,16 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="Server 1
-2
-3
-git clone https://github.com/SystemRage/py-kms.git
-cd py-kms/py-kms/
-nohup python3 pykms_Server.py & in windows 1
+  <meta name="description" content="1
 2
 3
 4
 5
-// change your &hellip;">
+# setup client in windows 10
+winget install python
+#reopen terminal
+pip3 install pproxy
+pproxy -r socks5://serverIp:18080#youruser:yourpass &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +88,104 @@ nohup python3 pykms_Server.py & in windows 1
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2021/07/08/using-python-proxy/">Using Python Proxy</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2021-07-08T13:56:38+08:00" pubdate data-updated="true">Jul 8<span>th</span>, 2021</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># setup client in windows 10
+</span><span class='line'>winget install python
+</span><span class='line'>#reopen terminal
+</span><span class='line'>pip3 install pproxy
+</span><span class='line'>pproxy -r socks5://serverIp:18080#youruser:yourpass --sys -vv</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># setup server in ubuntu 21.04
+</span><span class='line'>pip3 install pproxy
+</span><span class='line'>useradd --no-create-home -s /usr/sbin/nologin pproxy
+</span><span class='line'>
+</span><span class='line'>cd /etc/init.d/
+</span><span class='line'>wget https://raw.githubusercontent.com/fhd/init-script-template/master/template
+</span><span class='line'>mv template my-proxy
+</span><span class='line'>chmod +x my-proxy
+</span><span class='line'>nano my-proxy</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># nano my-proxy
+</span><span class='line'>dir="/usr/local/bin"
+</span><span class='line'>cmd="pproxy -l socks5://:18080#youruser:yourpass -v"
+</span><span class='line'>user="pproxy"</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/etc/init.d/my-proxy start
+</span><span class='line'>sudo update-rc.d my-proxy defaults</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/qwj/python-proxy
+</span><span class='line'>https://github.com/fhd/init-script-template
+</span><span class='line'>https://stackoverflow.com/questions/7221757/run-automatically-program-on-startup-under-linux-ubuntu</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -587,190 +684,6 @@ nohup python3 pykms_Server.py & in windows 1
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/">Install Docker in Ubuntu 16.04</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-01-30T16:54:02+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2019</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>install docker</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># install required packages
-</span><span class='line'>sudo apt-get install \
-</span><span class='line'>   apt-transport-https \
-</span><span class='line'>   ca-certificates \
-</span><span class='line'>   curl \
-</span><span class='line'>   software-properties-common
-</span><span class='line'>
-</span><span class='line'># get the GPG key for docker
-</span><span class='line'>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
-</span><span class='line'>   sudo apt-key add -
-</span><span class='line'>
-</span><span class='line'># validating the docker GPG key is installed
-</span><span class='line'>sudo apt-key fingerprint 0EBFCD88
-</span><span class='line'>
-</span><span class='line'># adding the docker repository
-</span><span class='line'>sudo add-apt-repository \
-</span><span class='line'>   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-</span><span class='line'>   $(lsb_release -cs) \
-</span><span class='line'>   stable"
-</span><span class='line'>
-</span><span class='line'># update apt-get libraries again
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>
-</span><span class='line'># install docker
-</span><span class='line'>sudo apt-get install docker-ce
-</span><span class='line'>
-</span><span class='line'># validate install with version command
-</span><span class='line'>docker --version
-</span><span class='line'>
-</span><span class='line'># validating functionality by running a container
-</span><span class='line'>sudo docker run hello-world</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install docker-compose</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-</span><span class='line'>
-</span><span class='line'>sudo chmod +x /usr/local/bin/docker-compose</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install portainer as a GUI manager</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo docker image pull portainer/portainer
-</span><span class='line'>sudo docker image ls
-</span><span class='line'>
-</span><span class='line'>sudo docker container run -d \
-</span><span class='line'> -p 9000:9000 \
-</span><span class='line'> -v /var/run/docker.sock:/var/run/docker.sock \
-</span><span class='line'> portainer/portainer</span></code></pre></td></tr></table></div></figure>
-
-
-<p>useful command</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo docker image pull hello-world
-</span><span class='line'>sudo docker image ls
-</span><span class='line'>
-</span><span class='line'>sudo docker container ps
-</span><span class='line'>sudo docker container ls -a
-</span><span class='line'>sudo docker container rm --force $(docker container ls --all --quiet) # remove all
-</span><span class='line'>sudo docker container run --detach --name web-server --rm nginx
-</span><span class='line'>sudo docker container run --detach -it --name web-server1 -p 80:80 nginx
-</span><span class='line'>sudo docker container run -it ubuntu bash
-</span><span class='line'>sudo docker container exec web-server1 cat /etc/debian_version
-</span><span class='line'>sudo docker container stop web-server
-</span><span class='line'>sudo docker container inspect web-server # docker detail
-</span><span class='line'>sudo docker container inspect --format '' web-server1 | jq
-</span><span class='line'>sudo docker container stats
-</span><span class='line'>sudo docker container stats web-server1 web-server2
-</span><span class='line'>
-</span><span class='line'>sudo docker search ubuntu
-</span><span class='line'>sudo docker volume  ls
-</span><span class='line'>sudo docker system info
-</span><span class='line'>sudo docker network ls 
-</span><span class='line'>
-</span><span class='line'>docker-compose start
-</span><span class='line'>docker-compose stop
-</span><span class='line'>docker-compose restart
-</span><span class='line'>docker-compose pause
-</span><span class='line'>docker-compose unpause</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -783,11 +696,15 @@ nohup python3 pykms_Server.py & in windows 1
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 153.68421052631578%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 125.26315789473685%'>production(8)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 160.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 115.78947368421052%'>tools(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.63157894736842%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.15789473684211%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.3157894736842%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.78947368421052%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.3157894736842%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.15789473684211%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.63157894736842%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.15789473684211%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.78947368421052%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.3157894736842%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.15789473684211%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 122.10526315789474%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.63157894736842%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.3157894736842%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 153.68421052631578%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.15789473684211%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.15789473684211%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.47368421052632%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.15789473684211%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.3157894736842%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.63157894736842%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.15789473684211%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.15789473684211%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 128.42105263157896%'>production(9)</a> <a href='/blog/categories/r' style='font-size: 103.15789473684211%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 125.26315789473685%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.3157894736842%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.15789473684211%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.15789473684211%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.15789473684211%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.78947368421052%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.15789473684211%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.3157894736842%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.15789473684211%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.15789473684211%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 160.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.47368421052632%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.94736842105263%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(19)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.3157894736842%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 128.42105263157896%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.15789473684211%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2021/07/08/using-python-proxy/">Using Python Proxy</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2021/06/19/setup-kms/">Setup Kms</a>
@@ -803,10 +720,6 @@ nohup python3 pykms_Server.py & in windows 1
     
       <li class="post">
         <a href="/blog/2020/04/16/setup-openvpn/">Setup Openvpn</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/">Double vs BigDecimal in Financial Programming</a>
       </li>
     
   </ul>
