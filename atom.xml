@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2021-07-08T14:29:28+08:00</updated>
+  <updated>2022-05-10T05:05:35+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Disable Ipv6 in Ubuntu 21.04]]></title>
+    <link href="http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/"/>
+    <updated>2022-05-10T04:54:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04</id>
+    <content type="html"><![CDATA[<p>sudo nano /etc/sysctl.conf
+add in the end of the file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>net.ipv6.conf.all.disable_ipv6=1
+</span><span class='line'>net.ipv6.conf.default.disable_ipv6=1
+</span><span class='line'>net.ipv6.conf.lo.disable_ipv6=1</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo sysctl -p
+</span><span class='line'># check it 
+</span><span class='line'>ip a</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sudo nano /etc/rc.local
+create a new file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/bash
+</span><span class='line'># /etc/rc.local
+</span><span class='line'>
+</span><span class='line'>/etc/sysctl.d
+</span><span class='line'>/etc/init.d/procps restart
+</span><span class='line'>
+</span><span class='line'>exit 0</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo chmod 755 /etc/rc.local
+</span><span class='line'>
+</span><span class='line'>sudo reboot</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://itsfoss.com/disable-ipv6-ubuntu-linux/">https://itsfoss.com/disable-ipv6-ubuntu-linux/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using Python Proxy]]></title>
@@ -802,17 +861,6 @@ sudo nano /etc/rsync.secrets</p>
 </span><span class='line'>
 </span><span class='line'>https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now
 </span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Minor GC vs Major GC vs Full GC]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc/"/>
-    <updated>2018-06-29T10:06:09+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/29/minor-gc-vs-major-gc-vs-full-gc</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://plumbr.io/blog/garbage-collection/minor-gc-vs-major-gc-vs-full-gc</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

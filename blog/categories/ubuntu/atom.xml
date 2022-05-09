@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2021-07-08T14:29:28+08:00</updated>
+  <updated>2022-05-10T05:05:35+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Disable Ipv6 in Ubuntu 21.04]]></title>
+    <link href="http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/"/>
+    <updated>2022-05-10T04:54:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04</id>
+    <content type="html"><![CDATA[<p>sudo nano /etc/sysctl.conf
+add in the end of the file
+<code>
+net.ipv6.conf.all.disable_ipv6=1
+net.ipv6.conf.default.disable_ipv6=1
+net.ipv6.conf.lo.disable_ipv6=1
+</code></p>
+
+<p>```
+sudo sysctl -p</p>
+
+<h1>check it</h1>
+
+<p>ip a
+```</p>
+
+<p>sudo nano /etc/rc.local
+create a new file
+```</p>
+
+<h1>!/bin/bash</h1>
+
+<h1>/etc/rc.local</h1>
+
+<p>/etc/sysctl.d
+/etc/init.d/procps restart</p>
+
+<p>exit 0
+```</p>
+
+<p>```
+sudo chmod 755 /etc/rc.local</p>
+
+<p>sudo reboot
+```</p>
+
+<p><a href="https://itsfoss.com/disable-ipv6-ubuntu-linux/">https://itsfoss.com/disable-ipv6-ubuntu-linux/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Docker in Ubuntu 16.04]]></title>
@@ -254,27 +299,6 @@ sudo apt-get autoremove
 <p>check the result
 <code>
 uname -r
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Make Wget Multithreading?]]></title>
-    <link href="http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading/"/>
-    <updated>2017-09-01T14:58:41+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2017/09/01/how-to-make-wget-multithreading</id>
-    <content type="html"><![CDATA[<p>try axel</p>
-
-<p>```
-sudo apt-get install axel
-axel -a -n [Num_of_Thread] link1 link2 link3 &hellip;</p>
-
-<h1>-a just show an improved progress bar.</h1>
-
-<p>```</p>
-
-<p><code>
-http://askubuntu.com/questions/214018/how-to-make-wget-faster-or-multithreading
 </code></p>
 ]]></content>
   </entry>

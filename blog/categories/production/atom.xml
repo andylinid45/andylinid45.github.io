@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Production | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/production/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2021-07-08T14:29:28+08:00</updated>
+  <updated>2022-05-10T05:05:35+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Disable Ipv6 in Ubuntu 21.04]]></title>
+    <link href="http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/"/>
+    <updated>2022-05-10T04:54:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04</id>
+    <content type="html"><![CDATA[<p>sudo nano /etc/sysctl.conf
+add in the end of the file
+<code>
+net.ipv6.conf.all.disable_ipv6=1
+net.ipv6.conf.default.disable_ipv6=1
+net.ipv6.conf.lo.disable_ipv6=1
+</code></p>
+
+<p>```
+sudo sysctl -p</p>
+
+<h1>check it</h1>
+
+<p>ip a
+```</p>
+
+<p>sudo nano /etc/rc.local
+create a new file
+```</p>
+
+<h1>!/bin/bash</h1>
+
+<h1>/etc/rc.local</h1>
+
+<p>/etc/sysctl.d
+/etc/init.d/procps restart</p>
+
+<p>exit 0
+```</p>
+
+<p>```
+sudo chmod 755 /etc/rc.local</p>
+
+<p>sudo reboot
+```</p>
+
+<p><a href="https://itsfoss.com/disable-ipv6-ubuntu-linux/">https://itsfoss.com/disable-ipv6-ubuntu-linux/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using Python Proxy]]></title>
@@ -182,39 +227,6 @@ sudo wg show</p>
 <h1>wireguard is faster than openvpn</h1>
 
 <p><a href="https://github.com/pirate/wireguard-docs">https://github.com/pirate/wireguard-docs</a>
-```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setup Openvpn]]></title>
-    <link href="http://andylinid45.github.io/blog/2020/04/16/setup-openvpn/"/>
-    <updated>2020-04-16T22:35:03+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2020/04/16/setup-openvpn</id>
-    <content type="html"><![CDATA[<p>```</p>
-
-<h1>install in ubuntu 18 server</h1>
-
-<p><a href="https://github.com/angristan/openvpn-install">https://github.com/angristan/openvpn-install</a></p>
-
-<p>curl -O <a href="https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh">https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh</a>
-chmod +x openvpn-install.sh</p>
-
-<p>```</p>
-
-<p>```</p>
-
-<h1>if tls handshake failed, try to reinstall with TCP option</h1>
-
-<p>service  openvpn restart
-tail -f  /var/log/syslog
-```</p>
-
-<p>```</p>
-
-<h1>install client in osx 10.9</h1>
-
-<p><a href="https://tunnelblick.net/">https://tunnelblick.net/</a>
 ```</p>
 ]]></content>
   </entry>
