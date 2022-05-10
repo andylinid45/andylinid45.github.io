@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2022-05-10T21:11:06+08:00</updated>
+  <updated>2022-05-10T21:18:48+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -18,13 +18,15 @@
     <link href="http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/"/>
     <updated>2022-05-10T04:54:20+08:00</updated>
     <id>http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04</id>
-    <content type="html"><![CDATA[<p>sudo nano /etc/sysctl.conf
-add in the end of the file
-<code>
-net.ipv6.conf.all.disable_ipv6=1
+    <content type="html"><![CDATA[<p>```
+sudo nano /etc/sysctl.conf</p>
+
+<h1>add in the end of the file</h1>
+
+<p>net.ipv6.conf.all.disable_ipv6=1
 net.ipv6.conf.default.disable_ipv6=1
 net.ipv6.conf.lo.disable_ipv6=1
-</code></p>
+```</p>
 
 <p>```
 sudo sysctl -p</p>
@@ -34,9 +36,10 @@ sudo sysctl -p</p>
 <p>ip a
 ```</p>
 
-<p>sudo nano /etc/rc.local
-create a new file
-```</p>
+<p>```
+sudo nano /etc/rc.local</p>
+
+<h1>create a new file</h1>
 
 <h1>!/bin/bash</h1>
 

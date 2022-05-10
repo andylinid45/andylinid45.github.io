@@ -9,13 +9,16 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="sudo nano /etc/sysctl.conf
-add in the end of the file 1
+  <meta name="description" content="1
 2
 3
+4
+5
+sudo nano /etc/sysctl.conf
+# add in the end of the file
 net.ipv6.conf.all.disable_ipv6=1
 net.ipv6.conf.default.disable_ipv6=1
-net.ipv6.conf.lo. &hellip;">
+net.ipv6.conf &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -114,13 +117,14 @@ net.ipv6.conf.lo. &hellip;">
   </header>
 
 
-  <div class="entry-content"><p>sudo nano /etc/sysctl.conf
-add in the end of the file</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>net.ipv6.conf.all.disable_ipv6=1
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/sysctl.conf
+</span><span class='line'># add in the end of the file
+</span><span class='line'>net.ipv6.conf.all.disable_ipv6=1
 </span><span class='line'>net.ipv6.conf.default.disable_ipv6=1
 </span><span class='line'>net.ipv6.conf.lo.disable_ipv6=1</span></code></pre></td></tr></table></div></figure>
 
@@ -135,8 +139,7 @@ add in the end of the file</p>
 </span><span class='line'>ip a</span></code></pre></td></tr></table></div></figure>
 
 
-<p>sudo nano /etc/rc.local
-create a new file</p>
+
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -145,7 +148,13 @@ create a new file</p>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/bash
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/rc.local
+</span><span class='line'># create a new file
+</span><span class='line'>
+</span><span class='line'>#!/bin/bash
 </span><span class='line'># /etc/rc.local
 </span><span class='line'>
 </span><span class='line'>/etc/sysctl.d

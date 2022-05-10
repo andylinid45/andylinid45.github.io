@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2022-05-10T21:11:06+08:00</updated>
+  <updated>2022-05-10T21:18:48+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -18,13 +18,14 @@
     <link href="http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/"/>
     <updated>2022-05-10T04:54:20+08:00</updated>
     <id>http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04</id>
-    <content type="html"><![CDATA[<p>sudo nano /etc/sysctl.conf
-add in the end of the file</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>net.ipv6.conf.all.disable_ipv6=1
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/sysctl.conf
+</span><span class='line'># add in the end of the file
+</span><span class='line'>net.ipv6.conf.all.disable_ipv6=1
 </span><span class='line'>net.ipv6.conf.default.disable_ipv6=1
 </span><span class='line'>net.ipv6.conf.lo.disable_ipv6=1</span></code></pre></td></tr></table></div></figure>
 
@@ -39,8 +40,7 @@ add in the end of the file</p>
 </span><span class='line'>ip a</span></code></pre></td></tr></table></div></figure>
 
 
-<p>sudo nano /etc/rc.local
-create a new file</p>
+
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -49,7 +49,13 @@ create a new file</p>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/bash
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/rc.local
+</span><span class='line'># create a new file
+</span><span class='line'>
+</span><span class='line'>#!/bin/bash
 </span><span class='line'># /etc/rc.local
 </span><span class='line'>
 </span><span class='line'>/etc/sysctl.d
