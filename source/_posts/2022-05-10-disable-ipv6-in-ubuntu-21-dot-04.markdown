@@ -6,9 +6,10 @@ comments: true
 categories: [production, ubuntu]
 ---
 
-sudo nano /etc/sysctl.conf
-add in the end of the file
+
 ```
+sudo nano /etc/sysctl.conf
+# add in the end of the file
 net.ipv6.conf.all.disable_ipv6=1
 net.ipv6.conf.default.disable_ipv6=1
 net.ipv6.conf.lo.disable_ipv6=1
@@ -20,9 +21,11 @@ sudo sysctl -p
 ip a
 ```
 
-sudo nano /etc/rc.local
-create a new file
+
 ```
+sudo nano /etc/rc.local
+# create a new file
+
 #!/bin/bash
 # /etc/rc.local
 
