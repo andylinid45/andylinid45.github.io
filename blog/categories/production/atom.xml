@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Production | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/production/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-10T09:06:47+08:00</updated>
+  <updated>2024-03-11T01:01:54+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -257,6 +257,19 @@ git clone https://github.com/SystemRage/py-kms.git
 cd py-kms/py-kms/
 nohup python3 pykms_Server.py &amp;
 </code></p>
+
+<p>With Python 3.10 Sequence has been moved to collections.abc
+nano py-kms/py-kms/Etrigan.py
+```</p>
+
+<h1>change</h1>
+
+<p>from collections import Sequence</p>
+
+<h1>to</h1>
+
+<p>from collections.abc import Sequence
+```</p>
 
 <p>in windows
 ```
