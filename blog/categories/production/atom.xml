@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Production | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/production/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2022-05-10T21:18:48+08:00</updated>
+  <updated>2024-03-10T09:06:47+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,138 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install Wireguard in Ubuntu 23.10]]></title>
+    <link href="http://andylinid45.github.io/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/"/>
+    <updated>2024-03-10T02:21:51+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10</id>
+    <content type="html"><![CDATA[<p>install wireguard
+```
+sudo apt-get update
+sudo apt install wireguard</p>
+
+<p>echo &ldquo;net.ipv4.ip_forward=1&rdquo; >> /etc/sysctl.conf
+echo &ldquo;net.ipv4.conf.all.forwarding=1&rdquo; >> /etc/sysctl.conf
+echo &ldquo;net.ipv6.conf.all.forwarding=1&rdquo; >> /etc/sysctl.conf
+sysctl -p
+```</p>
+
+<p>Create server and client at the same time.
+nano create_wg.py and run it: python3 create_wg.py
+```</p>
+
+<h1>run as root</h1>
+
+<p>from subprocess import run
+from os.path import exists
+import shutil</p>
+
+<p>ip = run(&ldquo;ip -4 addr | sed -ne &rsquo;s|^.<em> inet \([^/]</em>\)/.<em> scope global.</em>$|\1|p' | head -1&rdquo;, shell=True, capture_output=True, text=True).stdout.strip()
+print(f"Your server public ip is {ip}&ldquo;)</p>
+
+<p>subnet = input(&ldquo;What is your subnet? default is 38\n&rdquo;)
+subnet = int(subnet) if subnet else 38</p>
+
+<p>count = input(&ldquo;How many clients would you like to create? default is 18\n&rdquo;)
+count = int(count) if count else 18</p>
+
+<p>for num in range(1, count + 1):</p>
+
+<pre><code>config_file_name = f"wg{subnet:02d}.{num:02d}"
+client_folder = f"wg{subnet:02d}"
+port = f"1{subnet:02d}{num:02d}"
+net = f"10.{subnet}.{num}"
+
+private = run("wg genkey", shell=True, capture_output=True, text=True).stdout.strip()
+public = run(f"echo {private} | wg pubkey", shell=True, capture_output=True, text=True).stdout.strip()
+
+client_private = run("wg genkey", shell=True, capture_output=True, text=True).stdout.strip()
+client_public = run(f"echo {client_private} | wg pubkey", shell=True, capture_output=True, text=True).stdout.strip()
+
+run(f"systemctl stop wg-quick@{config_file_name}.service", shell=True)
+run(f"systemctl disable wg-quick@{config_file_name}.service", shell=True)
+
+config = f"""
+</code></pre>
+
+<p>[Interface]
+Address = {net}.1/32
+ListenPort = {port}
+PrivateKey = {private}
+SaveConfig = false
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE</p>
+
+<p>[Peer]
+PublicKey = {client_public}
+AllowedIPs = {net}.2/32
+&ldquo;&rdquo;"</p>
+
+<pre><code>client_config = f"""
+</code></pre>
+
+<p>[Interface]
+PrivateKey = {client_private}
+Address = {net}.2/32
+DNS = 208.67.222.222, 208.67.220.220</p>
+
+<p>[Peer]
+PublicKey = {public}
+AllowedIPs = 0.0.0.0/0, ::/0
+Endpoint = {ip}:{port}
+PersistentKeepalive = 25
+&ldquo;&rdquo;"</p>
+
+<pre><code>if not exists(f"/etc/wireguard/{client_folder}"):
+    run(f"mkdir /etc/wireguard/{client_folder}", shell=True)
+
+with open(f"/etc/wireguard/{config_file_name}.conf", "w", encoding="utf-8") as file:
+    file.write(config)
+
+with open(f"/etc/wireguard/{client_folder}/{config_file_name}.conf", "w", encoding="utf-8") as file:
+    file.write(client_config)
+
+run(f"systemctl enable wg-quick@{config_file_name}.service", shell=True)
+run(f"systemctl start wg-quick@{config_file_name}.service", shell=True)
+</code></pre>
+
+<p>shutil.make_archive(f"/etc/wireguard/{client_folder}&ldquo;, &lsquo;zip&rsquo;, f&rdquo;/etc/wireguard/{client_folder}&ldquo;)
+```</p>
+
+<p>Delete server, nano delete_wg.py, and run it : python3 delete_wg.py
+```</p>
+
+<h1>run as root</h1>
+
+<p>from subprocess import run
+from os.path import exists</p>
+
+<p>def delete_service_by_name(name):</p>
+
+<pre><code>if exists(f"/etc/wireguard/{name}.conf"):
+    run(f"systemctl stop wg-quick@{name}.service", shell=True)
+    run(f"systemctl disable wg-quick@{name}.service", shell=True)
+    run(f"rm /etc/wireguard/{name}.conf", shell=True)
+</code></pre>
+
+<p>def delete_service_by_subnet(subnet):</p>
+
+<pre><code>for num in range(1, 99):
+    delete_service_by_name(f"wg{subnet:02d}.{num:02d}")
+run(f"rm /etc/wireguard/wg{subnet:02d}.zip", shell=True)    
+run(f"rm /etc/wireguard/wg{subnet:02d} -r", shell=True)
+</code></pre>
+
+<p>subnet = input(&ldquo;Which subnet do you want to delete?\n&rdquo;)
+if subnet:</p>
+
+<pre><code>delete_service_by_subnet(int(subnet))
+</code></pre>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Disable Ipv6 in Ubuntu 21.04]]></title>
@@ -182,54 +314,6 @@ gsettings set org.gnome.system.proxy ignore-hosts &ldquo;[&lsquo;localhost&rsquo
 <p>trap finish EXIT</p>
 
 <p>~/go/bin/chisel client -fingerprint 12:34:56 &mdash;auth user:pass -v vps:9312 socks
-```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setup Wireguard]]></title>
-    <link href="http://andylinid45.github.io/blog/2020/04/17/setup-wireguard/"/>
-    <updated>2020-04-17T01:23:51+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2020/04/17/setup-wireguard</id>
-    <content type="html"><![CDATA[<p>```</p>
-
-<h1>install wireguard server in ubuntu 21  (new way)</h1>
-
-<p><a href="https://github.com/angristan/wireguard-install">https://github.com/angristan/wireguard-install</a></p>
-
-<p>curl -O <a href="https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh">https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh</a>
-chmod +x wireguard-install.sh
-./wireguard-install.sh
-```</p>
-
-<p>```</p>
-
-<h1>install wireguard server in ubuntu 18</h1>
-
-<p><a href="https://github.com/l-n-s/wireguard-install">https://github.com/l-n-s/wireguard-install</a></p>
-
-<p>wget <a href="https://raw.githubusercontent.com/l-n-s/wireguard-install/master/wireguard-install.sh">https://raw.githubusercontent.com/l-n-s/wireguard-install/master/wireguard-install.sh</a> -O wireguard-install.sh
-bash wireguard-install.sh
-```</p>
-
-<p>```</p>
-
-<h1>client side config</h1>
-
-<h1>copy config file to /etc/wireguard/mywg.conf</h1>
-
-<p>sudo wg-quick up mywg<br/>
-sudo wg show</p>
-
-<h1>sudo wg-quick down mywg</h1>
-
-<p>```</p>
-
-<p>```</p>
-
-<h1>wireguard is faster than openvpn</h1>
-
-<p><a href="https://github.com/pirate/wireguard-docs">https://github.com/pirate/wireguard-docs</a>
 ```</p>
 ]]></content>
   </entry>

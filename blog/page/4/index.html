@@ -9,12 +9,12 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="check the kernel version 1
-uname -r 1
+  <meta name="description" content="download cuda and install 1
 2
-sudo apt-get update
-apt-cache search linux-image pick up a version, 4.11.0-14 for example 1
-sudo apt-get &hellip;">
+3
+4
+#https://developer.nvidia.com/cuda-downloads
+sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +84,98 @@ sudo apt-get &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2017/09/04/install-tensorflow-gpu-in-ubuntu-16/">Install Tensorflow Gpu in Ubuntu 16</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-09-04T17:35:28+08:00" pubdate data-updated="true">Sep 4<span>th</span>, 2017</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>download cuda and install</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#https://developer.nvidia.com/cuda-downloads
+</span><span class='line'>sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install cuda</span></code></pre></td></tr></table></div></figure>
+
+
+<p>download cuDNN and install(cuDNN version depends on your tensorflow version, cuDNN v6 if on TF v1.3)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#https://developer.nvidia.com/cudnn
+</span><span class='line'>sudo dpkg -i libcudnn5_5.1.10-1+cuda8.0_amd64.deb
+</span><span class='line'>sudo dpkg -i libcudnn5-dev_5.1.10-1+cuda8.0_amd64.deb</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install libcupti-dev
+</span><span class='line'>pip install 'tensorflow-gpu==1.3.0'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>if &ldquo;libEGL.so.1 is not a symbolic link&rdquo;, and run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mv /usr/lib/nvidia-375/libEGL.so.1 /usr/lib/nvidia-375/libEGL.so.1.org
+</span><span class='line'>sudo mv /usr/lib32/nvidia-375/libEGL.so.1 /usr/lib32/nvidia-375/libEGL.so.1.org
+</span><span class='line'>sudo ln -s /usr/lib/nvidia-375/libEGL.so.375.39 /usr/lib/nvidia-375/libEGL.so.1
+</span><span class='line'>sudo ln -s /usr/lib32/nvidia-375/libEGL.so.375.39 /usr/lib32/nvidia-375/libEGL.so.1</span></code></pre></td></tr></table></div></figure>
+
+
+<p>verify your installation</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>tensorflow # if you are using virtualenv
+</span><span class='line'>python
+</span><span class='line'>import tensorflow as tf
+</span><span class='line'>hello = tf.constant('Hello TensorFlow!')
+</span><span class='line'>sess = tf.Session()
+</span><span class='line'>print(sess.run(hello))</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -521,115 +613,6 @@ sudo apt-get &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/08/29/html-best-practices/">Html Best Practices</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-29T22:59:28+08:00" pubdate data-updated="true">Aug 29<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;font&gt; for text style</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;b&gt; and &lt;i&gt; tags </span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;strong&gt; tag in stead of &lt;b&gt;, &lt;em&gt; tag in stead of &lt;i&gt;, if you want text to be emphasized</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use &lt;table&gt; for layout
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use div and css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>user &lt;br&gt; just for white space</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>use css</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Use headings (h1 h2 ...) to indicate the relative importance of text</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Use &lt;cite&gt; tag for referencing a book title, newspaper article, or website, and the &lt;address&gt; tag to identify and supply contact information for the author of a page</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Don&rsquo;t</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>overuse &lt;div&gt;tags.</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ues &lt;article&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt; tags if needed</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -644,11 +627,15 @@ sudo apt-get &hellip;">
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.0%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.0%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.0%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 121.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 151.0%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.0%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.0%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.0%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.0%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 130.0%'>production(10)</a> <a href='/blog/categories/r' style='font-size: 103.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 124.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.0%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.0%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.0%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.0%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.0%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.0%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 157.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(20)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 127.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.0%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.0%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.0%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.0%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 121.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 151.0%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.0%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.0%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.0%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.0%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 133.0%'>production(11)</a> <a href='/blog/categories/r' style='font-size: 103.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 124.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.0%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.0%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.0%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.0%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.0%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.0%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 157.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(20)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 127.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.0%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
@@ -666,10 +653,6 @@ sudo apt-get &hellip;">
         <a href="/blog/2020/06/29/setup-tcp-tunnel/">Setup TCP Tunnel</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2020/04/17/setup-wireguard/">Setup Wireguard</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -683,7 +666,7 @@ sudo apt-get &hellip;">
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2022 - Andy -
+  Copyright &copy; 2024 - Andy -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Install Wireguard in Ubuntu 23.10 - Andy Lin</title>
+  <meta name="author" content="Andy">
+
+  
+  <meta name="description" content="install wireguard 1
+2
+3
+4
+5
+6
+7
+sudo apt-get update
+sudo apt install wireguard echo "net.ipv4.ip_forward=1" &gt;&gt; /etc/sysctl.conf
+echo "net.ipv4. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48929179-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Andy Lin</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:andylinid45.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/technical-review/">Technical Review</a></li>
+  <li><a href="/blog/categories/big-data/">大数据</a></li>
+  <li><a href="/blog/categories/front-end/">前端</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Install Wireguard in Ubuntu 23.10</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2024-03-10T02:21:51+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2024</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>install wireguard</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt install wireguard
+</span><span class='line'>
+</span><span class='line'>echo "net.ipv4.ip_forward=1" &gt;&gt; /etc/sysctl.conf
+</span><span class='line'>echo "net.ipv4.conf.all.forwarding=1" &gt;&gt; /etc/sysctl.conf
+</span><span class='line'>echo "net.ipv6.conf.all.forwarding=1" &gt;&gt; /etc/sysctl.conf
+</span><span class='line'>sysctl -p</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create server and client at the same time.
+nano create_wg.py and run it: python3 create_wg.py</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#run as root
+</span><span class='line'>from subprocess import run
+</span><span class='line'>from os.path import exists
+</span><span class='line'>import shutil
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>ip = run("ip -4 addr | sed -ne 's|^.* inet \\([^/]*\\)/.* scope global.*$|\\1|p' | head -1", shell=True, capture_output=True, text=True).stdout.strip()
+</span><span class='line'>print(f"Your server public ip is {ip}")
+</span><span class='line'>
+</span><span class='line'>subnet = input("What is your subnet? default is 38\n")
+</span><span class='line'>subnet = int(subnet) if subnet else 38
+</span><span class='line'>
+</span><span class='line'>count = input("How many clients would you like to create? default is 18\n")
+</span><span class='line'>count = int(count) if count else 18
+</span><span class='line'>
+</span><span class='line'>for num in range(1, count + 1):
+</span><span class='line'>  config_file_name = f"wg{subnet:02d}.{num:02d}"
+</span><span class='line'>  client_folder = f"wg{subnet:02d}"
+</span><span class='line'>  port = f"1{subnet:02d}{num:02d}"
+</span><span class='line'>  net = f"10.{subnet}.{num}"
+</span><span class='line'>
+</span><span class='line'>  private = run("wg genkey", shell=True, capture_output=True, text=True).stdout.strip()
+</span><span class='line'>  public = run(f"echo {private} | wg pubkey", shell=True, capture_output=True, text=True).stdout.strip()
+</span><span class='line'>
+</span><span class='line'>  client_private = run("wg genkey", shell=True, capture_output=True, text=True).stdout.strip()
+</span><span class='line'>  client_public = run(f"echo {client_private} | wg pubkey", shell=True, capture_output=True, text=True).stdout.strip()
+</span><span class='line'>
+</span><span class='line'>  run(f"systemctl stop wg-quick@{config_file_name}.service", shell=True)
+</span><span class='line'>  run(f"systemctl disable wg-quick@{config_file_name}.service", shell=True)
+</span><span class='line'>
+</span><span class='line'>  config = f"""
+</span><span class='line'>[Interface]
+</span><span class='line'>Address = {net}.1/32
+</span><span class='line'>ListenPort = {port}
+</span><span class='line'>PrivateKey = {private}
+</span><span class='line'>SaveConfig = false
+</span><span class='line'>PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+</span><span class='line'>PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+</span><span class='line'>
+</span><span class='line'>[Peer]
+</span><span class='line'>PublicKey = {client_public}
+</span><span class='line'>AllowedIPs = {net}.2/32
+</span><span class='line'>"""
+</span><span class='line'>
+</span><span class='line'>  client_config = f"""
+</span><span class='line'>[Interface]
+</span><span class='line'>PrivateKey = {client_private}
+</span><span class='line'>Address = {net}.2/32
+</span><span class='line'>DNS = 208.67.222.222, 208.67.220.220
+</span><span class='line'>
+</span><span class='line'>[Peer]
+</span><span class='line'>PublicKey = {public}
+</span><span class='line'>AllowedIPs = 0.0.0.0/0, ::/0
+</span><span class='line'>Endpoint = {ip}:{port}
+</span><span class='line'>PersistentKeepalive = 25
+</span><span class='line'>"""
+</span><span class='line'>
+</span><span class='line'>  if not exists(f"/etc/wireguard/{client_folder}"):
+</span><span class='line'>      run(f"mkdir /etc/wireguard/{client_folder}", shell=True)
+</span><span class='line'>
+</span><span class='line'>  with open(f"/etc/wireguard/{config_file_name}.conf", "w", encoding="utf-8") as file:
+</span><span class='line'>      file.write(config)
+</span><span class='line'>
+</span><span class='line'>  with open(f"/etc/wireguard/{client_folder}/{config_file_name}.conf", "w", encoding="utf-8") as file:
+</span><span class='line'>      file.write(client_config)
+</span><span class='line'>
+</span><span class='line'>  run(f"systemctl enable wg-quick@{config_file_name}.service", shell=True)
+</span><span class='line'>  run(f"systemctl start wg-quick@{config_file_name}.service", shell=True)
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>shutil.make_archive(f"/etc/wireguard/{client_folder}", 'zip', f"/etc/wireguard/{client_folder}")</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Delete server, nano delete_wg.py, and run it : python3 delete_wg.py</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#run as root
+</span><span class='line'>from subprocess import run
+</span><span class='line'>from os.path import exists
+</span><span class='line'>
+</span><span class='line'>def delete_service_by_name(name):
+</span><span class='line'>  if exists(f"/etc/wireguard/{name}.conf"):
+</span><span class='line'>      run(f"systemctl stop wg-quick@{name}.service", shell=True)
+</span><span class='line'>      run(f"systemctl disable wg-quick@{name}.service", shell=True)
+</span><span class='line'>      run(f"rm /etc/wireguard/{name}.conf", shell=True)
+</span><span class='line'>  
+</span><span class='line'>
+</span><span class='line'>def delete_service_by_subnet(subnet):
+</span><span class='line'>  for num in range(1, 99):
+</span><span class='line'>      delete_service_by_name(f"wg{subnet:02d}.{num:02d}")
+</span><span class='line'>  run(f"rm /etc/wireguard/wg{subnet:02d}.zip", shell=True)    
+</span><span class='line'>  run(f"rm /etc/wireguard/wg{subnet:02d} -r", shell=True)
+</span><span class='line'>  
+</span><span class='line'>
+</span><span class='line'>subnet = input("Which subnet do you want to delete?\n")
+</span><span class='line'>if subnet:
+</span><span class='line'>  delete_service_by_subnet(int(subnet))</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Andy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2024-03-10T02:21:51+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2024</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/production/'>production</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/" title="Previous Post: disable ipv6 in ubuntu 21.04">&laquo; disable ipv6 in ubuntu 21.04</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.0%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.0%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.0%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 121.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 151.0%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.0%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.0%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.0%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 106.0%'>octopress(2)</a> <a href='/blog/categories/osx' style='font-size: 112.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 133.0%'>production(11)</a> <a href='/blog/categories/r' style='font-size: 103.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 124.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.0%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.0%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.0%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.0%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.0%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.0%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 157.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(20)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 127.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.0%'>技术(1)</a> </span>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2021/07/08/using-python-proxy/">Using Python Proxy</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2021/06/19/setup-kms/">Setup Kms</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2020/06/29/setup-tcp-tunnel/">Setup TCP Tunnel</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2024 - Andy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

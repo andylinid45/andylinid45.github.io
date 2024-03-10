@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2022-05-10T21:18:48+08:00</updated>
+  <updated>2024-03-10T09:06:47+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,224 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install Wireguard in Ubuntu 23.10]]></title>
+    <link href="http://andylinid45.github.io/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/"/>
+    <updated>2024-03-10T02:21:51+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10</id>
+    <content type="html"><![CDATA[<p>install wireguard</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt install wireguard
+</span><span class='line'>
+</span><span class='line'>echo "net.ipv4.ip_forward=1" &gt;&gt; /etc/sysctl.conf
+</span><span class='line'>echo "net.ipv4.conf.all.forwarding=1" &gt;&gt; /etc/sysctl.conf
+</span><span class='line'>echo "net.ipv6.conf.all.forwarding=1" &gt;&gt; /etc/sysctl.conf
+</span><span class='line'>sysctl -p</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create server and client at the same time.
+nano create_wg.py and run it: python3 create_wg.py</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#run as root
+</span><span class='line'>from subprocess import run
+</span><span class='line'>from os.path import exists
+</span><span class='line'>import shutil
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>ip = run("ip -4 addr | sed -ne 's|^.* inet \\([^/]*\\)/.* scope global.*$|\\1|p' | head -1", shell=True, capture_output=True, text=True).stdout.strip()
+</span><span class='line'>print(f"Your server public ip is {ip}")
+</span><span class='line'>
+</span><span class='line'>subnet = input("What is your subnet? default is 38\n")
+</span><span class='line'>subnet = int(subnet) if subnet else 38
+</span><span class='line'>
+</span><span class='line'>count = input("How many clients would you like to create? default is 18\n")
+</span><span class='line'>count = int(count) if count else 18
+</span><span class='line'>
+</span><span class='line'>for num in range(1, count + 1):
+</span><span class='line'>  config_file_name = f"wg{subnet:02d}.{num:02d}"
+</span><span class='line'>  client_folder = f"wg{subnet:02d}"
+</span><span class='line'>  port = f"1{subnet:02d}{num:02d}"
+</span><span class='line'>  net = f"10.{subnet}.{num}"
+</span><span class='line'>
+</span><span class='line'>  private = run("wg genkey", shell=True, capture_output=True, text=True).stdout.strip()
+</span><span class='line'>  public = run(f"echo {private} | wg pubkey", shell=True, capture_output=True, text=True).stdout.strip()
+</span><span class='line'>
+</span><span class='line'>  client_private = run("wg genkey", shell=True, capture_output=True, text=True).stdout.strip()
+</span><span class='line'>  client_public = run(f"echo {client_private} | wg pubkey", shell=True, capture_output=True, text=True).stdout.strip()
+</span><span class='line'>
+</span><span class='line'>  run(f"systemctl stop wg-quick@{config_file_name}.service", shell=True)
+</span><span class='line'>  run(f"systemctl disable wg-quick@{config_file_name}.service", shell=True)
+</span><span class='line'>
+</span><span class='line'>  config = f"""
+</span><span class='line'>[Interface]
+</span><span class='line'>Address = {net}.1/32
+</span><span class='line'>ListenPort = {port}
+</span><span class='line'>PrivateKey = {private}
+</span><span class='line'>SaveConfig = false
+</span><span class='line'>PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+</span><span class='line'>PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+</span><span class='line'>
+</span><span class='line'>[Peer]
+</span><span class='line'>PublicKey = {client_public}
+</span><span class='line'>AllowedIPs = {net}.2/32
+</span><span class='line'>"""
+</span><span class='line'>
+</span><span class='line'>  client_config = f"""
+</span><span class='line'>[Interface]
+</span><span class='line'>PrivateKey = {client_private}
+</span><span class='line'>Address = {net}.2/32
+</span><span class='line'>DNS = 208.67.222.222, 208.67.220.220
+</span><span class='line'>
+</span><span class='line'>[Peer]
+</span><span class='line'>PublicKey = {public}
+</span><span class='line'>AllowedIPs = 0.0.0.0/0, ::/0
+</span><span class='line'>Endpoint = {ip}:{port}
+</span><span class='line'>PersistentKeepalive = 25
+</span><span class='line'>"""
+</span><span class='line'>
+</span><span class='line'>  if not exists(f"/etc/wireguard/{client_folder}"):
+</span><span class='line'>      run(f"mkdir /etc/wireguard/{client_folder}", shell=True)
+</span><span class='line'>
+</span><span class='line'>  with open(f"/etc/wireguard/{config_file_name}.conf", "w", encoding="utf-8") as file:
+</span><span class='line'>      file.write(config)
+</span><span class='line'>
+</span><span class='line'>  with open(f"/etc/wireguard/{client_folder}/{config_file_name}.conf", "w", encoding="utf-8") as file:
+</span><span class='line'>      file.write(client_config)
+</span><span class='line'>
+</span><span class='line'>  run(f"systemctl enable wg-quick@{config_file_name}.service", shell=True)
+</span><span class='line'>  run(f"systemctl start wg-quick@{config_file_name}.service", shell=True)
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>shutil.make_archive(f"/etc/wireguard/{client_folder}", 'zip', f"/etc/wireguard/{client_folder}")</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Delete server, nano delete_wg.py, and run it : python3 delete_wg.py</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#run as root
+</span><span class='line'>from subprocess import run
+</span><span class='line'>from os.path import exists
+</span><span class='line'>
+</span><span class='line'>def delete_service_by_name(name):
+</span><span class='line'>  if exists(f"/etc/wireguard/{name}.conf"):
+</span><span class='line'>      run(f"systemctl stop wg-quick@{name}.service", shell=True)
+</span><span class='line'>      run(f"systemctl disable wg-quick@{name}.service", shell=True)
+</span><span class='line'>      run(f"rm /etc/wireguard/{name}.conf", shell=True)
+</span><span class='line'>  
+</span><span class='line'>
+</span><span class='line'>def delete_service_by_subnet(subnet):
+</span><span class='line'>  for num in range(1, 99):
+</span><span class='line'>      delete_service_by_name(f"wg{subnet:02d}.{num:02d}")
+</span><span class='line'>  run(f"rm /etc/wireguard/wg{subnet:02d}.zip", shell=True)    
+</span><span class='line'>  run(f"rm /etc/wireguard/wg{subnet:02d} -r", shell=True)
+</span><span class='line'>  
+</span><span class='line'>
+</span><span class='line'>subnet = input("Which subnet do you want to delete?\n")
+</span><span class='line'>if subnet:
+</span><span class='line'>  delete_service_by_subnet(int(subnet))</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Disable Ipv6 in Ubuntu 21.04]]></title>
@@ -843,30 +1061,6 @@ sudo nano /etc/rsync.secrets</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
 </span><span class='line'>https://help.ubuntu.com/community/CronHowto
 </span><span class='line'>https://askubuntu.com/questions/7676/function-of-etc-cron-hourly</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What Are the Applications of Machine Learning in the E-commerce Industry?]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry/"/>
-    <updated>2018-06-29T10:24:00+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/06/29/what-are-the-applications-of-machine-learning-in-the-e-commerce-industry</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.quora.com/What-are-the-applications-of-machine-learning-in-the-e-commerce-industry-Which-ML-algorithms-and-techniques-are-used
-</span><span class='line'>
-</span><span class='line'>https://www.quora.com/Revenue-management-and-pricing-What-machine-learning-techniques-are-used-in-revenue-management-and-pricing
-</span><span class='line'>
-</span><span class='line'>https://www.quora.com/Which-algorithms-are-used-in-recommender-systems
-</span><span class='line'>
-</span><span class='line'>https://hbr.org/2016/11/what-artificial-intelligence-can-and-cant-do-right-now
-</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
