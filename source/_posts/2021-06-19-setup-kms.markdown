@@ -13,6 +13,15 @@ cd py-kms/py-kms/
 nohup python3 pykms_Server.py &
 ```
 
+With Python 3.10 Sequence has been moved to collections.abc
+nano py-kms/py-kms/Etrigan.py
+```
+#change
+from collections import Sequence
+#to
+from collections.abc import Sequence
+```
+
 in windows
 ```
 // change your key in the page https://py-kms.readthedocs.io/en/latest/Keys.html#windows
