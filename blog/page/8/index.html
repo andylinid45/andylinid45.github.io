@@ -9,7 +9,7 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="login as root 1
 2
 3
 4
@@ -22,14 +22,7 @@
 11
 12
 13
-14
-15
-16
-17
-18
-mkdir ~/.ssh
-sudo cp /Users/andy/.ssh/id_rsa ~/.ssh
-sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
+adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers nano /etc/ssh/sshd_config &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -105,6 +98,76 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/10/27/ubuntu-14-dot-04-server-initial/">Ubuntu 14.04 Server Initial</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-27T00:01:07+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>login as root</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>adduser deploy
+</span><span class='line'>
+</span><span class='line'>echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
+</span><span class='line'>
+</span><span class='line'>nano /etc/ssh/sshd_config 
+</span><span class='line'># edit two lines
+</span><span class='line'>PermitRootLogin no
+</span><span class='line'>PasswordAuthentication no 
+</span><span class='line'>
+</span><span class='line'>service ssh restart  # do not use , no use /etc/init.d/ssh  restart 
+</span><span class='line'>
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in local</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id deploy@ip</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/10/21/dot-files-in-osx/">Dot Files in Osx</a></h1>
     
     
@@ -121,7 +184,7 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
   
 
 
-<time datetime="2014-10-21T12:45:33+00:00" pubdate data-updated="true">Oct 21<span>st</span>, 2014</time>
+<time datetime="2014-10-21T20:45:33+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2014</time>
         
       </p>
     
@@ -195,7 +258,7 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
   
 
 
-<time datetime="2014-09-29T08:56:49+00:00" pubdate data-updated="true">Sep 29<span>th</span>, 2014</time>
+<time datetime="2014-09-29T16:56:49+08:00" pubdate data-updated="true">Sep 29<span>th</span>, 2014</time>
         
       </p>
     
@@ -239,7 +302,7 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
   
 
 
-<time datetime="2014-09-27T14:23:32+00:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+<time datetime="2014-09-27T22:23:32+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
         
       </p>
     
@@ -281,7 +344,7 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
   
 
 
-<time datetime="2014-09-27T14:19:50+00:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+<time datetime="2014-09-27T22:19:50+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
         
       </p>
     
@@ -341,7 +404,7 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
   
 
 
-<time datetime="2014-09-27T14:07:35+00:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+<time datetime="2014-09-27T22:07:35+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
         
       </p>
     
@@ -381,7 +444,7 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
   
 
 
-<time datetime="2014-09-27T14:05:47+00:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
+<time datetime="2014-09-27T22:05:47+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2014</time>
         
       </p>
     
@@ -403,7 +466,7 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/09/24/ruby-on-rails-development-setup-for-osx/">Ruby on Rails Development Setup for OSX</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/09/25/ruby-on-rails-development-setup-for-osx/">Ruby on Rails Development Setup for OSX</a></h1>
     
     
       <p class="meta">
@@ -419,7 +482,7 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
   
 
 
-<time datetime="2014-09-24T18:13:09+00:00" pubdate data-updated="true">Sep 24<span>th</span>, 2014</time>
+<time datetime="2014-09-25T02:13:09+08:00" pubdate data-updated="true">Sep 25<span>th</span>, 2014</time>
         
       </p>
     
@@ -554,7 +617,7 @@ sudo cp /Users/andy/.ssh/id_rsa.pub ~/.ssh sudo cp / &hellip;">
   
 
 
-<time datetime="2014-09-23T02:15:27+00:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
+<time datetime="2014-09-23T10:15:27+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
         
       </p>
     
@@ -629,7 +692,7 @@ install</p>
   
 
 
-<time datetime="2014-09-23T02:10:16+00:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
+<time datetime="2014-09-23T10:10:16+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
         
       </p>
     
@@ -638,48 +701,6 @@ install</p>
 
   <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>echo 'account_name ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/09/23/using-homebrew-with-multiple-users/">Using Homebrew With Multiple Users</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-23T02:06:52+00:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo chmod -R g+w /Library/Caches/Homebrew
-</span><span class='line'>sudo chmod -R g+w /usr/local/
-</span><span class='line'>brew doctor</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -702,30 +723,30 @@ install</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.0%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.0%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.0%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 121.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 151.0%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.0%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.0%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.0%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 109.0%'>octopress(3)</a> <a href='/blog/categories/osx' style='font-size: 112.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 133.0%'>production(11)</a> <a href='/blog/categories/r' style='font-size: 103.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 124.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.0%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.0%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.0%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.0%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.0%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.0%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 157.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(20)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 127.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.0%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.0%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.0%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.0%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 121.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 151.0%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.0%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.0%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.0%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 112.0%'>octopress(4)</a> <a href='/blog/categories/osx' style='font-size: 112.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 133.0%'>production(11)</a> <a href='/blog/categories/r' style='font-size: 103.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 124.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.0%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.0%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.0%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.0%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.0%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.0%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 157.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(20)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 127.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.0%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2024/03/17/setup-octopress-2-dot-0-environment-using-docker-in-ubuntu-23-dot-10/">Setup Octopress 2.0 Environment Using Docker in Ubuntu 23.10</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine/">Blogging With Existing Octopress in a New Machine</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
+        <a href="/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
+        <a href="/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
       </li>
     
       <li class="post">
         <a href="/blog/2021/07/08/using-python-proxy/">Using Python Proxy</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2021/06/19/setup-kms/">Setup Kms</a>
       </li>
     
   </ul>

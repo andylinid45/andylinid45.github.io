@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Setup Octopress 2.0 Environment Using Docker in Ubuntu 23.10 - Andy Lin</title>
+  <meta name="author" content="Andy">
+
+  
+  <meta name="description" content="install docker 1
+snap install docker nano .gitconfig 1
+2
+3
+4
+5
+[user] name = Andy email = you@example.com
+[push] default = simple nano Dockerfile 1
+2 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2024/03/17/setup-octopress-2-dot-0-environment-using-docker-in-ubuntu-23-dot-10">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48929179-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Andy Lin</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:andylinid45.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/technical-review/">Technical Review</a></li>
+  <li><a href="/blog/categories/big-data/">大数据</a></li>
+  <li><a href="/blog/categories/front-end/">前端</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Setup Octopress 2.0 Environment Using Docker in Ubuntu 23.10</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2024-03-17T01:07:17+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2024</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>install docker</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>snap install docker</span></code></pre></td></tr></table></div></figure>
+
+
+<p>nano .gitconfig</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[user]
+</span><span class='line'>    name = Andy
+</span><span class='line'>    email = you@example.com
+</span><span class='line'>[push]
+</span><span class='line'>    default = simple</span></code></pre></td></tr></table></div></figure>
+
+
+<p>nano Dockerfile</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>FROM ubuntu:16.04
+</span><span class='line'>RUN apt-get update -y
+</span><span class='line'>RUN apt-get -y install locales locales-all tzdata sudo gcc make git nano less curl ruby ruby-dev python2.7 python-pip python-dev
+</span><span class='line'>ENV LC_ALL en_US.UTF-8
+</span><span class='line'>ENV LANG en_US.UTF-8
+</span><span class='line'>ENV LANGUAGE en_US.UTF-8
+</span><span class='line'>ENV TZ=Asia/Shanghai
+</span><span class='line'>WORKDIR /root
+</span><span class='line'>ADD .gitconfig /root/.gitconfig
+</span><span class='line'>ADD Gemfile /root/Gemfile
+</span><span class='line'># prevent bundle install twice
+</span><span class='line'>ADD Gemfile.lock /root/Gemfile.lock
+</span><span class='line'>RUN gem install bundler -v '1.15.4'
+</span><span class='line'>RUN bundle install
+</span><span class='line'>WORKDIR /work</span></code></pre></td></tr></table></div></figure>
+
+
+<p>build and run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker build . -t ubuntu_octopress
+</span><span class='line'>docker run -it ubuntu_octopress /bin/bash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>using volume to save the code</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker volume create octopress-volume
+</span><span class='line'>docker run --mount source=octopress-volume,target=/work -it ubuntu_octopress /bin/bash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>useful command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker image ls #ls images
+</span><span class='line'>docker image rm -f IMAGE_ID # remove image
+</span><span class='line'>docker volume ls
+</span><span class='line'>docker volume rm VOLUME_NAME</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Andy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2024-03-17T01:07:17+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2024</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine/" title="Previous Post: blogging with existing octopress in a new machine">&laquo; blogging with existing octopress in a new machine</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.0%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.0%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.0%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 121.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 151.0%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.0%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.0%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.0%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 112.0%'>octopress(4)</a> <a href='/blog/categories/osx' style='font-size: 112.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 133.0%'>production(11)</a> <a href='/blog/categories/r' style='font-size: 103.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 124.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.0%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.0%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.0%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.0%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.0%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.0%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 157.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(20)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 127.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.0%'>技术(1)</a> </span>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2024/03/17/setup-octopress-2-dot-0-environment-using-docker-in-ubuntu-23-dot-10/">Setup Octopress 2.0 Environment Using Docker in Ubuntu 23.10</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine/">Blogging With Existing Octopress in a New Machine</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2021/07/08/using-python-proxy/">Using Python Proxy</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2024 - Andy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

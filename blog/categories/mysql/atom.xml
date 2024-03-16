@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mysql | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/mysql/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Mysql Backup and Restore]]></title>
     <link href="http://andylinid45.github.io/blog/2014/05/02/mysql-backup-and-restore/"/>
-    <updated>2014-05-02T09:44:37+00:00</updated>
+    <updated>2014-05-02T17:44:37+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/05/02/mysql-backup-and-restore</id>
     <content type="html"><![CDATA[<p>backup
 <code>
@@ -38,7 +38,7 @@ mysql -u*** -p*** dbname &lt; data.sql
   <entry>
     <title type="html"><![CDATA[Reset Mysql Root Password]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/reset-mysql-root-password/"/>
-    <updated>2014-03-02T07:36:36+00:00</updated>
+    <updated>2014-03-02T15:36:36+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/reset-mysql-root-password</id>
     <content type="html"><![CDATA[<p>```
 sudo /etc/init.d/mysql stop
@@ -61,7 +61,7 @@ Enter password:</p>
   <entry>
     <title type="html"><![CDATA[Using Mysql in Ubuntu]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/01/using-mysql-in-ubuntu/"/>
-    <updated>2014-03-01T13:12:20+00:00</updated>
+    <updated>2014-03-01T21:12:20+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/01/using-mysql-in-ubuntu</id>
     <content type="html"><![CDATA[<p>```
 sudo apt-get install mysql-server

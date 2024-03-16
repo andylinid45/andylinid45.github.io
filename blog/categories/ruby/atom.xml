@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[How to Execute a Ruby Script in Terminal Using Shebang]]></title>
     <link href="http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal/"/>
-    <updated>2015-08-22T04:14:08+00:00</updated>
+    <updated>2015-08-22T12:14:08+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/22/how-to-execute-a-ruby-script-in-terminal</id>
     <content type="html"><![CDATA[<p><code>
 sudo apt-get install ruby

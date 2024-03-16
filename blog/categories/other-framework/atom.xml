@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Other-framework | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/other-framework/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Padrino Command]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/padrino-command/"/>
-    <updated>2014-03-02T12:22:01+00:00</updated>
+    <updated>2014-03-02T20:22:01+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/padrino-command</id>
     <content type="html"><![CDATA[<p>```
 gem install padrino</p>

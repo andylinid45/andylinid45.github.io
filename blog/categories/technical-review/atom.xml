@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical-review | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/technical-review/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Double vs BigDecimal in Financial Programming]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/"/>
-    <updated>2019-03-28T07:45:29+00:00</updated>
+    <updated>2019-03-28T15:45:29+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming</id>
     <content type="html"><![CDATA[<p><code>
 https://www.reddit.com/r/java/comments/8la803/double_vs_bigdecimal_in_financial_programming/
@@ -30,7 +30,7 @@ https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto
   <entry>
     <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation/"/>
-    <updated>2019-03-22T03:46:10+00:00</updated>
+    <updated>2019-03-22T11:46:10+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation</id>
     <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
 <a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
@@ -41,7 +41,7 @@ https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto
   <entry>
     <title type="html"><![CDATA[Storing Hierarchical Data in a Database]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database/"/>
-    <updated>2019-03-22T02:07:54+00:00</updated>
+    <updated>2019-03-22T10:07:54+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database</id>
     <content type="html"><![CDATA[<p><a href="https://www.sitepoint.com/hierarchical-data-database-2/">https://www.sitepoint.com/hierarchical-data-database-2/</a></p>
 ]]></content>
@@ -50,7 +50,7 @@ https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto
   <entry>
     <title type="html"><![CDATA[Headless Browser for Web Scraping]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping/"/>
-    <updated>2019-03-21T08:00:38+00:00</updated>
+    <updated>2019-03-21T16:00:38+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping</id>
     <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions">https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions</a>
 <a href="https://github.com/dhamaniasad/HeadlessBrowsers">https://github.com/dhamaniasad/HeadlessBrowsers</a></p>
@@ -60,7 +60,7 @@ https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto
   <entry>
     <title type="html"><![CDATA[API Design Guide]]></title>
     <link href="http://andylinid45.github.io/blog/2019/01/25/api-design-guide/"/>
-    <updated>2019-01-25T06:48:01+00:00</updated>
+    <updated>2019-01-25T14:48:01+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/01/25/api-design-guide</id>
     <content type="html"><![CDATA[<p><code>
 https://stackoverflow.com/questions/12806386/standard-json-api-response-format

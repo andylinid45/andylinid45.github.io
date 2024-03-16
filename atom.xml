@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -14,9 +14,98 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Setup Octopress 2.0 Environment Using Docker in Ubuntu 23.10]]></title>
+    <link href="http://andylinid45.github.io/blog/2024/03/17/setup-octopress-2-dot-0-environment-using-docker-in-ubuntu-23-dot-10/"/>
+    <updated>2024-03-17T01:07:17+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2024/03/17/setup-octopress-2-dot-0-environment-using-docker-in-ubuntu-23-dot-10</id>
+    <content type="html"><![CDATA[<p>install docker</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>snap install docker</span></code></pre></td></tr></table></div></figure>
+
+
+<p>nano .gitconfig</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[user]
+</span><span class='line'>    name = Andy
+</span><span class='line'>    email = you@example.com
+</span><span class='line'>[push]
+</span><span class='line'>    default = simple</span></code></pre></td></tr></table></div></figure>
+
+
+<p>nano Dockerfile</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>FROM ubuntu:16.04
+</span><span class='line'>RUN apt-get update -y
+</span><span class='line'>RUN apt-get -y install locales locales-all tzdata sudo gcc make git nano less curl ruby ruby-dev python2.7 python-pip python-dev
+</span><span class='line'>ENV LC_ALL en_US.UTF-8
+</span><span class='line'>ENV LANG en_US.UTF-8
+</span><span class='line'>ENV LANGUAGE en_US.UTF-8
+</span><span class='line'>ENV TZ=Asia/Shanghai
+</span><span class='line'>WORKDIR /root
+</span><span class='line'>ADD .gitconfig /root/.gitconfig
+</span><span class='line'>ADD Gemfile /root/Gemfile
+</span><span class='line'># prevent bundle install twice
+</span><span class='line'>ADD Gemfile.lock /root/Gemfile.lock
+</span><span class='line'>RUN gem install bundler -v '1.15.4'
+</span><span class='line'>RUN bundle install
+</span><span class='line'>WORKDIR /work</span></code></pre></td></tr></table></div></figure>
+
+
+<p>build and run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker build . -t ubuntu_octopress
+</span><span class='line'>docker run -it ubuntu_octopress /bin/bash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>using volume to save the code</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker volume create octopress-volume
+</span><span class='line'>docker run --mount source=octopress-volume,target=/work -it ubuntu_octopress /bin/bash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>useful command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker image ls #ls images
+</span><span class='line'>docker image rm -f IMAGE_ID # remove image
+</span><span class='line'>docker volume ls
+</span><span class='line'>docker volume rm VOLUME_NAME</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Blogging With Existing Octopress in a New Machine]]></title>
     <link href="http://andylinid45.github.io/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine/"/>
-    <updated>2024-03-16T07:11:53+00:00</updated>
+    <updated>2024-03-16T15:11:53+08:00</updated>
     <id>http://andylinid45.github.io/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -36,9 +125,9 @@
   
   <entry>
     <title type="html"><![CDATA[Install Wireguard in Ubuntu 23.10]]></title>
-    <link href="http://andylinid45.github.io/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10/"/>
-    <updated>2024-03-09T18:21:51+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10</id>
+    <link href="http://andylinid45.github.io/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/"/>
+    <updated>2024-03-10T02:21:51+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10</id>
     <content type="html"><![CDATA[<p>install wireguard</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -254,9 +343,9 @@ nano create_wg.py and run it: python3 create_wg.py</p>
   
   <entry>
     <title type="html"><![CDATA[Disable Ipv6 in Ubuntu 21.04]]></title>
-    <link href="http://andylinid45.github.io/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04/"/>
-    <updated>2022-05-09T20:54:20+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04</id>
+    <link href="http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/"/>
+    <updated>2022-05-10T04:54:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -320,7 +409,7 @@ nano create_wg.py and run it: python3 create_wg.py</p>
   <entry>
     <title type="html"><![CDATA[Using Python Proxy]]></title>
     <link href="http://andylinid45.github.io/blog/2021/07/08/using-python-proxy/"/>
-    <updated>2021-07-08T05:56:38+00:00</updated>
+    <updated>2021-07-08T13:56:38+08:00</updated>
     <id>http://andylinid45.github.io/blog/2021/07/08/using-python-proxy</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -391,7 +480,7 @@ nano create_wg.py and run it: python3 create_wg.py</p>
   <entry>
     <title type="html"><![CDATA[Setup Kms]]></title>
     <link href="http://andylinid45.github.io/blog/2021/06/19/setup-kms/"/>
-    <updated>2021-06-19T15:19:13+00:00</updated>
+    <updated>2021-06-19T23:19:13+08:00</updated>
     <id>http://andylinid45.github.io/blog/2021/06/19/setup-kms</id>
     <content type="html"><![CDATA[<p>Server</p>
 
@@ -435,9 +524,9 @@ nano py-kms/py-kms/Etrigan.py</p>
   
   <entry>
     <title type="html"><![CDATA[Setup TCP Tunnel]]></title>
-    <link href="http://andylinid45.github.io/blog/2020/06/28/setup-tcp-tunnel/"/>
-    <updated>2020-06-28T21:52:01+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2020/06/28/setup-tcp-tunnel</id>
+    <link href="http://andylinid45.github.io/blog/2020/06/29/setup-tcp-tunnel/"/>
+    <updated>2020-06-29T05:52:01+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2020/06/29/setup-tcp-tunnel</id>
     <content type="html"><![CDATA[<p>Server</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -506,9 +595,9 @@ nano py-kms/py-kms/Etrigan.py</p>
   
   <entry>
     <title type="html"><![CDATA[Setup Wireguard]]></title>
-    <link href="http://andylinid45.github.io/blog/2020/04/16/setup-wireguard/"/>
-    <updated>2020-04-16T17:23:51+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2020/04/16/setup-wireguard</id>
+    <link href="http://andylinid45.github.io/blog/2020/04/17/setup-wireguard/"/>
+    <updated>2020-04-17T01:23:51+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2020/04/17/setup-wireguard</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -564,7 +653,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[Setup Openvpn]]></title>
     <link href="http://andylinid45.github.io/blog/2020/04/16/setup-openvpn/"/>
-    <updated>2020-04-16T14:35:03+00:00</updated>
+    <updated>2020-04-16T22:35:03+08:00</updated>
     <id>http://andylinid45.github.io/blog/2020/04/16/setup-openvpn</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -604,7 +693,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[Double vs BigDecimal in Financial Programming]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/"/>
-    <updated>2019-03-28T07:45:29+00:00</updated>
+    <updated>2019-03-28T15:45:29+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -621,7 +710,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation/"/>
-    <updated>2019-03-22T03:46:10+00:00</updated>
+    <updated>2019-03-22T11:46:10+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation</id>
     <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
 <a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
@@ -632,7 +721,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[Storing Hierarchical Data in a Database]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database/"/>
-    <updated>2019-03-22T02:07:54+00:00</updated>
+    <updated>2019-03-22T10:07:54+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/22/storing-hierarchical-data-in-a-database</id>
     <content type="html"><![CDATA[<p><a href="https://www.sitepoint.com/hierarchical-data-database-2/">https://www.sitepoint.com/hierarchical-data-database-2/</a></p>
 ]]></content>
@@ -641,7 +730,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[Headless Browser for Web Scraping]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping/"/>
-    <updated>2019-03-21T08:00:38+00:00</updated>
+    <updated>2019-03-21T16:00:38+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/21/headless-browser-for-web-scraping</id>
     <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions">https://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions</a>
 <a href="https://github.com/dhamaniasad/HeadlessBrowsers">https://github.com/dhamaniasad/HeadlessBrowsers</a></p>
@@ -651,7 +740,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[Spring JDBC Logging SQL With Log4j]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/"/>
-    <updated>2019-03-21T06:54:13+00:00</updated>
+    <updated>2019-03-21T14:54:13+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -680,7 +769,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[Install Docker in Ubuntu 16.04]]></title>
     <link href="http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/"/>
-    <updated>2019-01-30T08:54:02+00:00</updated>
+    <updated>2019-01-30T16:54:02+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04</id>
     <content type="html"><![CDATA[<p>install docker</p>
 
@@ -837,7 +926,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[API Design Guide]]></title>
     <link href="http://andylinid45.github.io/blog/2019/01/25/api-design-guide/"/>
-    <updated>2019-01-25T06:48:01+00:00</updated>
+    <updated>2019-01-25T14:48:01+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/01/25/api-design-guide</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -856,7 +945,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[Use Nvm to Install Nodejs]]></title>
     <link href="http://andylinid45.github.io/blog/2018/12/06/use-nvm-to-install-nodejs/"/>
-    <updated>2018-12-06T05:52:57+00:00</updated>
+    <updated>2018-12-06T13:52:57+08:00</updated>
     <id>http://andylinid45.github.io/blog/2018/12/06/use-nvm-to-install-nodejs</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -885,7 +974,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[Spring Websockets Broadcast Message to Clients]]></title>
     <link href="http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/"/>
-    <updated>2018-10-19T03:06:12+00:00</updated>
+    <updated>2018-10-19T11:06:12+08:00</updated>
     <id>http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients</id>
     <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets">https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets</a></p>
 
@@ -906,7 +995,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   <entry>
     <title type="html"><![CDATA[Configuration of the Rsync Daemon]]></title>
     <link href="http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon/"/>
-    <updated>2018-10-11T09:30:09+00:00</updated>
+    <updated>2018-10-11T17:30:09+08:00</updated>
     <id>http://andylinid45.github.io/blog/2018/10/11/configuration-of-the-rsync-daemon</id>
     <content type="html"><![CDATA[<p>1 nano /etc/default/rsync</p>
 
@@ -1019,7 +1108,7 @@ sudo nano /etc/rsync.secrets</p>
   <entry>
     <title type="html"><![CDATA[Log All Requests and Responses in Spring Boot]]></title>
     <link href="http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/"/>
-    <updated>2018-09-12T08:10:34+00:00</updated>
+    <updated>2018-09-12T16:10:34+08:00</updated>
     <id>http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot</id>
     <content type="html"><![CDATA[<p>add pom.xml</p>
 
@@ -1047,19 +1136,6 @@ sudo nano /etc/rsync.secrets</p>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/zalando/logbook
 </span><span class='line'>https://stackoverflow.com/questions/33744875/spring-boot-how-to-log-all-requests-and-responses-with-exceptions-in-single-pl</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SQL Style Guide]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/09/12/sql-style-guide/"/>
-    <updated>2018-09-12T07:49:34+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/09/12/sql-style-guide</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://www.sqlstyle.guide/
-</span><span class='line'>http://www.dpriver.com/pp/sqlformat.htm</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>

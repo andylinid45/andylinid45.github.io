@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Spring | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/spring/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Spring JDBC Logging SQL With Log4j]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/"/>
-    <updated>2019-03-21T06:54:13+00:00</updated>
+    <updated>2019-03-21T14:54:13+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j</id>
     <content type="html"><![CDATA[<p><code>
 &lt;logger name="org.springframework.jdbc.core.JdbcTemplate"&gt;
@@ -37,7 +37,7 @@
   <entry>
     <title type="html"><![CDATA[Spring Websockets Broadcast Message to Clients]]></title>
     <link href="http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/"/>
-    <updated>2018-10-19T03:06:12+00:00</updated>
+    <updated>2018-10-19T11:06:12+08:00</updated>
     <id>http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients</id>
     <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets">https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets</a></p>
 
@@ -54,7 +54,7 @@ https://github.com/jaysridhar/spring-websocket-client
   <entry>
     <title type="html"><![CDATA[Log All Requests and Responses in Spring Boot]]></title>
     <link href="http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/"/>
-    <updated>2018-09-12T08:10:34+00:00</updated>
+    <updated>2018-09-12T16:10:34+08:00</updated>
     <id>http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot</id>
     <content type="html"><![CDATA[<p>add pom.xml
 ```
@@ -85,7 +85,7 @@ https://stackoverflow.com/questions/33744875/spring-boot-how-to-log-all-requests
   <entry>
     <title type="html"><![CDATA[Spring JDBC Is Not Logging SQL With Log4j]]></title>
     <link href="http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j/"/>
-    <updated>2018-06-25T07:54:41+00:00</updated>
+    <updated>2018-06-25T15:54:41+08:00</updated>
     <id>http://andylinid45.github.io/blog/2018/06/25/spring-jdbc-is-not-logging-sql-with-log4j</id>
     <content type="html"><![CDATA[<p><code>
 https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-log4j
@@ -96,7 +96,7 @@ https://stackoverflow.com/questions/1792244/spring-jdbc-is-not-logging-sql-with-
   <entry>
     <title type="html"><![CDATA[Spring Cloud Guides]]></title>
     <link href="http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides/"/>
-    <updated>2018-06-21T06:27:03+00:00</updated>
+    <updated>2018-06-21T14:27:03+08:00</updated>
     <id>http://andylinid45.github.io/blog/2018/06/21/spring-cloud-guides</id>
     <content type="html"><![CDATA[<p>```
 <a href="https://spring.io/guides/gs/centralized-configuration/">https://spring.io/guides/gs/centralized-configuration/</a>

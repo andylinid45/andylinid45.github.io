@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Heroku | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/heroku/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Heroku Command]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/heroku-command/"/>
-    <updated>2014-03-02T10:19:19+00:00</updated>
+    <updated>2014-03-02T18:19:19+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/heroku-command</id>
     <content type="html"><![CDATA[<p>```
 heroku create</p>
@@ -39,7 +39,7 @@ heroku db:pull</p>
   <entry>
     <title type="html"><![CDATA[Re-add Heroku Project Git Info]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/re-add-heroku-project-git-info/"/>
-    <updated>2014-03-02T10:16:51+00:00</updated>
+    <updated>2014-03-02T18:16:51+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/re-add-heroku-project-git-info</id>
     <content type="html"><![CDATA[<p><code>
 git remote add heroku git@heroku.com:your_project.git

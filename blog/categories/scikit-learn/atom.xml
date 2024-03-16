@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sciKit-learn | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/scikit-learn/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[TensorFlow vs SciKit Learn]]></title>
     <link href="http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn/"/>
-    <updated>2017-09-07T06:55:28+00:00</updated>
+    <updated>2017-09-07T14:55:28+08:00</updated>
     <id>http://andylinid45.github.io/blog/2017/09/07/tensorflow-vs-scikit-learn</id>
     <content type="html"><![CDATA[<ul>
 <li>TensorFlow is more low-level;</li>

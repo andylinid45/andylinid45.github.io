@@ -9,15 +9,15 @@
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="install docker 1
+snap install docker nano .gitconfig 1
 2
 3
 4
 5
-6
-git clone -b source https://github.com/YOUR_NAME/YOUR_NAME.github.io.git octopress
-cd octopress
-git clone https://github.com/YOUR_NAME/ &hellip;">
+[user] name = Andy email = you@example.com
+[push] default = simple nano Dockerfile 1
+2 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +93,122 @@ git clone https://github.com/YOUR_NAME/ &hellip;">
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2024/03/17/setup-octopress-2-dot-0-environment-using-docker-in-ubuntu-23-dot-10/">Setup Octopress 2.0 Environment Using Docker in Ubuntu 23.10</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2024-03-17T01:07:17+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2024</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>install docker</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>snap install docker</span></code></pre></td></tr></table></div></figure>
+
+
+<p>nano .gitconfig</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[user]
+</span><span class='line'>    name = Andy
+</span><span class='line'>    email = you@example.com
+</span><span class='line'>[push]
+</span><span class='line'>    default = simple</span></code></pre></td></tr></table></div></figure>
+
+
+<p>nano Dockerfile</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>FROM ubuntu:16.04
+</span><span class='line'>RUN apt-get update -y
+</span><span class='line'>RUN apt-get -y install locales locales-all tzdata sudo gcc make git nano less curl ruby ruby-dev python2.7 python-pip python-dev
+</span><span class='line'>ENV LC_ALL en_US.UTF-8
+</span><span class='line'>ENV LANG en_US.UTF-8
+</span><span class='line'>ENV LANGUAGE en_US.UTF-8
+</span><span class='line'>ENV TZ=Asia/Shanghai
+</span><span class='line'>WORKDIR /root
+</span><span class='line'>ADD .gitconfig /root/.gitconfig
+</span><span class='line'>ADD Gemfile /root/Gemfile
+</span><span class='line'># prevent bundle install twice
+</span><span class='line'>ADD Gemfile.lock /root/Gemfile.lock
+</span><span class='line'>RUN gem install bundler -v '1.15.4'
+</span><span class='line'>RUN bundle install
+</span><span class='line'>WORKDIR /work</span></code></pre></td></tr></table></div></figure>
+
+
+<p>build and run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker build . -t ubuntu_octopress
+</span><span class='line'>docker run -it ubuntu_octopress /bin/bash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>using volume to save the code</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker volume create octopress-volume
+</span><span class='line'>docker run --mount source=octopress-volume,target=/work -it ubuntu_octopress /bin/bash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>useful command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker image ls #ls images
+</span><span class='line'>docker image rm -f IMAGE_ID # remove image
+</span><span class='line'>docker volume ls
+</span><span class='line'>docker volume rm VOLUME_NAME</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine/">Blogging With Existing Octopress in a New Machine</a></h1>
     
     
@@ -109,7 +225,7 @@ git clone https://github.com/YOUR_NAME/ &hellip;">
   
 
 
-<time datetime="2024-03-16T07:11:53+00:00" pubdate data-updated="true">Mar 16<span>th</span>, 2024</time>
+<time datetime="2024-03-16T15:11:53+08:00" pubdate data-updated="true">Mar 16<span>th</span>, 2024</time>
         
       </p>
     
@@ -141,7 +257,7 @@ git clone https://github.com/YOUR_NAME/ &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a></h1>
+      <h1 class="entry-title"><a href="/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a></h1>
     
     
       <p class="meta">
@@ -157,7 +273,7 @@ git clone https://github.com/YOUR_NAME/ &hellip;">
   
 
 
-<time datetime="2024-03-09T18:21:51+00:00" pubdate data-updated="true">Mar 9<span>th</span>, 2024</time>
+<time datetime="2024-03-10T02:21:51+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2024</time>
         
       </p>
     
@@ -386,7 +502,7 @@ nano create_wg.py and run it: python3 create_wg.py</p>
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a></h1>
+      <h1 class="entry-title"><a href="/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a></h1>
     
     
       <p class="meta">
@@ -402,7 +518,7 @@ nano create_wg.py and run it: python3 create_wg.py</p>
   
 
 
-<time datetime="2022-05-09T20:54:20+00:00" pubdate data-updated="true">May 9<span>th</span>, 2022</time>
+<time datetime="2022-05-10T04:54:20+08:00" pubdate data-updated="true">May 10<span>th</span>, 2022</time>
         
       </p>
     
@@ -494,7 +610,7 @@ nano create_wg.py and run it: python3 create_wg.py</p>
   
 
 
-<time datetime="2021-07-08T05:56:38+00:00" pubdate data-updated="true">Jul 8<span>th</span>, 2021</time>
+<time datetime="2021-07-08T13:56:38+08:00" pubdate data-updated="true">Jul 8<span>th</span>, 2021</time>
         
       </p>
     
@@ -592,7 +708,7 @@ nano create_wg.py and run it: python3 create_wg.py</p>
   
 
 
-<time datetime="2021-06-19T15:19:13+00:00" pubdate data-updated="true">Jun 19<span>th</span>, 2021</time>
+<time datetime="2021-06-19T23:19:13+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2021</time>
         
       </p>
     
@@ -648,7 +764,7 @@ nano py-kms/py-kms/Etrigan.py</p>
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2020/06/28/setup-tcp-tunnel/">Setup TCP Tunnel</a></h1>
+      <h1 class="entry-title"><a href="/blog/2020/06/29/setup-tcp-tunnel/">Setup TCP Tunnel</a></h1>
     
     
       <p class="meta">
@@ -664,7 +780,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   
 
 
-<time datetime="2020-06-28T21:52:01+00:00" pubdate data-updated="true">Jun 28<span>th</span>, 2020</time>
+<time datetime="2020-06-29T05:52:01+08:00" pubdate data-updated="true">Jun 29<span>th</span>, 2020</time>
         
       </p>
     
@@ -746,7 +862,7 @@ nano py-kms/py-kms/Etrigan.py</p>
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2020/04/16/setup-wireguard/">Setup Wireguard</a></h1>
+      <h1 class="entry-title"><a href="/blog/2020/04/17/setup-wireguard/">Setup Wireguard</a></h1>
     
     
       <p class="meta">
@@ -762,7 +878,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   
 
 
-<time datetime="2020-04-16T17:23:51+00:00" pubdate data-updated="true">Apr 16<span>th</span>, 2020</time>
+<time datetime="2020-04-17T01:23:51+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2020</time>
         
       </p>
     
@@ -846,7 +962,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   
 
 
-<time datetime="2020-04-16T14:35:03+00:00" pubdate data-updated="true">Apr 16<span>th</span>, 2020</time>
+<time datetime="2020-04-16T22:35:03+08:00" pubdate data-updated="true">Apr 16<span>th</span>, 2020</time>
         
       </p>
     
@@ -913,7 +1029,7 @@ nano py-kms/py-kms/Etrigan.py</p>
   
 
 
-<time datetime="2019-03-28T07:45:29+00:00" pubdate data-updated="true">Mar 28<span>th</span>, 2019</time>
+<time datetime="2019-03-28T15:45:29+08:00" pubdate data-updated="true">Mar 28<span>th</span>, 2019</time>
         
       </p>
     
@@ -936,44 +1052,6 @@ nano py-kms/py-kms/Etrigan.py</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2019/03/22/using-mybatis-with-annotation/">Using Mybatis With Annotation</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-03-22T03:46:10+00:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2019</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
-<a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
-<a href="https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query">https://stackoverflow.com/questions/3428742/how-to-use-annotations-with-ibatis-mybatis-for-an-in-query</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -986,30 +1064,30 @@ nano py-kms/py-kms/Etrigan.py</p>
   
     <section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.0%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.0%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.0%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 121.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 151.0%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.0%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.0%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.0%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 109.0%'>octopress(3)</a> <a href='/blog/categories/osx' style='font-size: 112.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 133.0%'>production(11)</a> <a href='/blog/categories/r' style='font-size: 103.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 124.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.0%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.0%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.0%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.0%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.0%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.0%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 157.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(20)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 127.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.0%'>技术(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/ai' style='font-size: 112.0%'>ai(4)</a> <a href='/blog/categories/angularjs' style='font-size: 103.0%'>Angularjs(1)</a> <a href='/blog/categories/bash' style='font-size: 106.0%'>bash(2)</a> <a href='/blog/categories/big-data' style='font-size: 115.0%'>big-data(5)</a> <a href='/blog/categories/bower' style='font-size: 106.0%'>bower(2)</a> <a href='/blog/categories/brew' style='font-size: 103.0%'>brew(1)</a> <a href='/blog/categories/deploy' style='font-size: 112.0%'>deploy(4)</a> <a href='/blog/categories/docker' style='font-size: 103.0%'>docker(1)</a> <a href='/blog/categories/front-end' style='font-size: 115.0%'>front-end(5)</a> <a href='/blog/categories/gem' style='font-size: 106.0%'>gem(2)</a> <a href='/blog/categories/gems' style='font-size: 103.0%'>gems(1)</a> <a href='/blog/categories/git' style='font-size: 121.0%'>git(7)</a> <a href='/blog/categories/hadoop' style='font-size: 112.0%'>hadoop(4)</a> <a href='/blog/categories/heroku' style='font-size: 106.0%'>heroku(2)</a> <a href='/blog/categories/java' style='font-size: 151.0%'>java(17)</a> <a href='/blog/categories/ml' style='font-size: 103.0%'>ml(1)</a> <a href='/blog/categories/mongodb' style='font-size: 103.0%'>mongodb(1)</a> <a href='/blog/categories/mysql' style='font-size: 109.0%'>mysql(3)</a> <a href='/blog/categories/nodejs' style='font-size: 103.0%'>nodejs(1)</a> <a href='/blog/categories/octopress' style='font-size: 112.0%'>octopress(4)</a> <a href='/blog/categories/osx' style='font-size: 112.0%'>osx(4)</a> <a href='/blog/categories/other-framework' style='font-size: 103.0%'>other-framework(1)</a> <a href='/blog/categories/postgresql' style='font-size: 103.0%'>postgresql(1)</a> <a href='/blog/categories/production' style='font-size: 133.0%'>production(11)</a> <a href='/blog/categories/r' style='font-size: 103.0%'>r(1)</a> <a href='/blog/categories/rails' style='font-size: 124.0%'>rails(8)</a> <a href='/blog/categories/rbenv' style='font-size: 106.0%'>rbenv(2)</a> <a href='/blog/categories/ruby' style='font-size: 103.0%'>ruby(1)</a> <a href='/blog/categories/rvm' style='font-size: 103.0%'>rvm(1)</a> <a href='/blog/categories/scikit-learn' style='font-size: 103.0%'>sciKit-learn(1)</a> <a href='/blog/categories/spring' style='font-size: 115.0%'>spring(5)</a> <a href='/blog/categories/sql' style='font-size: 103.0%'>sql(1)</a> <a href='/blog/categories/ssh' style='font-size: 106.0%'>ssh(2)</a> <a href='/blog/categories/style' style='font-size: 103.0%'>style(1)</a> <a href='/blog/categories/svn' style='font-size: 103.0%'>svn(1)</a> <a href='/blog/categories/technical-review' style='font-size: 157.0%'>technical-review(19)</a> <a href='/blog/categories/tensorflow' style='font-size: 109.0%'>tensorflow(3)</a> <a href='/blog/categories/tools' style='font-size: 118.0%'>tools(6)</a> <a href='/blog/categories/ubuntu' style='font-size: 160.0%'>ubuntu(20)</a> <a href='/blog/categories/virtualbox' style='font-size: 106.0%'>virtualbox(2)</a> <a href='/blog/categories/chuang-ye' style='font-size: 127.0%'>创业(9)</a> <a href='/blog/categories/ji-zhu' style='font-size: 103.0%'>技术(1)</a> </span>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2024/03/17/setup-octopress-2-dot-0-environment-using-docker-in-ubuntu-23-dot-10/">Setup Octopress 2.0 Environment Using Docker in Ubuntu 23.10</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine/">Blogging With Existing Octopress in a New Machine</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
+        <a href="/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
+        <a href="/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
       </li>
     
       <li class="post">
         <a href="/blog/2021/07/08/using-python-proxy/">Using Python Proxy</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2021/06/19/setup-kms/">Setup Kms</a>
       </li>
     
   </ul>

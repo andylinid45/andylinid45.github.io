@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rbenv | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/rbenv/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ruby on Rails Development Setup for OSX]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/24/ruby-on-rails-development-setup-for-osx/"/>
-    <updated>2014-09-24T18:13:09+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/24/ruby-on-rails-development-setup-for-osx</id>
+    <link href="http://andylinid45.github.io/blog/2014/09/25/ruby-on-rails-development-setup-for-osx/"/>
+    <updated>2014-09-25T02:13:09+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/25/ruby-on-rails-development-setup-for-osx</id>
     <content type="html"><![CDATA[<p>Install Command Line Tools
 <code>
 xcode-select --install
@@ -94,7 +94,7 @@ brew install git
   <entry>
     <title type="html"><![CDATA[Using Rbenv to Manage Ruby Versions Instead of Rvm]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/03/using-rbenv-to-manage-ruby-versions/"/>
-    <updated>2014-03-03T11:48:48+00:00</updated>
+    <updated>2014-03-03T19:48:48+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/03/using-rbenv-to-manage-ruby-versions</id>
     <content type="html"><![CDATA[<p>remove rvm first
 <code>

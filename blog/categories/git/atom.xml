@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Git | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Git Marge Master to a Branch]]></title>
     <link href="http://andylinid45.github.io/blog/2014/05/02/git-marge-master-to-a-branch/"/>
-    <updated>2014-05-02T09:49:20+00:00</updated>
+    <updated>2014-05-02T17:49:20+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/05/02/git-marge-master-to-a-branch</id>
     <content type="html"><![CDATA[<p><code>
 git checkout branch_1
@@ -30,7 +30,7 @@ git checkout master
   <entry>
     <title type="html"><![CDATA[Switching Git Server]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/switching-git-server/"/>
-    <updated>2014-03-02T10:34:29+00:00</updated>
+    <updated>2014-03-02T18:34:29+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/switching-git-server</id>
     <content type="html"><![CDATA[<p>```
 git remote -v</p>
@@ -51,7 +51,7 @@ git remote -v</p>
   <entry>
     <title type="html"><![CDATA[Git Ignore the File Permission(mode) Changes]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/git-ignore-the-file-permission-mode-changes/"/>
-    <updated>2014-03-02T10:15:37+00:00</updated>
+    <updated>2014-03-02T18:15:37+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/git-ignore-the-file-permission-mode-changes</id>
     <content type="html"><![CDATA[<p><code>
 git config core.filemode false
@@ -63,7 +63,7 @@ git config --global core.filemode false # for global
   <entry>
     <title type="html"><![CDATA[Add Global Git Ignore]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/add-global-git-ignore/"/>
-    <updated>2014-03-02T10:14:02+00:00</updated>
+    <updated>2014-03-02T18:14:02+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/add-global-git-ignore</id>
     <content type="html"><![CDATA[<p>```
 git config &mdash;global core.excludesfile ~/.gitignore</p>
@@ -82,7 +82,7 @@ echo andy_pass  >> ~/.gitignore
   <entry>
     <title type="html"><![CDATA[Git Checkout Branch From a Tag]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/git-checkout-branch-from-a-tag/"/>
-    <updated>2014-03-02T07:55:54+00:00</updated>
+    <updated>2014-03-02T15:55:54+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/git-checkout-branch-from-a-tag</id>
     <content type="html"><![CDATA[<p>after you clone a git repo
 ```

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Front-end | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/front-end/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Html Best Practices]]></title>
     <link href="http://andylinid45.github.io/blog/2015/08/29/html-best-practices/"/>
-    <updated>2015-08-29T14:59:28+00:00</updated>
+    <updated>2015-08-29T22:59:28+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/29/html-best-practices</id>
     <content type="html"><![CDATA[<p>Don&rsquo;t
 <code>
@@ -77,7 +77,7 @@ ues &lt;article&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt; tags if ne
   <entry>
     <title type="html"><![CDATA[HTML5 Cross Browser Polyfills]]></title>
     <link href="http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills/"/>
-    <updated>2015-08-29T08:20:09+00:00</updated>
+    <updated>2015-08-29T16:20:09+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/29/html5-cross-browser-polyfills</id>
     <content type="html"><![CDATA[<p><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills</a></p>
 ]]></content>
@@ -85,9 +85,9 @@ ues &lt;article&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt; tags if ne
   
   <entry>
     <title type="html"><![CDATA[Responsive Web Design Key Points]]></title>
-    <link href="http://andylinid45.github.io/blog/2015/08/23/responsive-web-design-key-points/"/>
-    <updated>2015-08-23T19:14:10+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2015/08/23/responsive-web-design-key-points</id>
+    <link href="http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points/"/>
+    <updated>2015-08-24T03:14:10+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2015/08/24/responsive-web-design-key-points</id>
     <content type="html"><![CDATA[<p><code>
 Using media queries to change the navigation or layout or resize an image
 Using the fluid grid layout
@@ -115,7 +115,7 @@ Using the fluid grid layout
   <entry>
     <title type="html"><![CDATA[Native Apps, Mobile Web Apps and Hybrid Apps]]></title>
     <link href="http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps/"/>
-    <updated>2015-08-23T08:27:10+00:00</updated>
+    <updated>2015-08-23T16:27:10+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/23/native-apps-mobile-web-apps-and-hybrid-apps</id>
     <content type="html"><![CDATA[<p>Mobile web apps resource
 <code>
@@ -137,7 +137,7 @@ http://www.ionicframework.com/
   <entry>
     <title type="html"><![CDATA[What Is New in HTML5?]]></title>
     <link href="http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5/"/>
-    <updated>2015-08-23T06:39:20+00:00</updated>
+    <updated>2015-08-23T14:39:20+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/23/what-is-new-in-html5</id>
     <content type="html"><![CDATA[<p><code>
 http://html5please.com/

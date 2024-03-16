@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -14,9 +14,77 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Setup Octopress 2.0 Environment Using Docker in Ubuntu 23.10]]></title>
+    <link href="http://andylinid45.github.io/blog/2024/03/17/setup-octopress-2-dot-0-environment-using-docker-in-ubuntu-23-dot-10/"/>
+    <updated>2024-03-17T01:07:17+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2024/03/17/setup-octopress-2-dot-0-environment-using-docker-in-ubuntu-23-dot-10</id>
+    <content type="html"><![CDATA[<p>install docker
+<code>
+snap install docker
+</code></p>
+
+<p>nano .gitconfig
+```
+[user]</p>
+
+<pre><code>name = Andy
+email = you@example.com
+</code></pre>
+
+<p>[push]</p>
+
+<pre><code>default = simple
+</code></pre>
+
+<p>```</p>
+
+<p>nano Dockerfile
+```
+FROM ubuntu:16.04
+RUN apt-get update -y
+RUN apt-get -y install locales locales-all tzdata sudo gcc make git nano less curl ruby ruby-dev python2.7 python-pip python-dev
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV TZ=Asia/Shanghai
+WORKDIR /root
+ADD .gitconfig /root/.gitconfig
+ADD Gemfile /root/Gemfile</p>
+
+<h1>prevent bundle install twice</h1>
+
+<p>ADD Gemfile.lock /root/Gemfile.lock
+RUN gem install bundler -v &lsquo;1.15.4&rsquo;
+RUN bundle install
+WORKDIR /work
+```</p>
+
+<p>build and run
+<code>
+docker build . -t ubuntu_octopress
+docker run -it ubuntu_octopress /bin/bash
+</code></p>
+
+<p>using volume to save the code
+<code>
+docker volume create octopress-volume
+docker run --mount source=octopress-volume,target=/work -it ubuntu_octopress /bin/bash
+</code></p>
+
+<p>useful command
+<code>
+docker image ls #ls images
+docker image rm -f IMAGE_ID # remove image
+docker volume ls
+docker volume rm VOLUME_NAME
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Blogging With Existing Octopress in a New Machine]]></title>
     <link href="http://andylinid45.github.io/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine/"/>
-    <updated>2024-03-16T07:11:53+00:00</updated>
+    <updated>2024-03-16T15:11:53+08:00</updated>
     <id>http://andylinid45.github.io/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine</id>
     <content type="html"><![CDATA[<p>```
 git clone -b source <a href="https://github.com/YOUR_NAME/YOUR_NAME.github.io.git">https://github.com/YOUR_NAME/YOUR_NAME.github.io.git</a> octopress
@@ -32,7 +100,7 @@ bundle exec rake deploy
   <entry>
     <title type="html"><![CDATA[Reinstall Octopress]]></title>
     <link href="http://andylinid45.github.io/blog/2014/04/14/reinstall-octopress/"/>
-    <updated>2014-04-14T15:22:20+00:00</updated>
+    <updated>2014-04-14T23:22:20+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/04/14/reinstall-octopress</id>
     <content type="html"><![CDATA[<p>```
 git clone git://github.com/imathis/octopress.git octopress
@@ -62,7 +130,7 @@ octopress/plugins/tag_cloud.rb</p>
   <entry>
     <title type="html"><![CDATA[Octopress Command]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/01/octopress-command/"/>
-    <updated>2014-03-01T12:43:42+00:00</updated>
+    <updated>2014-03-01T20:43:42+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/01/octopress-command</id>
     <content type="html"><![CDATA[<p><code>
 bundle exec rake new_post["Hello octopress"]

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Deploy | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/deploy/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Nginx and Unicorn]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/nginx-and-unicorn/"/>
-    <updated>2014-03-02T10:44:27+00:00</updated>
+    <updated>2014-03-02T18:44:27+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/nginx-and-unicorn</id>
     <content type="html"><![CDATA[<p>nginx
 <code>
@@ -69,7 +69,7 @@ http://unicorn.bogomips.org/Unicorn/Configurator.html
   <entry>
     <title type="html"><![CDATA[Using Capistrano-nginx-unicorn]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/using-capistrano-nginx-unicorn/"/>
-    <updated>2014-03-02T10:23:47+00:00</updated>
+    <updated>2014-03-02T18:23:47+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/using-capistrano-nginx-unicorn</id>
     <content type="html"><![CDATA[<p>add gem
 <code>
@@ -98,7 +98,7 @@ cd /var/www/your_app/current; bundle exec unicorn -D -c /var/www/your_app/shared
   <entry>
     <title type="html"><![CDATA[Using Capistrano]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/using-capistrano/"/>
-    <updated>2014-03-02T10:21:00+00:00</updated>
+    <updated>2014-03-02T18:21:00+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/using-capistrano</id>
     <content type="html"><![CDATA[<p>add gem
 <code>
@@ -143,7 +143,7 @@ server "your_server.com", :app, :web
   <entry>
     <title type="html"><![CDATA[Fixed robots.txt No Found When Using Unicorn]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/fixed-robots-dot-txt-no-found-when-using-unicorn/"/>
-    <updated>2014-03-02T08:33:50+00:00</updated>
+    <updated>2014-03-02T16:33:50+08:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/fixed-robots-dot-txt-no-found-when-using-unicorn</id>
     <content type="html"><![CDATA[<p>in config production.rb
 <code>

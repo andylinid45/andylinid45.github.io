@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Production | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/production/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Install Wireguard in Ubuntu 23.10]]></title>
-    <link href="http://andylinid45.github.io/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10/"/>
-    <updated>2024-03-09T18:21:51+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10</id>
+    <link href="http://andylinid45.github.io/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/"/>
+    <updated>2024-03-10T02:21:51+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10</id>
     <content type="html"><![CDATA[<p>install wireguard
 ```
 sudo apt-get update
@@ -147,9 +147,9 @@ if subnet:</p>
   
   <entry>
     <title type="html"><![CDATA[Disable Ipv6 in Ubuntu 21.04]]></title>
-    <link href="http://andylinid45.github.io/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04/"/>
-    <updated>2022-05-09T20:54:20+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04</id>
+    <link href="http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/"/>
+    <updated>2022-05-10T04:54:20+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04</id>
     <content type="html"><![CDATA[<p>```
 sudo nano /etc/sysctl.conf</p>
 
@@ -196,7 +196,7 @@ sudo chmod 755 /etc/rc.local</p>
   <entry>
     <title type="html"><![CDATA[Using Python Proxy]]></title>
     <link href="http://andylinid45.github.io/blog/2021/07/08/using-python-proxy/"/>
-    <updated>2021-07-08T05:56:38+00:00</updated>
+    <updated>2021-07-08T13:56:38+08:00</updated>
     <id>http://andylinid45.github.io/blog/2021/07/08/using-python-proxy</id>
     <content type="html"><![CDATA[<p>```</p>
 
@@ -249,7 +249,7 @@ https://stackoverflow.com/questions/7221757/run-automatically-program-on-startup
   <entry>
     <title type="html"><![CDATA[Setup Kms]]></title>
     <link href="http://andylinid45.github.io/blog/2021/06/19/setup-kms/"/>
-    <updated>2021-06-19T15:19:13+00:00</updated>
+    <updated>2021-06-19T23:19:13+08:00</updated>
     <id>http://andylinid45.github.io/blog/2021/06/19/setup-kms</id>
     <content type="html"><![CDATA[<p>Server
 <code>
@@ -285,9 +285,9 @@ C:\Windows\system32>slmgr /ato</p>
   
   <entry>
     <title type="html"><![CDATA[Setup TCP Tunnel]]></title>
-    <link href="http://andylinid45.github.io/blog/2020/06/28/setup-tcp-tunnel/"/>
-    <updated>2020-06-28T21:52:01+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2020/06/28/setup-tcp-tunnel</id>
+    <link href="http://andylinid45.github.io/blog/2020/06/29/setup-tcp-tunnel/"/>
+    <updated>2020-06-29T05:52:01+08:00</updated>
+    <id>http://andylinid45.github.io/blog/2020/06/29/setup-tcp-tunnel</id>
     <content type="html"><![CDATA[<p>Server
 ```
 sudo snap install go &mdash;classic

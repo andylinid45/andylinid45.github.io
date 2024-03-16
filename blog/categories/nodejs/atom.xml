@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Nodejs | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/nodejs/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Use Nvm to Install Nodejs]]></title>
     <link href="http://andylinid45.github.io/blog/2018/12/06/use-nvm-to-install-nodejs/"/>
-    <updated>2018-12-06T05:52:57+00:00</updated>
+    <updated>2018-12-06T13:52:57+08:00</updated>
     <id>http://andylinid45.github.io/blog/2018/12/06/use-nvm-to-install-nodejs</id>
     <content type="html"><![CDATA[<p>```
 curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh">https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh</a> | bash</p>

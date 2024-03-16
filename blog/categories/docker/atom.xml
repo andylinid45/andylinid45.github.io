@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Docker | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/docker/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Install Docker in Ubuntu 16.04]]></title>
     <link href="http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04/"/>
-    <updated>2019-01-30T08:54:02+00:00</updated>
+    <updated>2019-01-30T16:54:02+08:00</updated>
     <id>http://andylinid45.github.io/blog/2019/01/30/install-docker-in-ubuntu-16-dot-04</id>
     <content type="html"><![CDATA[<p>install docker
 ```</p>

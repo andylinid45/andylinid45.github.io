@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hadoop | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/hadoop/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T15:21:04+00:00</updated>
+  <updated>2024-03-17T01:19:06+08:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Ruby on Hadoop, Using Streaming]]></title>
     <link href="http://andylinid45.github.io/blog/2015/08/22/ruby-on-hadoop/"/>
-    <updated>2015-08-22T07:23:05+00:00</updated>
+    <updated>2015-08-22T15:23:05+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/22/ruby-on-hadoop</id>
     <content type="html"><![CDATA[<p>wcmapper.rb
 ```</p>
@@ -77,7 +77,7 @@ cat test.txt | ./wcmapper.rb | sort | ./wcreducer.rb
   <entry>
     <title type="html"><![CDATA[Using HDFS FS Shell]]></title>
     <link href="http://andylinid45.github.io/blog/2015/08/22/using-hdfs-fs-shell/"/>
-    <updated>2015-08-22T03:00:09+00:00</updated>
+    <updated>2015-08-22T11:00:09+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/22/using-hdfs-fs-shell</id>
     <content type="html"><![CDATA[<p>```
 hadoop fs -mkdir /user
@@ -103,7 +103,7 @@ hadoop jar /opt/hadoop/hadoop-examples-1.0.4.jar
   <entry>
     <title type="html"><![CDATA[Config Hadoop for Pseudo Distributed Mode]]></title>
     <link href="http://andylinid45.github.io/blog/2015/08/21/config-hadoop-for-pseudo-distributed-mode/"/>
-    <updated>2015-08-21T09:17:03+00:00</updated>
+    <updated>2015-08-21T17:17:03+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/21/config-hadoop-for-pseudo-distributed-mode</id>
     <content type="html"><![CDATA[<p>install ssh
 <code>
@@ -178,7 +178,7 @@ http://localhost:50070/
   <entry>
     <title type="html"><![CDATA[Install hadoop1.0.4 on Ubuntu14]]></title>
     <link href="http://andylinid45.github.io/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14/"/>
-    <updated>2015-08-21T08:33:46+00:00</updated>
+    <updated>2015-08-21T16:33:46+08:00</updated>
     <id>http://andylinid45.github.io/blog/2015/08/21/install-hadoop1-dot-0-4-on-ubuntu14</id>
     <content type="html"><![CDATA[<p>Download hadoop
 <code>
