@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T09:02:18+00:00</updated>
+  <updated>2024-03-16T15:21:04+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Blogging With Existing Octopress in a New Machine]]></title>
+    <link href="http://andylinid45.github.io/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine/"/>
+    <updated>2024-03-16T07:11:53+00:00</updated>
+    <id>http://andylinid45.github.io/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine</id>
+    <content type="html"><![CDATA[<p>```
+git clone -b source <a href="https://github.com/YOUR_NAME/YOUR_NAME.github.io.git">https://github.com/YOUR_NAME/YOUR_NAME.github.io.git</a> octopress
+cd octopress
+git clone <a href="https://github.com/YOUR_NAME/YOUR_NAME.github.io.git">https://github.com/YOUR_NAME/YOUR_NAME.github.io.git</a> _deploy</p>
+
+<p>bundle exec rake generate
+bundle exec rake deploy
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Reinstall Octopress]]></title>

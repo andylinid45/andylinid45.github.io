@@ -4,7 +4,7 @@
   <title><![CDATA[Andy Lin]]></title>
   <link href="http://andylinid45.github.io/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-16T09:02:18+00:00</updated>
+  <updated>2024-03-16T15:21:04+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Blogging With Existing Octopress in a New Machine]]></title>
+    <link href="http://andylinid45.github.io/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine/"/>
+    <updated>2024-03-16T07:11:53+00:00</updated>
+    <id>http://andylinid45.github.io/blog/2024/03/16/blogging-with-existing-octopress-in-a-new-machine</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone -b source https://github.com/YOUR_NAME/YOUR_NAME.github.io.git octopress
+</span><span class='line'>cd octopress
+</span><span class='line'>git clone https://github.com/YOUR_NAME/YOUR_NAME.github.io.git _deploy
+</span><span class='line'>
+</span><span class='line'>bundle exec rake generate
+</span><span class='line'>bundle exec rake deploy</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Wireguard in Ubuntu 23.10]]></title>
@@ -1039,41 +1060,6 @@ sudo nano /etc/rsync.secrets</p>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://www.sqlstyle.guide/
 </span><span class='line'>http://www.dpriver.com/pp/sqlformat.htm</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hourly Cron Job in Ubuntu]]></title>
-    <link href="http://andylinid45.github.io/blog/2018/09/03/hourly-cron-job-in-ubuntu/"/>
-    <updated>2018-09-03T07:34:13+00:00</updated>
-    <id>http://andylinid45.github.io/blog/2018/09/03/hourly-cron-job-in-ubuntu</id>
-    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd /etc/cron.hourly
-</span><span class='line'>sudo nano test1
-</span><span class='line'># the job script start with #!/bin/bash
-</span><span class='line'>sudo chmod +x test1
-</span><span class='line'>
-</span><span class='line'># hava a test
-</span><span class='line'>run-parts --report --test /etc/cron.hourly
-</span><span class='line'>run-parts --report /etc/cron.hourly</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
-</span><span class='line'>https://help.ubuntu.com/community/CronHowto
-</span><span class='line'>https://askubuntu.com/questions/7676/function-of-etc-cron-hourly</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
