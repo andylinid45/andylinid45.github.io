@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bash | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/bash/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-11T01:01:54+08:00</updated>
+  <updated>2024-03-16T08:36:15+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Generate Several Random Passwords in Bash]]></title>
     <link href="http://andylinid45.github.io/blog/2014/09/27/generate-several-random-passwords-in-bash/"/>
-    <updated>2014-09-27T22:07:35+08:00</updated>
+    <updated>2014-09-27T14:07:35+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/09/27/generate-several-random-passwords-in-bash</id>
     <content type="html"><![CDATA[<p><code>
 brew install apg
@@ -28,7 +28,7 @@ apg -m 16
   <entry>
     <title type="html"><![CDATA[Find Process by Name in Bash]]></title>
     <link href="http://andylinid45.github.io/blog/2014/09/27/find-process-by-name-in-bash/"/>
-    <updated>2014-09-27T22:05:47+08:00</updated>
+    <updated>2014-09-27T14:05:47+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/09/27/find-process-by-name-in-bash</id>
     <content type="html"><![CDATA[<p><code>
 ps aux|grep sshd

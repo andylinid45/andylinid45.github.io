@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ssh | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/ssh/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-11T01:01:54+08:00</updated>
+  <updated>2024-03-16T08:36:15+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Modify Ssh Port]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/modify-ssh-port/"/>
-    <updated>2014-03-02T16:01:21+08:00</updated>
+    <updated>2014-03-02T08:01:21+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/modify-ssh-port</id>
     <content type="html"><![CDATA[<p>```
 sudo nano /etc/ssh/sshd_config</p>
@@ -31,7 +31,7 @@ sudo nano /etc/ssh/sshd_config</p>
   <entry>
     <title type="html"><![CDATA[Ssh Without Password]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/01/ssh-without-password/"/>
-    <updated>2014-03-01T21:10:02+08:00</updated>
+    <updated>2014-03-01T13:10:02+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/01/ssh-without-password</id>
     <content type="html"><![CDATA[<p><code>
 ssh-copy-id user@host

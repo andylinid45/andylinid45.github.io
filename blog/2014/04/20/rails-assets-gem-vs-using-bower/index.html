@@ -5,20 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Disable Ipv6 in Ubuntu 21.04 - Andy Lin</title>
+  <title>Rails Assets Gem vs Bower - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="1
-2
-3
-4
-5
-sudo nano /etc/sysctl.conf
-# add in the end of the file
-net.ipv6.conf.all.disable_ipv6=1
-net.ipv6.conf.default.disable_ipv6=1
-net.ipv6.conf &hellip;">
+  <meta name="description" content="There are many ways to manage assets in rails. let us compare these two ways. 1)use rails assets gem. https://rails-assets.org/ Rails Assets is the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -27,7 +18,7 @@ net.ipv6.conf &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/04/20/rails-assets-gem-vs-using-bower">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -91,7 +82,7 @@ net.ipv6.conf &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Disable Ipv6 in Ubuntu 21.04</h1>
+      <h1 class="entry-title">Rails Assets Gem vs Bower</h1>
     
     
       <p class="meta">
@@ -107,70 +98,45 @@ net.ipv6.conf &hellip;">
   
 
 
-<time datetime="2022-05-10T04:54:20+08:00" pubdate data-updated="true">May 10<span>th</span>, 2022</time>
+<time datetime="2014-04-20T17:26:18+00:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/sysctl.conf
-</span><span class='line'># add in the end of the file
-</span><span class='line'>net.ipv6.conf.all.disable_ipv6=1
-</span><span class='line'>net.ipv6.conf.default.disable_ipv6=1
-</span><span class='line'>net.ipv6.conf.lo.disable_ipv6=1</span></code></pre></td></tr></table></div></figure>
+<div class="entry-content"><p>There are many ways to manage assets in rails.</p>
 
+<h2>let us compare these two ways.</h2>
 
+<h3>1)use rails assets gem. <a href="https://rails-assets.org/">https://rails-assets.org/</a></h3>
 
+<p>Rails Assets is the frictionless proxy between Bundler and Bower.</p>
+
+<p>it need to add a gem source to your gem file</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo sysctl -p
-</span><span class='line'># check it 
-</span><span class='line'>ip a</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>source 'https://rails-assets.org'</span></code></pre></td></tr></table></div></figure>
 
 
-
+<p>and add assets like this to gem file</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/rc.local
-</span><span class='line'># create a new file
-</span><span class='line'>
-</span><span class='line'>#!/bin/bash
-</span><span class='line'># /etc/rc.local
-</span><span class='line'>
-</span><span class='line'>/etc/sysctl.d
-</span><span class='line'>/etc/init.d/procps restart
-</span><span class='line'>
-</span><span class='line'>exit 0</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'rails-assets-BOWER_PACKAGE_NAME'</span></code></pre></td></tr></table></div></figure>
 
 
+<h3>2)use bower directly</h3>
 
+<h3>use bower directly win!</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo chmod 755 /etc/rc.local
-</span><span class='line'>
-</span><span class='line'>sudo reboot</span></code></pre></td></tr></table></div></figure>
+<p>I think rails-assets adds an unnecessary layer.
+I want to make things simple.</p>
 
+<p>PS: there is a gem called &lsquo;bower-rails&rsquo;, helping you use bower.</p>
 
-<p><a href="https://itsfoss.com/disable-ipv6-ubuntu-linux/">https://itsfoss.com/disable-ipv6-ubuntu-linux/</a></p>
+<p>It provides a DSL configuration in Bowerfile at the project&rsquo;s root similar to Bundler.</p>
+
+<p>But I think this gem also add an unnecessary layer. so DON&rsquo;T use this gem! It just wastes your time!</p>
 </div>
 
 
@@ -193,12 +159,12 @@ net.ipv6.conf &hellip;">
   
 
 
-<time datetime="2022-05-10T04:54:20+08:00" pubdate data-updated="true">May 10<span>th</span>, 2022</time>
+<time datetime="2014-04-20T17:26:18+00:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/production/'>production</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+    <a class='category' href='/blog/categories/technical-review/'>technical-review</a>
   
 </span>
 
@@ -214,10 +180,10 @@ net.ipv6.conf &hellip;">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2021/07/08/using-python-proxy/" title="Previous Post: using python proxy">&laquo; using python proxy</a>
+        <a class="basic-alignment left" href="/blog/2014/04/20/using-bower-to-manage-rails-assets/" title="Previous Post: using bower to manage rails assets">&laquo; using bower to manage rails assets</a>
       
       
-        <a class="basic-alignment right" href="/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/" title="Next Post: install wireguard in ubuntu 23.10">install wireguard in ubuntu 23.10 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/04/23/angularjs-vs-emberjs-vs-backbonejs/" title="Next Post: Angularjs vs Emberjs vs Backbonejs">Angularjs vs Emberjs vs Backbonejs &raquo;</a>
       
     </p>
   </footer>
@@ -236,11 +202,11 @@ net.ipv6.conf &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
+        <a href="/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
+        <a href="/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
       </li>
     
       <li class="post">
@@ -252,7 +218,7 @@ net.ipv6.conf &hellip;">
       </li>
     
       <li class="post">
-        <a href="/blog/2020/06/29/setup-tcp-tunnel/">Setup TCP Tunnel</a>
+        <a href="/blog/2020/06/28/setup-tcp-tunnel/">Setup TCP Tunnel</a>
       </li>
     
   </ul>

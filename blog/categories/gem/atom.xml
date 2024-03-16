@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gem | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/gem/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-11T01:01:54+08:00</updated>
+  <updated>2024-03-16T08:36:15+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Write a Executable Gem]]></title>
     <link href="http://andylinid45.github.io/blog/2014/04/11/write-a-executable-gem/"/>
-    <updated>2014-04-11T15:05:49+08:00</updated>
+    <updated>2014-04-11T07:05:49+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/04/11/write-a-executable-gem</id>
     <content type="html"><![CDATA[<p><code>
 cd my_gem
@@ -57,7 +57,7 @@ my_gem
   <entry>
     <title type="html"><![CDATA[Make Your Own Gem]]></title>
     <link href="http://andylinid45.github.io/blog/2014/04/11/make-your-own-gem/"/>
-    <updated>2014-04-11T12:16:16+08:00</updated>
+    <updated>2014-04-11T04:16:16+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/04/11/make-your-own-gem</id>
     <content type="html"><![CDATA[<p>create the gem
 <code>

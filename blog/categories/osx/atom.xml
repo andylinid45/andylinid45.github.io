@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Osx | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/osx/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-11T01:01:54+08:00</updated>
+  <updated>2024-03-16T08:36:15+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Dot Files in Osx]]></title>
     <link href="http://andylinid45.github.io/blog/2014/10/21/dot-files-in-osx/"/>
-    <updated>2014-10-21T20:45:33+08:00</updated>
+    <updated>2014-10-21T12:45:33+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/10/21/dot-files-in-osx</id>
     <content type="html"><![CDATA[<p>```
 mkdir ~/.ssh
@@ -43,9 +43,9 @@ sudo chown new_user ~/.gitignore
   
   <entry>
     <title type="html"><![CDATA[Ruby on Rails Development Setup for OSX]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/09/25/ruby-on-rails-development-setup-for-osx/"/>
-    <updated>2014-09-25T02:13:09+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/09/25/ruby-on-rails-development-setup-for-osx</id>
+    <link href="http://andylinid45.github.io/blog/2014/09/24/ruby-on-rails-development-setup-for-osx/"/>
+    <updated>2014-09-24T18:13:09+00:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/09/24/ruby-on-rails-development-setup-for-osx</id>
     <content type="html"><![CDATA[<p>Install Command Line Tools
 <code>
 xcode-select --install
@@ -122,7 +122,7 @@ brew install git
   <entry>
     <title type="html"><![CDATA[Using Brew in Osx]]></title>
     <link href="http://andylinid45.github.io/blog/2014/09/23/using-brew-in-osx/"/>
-    <updated>2014-09-23T10:15:27+08:00</updated>
+    <updated>2014-09-23T02:15:27+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/09/23/using-brew-in-osx</id>
     <content type="html"><![CDATA[<p><a href="http://brew.sh">http://brew.sh</a></p>
 
@@ -157,7 +157,7 @@ brew cask install the-unarchiver #rar 7zip
   <entry>
     <title type="html"><![CDATA[Sudo Without Password in Osx and Ubuntu]]></title>
     <link href="http://andylinid45.github.io/blog/2014/09/23/sudo-without-password/"/>
-    <updated>2014-09-23T10:10:16+08:00</updated>
+    <updated>2014-09-23T02:10:16+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/09/23/sudo-without-password</id>
     <content type="html"><![CDATA[<p><code>
 echo 'account_name ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers

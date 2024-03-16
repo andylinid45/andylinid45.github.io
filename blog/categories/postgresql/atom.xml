@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Postgresql | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/postgresql/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-11T01:01:54+08:00</updated>
+  <updated>2024-03-16T08:36:15+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Using Postgresql in Ubuntu]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/using-postgresql-in-ubuntu/"/>
-    <updated>2014-03-02T15:40:07+08:00</updated>
+    <updated>2014-03-02T07:40:07+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/using-postgresql-in-ubuntu</id>
     <content type="html"><![CDATA[<p>install
 <code>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-11T01:01:54+08:00</updated>
+  <updated>2024-03-16T08:36:15+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Double vs BigDecimal in Financial Programming]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming/"/>
-    <updated>2019-03-28T15:45:29+08:00</updated>
+    <updated>2019-03-28T07:45:29+00:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/28/double-vs-bigdecimal-in-financial-programming</id>
     <content type="html"><![CDATA[<p><code>
 https://www.reddit.com/r/java/comments/8la803/double_vs_bigdecimal_in_financial_programming/
@@ -30,7 +30,7 @@ https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto
   <entry>
     <title type="html"><![CDATA[Using Mybatis With Annotation]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation/"/>
-    <updated>2019-03-22T11:46:10+08:00</updated>
+    <updated>2019-03-22T03:46:10+00:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/22/using-mybatis-with-annotation</id>
     <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation">https://stackoverflow.com/questions/32631438/mybatis-xml-vs-annotation</a>
 <a href="http://www.mybatis.org/mybatis-3/java-api.html">http://www.mybatis.org/mybatis-3/java-api.html</a>
@@ -41,7 +41,7 @@ https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto
   <entry>
     <title type="html"><![CDATA[Spring JDBC Logging SQL With Log4j]]></title>
     <link href="http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j/"/>
-    <updated>2019-03-21T14:54:13+08:00</updated>
+    <updated>2019-03-21T06:54:13+00:00</updated>
     <id>http://andylinid45.github.io/blog/2019/03/21/spring-jdbc-logging-sql-with-log4j</id>
     <content type="html"><![CDATA[<p><code>
 &lt;logger name="org.springframework.jdbc.core.JdbcTemplate"&gt;
@@ -62,7 +62,7 @@ https://stackoverflow.com/questions/6787142/bigdecimal-equals-versus-compareto
   <entry>
     <title type="html"><![CDATA[Spring Websockets Broadcast Message to Clients]]></title>
     <link href="http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients/"/>
-    <updated>2018-10-19T11:06:12+08:00</updated>
+    <updated>2018-10-19T03:06:12+00:00</updated>
     <id>http://andylinid45.github.io/blog/2018/10/19/spring-websockets-broadcast-message-to-clients</id>
     <content type="html"><![CDATA[<p><a href="https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets">https://stackoverflow.com/questions/26465135/spring-how-to-broadcast-message-to-connected-clients-using-websockets</a></p>
 
@@ -79,7 +79,7 @@ https://github.com/jaysridhar/spring-websocket-client
   <entry>
     <title type="html"><![CDATA[Log All Requests and Responses in Spring Boot]]></title>
     <link href="http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot/"/>
-    <updated>2018-09-12T16:10:34+08:00</updated>
+    <updated>2018-09-12T08:10:34+00:00</updated>
     <id>http://andylinid45.github.io/blog/2018/09/12/log-all-requests-and-responses-in-spring-boot</id>
     <content type="html"><![CDATA[<p>add pom.xml
 ```

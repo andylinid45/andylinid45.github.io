@@ -4,7 +4,7 @@
   <title><![CDATA[Category: R | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/r/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-11T01:01:54+08:00</updated>
+  <updated>2024-03-16T08:36:15+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[R Language]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/r-language/"/>
-    <updated>2014-03-02T20:26:51+08:00</updated>
+    <updated>2014-03-02T12:26:51+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/r-language</id>
     <content type="html"><![CDATA[<p>```
 sudo apt-get install r-base</p>

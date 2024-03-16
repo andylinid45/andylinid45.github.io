@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Virtualbox | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/virtualbox/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-11T01:01:54+08:00</updated>
+  <updated>2024-03-16T08:36:15+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Usb in Virtualbox]]></title>
     <link href="http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox/"/>
-    <updated>2014-09-27T22:23:32+08:00</updated>
+    <updated>2014-09-27T14:23:32+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/09/27/usb-in-virtualbox</id>
     <content type="html"><![CDATA[<p>ubuntu 14.04 , virtualbox 4.3
 <code>
@@ -30,7 +30,7 @@ sudo adduser yourusername vboxusers
   <entry>
     <title type="html"><![CDATA[Virtualbox Win7 Screen Resolution]]></title>
     <link href="http://andylinid45.github.io/blog/2014/03/02/virtualbox-win8-screen-resolution/"/>
-    <updated>2014-03-02T18:41:00+08:00</updated>
+    <updated>2014-03-02T10:41:00+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/03/02/virtualbox-win8-screen-resolution</id>
     <content type="html"><![CDATA[<p>run (in ubuntu)
 <code>

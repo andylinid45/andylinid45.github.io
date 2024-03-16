@@ -5,24 +5,19 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ubuntu 14.04 Server Initial - Andy Lin</title>
+  <title>Using Bower to Manage Rails Assets - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
-  <meta name="description" content="login as root 1
+  <meta name="description" content="1
 2
 3
 4
 5
 6
-7
-8
-9
-10
-11
-12
-13
-adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers nano /etc/ssh/sshd_config &hellip;">
+cd project_root
+echo '{ "directory": "vendor/assets/components" }' &gt; .bowerrc
+bower init #just use the default setting is ok bower &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -31,7 +26,7 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/10/27/ubuntu-14-dot-04-server-initial">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2014/04/20/using-bower-to-manage-rails-assets">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -95,7 +90,7 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
   
   <header>
     
-      <h1 class="entry-title">Ubuntu 14.04 Server Initial</h1>
+      <h1 class="entry-title">Using Bower to Manage Rails Assets</h1>
     
     
       <p class="meta">
@@ -111,47 +106,37 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
   
 
 
-<time datetime="2014-10-27T00:01:07+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+<time datetime="2014-04-20T16:02:56+00:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>login as root</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>adduser deploy
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd project_root
+</span><span class='line'>echo '{ "directory": "vendor/assets/components" }' &gt; .bowerrc
+</span><span class='line'>bower init #just use the default setting is ok
 </span><span class='line'>
-</span><span class='line'>echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers
-</span><span class='line'>
-</span><span class='line'>nano /etc/ssh/sshd_config 
-</span><span class='line'># edit two lines
-</span><span class='line'>PermitRootLogin no
-</span><span class='line'>PasswordAuthentication no 
-</span><span class='line'>
-</span><span class='line'>service ssh restart  # do not use , no use /etc/init.d/ssh  restart 
-</span><span class='line'>
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get upgrade</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>bower install angular
+</span><span class='line'>bower install sass-bootstrap</span></code></pre></td></tr></table></div></figure>
 
 
-<p>in local</p>
+<p>in app/assets/javascripts/application.js add:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-copy-id deploy@ip</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//= require angular/angular</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in app/assets/stylesheets/application.css add:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*= require sass-bootstrap/lib/bootstrap</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -175,12 +160,12 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
   
 
 
-<time datetime="2014-10-27T00:01:07+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+<time datetime="2014-04-20T16:02:56+00:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/production/'>production</a>
+    <a class='category' href='/blog/categories/bower/'>bower</a>
   
 </span>
 
@@ -196,10 +181,10 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/10/21/dot-files-in-osx/" title="Previous Post: dot files in osx">&laquo; dot files in osx</a>
+        <a class="basic-alignment left" href="/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/" title="Previous Post: fixed failed to fetch from registry: bower, in ubuntu 13">&laquo; fixed failed to fetch from registry: bower, in ubuntu 13</a>
       
       
-        <a class="basic-alignment right" href="/blog/2014/11/01/id-naming/" title="Next Post: id naming">id naming &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/04/20/rails-assets-gem-vs-using-bower/" title="Next Post: rails assets gem vs bower">rails assets gem vs bower &raquo;</a>
       
     </p>
   </footer>
@@ -218,11 +203,11 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
+        <a href="/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
+        <a href="/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
       </li>
     
       <li class="post">
@@ -234,7 +219,7 @@ adduser deploy echo 'deploy ALL=(ALL) NOPASSWD: ALL' |sudo tee -a /etc/sudoers n
       </li>
     
       <li class="post">
-        <a href="/blog/2020/06/29/setup-tcp-tunnel/">Setup TCP Tunnel</a>
+        <a href="/blog/2020/06/28/setup-tcp-tunnel/">Setup TCP Tunnel</a>
       </li>
     
   </ul>

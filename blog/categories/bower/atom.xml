@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bower | Andy Lin]]></title>
   <link href="http://andylinid45.github.io/blog/categories/bower/atom.xml" rel="self"/>
   <link href="http://andylinid45.github.io/"/>
-  <updated>2024-03-11T01:01:54+08:00</updated>
+  <updated>2024-03-16T08:36:15+00:00</updated>
   <id>http://andylinid45.github.io/</id>
   <author>
     <name><![CDATA[Andy]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using Bower to Manage Rails Assets]]></title>
-    <link href="http://andylinid45.github.io/blog/2014/04/21/using-bower-to-manage-rails-assets/"/>
-    <updated>2014-04-21T00:02:56+08:00</updated>
-    <id>http://andylinid45.github.io/blog/2014/04/21/using-bower-to-manage-rails-assets</id>
+    <link href="http://andylinid45.github.io/blog/2014/04/20/using-bower-to-manage-rails-assets/"/>
+    <updated>2014-04-20T16:02:56+00:00</updated>
+    <id>http://andylinid45.github.io/blog/2014/04/20/using-bower-to-manage-rails-assets</id>
     <content type="html"><![CDATA[<p>```
 cd project_root
 echo &lsquo;{ &ldquo;directory&rdquo;: &ldquo;vendor/assets/components&rdquo; }&rsquo; > .bowerrc
@@ -42,7 +42,7 @@ bower install sass-bootstrap
   <entry>
     <title type="html"><![CDATA[Fixed Failed to Fetch From Registry: Bower, in Ubuntu 13]]></title>
     <link href="http://andylinid45.github.io/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower/"/>
-    <updated>2014-04-20T16:19:57+08:00</updated>
+    <updated>2014-04-20T08:19:57+00:00</updated>
     <id>http://andylinid45.github.io/blog/2014/04/20/fixed-failed-to-fetch-from-registry-bower</id>
     <content type="html"><![CDATA[<p>```
 sudo apt-get purge nodejs npm</p>

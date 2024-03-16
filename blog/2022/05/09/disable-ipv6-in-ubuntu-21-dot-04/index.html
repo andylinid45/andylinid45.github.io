@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Setup Wireguard - Andy Lin</title>
+  <title>Disable Ipv6 in Ubuntu 21.04 - Andy Lin</title>
   <meta name="author" content="Andy">
 
   
@@ -14,9 +14,11 @@
 3
 4
 5
-6
-#install wireguard server in ubuntu 21 (new way)
-https://github.com/angristan/wireguard-install curl -O https://raw.githubusercontent.com &hellip;">
+sudo nano /etc/sysctl.conf
+# add in the end of the file
+net.ipv6.conf.all.disable_ipv6=1
+net.ipv6.conf.default.disable_ipv6=1
+net.ipv6.conf &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -25,7 +27,7 @@ https://github.com/angristan/wireguard-install curl -O https://raw.githubusercon
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://andylinid45.github.io/blog/2020/04/17/setup-wireguard">
+  <link rel="canonical" href="http://andylinid45.github.io/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Andy Lin" type="application/atom+xml">
@@ -89,7 +91,7 @@ https://github.com/angristan/wireguard-install curl -O https://raw.githubusercon
   
   <header>
     
-      <h1 class="entry-title">Setup Wireguard</h1>
+      <h1 class="entry-title">Disable Ipv6 in Ubuntu 21.04</h1>
     
     
       <p class="meta">
@@ -105,7 +107,7 @@ https://github.com/angristan/wireguard-install curl -O https://raw.githubusercon
   
 
 
-<time datetime="2020-04-17T01:23:51+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2020</time>
+<time datetime="2022-05-09T20:54:20+00:00" pubdate data-updated="true">May 9<span>th</span>, 2022</time>
         
       </p>
     
@@ -117,13 +119,45 @@ https://github.com/angristan/wireguard-install curl -O https://raw.githubusercon
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/sysctl.conf
+</span><span class='line'># add in the end of the file
+</span><span class='line'>net.ipv6.conf.all.disable_ipv6=1
+</span><span class='line'>net.ipv6.conf.default.disable_ipv6=1
+</span><span class='line'>net.ipv6.conf.lo.disable_ipv6=1</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo sysctl -p
+</span><span class='line'># check it 
+</span><span class='line'>ip a</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#install wireguard server in ubuntu 21  (new way)
-</span><span class='line'>https://github.com/angristan/wireguard-install
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/rc.local
+</span><span class='line'># create a new file
 </span><span class='line'>
-</span><span class='line'>curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
-</span><span class='line'>chmod +x wireguard-install.sh
-</span><span class='line'>./wireguard-install.sh</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>#!/bin/bash
+</span><span class='line'># /etc/rc.local
+</span><span class='line'>
+</span><span class='line'>/etc/sysctl.d
+</span><span class='line'>/etc/init.d/procps restart
+</span><span class='line'>
+</span><span class='line'>exit 0</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -131,36 +165,12 @@ https://github.com/angristan/wireguard-install curl -O https://raw.githubusercon
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#install wireguard server in ubuntu 18
-</span><span class='line'>https://github.com/l-n-s/wireguard-install
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo chmod 755 /etc/rc.local
 </span><span class='line'>
-</span><span class='line'>wget https://raw.githubusercontent.com/l-n-s/wireguard-install/master/wireguard-install.sh -O wireguard-install.sh
-</span><span class='line'>bash wireguard-install.sh</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>sudo reboot</span></code></pre></td></tr></table></div></figure>
 
 
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#client side config
-</span><span class='line'>#copy config file to /etc/wireguard/mywg.conf
-</span><span class='line'>sudo wg-quick up mywg  
-</span><span class='line'>sudo wg show
-</span><span class='line'>#sudo wg-quick down mywg</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#wireguard is faster than openvpn
-</span><span class='line'>https://github.com/pirate/wireguard-docs</span></code></pre></td></tr></table></div></figure>
-
+<p><a href="https://itsfoss.com/disable-ipv6-ubuntu-linux/">https://itsfoss.com/disable-ipv6-ubuntu-linux/</a></p>
 </div>
 
 
@@ -183,12 +193,12 @@ https://github.com/angristan/wireguard-install curl -O https://raw.githubusercon
   
 
 
-<time datetime="2020-04-17T01:23:51+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2020</time>
+<time datetime="2022-05-09T20:54:20+00:00" pubdate data-updated="true">May 9<span>th</span>, 2022</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/production/'>production</a>
+    <a class='category' href='/blog/categories/production/'>production</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
   
 </span>
 
@@ -204,10 +214,10 @@ https://github.com/angristan/wireguard-install curl -O https://raw.githubusercon
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2020/04/16/setup-openvpn/" title="Previous Post: setup openvpn">&laquo; setup openvpn</a>
+        <a class="basic-alignment left" href="/blog/2021/07/08/using-python-proxy/" title="Previous Post: using python proxy">&laquo; using python proxy</a>
       
       
-        <a class="basic-alignment right" href="/blog/2020/06/29/setup-tcp-tunnel/" title="Next Post: setup TCP tunnel">setup TCP tunnel &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10/" title="Next Post: install wireguard in ubuntu 23.10">install wireguard in ubuntu 23.10 &raquo;</a>
       
     </p>
   </footer>
@@ -226,11 +236,11 @@ https://github.com/angristan/wireguard-install curl -O https://raw.githubusercon
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2024/03/10/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
+        <a href="/blog/2024/03/09/install-wireguard-in-ubuntu-23-dot-10/">Install Wireguard in Ubuntu 23.10</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2022/05/10/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
+        <a href="/blog/2022/05/09/disable-ipv6-in-ubuntu-21-dot-04/">Disable Ipv6 in Ubuntu 21.04</a>
       </li>
     
       <li class="post">
@@ -242,7 +252,7 @@ https://github.com/angristan/wireguard-install curl -O https://raw.githubusercon
       </li>
     
       <li class="post">
-        <a href="/blog/2020/06/29/setup-tcp-tunnel/">Setup TCP Tunnel</a>
+        <a href="/blog/2020/06/28/setup-tcp-tunnel/">Setup TCP Tunnel</a>
       </li>
     
   </ul>
